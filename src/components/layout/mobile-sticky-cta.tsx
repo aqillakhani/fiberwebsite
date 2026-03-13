@@ -36,7 +36,7 @@ export function MobileStickyCtA() {
       <div className="bg-white dark:bg-gray-900 border-t border-border shadow-lg pb-safe pt-3 px-4">
         <div className="flex items-center gap-2 max-w-7xl mx-auto">
           <Link href="/check-availability" className="flex-1">
-            <Button className="w-full bg-[var(--fiber-orange)] text-white hover:bg-[var(--fiber-orange)]/90">
+            <Button className="w-full bg-[var(--fiber-teal)] text-white hover:bg-[var(--fiber-teal)]/90">
               Check Availability
             </Button>
           </Link>

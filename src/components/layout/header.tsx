@@ -54,11 +54,11 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-orange)] transition-colors"
+            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-teal)] transition-colors"
           >
             <ZapIcon
               className="size-5"
-              style={{ color: "var(--fiber-orange)" }}
+              style={{ color: "var(--fiber-teal)" }}
             />
             {COMPANY.name}
           </Link>
@@ -67,7 +67,7 @@ export function Header() {
           {repDisplayName && repSlug && (
             <Link
               href={`/rep/${repSlug}`}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fiber-orange/10 text-fiber-orange text-xs font-medium hover:bg-fiber-orange/20 transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fiber-teal/10 text-fiber-teal text-xs font-medium hover:bg-fiber-teal/20 transition-colors"
             >
               <span className="w-1.5 h-1.5 bg-fiber-success rounded-full" />
               Working with {repDisplayName}
@@ -78,7 +78,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             <Link
               href="/check-availability"
-              className="px-3 py-2 text-sm font-medium text-[var(--fiber-orange)] hover:text-[var(--fiber-orange)]/80 transition-colors"
+              className="px-3 py-2 text-sm font-medium text-[var(--fiber-teal)] hover:text-[var(--fiber-teal)]/80 transition-colors"
             >
               Check Availability
             </Link>
@@ -115,7 +115,7 @@ export function Header() {
             {/* Desktop Get Started Button */}
             <Link href="/get-started" className="hidden lg:block">
               <Button
-                className="bg-[var(--fiber-orange)] text-white hover:bg-[var(--fiber-orange)]/90"
+                className="bg-[var(--fiber-teal)] text-white hover:bg-[var(--fiber-teal)]/90"
               >
                 Get Started
               </Button>
@@ -135,7 +135,7 @@ export function Header() {
                     <div className="flex items-center gap-2">
                       <ZapIcon
                         className="size-5"
-                        style={{ color: "var(--fiber-orange)" }}
+                        style={{ color: "var(--fiber-teal)" }}
                       />
                       <span className="font-bold">{COMPANY.name}</span>
                     </div>
@@ -144,7 +144,7 @@ export function Header() {
                   <nav className="flex flex-col gap-2 py-4">
                     <Link
                       href="/check-availability"
-                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-orange)] hover:text-[var(--fiber-orange)]/80 transition-colors"
+                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-teal)] hover:text-[var(--fiber-teal)]/80 transition-colors"
                     >
                       Check Availability
                     </Link>
@@ -162,7 +162,7 @@ export function Header() {
                   <SheetFooter className="flex flex-col gap-3">
                     <Link href="/check-availability" className="w-full">
                       <Button
-                        className="w-full bg-[var(--fiber-orange)] text-white hover:bg-[var(--fiber-orange)]/90"
+                        className="w-full bg-[var(--fiber-teal)] text-white hover:bg-[var(--fiber-teal)]/90"
                       >
                         Check Availability
                       </Button>
