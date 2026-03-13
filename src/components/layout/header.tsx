@@ -59,6 +59,12 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
+            <Link
+              href="/check-availability"
+              className="px-3 py-2 text-sm font-medium text-[var(--fiber-orange)] hover:text-[var(--fiber-orange)]/80 transition-colors"
+            >
+              Check Availability
+            </Link>
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -119,6 +125,12 @@ export function Header() {
                   </SheetHeader>
 
                   <nav className="flex flex-col gap-2 py-4">
+                    <Link
+                      href="/check-availability"
+                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-orange)] hover:text-[var(--fiber-orange)]/80 transition-colors"
+                    >
+                      Check Availability
+                    </Link>
                     {NAV_LINKS.map((link) => (
                       <Link
                         key={link.href}
@@ -131,9 +143,17 @@ export function Header() {
                   </nav>
 
                   <SheetFooter className="flex flex-col gap-3">
-                    <Link href="/get-started" className="w-full">
+                    <Link href="/check-availability" className="w-full">
                       <Button
                         className="w-full bg-[var(--fiber-orange)] text-white hover:bg-[var(--fiber-orange)]/90"
+                      >
+                        Check Availability
+                      </Button>
+                    </Link>
+                    <Link href="/get-started" className="w-full">
+                      <Button
+                        variant="outline"
+                        className="w-full"
                       >
                         Get Started
                       </Button>

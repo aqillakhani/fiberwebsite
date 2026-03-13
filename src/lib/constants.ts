@@ -178,7 +178,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     slug: "mike-chen",
     name: "Mike Chen",
     role: "Head of Operations",
-    bio: "Infrastructure expert dedicated to building Colorado's fastest network.",
+    bio: "Infrastructure expert dedicated to building the fastest fiber network nationwide.",
     phone: "(888) 555-3278",
     email: "mike@fiberfastusa.com",
   },
@@ -236,15 +236,15 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     name: "Sarah M.",
     city: "Denver",
     state: "CO",
-    quote: "Switched from Comcast and the difference is night and day. No more buffering, no more outages. My whole family streams at the same time without any issues.",
+    quote: "Switched from cable and the difference is night and day. No more buffering, no more outages. My whole family streams at the same time without any issues.",
     rating: 5,
     isFeatured: true,
   },
   {
     id: "2",
     name: "James T.",
-    city: "Colorado Springs",
-    state: "CO",
+    city: "Dallas",
+    state: "TX",
     quote: "I work from home and need reliable internet. FiberFastUSA has been rock solid — zero dropped Zoom calls in 6 months. Worth every penny.",
     rating: 5,
     isFeatured: true,
@@ -252,8 +252,8 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   {
     id: "3",
     name: "Maria L.",
-    city: "Aurora",
-    state: "CO",
+    city: "Phoenix",
+    state: "AZ",
     quote: "The installation was quick and professional. The tech even helped me set up my smart home devices. Customer service is actually helpful here.",
     rating: 5,
     isFeatured: true,
@@ -261,8 +261,8 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   {
     id: "4",
     name: "David K.",
-    city: "Boulder",
-    state: "CO",
+    city: "Tampa",
+    state: "FL",
     quote: "Finally, upload speeds that match download speeds. I'm a content creator and fiber has cut my upload times by 90%. Game changer.",
     rating: 5,
     isFeatured: false,
@@ -270,8 +270,8 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   {
     id: "5",
     name: "Rachel P.",
-    city: "Fort Collins",
-    state: "CO",
+    city: "Nashville",
+    state: "TN",
     quote: "No contracts and no data caps? Sign me up. Been with FiberFastUSA for a year now and haven't had a single issue. Highly recommend.",
     rating: 4,
     isFeatured: false,
@@ -279,9 +279,9 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   {
     id: "6",
     name: "Mike R.",
-    city: "Lakewood",
+    city: "Denver",
     state: "CO",
-    quote: "My kids game online while my wife and I stream 4K. No lag, no buffering. The Ultra plan handles everything we throw at it.",
+    quote: "My kids game online while my wife and I stream 4K. No lag, no buffering. The Gig 1 plan handles everything we throw at it.",
     rating: 5,
     isFeatured: false,
   },
@@ -294,7 +294,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Is fiber available at my address?",
-    answer: "We're expanding rapidly across Colorado and neighboring states. Use our Check Availability tool to see if your address is in our service area. If we're not there yet, sign up to be notified when we arrive in your area.",
+    answer: "We're expanding rapidly across the United States. Use our Check Availability tool to see if your address is in our service area. If we're not there yet, sign up to be notified when we arrive in your area.",
   },
   {
     question: "Is there a contract or commitment?",
@@ -326,7 +326,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We currently serve communities across Colorado including Denver, Colorado Springs, Aurora, Boulder, Fort Collins, and Lakewood, with more areas being added every month. Check availability at your address to see if we're in your area.",
+    answer: "We currently serve communities across the United States including Denver, Dallas, Phoenix, Tampa, Nashville, and more — with new areas being added every month. Check availability at your address to see if we're in your area.",
   },
 ] as const;
 
@@ -344,6 +344,7 @@ export const FOOTER_LINKS = {
     { href: "/about", label: "About Us" },
     { href: "/reviews", label: "Reviews" },
     { href: "/contact", label: "Contact" },
+    { href: "/careers", label: "Careers" },
     { href: "/verify-rep", label: "Verify a Rep" },
   ],
   services: [

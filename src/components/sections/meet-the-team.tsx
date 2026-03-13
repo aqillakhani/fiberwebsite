@@ -1,0 +1,81 @@
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { getReps } from "@/lib/reps"
+
+export default async function MeetTheTeam() {
+  const reps = await getReps()
+
+  return (
+    <section className="w-full py-16 md:py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section heading */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="heading-section text-foreground mb-4">
+            Meet the FiberFastUSA Team
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Our team of dedicated professionals is here to help you get connected to fast, reliable fiber internet.
+          </p>
+        </div>
+
+        {/* Team grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {reps.map((rep) => {
+            const firstLetter = rep.name.charAt(0).toUpperCase()
+
+            return (
+              <div
+                key={rep.slug}
+                className="card-premium bg-card rounded-xl border border-border overflow-hidden flex flex-col h-full"
+              >
+                {/* Photo or placeholder */}
+                {rep.photo_url ? (
+                  <div className="aspect-square relative">
+                    <Image
+                      src={rep.photo_url}
+                      alt={rep.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/10 via-fiber-orange/5 to-fiber-blue/10 flex items-center justify-center">
+                    <span className="text-5xl font-bold text-fiber-blue/20">
+                      {firstLetter}
+                    </span>
+                  </div>
+                )}
+
+                {/* Card content */}
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {rep.name}
+                  </h3>
+                  <p className="text-sm text-fiber-orange font-medium">
+                    {rep.role}
+                  </p>
+                  {(rep.city || rep.state) && (
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {[rep.city, rep.state].filter(Boolean).join(", ")}
+                    </p>
+                  )}
+                  <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                    {rep.bio}
+                  </p>
+                  <Link
+                    href={`/rep/${rep.slug}`}
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-blue hover:text-fiber-orange transition-colors"
+                  >
+                    View Profile
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "next"
+import Link from "next/link"
 import {
   CheckCircle2,
   XCircle,
@@ -7,16 +7,21 @@ import {
   Infinity,
   Network,
   Gamepad2,
-} from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+  Cable,
+  Lightbulb,
+  Shield,
+  ArrowRight,
+} from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Why Fiber Internet? | FiberFastUSA",
   description:
-    "Discover why fiber internet is the future. Learn how fiber compares to cable and who benefits most from fiber connectivity.",
-};
+    "Discover why fiber internet is the future. Learn how fiber compares to cable and DSL, and who benefits most from fiber connectivity.",
+  openGraph: {
+    title: "Why Fiber Internet? | FiberFastUSA",
+    description: "See how fiber outperforms cable and DSL across every metric that matters.",
+  },
+}
 
 export default function WhyFiberPage() {
   const benefitCategories = [
@@ -55,255 +60,269 @@ export default function WhyFiberPage() {
       description:
         "Everyone streams, games, and works at the same time without competition for bandwidth.",
     },
-  ];
+  ]
 
   return (
-    <main className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="border-b bg-gradient-to-b from-primary/10 to-background py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen">
+      {/* Hero */}
+      <section className="section-navy py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white pointer-events-none" />
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="heading-display text-white mb-6">
               Why Fiber Internet?
             </h1>
-            <p className="mt-4 text-xl text-muted-foreground">
-              The future of home internet is here.
+            <p className="text-xl text-white/80 leading-relaxed">
+              Fiber optic internet uses light to transmit data through thin glass strands,
+              delivering speeds and reliability that cable and DSL simply can&apos;t match.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Comparison Table Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      {/* How Fiber Works */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold">Fiber vs Cable</h2>
-            <p className="mt-2 text-muted-foreground">
-              See how fiber outperforms traditional cable internet.
+          <div className="text-center mb-12">
+            <h2 className="heading-section text-foreground mb-4">
+              How Fiber Optic Technology Works
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Understanding why fiber is fundamentally superior to older internet technologies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="card-premium bg-card rounded-xl border border-border p-6 text-center">
+              <div className="w-14 h-14 rounded-full bg-fiber-blue/10 flex items-center justify-center mx-auto mb-4">
+                <Lightbulb className="size-7 text-fiber-blue" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Light-Based Transmission</h3>
+              <p className="text-sm text-muted-foreground">
+                Data travels as pulses of light through glass fibers thinner than a human hair.
+                Light is the fastest medium possible — nothing beats it.
+              </p>
+            </div>
+            <div className="card-premium bg-card rounded-xl border border-border p-6 text-center">
+              <div className="w-14 h-14 rounded-full bg-fiber-orange/10 flex items-center justify-center mx-auto mb-4">
+                <Cable className="size-7 text-fiber-orange" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Dedicated Connection</h3>
+              <p className="text-sm text-muted-foreground">
+                Unlike cable, fiber gives you a dedicated line to your home. No sharing bandwidth
+                with neighbors means consistent speeds even during peak hours.
+              </p>
+            </div>
+            <div className="card-premium bg-card rounded-xl border border-border p-6 text-center">
+              <div className="w-14 h-14 rounded-full bg-fiber-success/10 flex items-center justify-center mx-auto mb-4">
+                <Shield className="size-7 text-fiber-success" />
+              </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Future-Proof Infrastructure</h3>
+              <p className="text-sm text-muted-foreground">
+                Fiber cables can theoretically carry petabits of data. Today&apos;s fiber infrastructure
+                will support next-generation speeds without replacement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table: Fiber vs Cable vs DSL */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="heading-section text-foreground mb-4">
+              Fiber vs Cable vs DSL
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              See how fiber stacks up against older internet technologies across every metric.
             </p>
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full bg-card rounded-xl border border-border overflow-hidden">
               <thead>
-                <tr className="border-b bg-muted/50">
-                  <th className="px-4 py-3 text-left font-semibold">Feature</th>
-                  <th className="px-4 py-3 text-left font-semibold text-primary">
-                    Fiber
-                  </th>
-                  <th className="px-4 py-3 text-left font-semibold text-muted-foreground">
-                    Cable
-                  </th>
+                <tr className="border-b border-border bg-muted/50">
+                  <th className="px-6 py-4 text-left font-semibold text-foreground">Feature</th>
+                  <th className="px-6 py-4 text-left font-semibold text-fiber-blue">Fiber</th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Cable</th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground">DSL</th>
                 </tr>
               </thead>
-              <tbody className="divide-y">
-                <tr>
-                  <td className="px-4 py-4 font-medium">Download Speed</td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-green-600" />
-                      <span>Up to 7 Gbps</span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-orange-500" />
-                      <span>Up to 1 Gbps</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-4 font-medium">Upload Speed</td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-green-600" />
-                      <span>Symmetric (matches download)</span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="size-5 text-red-600" />
-                      <span>10-50 Mbps</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-4 font-medium">Latency</td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-green-600" />
-                      <span>1-5ms</span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="size-5 text-red-600" />
-                      <span>10-30ms</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-4 font-medium">Reliability</td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-green-600" />
-                      <span>99.9% uptime</span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="size-5 text-red-600" />
-                      <span>Weather/distance dependent</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-4 font-medium">Data Caps</td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-green-600" />
-                      <span>None</span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="size-5 text-red-600" />
-                      <span>Often 1-1.5 TB</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-4 font-medium">Technology</td>
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="size-5 text-green-600" />
-                      <span>Light through glass</span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-4">
-                    <span>Electrical through copper</span>
-                  </td>
-                </tr>
+              <tbody className="divide-y divide-border">
+                {[
+                  {
+                    feature: "Download Speed",
+                    fiber: { text: "Up to 7 Gbps", good: true },
+                    cable: { text: "Up to 1 Gbps", ok: true },
+                    dsl: { text: "Up to 100 Mbps", bad: true },
+                  },
+                  {
+                    feature: "Upload Speed",
+                    fiber: { text: "Symmetric (matches download)", good: true },
+                    cable: { text: "10-50 Mbps", bad: true },
+                    dsl: { text: "1-10 Mbps", bad: true },
+                  },
+                  {
+                    feature: "Latency",
+                    fiber: { text: "1-5ms", good: true },
+                    cable: { text: "10-30ms", bad: true },
+                    dsl: { text: "25-50ms", bad: true },
+                  },
+                  {
+                    feature: "Reliability",
+                    fiber: { text: "99.9% uptime", good: true },
+                    cable: { text: "Weather/distance dependent", bad: true },
+                    dsl: { text: "Distance degradation", bad: true },
+                  },
+                  {
+                    feature: "Data Caps",
+                    fiber: { text: "None", good: true },
+                    cable: { text: "Often 1-1.5 TB", bad: true },
+                    dsl: { text: "Varies", bad: true },
+                  },
+                  {
+                    feature: "Technology",
+                    fiber: { text: "Light through glass", good: true },
+                    cable: { text: "Electrical through copper", ok: false },
+                    dsl: { text: "Phone line (copper)", ok: false },
+                  },
+                  {
+                    feature: "Shared Bandwidth",
+                    fiber: { text: "Dedicated line", good: true },
+                    cable: { text: "Shared with neighbors", bad: true },
+                    dsl: { text: "Dedicated but slow", ok: false },
+                  },
+                ].map((row) => (
+                  <tr key={row.feature}>
+                    <td className="px-6 py-4 font-medium text-foreground">{row.feature}</td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-2">
+                        {row.fiber.good && <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0" />}
+                        <span className="text-sm">{row.fiber.text}</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-2">
+                        {row.cable.bad ? (
+                          <XCircle className="size-5 text-red-500 flex-shrink-0" />
+                        ) : row.cable.ok ? (
+                          <CheckCircle2 className="size-5 text-orange-500 flex-shrink-0" />
+                        ) : null}
+                        <span className="text-sm text-muted-foreground">{row.cable.text}</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-2">
+                        {row.dsl.bad ? (
+                          <XCircle className="size-5 text-red-500 flex-shrink-0" />
+                        ) : null}
+                        <span className="text-sm text-muted-foreground">{row.dsl.text}</span>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="border-t bg-muted/30 py-12 sm:py-16 lg:py-20">
+      {/* Benefits of Fiber */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold">Benefits of Fiber</h2>
+          <div className="text-center mb-12">
+            <h2 className="heading-section text-foreground mb-4">
+              Benefits of Fiber
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">Symmetric Speeds</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Upload equals download speeds. Perfect for video calls and
-                  cloud backups.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">Future-Proof</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Fiber infrastructure supports next-gen speeds without
-                  replacements.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">No Congestion</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Dedicated line connection, not shared bandwidth with
-                  neighbors.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">Lower Latency</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  Lightning-fast response times for gaming, video calls, and
-                  real-time apps.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Symmetric Speeds",
+                desc: "Upload equals download speeds. Perfect for video calls and cloud backups.",
+              },
+              {
+                title: "Future-Proof",
+                desc: "Fiber infrastructure supports next-gen speeds without replacements.",
+              },
+              {
+                title: "No Congestion",
+                desc: "Dedicated line connection, not shared bandwidth with neighbors.",
+              },
+              {
+                title: "Lower Latency",
+                desc: "Lightning-fast response times for gaming, video calls, and real-time apps.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="card-premium bg-card rounded-xl border border-border p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Who Benefits Most Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      {/* Who Benefits Most */}
+      <section className="py-16 md:py-24 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold">Who Benefits Most?</h2>
+          <div className="text-center mb-12">
+            <h2 className="heading-section text-foreground mb-4">
+              Who Benefits Most?
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {benefitCategories.map((category, index) => {
-              const Icon = category.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefitCategories.map((category) => {
+              const Icon = category.icon
               return (
-                <Card key={index}>
-                  <CardHeader>
-                    <div className="flex items-start gap-3">
-                      <Icon className="size-6 text-primary flex-shrink-0 mt-1" />
-                      <CardTitle className="text-base">
-                        {category.title}
-                      </CardTitle>
+                <div key={category.title} className="card-premium bg-card rounded-xl border border-border p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-fiber-blue/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="size-5 text-fiber-blue" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      {category.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
+                    <h3 className="text-lg font-semibold text-foreground pt-1.5">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {category.description}
+                  </p>
+                </div>
+              )
             })}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="border-t bg-gradient-to-b from-primary/10 to-background py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold">Experience the Fiber Difference</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Ready to upgrade to fiber internet? Check if it&apos;s available at
-              your address.
-            </p>
-
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link href="/check-availability">
-                <Button size="lg">Check Availability</Button>
-              </Link>
-              <Link href="/pricing">
-                <Button variant="outline" size="lg">
-                  View Plans
-                </Button>
-              </Link>
-            </div>
+      <section className="section-navy py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white pointer-events-none" />
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Experience the Fiber Difference
+          </h2>
+          <p className="text-lg text-white/70 mb-8">
+            Ready to upgrade to fiber internet? Check if it&apos;s available at your address.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/check-availability"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+            >
+              Check Availability
+            </Link>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg border border-white/20 text-white font-semibold hover:bg-white/10 transition-all gap-2"
+            >
+              View Plans <ArrowRight className="size-4" />
+            </Link>
           </div>
         </div>
       </section>
     </main>
-  );
+  )
 }

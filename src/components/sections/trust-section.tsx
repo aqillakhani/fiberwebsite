@@ -37,7 +37,7 @@ export default function TrustSection() {
           />
           <TrustSignal
             icon={<MapPin className="w-8 h-8" />}
-            label="Serving Colorado"
+            label="Serving Nationwide"
           />
         </div>
       </div>

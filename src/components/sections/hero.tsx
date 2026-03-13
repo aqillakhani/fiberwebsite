@@ -4,42 +4,118 @@ import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-gradient-to-br from-fiber-blue-light to-fiber-blue-light/50 py-16 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-fiber-blue-dark mb-4 leading-tight">
-            Fiber Internet That Actually Works
-          </h1>
+    <section className="relative w-full overflow-hidden py-16 md:py-32 lg:py-40">
+      {/* Background with gradient and grid overlay */}
+      <div className="absolute inset-0 hero-gradient bg-grid-white"></div>
 
-          <p className="text-base md:text-lg text-gray-700 mb-8 max-w-2xl">
-            Faster speeds. More reliable. No data caps. Check availability in 10 seconds.
-          </p>
+      {/* Content container */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-[1fr_1fr] gap-8 lg:gap-12 items-center">
+          {/* Left side - Text content */}
+          <div className="flex flex-col justify-center">
+            <h1 className="heading-display text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+              Blazing Fast{" "}
+              <span className="text-gradient-blue">Fiber Internet</span> for Your Home
+            </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Link href="/check-availability">
-              <Button
-                size="lg"
-                className="bg-fiber-orange hover:bg-fiber-orange/90 text-white px-6 md:px-8 gap-2"
-              >
-                Check Your Address
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </Link>
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
+              Tired of slow, unreliable internet? Switch to fiber and experience speeds up to 7 Gbps with no data caps, no contracts, and no surprises.
+            </p>
 
-            <Link href="/pricing">
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-6 md:px-8"
-              >
-                View Plans →
-              </Button>
-            </Link>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link href="/check-availability" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-fiber-orange hover:bg-fiber-orange/90 text-white px-8 md:px-10 gap-2 glow-orange min-h-[52px] font-semibold"
+                >
+                  Check Availability
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
+
+              <Link href="/pricing" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto border-white/20 text-white hover:bg-white/5 px-8 md:px-10 min-h-[52px] font-semibold"
+                >
+                  View Plans
+                </Button>
+              </Link>
+            </div>
+
+            {/* Social proof badge */}
+            <div className="inline-flex items-center gap-3 w-fit px-4 py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+              <span className="w-2 h-2 bg-green-500 rounded-full pulse-green"></span>
+              <span className="text-sm font-medium text-white/80">Now serving homes nationwide</span>
+            </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 bg-white/60 px-4 py-2 rounded-full border border-gray-200">
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-            Serving 10,000+ homes across Colorado
+          {/* Right side - Speed visualization (desktop only) */}
+          <div className="hidden md:flex items-center justify-center">
+            <div className="w-full max-w-sm p-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md">
+              {/* Speed indicator */}
+              <div className="mb-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-white mb-2">Up to 7 Gbps</div>
+                  <div className="text-sm text-white/70">Download Speed</div>
+                </div>
+              </div>
+
+              {/* Speed bars */}
+              <div className="space-y-4 mb-8">
+                {/* Bar 1 - 30% */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-white/70 uppercase tracking-wide">Standard</span>
+                    <span className="text-xs font-semibold text-white">100 Mbps</span>
+                  </div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-orange rounded-full"
+                      style={{ width: "30%" }}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Bar 2 - 60% */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-white/70 uppercase tracking-wide">Premium</span>
+                    <span className="text-xs font-semibold text-white">1 Gbps</span>
+                  </div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-orange rounded-full"
+                      style={{ width: "60%" }}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Bar 3 - 100% */}
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-white/70 uppercase tracking-wide">Elite</span>
+                    <span className="text-xs font-semibold text-white">7 Gbps</span>
+                  </div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-orange rounded-full"
+                      style={{ width: "100%" }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Symmetric label */}
+              <div className="border-t border-white/10 pt-4">
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-white">Symmetric Upload & Download</div>
+                  <div className="text-xs text-white/60 mt-1">Same speed both ways</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
