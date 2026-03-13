@@ -34,7 +34,7 @@ export default function PlansPreviewSection() {
               {/* Most Popular Badge */}
               {plan.isFeatured && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <Badge className="bg-fiber-orange text-white border-0 shadow-md">
+                  <Badge className="bg-fiber-teal text-white border-0 shadow-md">
                     Most Popular
                   </Badge>
                 </div>
@@ -86,7 +86,7 @@ export default function PlansPreviewSection() {
                       </Badge>
                     )}
                     {plan.giftCard > 0 && (
-                      <Badge className="bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 border-orange-200 dark:border-orange-800 flex items-center gap-1">
+                      <Badge className="bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400 border-teal-200 dark:border-teal-800 flex items-center gap-1">
                         <Gift className="size-3" />
                         ${plan.giftCard} Gift Card
                       </Badge>
@@ -111,7 +111,7 @@ export default function PlansPreviewSection() {
                     className={cn(
                       "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                       plan.isFeatured
-                        ? "bg-fiber-orange text-white hover:bg-fiber-orange/90"
+                        ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
                         : "border border-border bg-transparent hover:bg-accent text-foreground"
                     )}
                   >

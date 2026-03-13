@@ -27,7 +27,7 @@ export default function HeroSection() {
               <Link href="/check-availability" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-fiber-orange hover:bg-fiber-orange/90 text-white px-8 md:px-10 gap-2 glow-orange min-h-[52px] font-semibold"
+                  className="w-full sm:w-auto bg-fiber-teal hover:bg-fiber-teal/90 text-white px-8 md:px-10 gap-2 glow-teal min-h-[52px] font-semibold"
                 >
                   Check Availability
                   <ArrowRight className="w-5 h-5" />
@@ -73,7 +73,7 @@ export default function HeroSection() {
                   </div>
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-orange rounded-full"
+                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full"
                       style={{ width: "30%" }}
                     ></div>
                   </div>
@@ -87,7 +87,7 @@ export default function HeroSection() {
                   </div>
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-orange rounded-full"
+                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full"
                       style={{ width: "60%" }}
                     ></div>
                   </div>
@@ -101,7 +101,7 @@ export default function HeroSection() {
                   </div>
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-orange rounded-full"
+                      className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full"
                       style={{ width: "100%" }}
                     ></div>
                   </div>

@@ -66,7 +66,7 @@ export async function GET(
               <div
                 style={{
                   fontSize: "14px",
-                  color: "#FF6B35",
+                  color: "#14B8A6",
                   fontWeight: 700,
                   letterSpacing: "1px",
                   textTransform: "uppercase" as const,

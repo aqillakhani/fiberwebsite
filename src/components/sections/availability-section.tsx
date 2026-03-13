@@ -100,7 +100,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="name"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-orange focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.fullName && (
                 <p className="text-red-400 text-xs mt-1">{errors.fullName.message}</p>
@@ -113,7 +113,7 @@ export default function AvailabilitySection() {
                 type="tel"
                 placeholder="Phone Number"
                 autoComplete="tel"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-orange focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.phone && (
                 <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>
@@ -127,7 +127,7 @@ export default function AvailabilitySection() {
               type="email"
               placeholder="Email Address"
               autoComplete="email"
-              className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-orange focus:border-transparent text-base"
+              className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
             />
             {errors.email && (
               <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
@@ -141,7 +141,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Street Address"
                 autoComplete="street-address"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-orange focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.serviceAddress && (
                 <p className="text-red-400 text-xs mt-1">{errors.serviceAddress.message}</p>
@@ -154,7 +154,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="ZIP Code"
                 autoComplete="postal-code"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-orange focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.zip && (
                 <p className="text-red-400 text-xs mt-1">{errors.zip.message}</p>
@@ -171,7 +171,7 @@ export default function AvailabilitySection() {
               type="submit"
               disabled={isSubmitting}
               size="lg"
-              className="w-full sm:w-auto sm:min-w-[240px] mx-auto flex items-center justify-center gap-2 bg-fiber-orange hover:bg-fiber-orange/90 text-white min-h-[52px] text-base font-semibold glow-orange"
+              className="w-full sm:w-auto sm:min-w-[240px] mx-auto flex items-center justify-center gap-2 bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[52px] text-base font-semibold glow-teal"
             >
               {isSubmitting ? (
                 <>

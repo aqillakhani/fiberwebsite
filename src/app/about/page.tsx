@@ -213,12 +213,12 @@ export default async function AboutPage() {
                     {member.name.split(" ")[0][0]}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-orange transition-colors">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-teal transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-sm text-fiber-blue font-medium mb-2">{member.role}</p>
                 <p className="text-sm text-muted-foreground mb-3">{member.bio}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-orange">
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-teal">
                   View Profile <ArrowRight className="size-3" />
                 </span>
               </Link>
@@ -239,7 +239,7 @@ export default async function AboutPage() {
           </p>
           <Link
             href="/check-availability"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
           >
             Check Availability
           </Link>

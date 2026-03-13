@@ -205,7 +205,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   href="#check"
                   className={`inline-flex items-center justify-center w-full h-10 px-4 rounded-lg text-sm font-semibold transition-all ${
                     plan.isFeatured
-                      ? "bg-fiber-orange text-white hover:bg-fiber-orange/90"
+                      ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
                       : "border border-border hover:bg-accent text-foreground"
                   }`}
                 >
@@ -275,7 +275,7 @@ export default async function CityPage({ params }: CityPageProps) {
           </p>
           <a
             href="#check"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
           >
             Check Your Address
           </a>

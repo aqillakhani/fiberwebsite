@@ -40,7 +40,7 @@ export default async function MeetTheTeam() {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/10 via-fiber-orange/5 to-fiber-blue/10 flex items-center justify-center">
+                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/10 via-fiber-teal/5 to-fiber-blue/10 flex items-center justify-center">
                     <span className="text-5xl font-bold text-fiber-blue/20">
                       {firstLetter}
                     </span>
@@ -52,7 +52,7 @@ export default async function MeetTheTeam() {
                   <h3 className="text-lg font-semibold text-foreground">
                     {rep.name}
                   </h3>
-                  <p className="text-sm text-fiber-orange font-medium">
+                  <p className="text-sm text-fiber-teal font-medium">
                     {rep.role}
                   </p>
                   {(rep.city || rep.state) && (
@@ -65,7 +65,7 @@ export default async function MeetTheTeam() {
                   </p>
                   <Link
                     href={`/rep/${rep.slug}`}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-blue hover:text-fiber-orange transition-colors"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-blue hover:text-fiber-teal transition-colors"
                   >
                     View Profile
                     <ArrowRight className="w-4 h-4" />

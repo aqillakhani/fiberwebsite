@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
               className="card-premium bg-card rounded-xl border border-border p-6 md:p-8 flex flex-col h-full"
             >
               {/* Decorative quote mark */}
-              <div className="text-5xl text-fiber-orange/20 font-serif leading-none mb-2">
+              <div className="text-5xl text-fiber-blue/20 font-serif leading-none mb-2">
                 &ldquo;
               </div>
 
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
         <div className="text-center">
           <Link
             href="/reviews"
-            className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-orange transition-colors font-semibold"
+            className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-teal transition-colors font-semibold"
           >
             Read More Reviews →
           </Link>

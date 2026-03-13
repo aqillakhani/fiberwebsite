@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 
 import HeroSection from "@/components/sections/hero"
-import AvailabilitySection from "@/components/sections/availability-section"
+import WhyFiberSection from "@/components/sections/why-fiber-section"
+import SpeedVisualization from "@/components/sections/speed-visualization"
 import PlansPreviewSection from "@/components/sections/plans-preview"
-import BenefitsSection from "@/components/sections/benefits"
 import HowItWorksSection from "@/components/sections/how-it-works"
+import RepVerificationSection from "@/components/sections/rep-verification-section"
+import ServiceAreaSection from "@/components/sections/service-area-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
-import MeetTheTeamSection from "@/components/sections/meet-the-team"
+import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
 
 export const metadata: Metadata = {
@@ -51,37 +53,16 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
-      <section className="py-0">
-        <HeroSection />
-      </section>
-
-      <section className="py-0">
-        <AvailabilitySection />
-      </section>
-
-      <section className="py-16 md:py-24">
-        <PlansPreviewSection />
-      </section>
-
-      <section className="py-16 md:py-24">
-        <BenefitsSection />
-      </section>
-
-      <section className="py-16 md:py-24">
-        <HowItWorksSection />
-      </section>
-
-      <section className="py-16 md:py-24">
-        <TestimonialsSection />
-      </section>
-
-      <section className="py-16 md:py-24">
-        <MeetTheTeamSection />
-      </section>
-
-      <section className="py-0">
-        <FinalCTASection />
-      </section>
+      <HeroSection />
+      <WhyFiberSection />
+      <SpeedVisualization />
+      <PlansPreviewSection />
+      <HowItWorksSection />
+      <RepVerificationSection />
+      <ServiceAreaSection />
+      <TestimonialsSection />
+      <HomepageFAQ />
+      <FinalCTASection />
     </main>
   )
 }

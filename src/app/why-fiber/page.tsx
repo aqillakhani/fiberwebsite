@@ -104,8 +104,8 @@ export default function WhyFiberPage() {
               </p>
             </div>
             <div className="card-premium bg-card rounded-xl border border-border p-6 text-center">
-              <div className="w-14 h-14 rounded-full bg-fiber-orange/10 flex items-center justify-center mx-auto mb-4">
-                <Cable className="size-7 text-fiber-orange" />
+              <div className="w-14 h-14 rounded-full bg-fiber-teal/10 flex items-center justify-center mx-auto mb-4">
+                <Cable className="size-7 text-fiber-teal" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Dedicated Connection</h3>
               <p className="text-sm text-muted-foreground">
@@ -207,7 +207,7 @@ export default function WhyFiberPage() {
                         {row.cable.bad ? (
                           <XCircle className="size-5 text-red-500 flex-shrink-0" />
                         ) : row.cable.ok ? (
-                          <CheckCircle2 className="size-5 text-orange-500 flex-shrink-0" />
+                          <CheckCircle2 className="size-5 text-teal-500 flex-shrink-0" />
                         ) : null}
                         <span className="text-sm text-muted-foreground">{row.cable.text}</span>
                       </div>
@@ -375,7 +375,7 @@ export default function WhyFiberPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/check-availability"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
             >
               Check Availability
             </Link>

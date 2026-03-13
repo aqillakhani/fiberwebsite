@@ -84,7 +84,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                     />
                   </div>
                 ) : (
-                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/30 via-fiber-orange/20 to-fiber-blue/30 flex items-center justify-center">
+                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/30 via-fiber-teal/20 to-fiber-blue/30 flex items-center justify-center">
                     <span className="text-7xl font-bold text-white/30">
                       {firstName[0]}
                     </span>
@@ -124,7 +124,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                 <a
                   href={`/api/qr/${rep.slug}?size=600`}
                   download={`${rep.slug}-qr.png`}
-                  className="inline-flex items-center gap-2 text-xs text-fiber-orange hover:text-fiber-orange/80 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs text-fiber-teal hover:text-fiber-teal/80 transition-colors"
                 >
                   <Download className="size-3" />
                   Download QR Code
@@ -146,7 +146,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-2">
                   {rep.name}
                 </h1>
-                <p className="text-lg text-fiber-orange font-semibold mb-4">
+                <p className="text-lg text-fiber-teal font-semibold mb-4">
                   {rep.role}
                 </p>
                 {(rep.city || rep.state) && (
@@ -162,7 +162,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
               {/* Scroll to form CTA */}
               <a
                 href="#lead-form"
-                className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+                className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
               >
                 Get Started with {firstName}
               </a>
@@ -216,7 +216,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
               >
                 {plan.isFeatured && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                    <Badge className="bg-fiber-orange text-white border-0 shadow-md">
+                    <Badge className="bg-fiber-teal text-white border-0 shadow-md">
                       <Star className="size-3 mr-1" />
                       Most Popular
                     </Badge>
@@ -255,7 +255,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                         </Badge>
                       )}
                       {plan.giftCard > 0 && (
-                        <Badge className="bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 border-orange-200 dark:border-orange-800 flex items-center gap-1">
+                        <Badge className="bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400 border-teal-200 dark:border-teal-800 flex items-center gap-1">
                           <Gift className="size-3" />
                           ${plan.giftCard} Gift Card
                         </Badge>
@@ -276,7 +276,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                       className={cn(
                         "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                         plan.isFeatured
-                          ? "bg-fiber-orange text-white hover:bg-fiber-orange/90"
+                          ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
                           : "border border-border hover:bg-accent text-foreground"
                       )}
                     >
@@ -330,7 +330,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
           </p>
           <a
             href="#lead-form"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
           >
             Talk to {firstName} Now
           </a>

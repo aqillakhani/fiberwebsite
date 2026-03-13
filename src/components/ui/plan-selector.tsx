@@ -33,15 +33,15 @@ export function PlanSelector({
                 isFeatured && "bg-gradient-to-br from-amber-50 to-transparent",
                 isSelected &&
                   isFeatured &&
-                  "border-orange-500 bg-gradient-to-br from-amber-50 to-transparent ring-2 ring-orange-500 ring-offset-2",
+                  "border-teal-500 bg-gradient-to-br from-amber-50 to-transparent ring-2 ring-teal-500 ring-offset-2",
                 isSelected &&
                   !isFeatured &&
-                  "border-orange-500 ring-2 ring-orange-500 ring-offset-2",
+                  "border-teal-500 ring-2 ring-teal-500 ring-offset-2",
               )}
             >
               {/* Featured badge */}
               {isFeatured && (
-                <div className="absolute -top-3 right-4 inline-block bg-orange-500 px-3 py-1 text-xs font-semibold text-white rounded-full">
+                <div className="absolute -top-3 right-4 inline-block bg-teal-500 px-3 py-1 text-xs font-semibold text-white rounded-full">
                   Most Popular
                 </div>
               )}
@@ -49,7 +49,7 @@ export function PlanSelector({
               {/* Radio indicator */}
               <div className="absolute top-4 right-4 h-5 w-5 rounded-full border-2 border-gray-300">
                 {isSelected && (
-                  <div className="absolute inset-1 rounded-full bg-orange-500" />
+                  <div className="absolute inset-1 rounded-full bg-teal-500" />
                 )}
               </div>
 

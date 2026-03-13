@@ -68,14 +68,14 @@ export function PlanRecommender() {
           <span className="text-sm font-semibold text-fiber-success">Our Recommendation</span>
         </div>
         <h3 className="text-2xl font-bold text-foreground mb-2">{recommendedPlan.name}</h3>
-        <p className="text-3xl font-bold text-fiber-orange mb-2">
+        <p className="text-3xl font-bold text-fiber-teal mb-2">
           ${recommendedPlan.price}<span className="text-base font-normal text-muted-foreground">/mo</span>
         </p>
         <p className="text-muted-foreground mb-6">{recommendedPlan.description}</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href={`/check-availability?plan=${recommendedPlan.id}`}
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
           >
             Get Started with {recommendedPlan.name}
           </Link>
@@ -103,7 +103,7 @@ export function PlanRecommender() {
           <button
             key={option.value}
             onClick={() => handleAnswer(currentQuestion.id, option.value)}
-            className="inline-flex items-center justify-center h-12 px-6 rounded-lg border border-border text-foreground font-medium hover:bg-accent hover:border-fiber-orange/50 transition-all"
+            className="inline-flex items-center justify-center h-12 px-6 rounded-lg border border-border text-foreground font-medium hover:bg-accent hover:border-fiber-teal/50 transition-all"
           >
             {option.label}
           </button>

@@ -53,9 +53,9 @@ export default function CareersPage() {
         <div className="absolute inset-0 bg-grid-white pointer-events-none" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full bg-fiber-orange/20 px-4 py-1.5 mb-6">
-              <Zap className="size-4 text-fiber-orange" />
-              <span className="text-sm font-medium text-fiber-orange">
+            <div className="inline-flex items-center gap-2 rounded-full bg-fiber-teal/20 px-4 py-1.5 mb-6">
+              <Zap className="size-4 text-fiber-teal" />
+              <span className="text-sm font-medium text-fiber-teal">
                 We&apos;re Hiring Nationwide
               </span>
             </div>
@@ -90,8 +90,8 @@ export default function CareersPage() {
                   key={benefit.title}
                   className="card-premium bg-card rounded-xl border border-border p-6"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-fiber-orange/10 flex items-center justify-center mb-4">
-                    <Icon className="size-6 text-fiber-orange" />
+                  <div className="w-12 h-12 rounded-lg bg-fiber-teal/10 flex items-center justify-center mb-4">
+                    <Icon className="size-6 text-fiber-teal" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {benefit.title}
@@ -144,7 +144,7 @@ export default function CareersPage() {
                   "Mobile tools to track leads and commissions",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <Zap className="size-4 text-fiber-orange flex-shrink-0 mt-1" />
+                    <Zap className="size-4 text-fiber-teal flex-shrink-0 mt-1" />
                     <span className="text-sm text-foreground">{item}</span>
                   </div>
                 ))}
@@ -185,7 +185,7 @@ export default function CareersPage() {
           </p>
           <a
             href="mailto:careers@fiberfastusa.com"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
           >
             Email careers@fiberfastusa.com
           </a>

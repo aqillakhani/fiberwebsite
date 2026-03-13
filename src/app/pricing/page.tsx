@@ -110,7 +110,7 @@ export default function PricingPage() {
               >
                 {plan.isFeatured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-orange px-3 py-1 text-xs font-semibold text-white">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-teal px-3 py-1 text-xs font-semibold text-white">
                       <Zap className="size-3" /> Most Popular
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function PricingPage() {
                     </span>
                   )}
                   {plan.giftCard > 0 && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-orange/10 px-3 py-1 text-xs font-semibold text-fiber-orange">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-teal/10 px-3 py-1 text-xs font-semibold text-fiber-teal">
                       <Gift className="size-3" />
                       +${plan.giftCard} Visa Gift Card
                     </span>
@@ -159,7 +159,7 @@ export default function PricingPage() {
                   href={`/check-availability?plan=${plan.id}`}
                   className={`inline-flex items-center justify-center w-full h-11 px-4 rounded-lg text-sm font-semibold transition-all ${
                     plan.isFeatured
-                      ? "bg-fiber-orange text-white hover:bg-fiber-orange/90 glow-orange"
+                      ? "bg-fiber-teal text-white hover:bg-fiber-teal/90 glow-teal"
                       : "border border-border hover:bg-accent text-foreground"
                   }`}
                 >
@@ -215,12 +215,12 @@ export default function PricingPage() {
                     <th
                       key={plan.id}
                       className={`px-6 py-4 text-center font-semibold ${
-                        plan.isFeatured ? "text-fiber-orange" : "text-foreground"
+                        plan.isFeatured ? "text-fiber-teal" : "text-foreground"
                       }`}
                     >
                       {plan.name}
                       {plan.isFeatured && (
-                        <span className="block text-xs text-fiber-orange/70 font-normal mt-0.5">
+                        <span className="block text-xs text-fiber-teal/70 font-normal mt-0.5">
                           Most Popular
                         </span>
                       )}
@@ -273,7 +273,7 @@ export default function PricingPage() {
                   <td className="px-6 py-4 font-medium text-foreground">Price</td>
                   {PLANS.map((plan) => (
                     <td key={plan.id} className={`px-6 py-4 text-center font-semibold ${
-                      plan.isFeatured ? "text-fiber-orange" : "text-foreground"
+                      plan.isFeatured ? "text-fiber-teal" : "text-foreground"
                     }`}>
                       ${plan.price}/mo
                     </td>
@@ -343,7 +343,7 @@ export default function PricingPage() {
           </p>
           <Link
             href="/check-availability"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange gap-2"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal gap-2"
           >
             <Zap className="size-5" />
             Check Your Address
