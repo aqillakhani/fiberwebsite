@@ -10,9 +10,11 @@ import { PLANS } from "@/lib/constants"
 import { getRepBySlug, getAllRepSlugs } from "@/lib/reps"
 import { cn } from "@/lib/utils"
 import CompactLeadForm from "@/components/forms/compact-lead-form"
+import DoorModeView from "@/components/rep/door-mode-view"
 
 interface RepProfilePageProps {
   params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export async function generateMetadata({ params }: RepProfilePageProps): Promise<Metadata> {
@@ -42,12 +44,20 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }))
 }
 
-export default async function RepProfilePage({ params }: RepProfilePageProps) {
+export default async function RepProfilePage({ params, searchParams }: RepProfilePageProps) {
   const { slug } = await params
+  const resolvedSearchParams = await searchParams
   const rep = await getRepBySlug(slug)
 
   if (!rep) {
     notFound()
+  }
+
+  // Door Mode: streamlined conversion flow
+  if (resolvedSearchParams.door === "1") {
+    const address = typeof resolvedSearchParams.address === "string" ? resolvedSearchParams.address : undefined
+    const plan = typeof resolvedSearchParams.plan === "string" ? resolvedSearchParams.plan : undefined
+    return <DoorModeView rep={rep} prefilledAddress={address} prefilledPlan={plan} />
   }
 
   const firstName = rep.name.split(" ")[0]

@@ -95,8 +95,32 @@ export default async function CityPage({ params }: CityPageProps) {
 
   const topPlans = PLANS.slice(0, 3)
 
+  const cityJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `FiberFastUSA - ${cityData.name}, ${cityData.stateAbbr}`,
+    description: `Fiber internet service in ${cityData.name}, ${cityData.state}. Speeds up to 7 Gbps with free installation, no contracts, and no data caps.`,
+    url: `https://fiberfastusa.com/locations/${cityData.slug}`,
+    telephone: "(888) 555-FAST",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: cityData.name,
+      addressRegion: cityData.stateAbbr,
+      addressCountry: "US",
+    },
+    priceRange: "$34.99 - $109.99/mo",
+    areaServed: {
+      "@type": "City",
+      name: cityData.name,
+    },
+  }
+
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityJsonLd) }}
+      />
       {/* Hero */}
       <section className="section-navy py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white pointer-events-none" />

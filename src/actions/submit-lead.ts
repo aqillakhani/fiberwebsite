@@ -37,6 +37,9 @@ export async function submitLead(data: LeadFormData): Promise<LeadResult> {
       utm_medium: parsed.data.utmMedium,
       utm_campaign: parsed.data.utmCampaign,
       rep_id: parsed.data.repId,
+      selected_plan: parsed.data.selectedPlan,
+      preferred_install_date: parsed.data.preferredInstallDate,
+      preferred_install_time: parsed.data.preferredInstallTime,
     });
 
     if (error) {

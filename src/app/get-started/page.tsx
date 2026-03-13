@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Get Started | FiberFastUSA",
   description:
     "Sign up for fiber internet in just a few minutes. Fast, simple, and secure. Get connected to blazing-fast speeds today.",
+  openGraph: {
+    title: "Sign Up for Fiber Internet | FiberFastUSA",
+    description: "Get connected to blazing-fast fiber internet in just a few minutes. No contracts, no hassle.",
+  },
 };
 
 export default function GetStartedPage() {

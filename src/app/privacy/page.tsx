@@ -3,6 +3,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | FiberFastUSA",
   description: "FiberFastUSA privacy policy. Learn how we protect your personal data.",
+  openGraph: {
+    title: "Privacy Policy | FiberFastUSA",
+    description: "We protect your data with industry-leading security practices and transparency.",
+  },
 };
 
 export default function PrivacyPage() {

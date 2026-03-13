@@ -10,9 +10,9 @@ import MeetTheTeamSection from "@/components/sections/meet-the-team"
 import FinalCTASection from "@/components/sections/final-cta"
 
 export const metadata: Metadata = {
-  title: "FiberFastUSA | Blazing Fast Fiber Internet for Your Home",
+  title: "FiberFastUSA | Fiber Internet That Actually Delivers",
   description:
-    "Experience blazing-fast fiber internet from 500 Mbps to 7 Gbps. No contracts, no data caps, no hidden fees. Check availability at your address today.",
+    "No contracts. No data caps. No surprises. Just fast. Fiber internet from 500 Mbps to 7 Gbps starting at $34.99/mo. Check availability at your address today.",
   openGraph: {
     title: "FiberFastUSA | Fiber Internet That Actually Works",
     description:
@@ -25,7 +25,7 @@ const localBusinessJsonLd = {
   "@type": "LocalBusiness",
   name: "FiberFastUSA",
   description:
-    "Blazing-fast fiber internet with symmetric speeds up to 7 Gbps. No contracts, no data caps, no hidden fees.",
+    "Fiber internet that actually delivers. Symmetric speeds up to 7 Gbps. No contracts, no data caps, no hidden fees.",
   url: "https://fiberfastusa.com",
   telephone: "(888) 555-FAST",
   email: "hello@fiberfastusa.com",

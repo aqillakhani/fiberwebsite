@@ -14,12 +14,12 @@ export default function HeroSection() {
           {/* Left side - Text content */}
           <div className="flex flex-col justify-center">
             <h1 className="heading-display text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-white">
-              Blazing Fast{" "}
-              <span className="text-gradient-blue">Fiber Internet</span> for Your Home
+              Fiber Internet That{" "}
+              <span className="text-gradient-blue">Actually Delivers</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-              Tired of slow, unreliable internet? Switch to fiber and experience speeds up to 7 Gbps with no data caps, no contracts, and no surprises.
+              No contracts. No data caps. No surprises. Just fast. Speeds up to 7 Gbps starting at $34.99/mo.
             </p>
 
             {/* CTA Buttons */}
@@ -52,9 +52,9 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right side - Speed visualization (desktop only) */}
-          <div className="hidden md:flex items-center justify-center">
-            <div className="w-full max-w-sm p-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md">
+          {/* Right side - Speed visualization */}
+          <div className="flex items-center justify-center">
+            <div className="w-full max-w-sm p-6 md:p-8 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md">
               {/* Speed indicator */}
               <div className="mb-8">
                 <div className="text-center">

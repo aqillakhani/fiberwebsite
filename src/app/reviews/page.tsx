@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: "Customer Reviews | FiberFastUSA",
   description:
     "See what our happy customers say about FiberFastUSA fiber internet service. Read real reviews and ratings.",
+  openGraph: {
+    title: "Real Customer Reviews | FiberFastUSA",
+    description: "Read genuine customer reviews. 500+ customers rate us 4.9 stars. 98% would recommend.",
+  },
 };
 
 function StarRating({ rating }: { rating: number }) {

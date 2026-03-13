@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Check, Zap, Gift, ArrowRight } from "lucide-react"
+import { Check, Zap, Gift } from "lucide-react"
 
 import { PLANS, PLAN_INCLUDES } from "@/lib/constants"
 import {
@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { PlanRecommender } from "@/components/ui/plan-recommender"
 
 export const metadata: Metadata = {
   title: "Plans & Pricing | FiberFastUSA",
@@ -37,7 +38,7 @@ const pricingJsonLd = {
         priceCurrency: "USD",
         priceValidUntil: "2027-12-31",
         availability: "https://schema.org/InStock",
-        url: `https://fiberfastusa.com/get-started?plan=${plan.id}`,
+        url: `https://fiberfastusa.com/check-availability?plan=${plan.id}`,
       },
     },
   })),
@@ -155,7 +156,7 @@ export default function PricingPage() {
                 </div>
 
                 <Link
-                  href={`/get-started?plan=${plan.id}`}
+                  href={`/check-availability?plan=${plan.id}`}
                   className={`inline-flex items-center justify-center w-full h-11 px-4 rounded-lg text-sm font-semibold transition-all ${
                     plan.isFeatured
                       ? "bg-fiber-orange text-white hover:bg-fiber-orange/90 glow-orange"
@@ -290,29 +291,19 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Not Sure CTA */}
+      {/* Not Sure CTA + Plan Recommender */}
       <section className="py-16 md:py-20 bg-muted/30">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Not Sure Which Plan Is Right?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Most families are happy with our Gig 1 plan. For heavy users with lots of devices,
-            consider Gig 2 or above. Still unsure? We can help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/check-availability"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-orange text-white font-semibold hover:bg-fiber-orange/90 transition-all glow-orange"
-            >
-              Check Availability
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg border border-border text-foreground font-semibold hover:bg-accent transition-all gap-2"
-            >
-              Talk to Us <ArrowRight className="size-4" />
-            </Link>
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Not Sure Which Plan Is Right?
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Answer two quick questions and we&apos;ll recommend the best plan for you.
+            </p>
+          </div>
+          <div className="bg-card rounded-xl border border-border p-8 shadow-sm">
+            <PlanRecommender />
           </div>
         </div>
       </section>

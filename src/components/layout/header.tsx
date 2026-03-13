@@ -5,9 +5,10 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { ZapIcon, MenuIcon, SunIcon, MoonIcon } from "lucide-react"
 
-import { COMPANY, NAV_LINKS } from "@/lib/constants"
+import { COMPANY, NAV_LINKS, TEAM_MEMBERS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { useAttribution } from "@/components/providers/attribution-provider"
 import {
   Sheet,
   SheetTrigger,
@@ -20,6 +21,11 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { repSlug } = useAttribution()
+
+  // Resolve rep name from slug
+  const repMember = repSlug ? TEAM_MEMBERS.find((m) => m.slug === repSlug) : null
+  const repDisplayName = repMember ? repMember.name.split(" ")[0] : null
 
   useEffect(() => {
     setMounted(true)
@@ -56,6 +62,17 @@ export function Header() {
             />
             {COMPANY.name}
           </Link>
+
+          {/* Rep Attribution Badge */}
+          {repDisplayName && repSlug && (
+            <Link
+              href={`/rep/${repSlug}`}
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fiber-orange/10 text-fiber-orange text-xs font-medium hover:bg-fiber-orange/20 transition-colors"
+            >
+              <span className="w-1.5 h-1.5 bg-fiber-success rounded-full" />
+              Working with {repDisplayName}
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">

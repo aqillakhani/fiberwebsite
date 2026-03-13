@@ -297,6 +297,71 @@ export default function WhyFiberPage() {
         </div>
       </section>
 
+      {/* Common Myths */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="heading-section text-foreground mb-4">
+              Common Myths About Fiber Internet
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Let&apos;s clear up some misconceptions about fiber internet.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                myth: "Fiber internet is too expensive",
+                reality:
+                  "Fiber plans start at just $34.99/mo — often comparable to or cheaper than cable. Plus, you get symmetric speeds, no data caps, and no hidden fees. When you factor in the total value, fiber is the better deal.",
+              },
+              {
+                myth: "I don&apos;t need that much speed",
+                reality:
+                  "It&apos;s not just about raw speed — fiber delivers lower latency, more consistent performance, and symmetric uploads. Even basic tasks like video calls and cloud backups benefit dramatically from fiber&apos;s reliability.",
+              },
+              {
+                myth: "Installation is complicated and disruptive",
+                reality:
+                  "Professional installation typically takes 2-4 hours. Our technicians handle everything, and most customers are online the same day with zero disruption to their daily routine.",
+              },
+              {
+                myth: "Cable internet is just as good",
+                reality:
+                  "Cable shares bandwidth with your neighbors, causing slowdowns during peak hours. Fiber gives you a dedicated connection with consistent speeds 24/7, plus symmetric upload speeds that cable simply cannot match.",
+              },
+              {
+                myth: "Fiber isn&apos;t available in my area",
+                reality:
+                  "Fiber networks are expanding rapidly across the United States. Even if it wasn&apos;t available last year, it may be now. Check your address — you might be surprised.",
+              },
+            ].map((item) => (
+              <div
+                key={item.myth}
+                className="bg-card rounded-xl border border-border p-6"
+              >
+                <div className="flex items-start gap-4">
+                  <XCircle className="size-6 text-red-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">
+                      Myth: &ldquo;{item.myth}&rdquo;
+                    </h3>
+                    <div className="flex items-start gap-2 mt-3">
+                      <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-fiber-success">Reality:</span>{" "}
+                        {item.reality}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="section-navy py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white pointer-events-none" />

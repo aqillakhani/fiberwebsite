@@ -279,8 +279,8 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   {
     id: "6",
     name: "Mike R.",
-    city: "Denver",
-    state: "CO",
+    city: "Atlanta",
+    state: "GA",
     quote: "My kids game online while my wife and I stream 4K. No lag, no buffering. The Gig 1 plan handles everything we throw at it.",
     rating: 5,
     isFeatured: false,

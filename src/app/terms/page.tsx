@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "Terms of Service | FiberFastUSA",
   description:
     "FiberFastUSA terms of service. Review the terms and conditions for using our fiber internet service.",
+  openGraph: {
+    title: "Terms of Service | FiberFastUSA",
+    description: "Review our terms and conditions for fast, reliable fiber internet service.",
+  },
 };
 
 export default function TermsPage() {

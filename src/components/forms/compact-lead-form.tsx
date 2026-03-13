@@ -4,10 +4,12 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { ArrowRight, CheckCircle, Loader2 } from "lucide-react"
+import { ArrowRight, Loader2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { ConfirmationScreen } from "@/components/ui/confirmation-screen"
 import { submitLead } from "@/actions/submit-lead"
+import { useAttribution } from "@/components/providers/attribution-provider"
 
 const compactLeadSchema = z.object({
   fullName: z.string().min(2, "Name is required"),
@@ -17,6 +19,8 @@ const compactLeadSchema = z.object({
     .regex(/^[\d\s\-()+ ]+$/, "Valid phone number required"),
   email: z.string().email("Valid email required"),
   serviceAddress: z.string().min(5, "Street address required"),
+  city: z.string().min(2, "City is required"),
+  state: z.string().min(2, "State is required"),
   zip: z.string().min(5, "ZIP code required").max(10),
 })
 
@@ -29,9 +33,10 @@ type CompactLeadFormProps = {
 }
 
 export default function CompactLeadForm({ repId, repName, source = "rep-page" }: CompactLeadFormProps) {
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submittedName, setSubmittedName] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
+  const { repSlug } = useAttribution()
 
   const {
     register,
@@ -45,39 +50,36 @@ export default function CompactLeadForm({ repId, repName, source = "rep-page" }:
     setIsSubmitting(true)
     setSubmitError(null)
 
+    const resolvedRepId = repId ?? repSlug
+
     const result = await submitLead({
       fullName: data.fullName,
       email: data.email,
       phone: data.phone,
       serviceAddress: data.serviceAddress,
-      city: "",
-      state: "",
+      city: data.city,
+      state: data.state,
       zip: data.zip,
       source,
-      repId: repId,
+      repId: resolvedRepId,
     })
 
     setIsSubmitting(false)
 
     if (result.success) {
-      setIsSubmitted(true)
+      setSubmittedName(data.fullName)
     } else {
       setSubmitError(result.error ?? "Something went wrong. Please try again.")
     }
   }
 
-  if (isSubmitted) {
+  if (submittedName) {
     return (
-      <div className="rounded-xl border border-fiber-success/30 bg-fiber-success/5 p-8 text-center">
-        <CheckCircle className="w-12 h-12 text-fiber-success mx-auto mb-4" />
-        <h3 className="text-xl font-bold text-foreground mb-2">
-          You&apos;re All Set!
-        </h3>
-        <p className="text-muted-foreground">
-          {repName ? `${repName} will` : "A representative will"} reach out shortly to confirm
-          availability and get you connected.
-        </p>
-      </div>
+      <ConfirmationScreen
+        firstName={submittedName.split(" ")[0]}
+        repName={repName}
+        source="rep-page"
+      />
     )
   }
 
@@ -125,24 +127,49 @@ export default function CompactLeadForm({ repId, repName, source = "rep-page" }:
         )}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="sm:col-span-2">
+      <div>
+        <input
+          {...register("serviceAddress")}
+          type="text"
+          placeholder="Street Address"
+          autoComplete="street-address"
+          className={inputClasses}
+        />
+        {errors.serviceAddress && (
+          <p className="text-red-500 text-xs mt-1">{errors.serviceAddress.message}</p>
+        )}
+      </div>
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="col-span-1 sm:col-span-2">
           <input
-            {...register("serviceAddress")}
+            {...register("city")}
             type="text"
-            placeholder="Street Address"
-            autoComplete="street-address"
+            placeholder="City"
+            autoComplete="address-level2"
             className={inputClasses}
           />
-          {errors.serviceAddress && (
-            <p className="text-red-500 text-xs mt-1">{errors.serviceAddress.message}</p>
+          {errors.city && (
+            <p className="text-red-500 text-xs mt-1">{errors.city.message}</p>
+          )}
+        </div>
+        <div>
+          <input
+            {...register("state")}
+            type="text"
+            placeholder="State"
+            autoComplete="address-level1"
+            className={inputClasses}
+          />
+          {errors.state && (
+            <p className="text-red-500 text-xs mt-1">{errors.state.message}</p>
           )}
         </div>
         <div>
           <input
             {...register("zip")}
             type="text"
-            placeholder="ZIP Code"
+            placeholder="ZIP"
             autoComplete="postal-code"
             className={inputClasses}
           />

@@ -7,6 +7,8 @@ import { ThemeProviderComponent } from "@/components/layout/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileStickyCtA } from "@/components/layout/mobile-sticky-cta";
+import { Suspense } from "react";
+import { AttributionProvider } from "@/components/providers/attribution-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -114,10 +116,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProviderComponent attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          {children}
-          <Footer />
-          <MobileStickyCtA />
+          <Suspense>
+            <AttributionProvider>
+              <Header />
+              {children}
+              <Footer />
+              <MobileStickyCtA />
+            </AttributionProvider>
+          </Suspense>
         </ThemeProviderComponent>
       </body>
     </html>

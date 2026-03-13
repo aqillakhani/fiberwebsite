@@ -22,7 +22,7 @@ export async function GET(
   }
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fiberfastusa.com"
-  const repUrl = `${baseUrl}/rep/${encodeURIComponent(slug)}`
+  const repUrl = `${baseUrl}/rep/${encodeURIComponent(slug)}?door=1`
 
   try {
     const qrDataUrl = await QRCode.toDataURL(repUrl, {
@@ -93,6 +93,11 @@ export async function GET(
               >
                 {rep.role}
               </div>
+              {(rep.city || rep.territory) && (
+                <div style={{ fontSize: "12px", color: "#94A3B8", marginTop: "4px" }}>
+                  {rep.city && rep.state ? `${rep.city}, ${rep.state}` : rep.territory || ""}
+                </div>
+              )}
               {rep.phone && (
                 <div style={{ fontSize: "13px", color: "#CBD5E1", marginTop: "8px" }}>
                   {rep.phone}

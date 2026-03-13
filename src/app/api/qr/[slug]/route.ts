@@ -16,7 +16,7 @@ export async function GET(
   const format = searchParams.get("format") ?? "png"
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fiberfastusa.com"
-  const repUrl = `${baseUrl}/rep/${encodeURIComponent(slug)}`
+  const repUrl = `${baseUrl}/rep/${encodeURIComponent(slug)}?door=1`
 
   try {
     if (format === "svg") {

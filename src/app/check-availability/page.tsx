@@ -1,50 +1,78 @@
 import type { Metadata } from "next";
-import { Zap, Shield, Award } from "lucide-react";
+import { Suspense } from "react";
+import { Shield, Zap, Award, Wifi } from "lucide-react";
 
-import { AvailabilityCheckForm } from "@/components/forms/availability-check-form";
+import QualificationFlow from "@/components/forms/qualification-flow";
 
 export const metadata: Metadata = {
   title: "Check Availability | FiberFastUSA",
   description:
-    "Check if FiberFastUSA fiber internet is available at your address. Enter your location and get instant results.",
+    "Check if FiberFastUSA fiber internet is available at your address. Choose your plan, pick an install date, and get connected.",
+  openGraph: {
+    title: "Check Your Fiber Availability | FiberFastUSA",
+    description: "See if blazing-fast fiber internet is available at your address.",
+  },
 };
 
-export default function CheckAvailabilityPage() {
+function QualificationFlowWrapper({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const address = typeof searchParams.address === "string" ? searchParams.address : undefined;
+  const plan = typeof searchParams.plan === "string" ? searchParams.plan : undefined;
+
+  return <QualificationFlow prefilledAddress={address} prefilledPlan={plan} />;
+}
+
+export default async function CheckAvailabilityPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const resolvedSearchParams = await searchParams;
+
   const trustSignals = [
-    { icon: Zap, label: "Fastest in Colorado" },
-    { icon: Shield, label: "Reliable Service" },
-    { icon: Award, label: "Top Rated" },
+    { icon: Zap, label: "Nationwide Fiber Coverage" },
+    { icon: Shield, label: "No Contracts" },
+    { icon: Wifi, label: "No Data Caps" },
+    { icon: Award, label: "Free Installation" },
   ];
 
   return (
     <main>
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Check If Fiber Is Available at Your Address
+          <div className="text-center mb-10">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+              Get Connected to Fiber Internet
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground sm:text-xl max-w-2xl mx-auto">
-              Enter your address and we&apos;ll let you know if FiberFastUSA is in your area.
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Check availability, choose your plan, and schedule your installation — all in under 2 minutes.
             </p>
           </div>
 
-          <div className="mx-auto max-w-xl mb-12">
-            <AvailabilityCheckForm />
-          </div>
-
           {/* Trust Signals */}
-          <div className="mx-auto max-w-2xl">
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mx-auto max-w-2xl mb-10">
+            <div className="flex flex-wrap justify-center gap-6">
               {trustSignals.map((signal) => {
                 const Icon = signal.icon;
                 return (
-                  <div key={signal.label} className="flex flex-col items-center text-center">
-                    <Icon className="size-8 text-primary mb-2" />
-                    <p className="text-sm font-medium text-foreground">{signal.label}</p>
+                  <div key={signal.label} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Icon className="size-4 text-fiber-success" />
+                    <span className="font-medium">{signal.label}</span>
                   </div>
                 );
               })}
+            </div>
+          </div>
+
+          {/* Qualification Flow */}
+          <div className="mx-auto max-w-2xl">
+            <div className="bg-card rounded-2xl border border-border p-6 md:p-10 shadow-sm">
+              <Suspense fallback={<div className="h-96 flex items-center justify-center text-muted-foreground">Loading...</div>}>
+                <QualificationFlowWrapper searchParams={resolvedSearchParams} />
+              </Suspense>
             </div>
           </div>
         </div>

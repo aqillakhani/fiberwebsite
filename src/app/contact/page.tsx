@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Contact Us | FiberFastUSA",
   description:
     "Get in touch with FiberFastUSA. Call, email, or send us a message. Our local team is here to help.",
+  openGraph: {
+    title: "Contact FiberFastUSA Support Team",
+    description: "Reach out to our friendly team for help with any questions about fiber internet.",
+  },
 };
 
 export default function ContactPage() {

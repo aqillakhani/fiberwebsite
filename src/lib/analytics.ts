@@ -31,6 +31,14 @@ export function trackRepVerified(repId: string) {
   trackEvent("rep_verified", { rep_id: repId });
 }
 
+export function trackDoorModeView(repSlug: string) {
+  trackEvent("door_mode_view", { rep_slug: repSlug });
+}
+
+export function trackDoorModeSubmit(repSlug: string, planId: string) {
+  trackEvent("door_mode_submit", { rep_slug: repSlug, plan: planId });
+}
+
 // Type declarations for analytics globals
 declare global {
   interface Window {

@@ -29,6 +29,9 @@ export const leadSchema = z.object({
   utmMedium: z.string().optional(),
   utmCampaign: z.string().optional(),
   repId: z.string().optional(),
+  selectedPlan: z.string().optional(),
+  preferredInstallDate: z.string().optional(),
+  preferredInstallTime: z.enum(["morning", "afternoon", "no-preference"]).optional(),
 });
 
 export type LeadFormData = z.infer<typeof leadSchema>;
