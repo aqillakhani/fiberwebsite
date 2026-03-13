@@ -35,6 +35,40 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "FiberFastUSA",
+              url: "https://fiberfastusa.com",
+              logo: "https://fiberfastusa.com/logo.png",
+              description:
+                "Blazing-fast fiber internet with no contracts, no data caps, and no hidden fees.",
+              telephone: "(888) 555-FAST",
+              email: "hello@fiberfastusa.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "123 Fiber Lane",
+                addressLocality: "Denver",
+                addressRegion: "CO",
+                postalCode: "80202",
+                addressCountry: "US",
+              },
+              sameAs: [
+                "https://facebook.com/fiberfastusa",
+                "https://x.com/fiberfastusa",
+                "https://instagram.com/fiberfastusa",
+                "https://linkedin.com/company/fiberfastusa",
+              ],
+              areaServed: {
+                "@type": "Country",
+                name: "United States",
+              },
+            }),
+          }}
+        />
         {gaId && (
           <>
             <Script

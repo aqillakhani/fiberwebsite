@@ -20,6 +20,29 @@ export const metadata: Metadata = {
   },
 }
 
+const pricingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "FiberFastUSA Internet Plans",
+  itemListElement: PLANS.map((plan, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Product",
+      name: `FiberFastUSA ${plan.name}`,
+      description: plan.description,
+      offers: {
+        "@type": "Offer",
+        price: plan.price,
+        priceCurrency: "USD",
+        priceValidUntil: "2027-12-31",
+        availability: "https://schema.org/InStock",
+        url: `https://fiberfastusa.com/get-started?plan=${plan.id}`,
+      },
+    },
+  })),
+}
+
 export default function PricingPage() {
   const pricingFAQ = [
     {
@@ -51,6 +74,10 @@ export default function PricingPage() {
 
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
+      />
       {/* Hero */}
       <section className="section-navy py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white pointer-events-none" />
