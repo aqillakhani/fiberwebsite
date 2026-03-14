@@ -128,7 +128,7 @@ export default function WhyFiberPage() {
       </section>
 
       {/* Comparison Table: Fiber vs Cable vs Tower/Satellite */}
-      <section id="speed-comparison" className="py-16 md:py-24 bg-muted/30 scroll-mt-20">
+      <section id="speed-comparison" className="py-16 md:py-24 bg-white white-section scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -153,65 +153,80 @@ export default function WhyFiberPage() {
                 {[
                   {
                     feature: "Download Speed",
-                    fiber: { text: "Up to 7,000 Mbps", good: true },
+                    fiber: { stat: "7,000 Mbps", text: "Up to 7 Gbps", good: true },
                     cable: { text: "Up to 300 Mbps", bad: true },
                     satellite: { text: "Up to 25 Mbps", bad: true },
                   },
                   {
                     feature: "Upload Speed",
-                    fiber: { text: "Up to 7,000 Mbps (symmetric)", good: true },
+                    fiber: { stat: "7,000 Mbps", text: "Symmetric — same as download", good: true },
                     cable: { text: "10-50 Mbps", bad: true },
                     satellite: { text: "3 Mbps", bad: true },
                   },
                   {
                     feature: "Latency",
-                    fiber: { text: "1-5 ms", good: true },
+                    fiber: { stat: "<5 ms", text: "Ultra-low ping", good: true },
                     cable: { text: "10-30 ms", bad: true },
                     satellite: { text: "500-700 ms", bad: true },
                   },
                   {
                     feature: "Reliability",
-                    fiber: { text: "99.9% uptime", good: true },
+                    fiber: { stat: "99.9%", text: "Uptime guarantee", good: true },
                     cable: { text: "Weather/distance dependent", bad: true },
                     satellite: { text: "Weather disruptions common", bad: true },
                   },
                   {
                     feature: "Data Caps",
-                    fiber: { text: "None — unlimited", good: true },
+                    fiber: { stat: "Unlimited", text: "No caps, no throttling", good: true },
                     cable: { text: "Often 1-1.5 TB", bad: true },
                     satellite: { text: "Strict caps (40-150 GB)", bad: true },
                   },
                   {
                     feature: "Technology",
-                    fiber: { text: "Light through glass fiber", good: true },
+                    fiber: { stat: "Fiber Optic", text: "Light through glass", good: true },
                     cable: { text: "Electrical through copper", ok: true },
                     satellite: { text: "Radio waves to orbit", ok: true },
                   },
                   {
                     feature: "Shared Bandwidth",
-                    fiber: { text: "Dedicated line to your home", good: true },
+                    fiber: { stat: "Dedicated", text: "Your own line to your home", good: true },
                     cable: { text: "Shared with neighbors", bad: true },
                     satellite: { text: "Shared across region", bad: true },
                   },
                   {
                     feature: "Monthly Price",
-                    fiber: { text: "From $34.99/mo", good: true },
+                    fiber: { stat: "$34.99", text: "Starting price/mo", good: true },
                     cable: { text: "From $49.99/mo", bad: true },
                     satellite: { text: "From $64.99/mo", bad: true },
                   },
                   {
                     feature: "Contract Required",
-                    fiber: { text: "No contract", good: true },
+                    fiber: { stat: "None", text: "Month-to-month, cancel anytime", good: true },
                     cable: { text: "Often 1-2 year contract", bad: true },
                     satellite: { text: "Usually 2 year contract", bad: true },
                   },
+                  {
+                    feature: "Installation",
+                    fiber: { stat: "Free", text: "Professional install included", good: true },
+                    cable: { text: "$49-$99 install fee", bad: true },
+                    satellite: { text: "$99-$199 install fee", bad: true },
+                  },
+                  {
+                    feature: "Equipment",
+                    fiber: { stat: "Free", text: "Wi-Fi router included", good: true },
+                    cable: { text: "$10-$15/mo rental", bad: true },
+                    satellite: { text: "$10-$25/mo rental", bad: true },
+                  },
                 ].map((row) => (
                   <tr key={row.feature}>
-                    <td className="px-6 py-4 font-medium text-foreground">{row.feature}</td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 font-bold text-foreground">{row.feature}</td>
+                    <td className="px-6 py-4 bg-fiber-teal/5">
                       <div className="flex items-center gap-2">
-                        {row.fiber.good && <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0" />}
-                        <span className="text-sm font-medium">{row.fiber.text}</span>
+                        <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0" />
+                        <div>
+                          <span className="text-base font-black text-fiber-teal block">{row.fiber.stat}</span>
+                          <span className="text-xs text-muted-foreground">{row.fiber.text}</span>
+                        </div>
                       </div>
                     </td>
                     <td className="px-6 py-4">
