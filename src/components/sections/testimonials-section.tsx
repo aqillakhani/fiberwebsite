@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { Star } from "lucide-react"
 import { TESTIMONIALS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
@@ -76,20 +75,6 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Read More Reviews link */}
-        <div
-          className={cn(
-            "text-center transition-all duration-700 delay-700",
-            isVisible ? "opacity-100" : "opacity-0"
-          )}
-        >
-          <Link
-            href="/reviews"
-            className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-teal transition-colors font-semibold"
-          >
-            Read More Reviews &rarr;
-          </Link>
-        </div>
       </div>
     </section>
   )

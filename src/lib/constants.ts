@@ -694,7 +694,6 @@ export const NAV_LINKS = [
   { href: "/pricing", label: "Pricing" },
   { href: "/why-fiber", label: "Why Fiber" },
   { href: "/about", label: "About" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -702,7 +701,6 @@ export const NAV_LINKS = [
 export const FOOTER_LINKS = {
   company: [
     { href: "/about", label: "About Us" },
-    { href: "/reviews", label: "Reviews" },
     { href: "/contact", label: "Contact" },
     { href: "/careers", label: "Careers" },
     { href: "/verify-rep", label: "Verify a Rep" },
