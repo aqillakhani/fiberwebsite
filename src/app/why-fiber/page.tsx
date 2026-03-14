@@ -154,7 +154,7 @@ export default function WhyFiberPage() {
                   {
                     feature: "Download Speed",
                     fiber: { stat: "7,000 Mbps", text: "Up to 7 Gbps", good: true },
-                    cable: { text: "Up to 300 Mbps", bad: true },
+                    cable: { text: "Up to 700 Mbps", bad: true },
                     satellite: { text: "Up to 25 Mbps", bad: true },
                   },
                   {

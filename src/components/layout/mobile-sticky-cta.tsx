@@ -2,29 +2,21 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { XIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 export function MobileStickyCtA() {
   const [isVisible, setIsVisible] = useState(false)
-  const [isDismissed, setIsDismissed] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const hasScrolled = window.scrollY > 300
-      setIsVisible(hasScrolled && !isDismissed)
+      setIsVisible(window.scrollY > 300)
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [isDismissed])
-
-  const handleDismiss = () => {
-    setIsDismissed(true)
-    setIsVisible(false)
-  }
+  }, [])
 
   return (
     <div
@@ -33,20 +25,14 @@ export function MobileStickyCtA() {
         isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
       )}
     >
-      <div className="bg-white dark:bg-gray-900 border-t border-border shadow-lg pb-safe pt-3 px-4">
-        <div className="flex items-center gap-2 max-w-7xl mx-auto">
-          <Link href="/check-availability" className="flex-1">
-            <Button className="w-full bg-red-600 text-white hover:bg-red-700">
-              Check Availability
+      <div className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-border shadow-[0_-4px_16px_rgba(0,0,0,0.1)] pb-safe pt-3 pb-4 px-4">
+        <div className="flex flex-col items-center gap-1.5 max-w-7xl mx-auto">
+          <p className="text-xs text-gray-500 font-medium">Check if fiber is available</p>
+          <Link href="/check-availability" className="w-full">
+            <Button className="w-full bg-red-600 text-white hover:bg-red-700 min-h-[48px] text-base font-semibold">
+              See If You Qualify
             </Button>
           </Link>
-          <button
-            onClick={handleDismiss}
-            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Close"
-          >
-            <XIcon className="size-4" />
-          </button>
         </div>
       </div>
     </div>

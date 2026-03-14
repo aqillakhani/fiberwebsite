@@ -21,7 +21,7 @@ const comparisons = [
   {
     type: "Cable",
     icon: Cable,
-    speed: "Up to 300 Mbps",
+    speed: "Up to 700 Mbps",
     latency: "15-30ms",
     upload: "20 Mbps",
     reliability: "Fair",

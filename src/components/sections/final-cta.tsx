@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { COMPANY } from "@/lib/constants"
 
@@ -11,23 +12,28 @@ export default function FinalCTASection() {
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
         {/* Main Heading */}
         <h2 className="heading-display mb-4 text-3xl text-white md:text-4xl lg:text-5xl">
-          Ready to Experience Real Fiber Internet?
+          Stop Settling for Slow Internet
         </h2>
 
         {/* Subtext */}
         <p className="mb-8 text-lg text-white/80">
-          Join thousands of homes enjoying blazing fast, reliable fiber internet. No contracts, no data caps, no regrets.
+          Join 10,000+ homes already enjoying blazing fast, reliable fiber. No contracts, no data caps — just speed you can count on.
         </p>
 
         {/* Primary CTA Button */}
-        <Link href="/check-availability" className="mb-6">
+        <Link href="/check-availability" className="mb-4">
           <Button
             size="lg"
-            className="min-h-[52px] bg-red-600 px-8 text-white hover:bg-red-700 shadow-lg shadow-red-600/30"
+            className="min-h-[56px] bg-red-600 px-10 text-lg text-white hover:bg-red-700 shadow-lg shadow-red-600/30 cta-pulse gap-2"
           >
-            Check Availability
+            See If You Qualify
+            <ArrowRight className="w-5 h-5" />
           </Button>
         </Link>
+
+        <p className="text-sm text-white/50 mb-6">
+          Takes less than 30 seconds
+        </p>
 
         {/* Secondary CTA Link */}
         <Link

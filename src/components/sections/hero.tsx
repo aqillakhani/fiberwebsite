@@ -67,37 +67,46 @@ export default function HeroSection() {
           <div className="flex flex-col justify-center">
             <h1
               className={cn(
-                "heading-display text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight text-white hero-heading-shadow transition-all duration-700",
+                "heading-display text-5xl md:text-6xl lg:text-8xl font-extrabold mb-6 leading-tight text-white hero-heading-shadow transition-all duration-700",
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               )}
             >
-              <span className="hero-line whitespace-nowrap">Fiber Internet That</span>
+              <span className="hero-line sm:whitespace-nowrap">Ultra-Fast Fiber</span>
               <br />
-              <span className="hero-line whitespace-nowrap">Actually Delivers</span>
+              <span className="hero-line sm:whitespace-nowrap">Built for You</span>
             </h1>
 
             <p
               className={cn(
-                "text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl transition-all duration-700 delay-100",
+                "text-lg md:text-xl text-white/90 mb-3 leading-relaxed max-w-xl transition-all duration-700 delay-100",
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               )}
             >
-              No contracts. No data caps. No surprises. Just fast. Speeds up to 7 Gbps starting at $34.99/mo.
+              Blazing symmetric speeds up to 7 Gbps. Stream, game, and work from home — all at the same time, without a hiccup.
+            </p>
+
+            <p
+              className={cn(
+                "text-base text-white/70 mb-8 max-w-xl transition-all duration-700 delay-150",
+                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              )}
+            >
+              No contracts. No data caps. No hidden fees. Starting at $34.99/mo.
             </p>
 
             {/* CTA Buttons */}
             <div
               className={cn(
-                "flex flex-col sm:flex-row gap-4 mb-12 transition-all duration-700 delay-200",
+                "flex flex-col sm:flex-row gap-4 mb-3 transition-all duration-700 delay-200",
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               )}
             >
               <Link href="/check-availability" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 gap-2 min-h-[52px] font-semibold shadow-lg shadow-red-600/30"
+                  className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 gap-2 min-h-[56px] text-lg font-semibold shadow-lg shadow-red-600/30 cta-pulse"
                 >
-                  Check Availability
+                  See If You Qualify
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
@@ -105,22 +114,38 @@ export default function HeroSection() {
               <Link href="/pricing" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-white text-black hover:bg-gray-100 px-8 md:px-10 min-h-[52px] font-bold"
+                  className="w-full sm:w-auto bg-white text-black hover:bg-gray-100 px-8 md:px-10 min-h-[56px] text-lg font-bold"
                 >
                   View Plans
                 </Button>
               </Link>
             </div>
 
-            {/* Social proof badge */}
+            {/* Microcopy below CTAs */}
+            <p
+              className={cn(
+                "text-sm text-white/60 mb-10 transition-all duration-700 delay-250",
+                mounted ? "opacity-100" : "opacity-0"
+              )}
+            >
+              Takes less than 30 seconds
+            </p>
+
+            {/* Social proof badges */}
             <div
               className={cn(
-                "inline-flex items-center gap-3 w-fit px-4 py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-700 delay-300",
+                "flex flex-wrap items-center gap-4 transition-all duration-700 delay-300",
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               )}
             >
-              <span className="w-2 h-2 bg-green-500 rounded-full pulse-green" />
-              <span className="text-sm font-medium text-white/80">Serving 50+ cities nationwide</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+                <span className="w-2 h-2 bg-green-500 rounded-full pulse-green" />
+                <span className="text-sm font-medium text-white/80">Trusted by 10,000+ homes</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+                <span className="text-amber-400 text-sm">&#9733;</span>
+                <span className="text-sm font-medium text-white/80">4.9 average rating</span>
+              </div>
             </div>
           </div>
 
@@ -185,10 +210,10 @@ export default function HeroSection() {
                       <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div
                           className="h-full bg-amber-400 rounded-full transition-all duration-1000 ease-out delay-200"
-                          style={{ width: mounted ? "20%" : "0%" }}
+                          style={{ width: mounted ? "30%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-black mt-0.5">300 Mbps</div>
+                      <div className="text-[10px] font-bold text-black mt-0.5">700 Mbps</div>
                     </div>
                     <div>
                       <div className="text-[10px] text-gray-400 font-semibold mb-1">Upload</div>

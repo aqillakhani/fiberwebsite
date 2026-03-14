@@ -13,7 +13,7 @@ export default function PlansPreviewSection() {
   const displayedPlans = PLANS.slice(0, 4)
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white white-section">
+    <section className="w-full py-20 md:py-28 bg-white white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div
@@ -139,7 +139,7 @@ export default function PlansPreviewSection() {
                         : "bg-white text-black border border-gray-300 hover:bg-gray-100 font-bold"
                     )}
                   >
-                    Check Availability
+                    See If You Qualify
                   </Link>
                 </CardContent>
               </Card>

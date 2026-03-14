@@ -7,6 +7,7 @@ import { ThemeProviderComponent } from "@/components/layout/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileStickyCtA } from "@/components/layout/mobile-sticky-cta";
+import { RepBanner } from "@/components/layout/rep-banner";
 import { Suspense } from "react";
 import { AttributionProvider } from "@/components/providers/attribution-provider";
 
@@ -115,6 +116,7 @@ export default function RootLayout({
           <Suspense>
             <AttributionProvider>
               <Header />
+              <RepBanner />
               {children}
               <Footer />
               <MobileStickyCtA />

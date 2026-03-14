@@ -1,24 +1,25 @@
 import type { Metadata } from "next"
 
 import HeroSection from "@/components/sections/hero"
+import HowItWorksSection from "@/components/sections/how-it-works"
 import WhyFiberSection from "@/components/sections/why-fiber-section"
 import SpeedVisualization from "@/components/sections/speed-visualization"
 import PlansPreviewSection from "@/components/sections/plans-preview"
-import HowItWorksSection from "@/components/sections/how-it-works"
+import InlineCTA from "@/components/sections/inline-cta"
 import TrustSection from "@/components/sections/trust-section"
-import RepVerificationSection from "@/components/sections/rep-verification-section"
-import ServiceAreaSection from "@/components/sections/service-area-section"
-import AvailabilitySection from "@/components/sections/availability-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
+import AvailabilitySection from "@/components/sections/availability-section"
+import ServiceAreaSection from "@/components/sections/service-area-section"
+import RepVerificationSection from "@/components/sections/rep-verification-section"
 import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
 
 export const metadata: Metadata = {
-  title: "FiberFastUSA | Fiber Internet That Actually Delivers",
+  title: "FiberFastUSA | Ultra-Fast Fiber Internet Built for Your Home",
   description:
     "No contracts. No data caps. No surprises. Just fast. Fiber internet from 500 Mbps to 7 Gbps starting at $34.99/mo. Check availability at your address today.",
   openGraph: {
-    title: "FiberFastUSA | Fiber Internet That Actually Works",
+    title: "FiberFastUSA | Ultra-Fast Fiber Internet Built for Your Home",
     description:
       "Gigabit fiber internet starting at $34.99/mo. No contracts, no data caps. Check availability now.",
   },
@@ -56,16 +57,23 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
       <HeroSection />
+      <HowItWorksSection />
       <WhyFiberSection />
       <SpeedVisualization />
       <PlansPreviewSection />
-      <HowItWorksSection />
-      <div className="divider-gradient" />
+      <InlineCTA
+        heading="See if fiber is available at your address"
+        ctaText="Check Your Address"
+      />
       <TrustSection />
-      <RepVerificationSection />
-      <ServiceAreaSection />
-      <AvailabilitySection />
       <TestimonialsSection />
+      <AvailabilitySection />
+      <InlineCTA
+        heading="Still have questions? We're here to help."
+        ctaText="Get Started Now"
+      />
+      <ServiceAreaSection />
+      <RepVerificationSection />
       <HomepageFAQ />
       <FinalCTASection />
     </main>

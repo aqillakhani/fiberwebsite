@@ -97,7 +97,7 @@ export default function HowItWorksSection() {
   ]
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white white-section">
+    <section className="w-full py-20 md:py-28 bg-white white-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section title */}
         <h2 className="heading-section text-foreground text-center mb-12">
@@ -138,7 +138,7 @@ export default function HowItWorksSection() {
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white"
             >
-              Check Availability
+              Check Your Address
             </Button>
           </Link>
         </div>

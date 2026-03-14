@@ -5,10 +5,10 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 const speeds = [
   { label: "DSL", speed: 25, unit: "Mbps", color: "bg-red-400/50", width: "0.36%", isFiber: false },
-  { label: "Cable", speed: 300, unit: "Mbps", color: "bg-amber-400/50", width: "4.3%", isFiber: false },
+  { label: "Cable", speed: 700, unit: "Mbps", color: "bg-amber-400/50", width: "10%", isFiber: false },
   { label: "FiberFast 500", speed: 500, unit: "Mbps", color: "bg-fiber-blue", width: "7.1%", isFiber: true },
   { label: "FiberFast Gig 1", speed: 1000, unit: "Mbps", color: "bg-fiber-teal", width: "14.3%", isFiber: true },
-  { label: "FiberFast Gig 7", speed: 7000, unit: "Mbps", color: "bg-gradient-to-r from-fiber-blue to-fiber-teal", width: "100%", isFiber: true, multiplier: "280x faster than DSL" },
+  { label: "FiberFast Gig 7", speed: 7000, unit: "Mbps", color: "bg-gradient-to-r from-fiber-blue to-fiber-teal", width: "100%", isFiber: true, multiplier: "10x faster than cable" },
 ]
 
 export default function SpeedVisualization() {
