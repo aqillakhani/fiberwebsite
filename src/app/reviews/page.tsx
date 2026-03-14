@@ -5,6 +5,7 @@ import { Star } from "lucide-react";
 import { TESTIMONIALS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { SubmitReviewForm } from "@/components/forms/submit-review-form";
 
 export const metadata: Metadata = {
   title: "Customer Reviews | FiberFastUSA",
@@ -108,14 +109,31 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Submit a Review */}
       <section className="border-t bg-muted/30 py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-foreground mb-2">
+              Share Your Experience
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Already a FiberFastUSA customer? We&apos;d love to hear from you.
+            </p>
+          </div>
+          <div className="bg-card rounded-xl border border-border p-6 md:p-8 shadow-sm">
+            <SubmitReviewForm />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="border-t bg-background py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold">Join our happy customers</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Experience the speed and reliability that thousands of Colorado
-              families trust.
+              Experience the speed and reliability that thousands of families
+              trust.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">

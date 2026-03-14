@@ -71,7 +71,7 @@ export default function HeroSection() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               )}
             >
-              <span className="hero-line sm:whitespace-nowrap">Ultra-Fast Fiber</span>
+              <span className="hero-line sm:whitespace-nowrap">Light-Speed Fiber</span>
               <br />
               <span className="hero-line sm:whitespace-nowrap">Built for You</span>
             </h1>

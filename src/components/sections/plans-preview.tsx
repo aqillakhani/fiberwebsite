@@ -96,14 +96,14 @@ export default function PlansPreviewSection() {
                   {/* Badges: Free Months & Gift Card */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {plan.freeMonths !== null && (
-                      <Badge className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800 flex items-center gap-1">
-                        <Zap className="size-3" />
+                      <Badge className="bg-green-600 text-white border-green-700 shadow-sm shadow-green-600/20 flex items-center gap-1.5 px-3 py-1 text-sm font-bold animate-pulse-subtle">
+                        <Zap className="size-3.5" />
                         {plan.freeMonths} Months FREE
                       </Badge>
                     )}
                     {plan.giftCard > 0 && (
-                      <Badge className="bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400 border-teal-200 dark:border-teal-800 flex items-center gap-1">
-                        <Gift className="size-3" />
+                      <Badge className="bg-amber-500 text-white border-amber-600 shadow-sm shadow-amber-500/20 flex items-center gap-1.5 px-3 py-1 text-sm font-bold">
+                        <Gift className="size-3.5" />
                         ${plan.giftCard} Gift Card
                       </Badge>
                     )}

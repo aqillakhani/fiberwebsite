@@ -15,11 +15,11 @@ import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
 
 export const metadata: Metadata = {
-  title: "FiberFastUSA | Ultra-Fast Fiber Internet Built for Your Home",
+  title: "FiberFastUSA | Light-Speed Fiber Internet Built for Your Home",
   description:
     "No contracts. No data caps. No surprises. Just fast. Fiber internet from 500 Mbps to 7 Gbps starting at $34.99/mo. Check availability at your address today.",
   openGraph: {
-    title: "FiberFastUSA | Ultra-Fast Fiber Internet Built for Your Home",
+    title: "FiberFastUSA | Light-Speed Fiber Internet Built for Your Home",
     description:
       "Gigabit fiber internet starting at $34.99/mo. No contracts, no data caps. Check availability now.",
   },
