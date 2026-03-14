@@ -29,7 +29,7 @@ export default function RepVerificationSection() {
   const displayReps = TEAM_MEMBERS.slice(0, 3)
 
   return (
-    <section className="w-full py-16 md:py-24 bg-background">
+    <section className="w-full py-16 md:py-24 bg-white white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={cn(

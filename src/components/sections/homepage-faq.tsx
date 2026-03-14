@@ -16,7 +16,7 @@ export default function HomepageFAQ() {
   const topFaqs = FAQ_ITEMS.slice(0, 5)
 
   return (
-    <section className="w-full py-16 md:py-24 bg-background">
+    <section className="w-full py-16 md:py-24 bg-white white-section">
       <div ref={ref} className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={cn(

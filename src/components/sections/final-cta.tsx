@@ -23,7 +23,7 @@ export default function FinalCTASection() {
         <Link href="/check-availability" className="mb-6">
           <Button
             size="lg"
-            className="min-h-[52px] bg-fiber-teal px-8 text-white hover:bg-fiber-teal/90 glow-teal"
+            className="min-h-[52px] bg-red-600 px-8 text-white hover:bg-red-700 shadow-lg shadow-red-600/30"
           >
             Check Availability
           </Button>

@@ -1,19 +1,28 @@
+"use client"
+
 import { Zap, Shield, Infinity, Ban, Wifi, Headphones } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 type BenefitCardProps = {
   icon: React.ReactNode
   title: string
   description: string
   iconColor: string
+  delay: number
+  isVisible: boolean
 }
 
-function BenefitCard({ icon, title, description, iconColor }: BenefitCardProps) {
+function BenefitCard({ icon, title, description, iconColor, delay, isVisible }: BenefitCardProps) {
   return (
-    <div className={cn(
-      "card-premium flex flex-col items-center text-center p-6 md:p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow",
-      "bg-card"
-    )}>
+    <div
+      className={cn(
+        "card-premium flex flex-col items-center text-center p-6 md:p-8 rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-700",
+        "bg-card",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      )}
+      style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
+    >
       <div className={cn(
         "flex items-center justify-center w-12 h-12 rounded-full mb-4",
         iconColor
@@ -31,49 +40,54 @@ function BenefitCard({ icon, title, description, iconColor }: BenefitCardProps) 
 }
 
 export default function BenefitsSection() {
+  const { ref, isVisible } = useIntersectionObserver()
+
   const benefits = [
     {
       icon: <Zap className="w-6 h-6 text-white" />,
       title: "Blazing Fast Speeds",
       description: "Up to 7 Gbps symmetric speeds. Stream, game, and work — all at once, all without lag.",
-      iconColor: "bg-amber-500"
+      iconColor: "bg-fiber-teal"
     },
     {
       icon: <Shield className="w-6 h-6 text-white" />,
       title: "Rock-Solid Reliability",
       description: "99.9% uptime backed by a dedicated fiber line straight to your home. No shared cables.",
-      iconColor: "bg-emerald-500"
+      iconColor: "bg-fiber-success"
     },
     {
       icon: <Infinity className="w-6 h-6 text-white" />,
       title: "No Data Caps — Ever",
       description: "Unlimited data with no throttling and no overage charges. Use as much as you want.",
-      iconColor: "bg-blue-500"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Ban className="w-6 h-6 text-white" />,
       title: "No Contracts Required",
       description: "Month-to-month plans with no commitments. Cancel anytime, no fees.",
-      iconColor: "bg-purple-500"
+      iconColor: "bg-fiber-teal"
     },
     {
       icon: <Wifi className="w-6 h-6 text-white" />,
       title: "Free Equipment",
       description: "Every plan includes a free premium Wi-Fi router and professional installation.",
-      iconColor: "bg-teal-500"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Headphones className="w-6 h-6 text-white" />,
       title: "Local Customer Support",
       description: "Real humans answering your calls 24/7. No bots, no runaround, no overseas call centers.",
-      iconColor: "bg-rose-500"
+      iconColor: "bg-fiber-success"
     }
   ]
 
   return (
-    <section className="w-full py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="heading-section text-foreground text-center mb-12">
+    <section className="w-full py-16 md:py-24 bg-white white-section">
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className={cn(
+          "heading-section text-foreground text-center mb-12 transition-all duration-700",
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        )}>
           Why Choose FiberFastUSA
         </h2>
 
@@ -85,6 +99,8 @@ export default function BenefitsSection() {
               title={benefit.title}
               description={benefit.description}
               iconColor={benefit.iconColor}
+              delay={index * 100}
+              isVisible={isVisible}
             />
           ))}
         </div>

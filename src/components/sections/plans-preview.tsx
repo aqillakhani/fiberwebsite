@@ -1,35 +1,49 @@
+"use client"
+
 import Link from "next/link"
 import { Check, Zap, Gift } from "lucide-react"
 import { PLANS } from "@/lib/constants"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
 export default function PlansPreviewSection() {
+  const { ref, isVisible } = useIntersectionObserver()
   const displayedPlans = PLANS.slice(0, 4)
 
   return (
-    <section className="w-full py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-16 md:py-24 bg-white white-section">
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="mb-16 text-center">
+        <div
+          className={cn(
+            "mb-16 text-center transition-all duration-700",
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          )}
+        >
           <h2 className="heading-section text-foreground mb-3">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No hidden fees, no contracts, no surprises. Just fast, reliable fiber internet.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+            All-in pricing with no hidden fees. Free installation. Free router. No contracts.
+          </p>
+          <p className="text-base font-bold text-fiber-teal">
+            Schedule your install today — no payment required upfront.
           </p>
         </div>
 
         {/* Plans Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {displayedPlans.map((plan) => (
+          {displayedPlans.map((plan, index) => (
             <div
               key={plan.id}
               className={cn(
-                "relative",
-                plan.isFeatured && "lg:scale-105 lg:z-10"
+                "relative transition-all duration-700",
+                plan.isFeatured && "lg:scale-105 lg:z-10",
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               )}
+              style={{ transitionDelay: isVisible ? `${index * 100 + 200}ms` : "0ms" }}
             >
               {/* Most Popular Badge */}
               {plan.isFeatured && (
@@ -44,7 +58,9 @@ export default function PlansPreviewSection() {
               <Card
                 className={cn(
                   "card-premium flex flex-col h-full rounded-xl transition-all duration-300",
-                  plan.isFeatured && "gradient-border border-2"
+                  plan.isFeatured
+                    ? "gradient-border border-2 shadow-lg hover:shadow-xl"
+                    : "hover:border-fiber-teal/30"
                 )}
               >
                 <CardHeader className="pb-3">
@@ -95,8 +111,16 @@ export default function PlansPreviewSection() {
 
                   {/* Features */}
                   <div className="space-y-3 mb-8 flex-grow">
-                    {plan.features.slice(0, 4).map((feature, index) => (
-                      <div key={index} className="flex items-start gap-3">
+                    <div className="flex items-start gap-3">
+                      <Check className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-foreground">Free Professional Installation</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Check className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-foreground">Free Wi-Fi Router Included</span>
+                    </div>
+                    {plan.features.slice(0, 2).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
                         <Check className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground">
                           {feature}
@@ -107,15 +131,15 @@ export default function PlansPreviewSection() {
 
                   {/* CTA Button */}
                   <Link
-                    href={`/get-started?plan=${plan.id}`}
+                    href={`/check-availability?plan=${plan.id}`}
                     className={cn(
                       "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                       plan.isFeatured
-                        ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
-                        : "border border-border bg-transparent hover:bg-accent text-foreground"
+                        ? "bg-red-600 text-white hover:bg-red-700"
+                        : "bg-white text-black border border-gray-300 hover:bg-gray-100 font-bold"
                     )}
                   >
-                    Get Started
+                    Check Availability
                   </Link>
                 </CardContent>
               </Card>
@@ -124,13 +148,18 @@ export default function PlansPreviewSection() {
         </div>
 
         {/* View All Plans Link */}
-        <div className="text-center">
+        <div
+          className={cn(
+            "text-center transition-all duration-700 delay-700",
+            isVisible ? "opacity-100" : "opacity-0"
+          )}
+        >
           <Link
             href="/pricing"
             className="inline-flex items-center justify-center text-base font-semibold text-fiber-blue dark:text-fiber-blue hover:underline transition-colors"
           >
             View All Plans
-            <span className="ml-2">→</span>
+            <span className="ml-2">&rarr;</span>
           </Link>
         </div>
       </div>

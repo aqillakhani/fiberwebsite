@@ -127,12 +127,12 @@ export default function WhyFiberPage() {
         </div>
       </section>
 
-      {/* Comparison Table: Fiber vs Cable vs DSL */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      {/* Comparison Table: Fiber vs Cable vs Tower/Satellite */}
+      <section id="speed-comparison" className="py-16 md:py-24 bg-muted/30 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
-              Fiber vs Cable vs DSL
+              Fiber vs Copper Cable vs Tower/Satellite
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               See how fiber stacks up against older internet technologies across every metric.
@@ -144,54 +144,66 @@ export default function WhyFiberPage() {
               <thead>
                 <tr className="border-b border-border bg-muted/50">
                   <th className="px-6 py-4 text-left font-semibold text-foreground">Feature</th>
-                  <th className="px-6 py-4 text-left font-semibold text-fiber-blue">Fiber</th>
-                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Cable</th>
-                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground">DSL</th>
+                  <th className="px-6 py-4 text-left font-semibold text-fiber-teal">Fiber Optic</th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Copper Cable</th>
+                  <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Tower / Satellite</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
                 {[
                   {
                     feature: "Download Speed",
-                    fiber: { text: "Up to 7 Gbps", good: true },
-                    cable: { text: "Up to 1 Gbps", ok: true },
-                    dsl: { text: "Up to 100 Mbps", bad: true },
+                    fiber: { text: "Up to 7,000 Mbps", good: true },
+                    cable: { text: "Up to 300 Mbps", bad: true },
+                    satellite: { text: "Up to 25 Mbps", bad: true },
                   },
                   {
                     feature: "Upload Speed",
-                    fiber: { text: "Symmetric (matches download)", good: true },
+                    fiber: { text: "Up to 7,000 Mbps (symmetric)", good: true },
                     cable: { text: "10-50 Mbps", bad: true },
-                    dsl: { text: "1-10 Mbps", bad: true },
+                    satellite: { text: "3 Mbps", bad: true },
                   },
                   {
                     feature: "Latency",
-                    fiber: { text: "1-5ms", good: true },
-                    cable: { text: "10-30ms", bad: true },
-                    dsl: { text: "25-50ms", bad: true },
+                    fiber: { text: "1-5 ms", good: true },
+                    cable: { text: "10-30 ms", bad: true },
+                    satellite: { text: "500-700 ms", bad: true },
                   },
                   {
                     feature: "Reliability",
                     fiber: { text: "99.9% uptime", good: true },
                     cable: { text: "Weather/distance dependent", bad: true },
-                    dsl: { text: "Distance degradation", bad: true },
+                    satellite: { text: "Weather disruptions common", bad: true },
                   },
                   {
                     feature: "Data Caps",
-                    fiber: { text: "None", good: true },
+                    fiber: { text: "None — unlimited", good: true },
                     cable: { text: "Often 1-1.5 TB", bad: true },
-                    dsl: { text: "Varies", bad: true },
+                    satellite: { text: "Strict caps (40-150 GB)", bad: true },
                   },
                   {
                     feature: "Technology",
-                    fiber: { text: "Light through glass", good: true },
-                    cable: { text: "Electrical through copper", ok: false },
-                    dsl: { text: "Phone line (copper)", ok: false },
+                    fiber: { text: "Light through glass fiber", good: true },
+                    cable: { text: "Electrical through copper", ok: true },
+                    satellite: { text: "Radio waves to orbit", ok: true },
                   },
                   {
                     feature: "Shared Bandwidth",
-                    fiber: { text: "Dedicated line", good: true },
+                    fiber: { text: "Dedicated line to your home", good: true },
                     cable: { text: "Shared with neighbors", bad: true },
-                    dsl: { text: "Dedicated but slow", ok: false },
+                    satellite: { text: "Shared across region", bad: true },
+                  },
+                  {
+                    feature: "Monthly Price",
+                    fiber: { text: "From $34.99/mo", good: true },
+                    cable: { text: "From $49.99/mo", bad: true },
+                    satellite: { text: "From $64.99/mo", bad: true },
+                  },
+                  {
+                    feature: "Contract Required",
+                    fiber: { text: "No contract", good: true },
+                    cable: { text: "Often 1-2 year contract", bad: true },
+                    satellite: { text: "Usually 2 year contract", bad: true },
                   },
                 ].map((row) => (
                   <tr key={row.feature}>
@@ -199,25 +211,23 @@ export default function WhyFiberPage() {
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
                         {row.fiber.good && <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0" />}
-                        <span className="text-sm">{row.fiber.text}</span>
+                        <span className="text-sm font-medium">{row.fiber.text}</span>
                       </div>
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
                         {row.cable.bad ? (
                           <XCircle className="size-5 text-red-500 flex-shrink-0" />
-                        ) : row.cable.ok ? (
-                          <CheckCircle2 className="size-5 text-teal-500 flex-shrink-0" />
                         ) : null}
                         <span className="text-sm text-muted-foreground">{row.cable.text}</span>
                       </div>
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
-                        {row.dsl.bad ? (
+                        {row.satellite.bad ? (
                           <XCircle className="size-5 text-red-500 flex-shrink-0" />
                         ) : null}
-                        <span className="text-sm text-muted-foreground">{row.dsl.text}</span>
+                        <span className="text-sm text-muted-foreground">{row.satellite.text}</span>
                       </div>
                     </td>
                   </tr>
@@ -375,7 +385,7 @@ export default function WhyFiberPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/check-availability"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition-all"
             >
               Check Availability
             </Link>

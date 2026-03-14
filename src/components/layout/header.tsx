@@ -112,12 +112,12 @@ export function Header() {
               </Button>
             )}
 
-            {/* Desktop Get Started Button */}
-            <Link href="/get-started" className="hidden lg:block">
+            {/* Desktop CTA Button */}
+            <Link href="/check-availability" className="hidden lg:block">
               <Button
-                className="bg-[var(--fiber-teal)] text-white hover:bg-[var(--fiber-teal)]/90"
+                className="bg-red-600 text-white hover:bg-red-700"
               >
-                Get Started
+                Check Availability
               </Button>
             </Link>
 
@@ -162,17 +162,16 @@ export function Header() {
                   <SheetFooter className="flex flex-col gap-3">
                     <Link href="/check-availability" className="w-full">
                       <Button
-                        className="w-full bg-[var(--fiber-teal)] text-white hover:bg-[var(--fiber-teal)]/90"
+                        className="w-full bg-red-600 text-white hover:bg-red-700"
                       >
                         Check Availability
                       </Button>
                     </Link>
-                    <Link href="/get-started" className="w-full">
+                    <Link href="/pricing" className="w-full">
                       <Button
-                        variant="outline"
-                        className="w-full"
+                        className="w-full bg-white text-black hover:bg-gray-100 border border-gray-300 font-bold"
                       >
-                        Get Started
+                        View Plans
                       </Button>
                     </Link>
                     <a

@@ -61,14 +61,14 @@ export default function AvailabilitySection() {
 
   if (isSubmitted) {
     return (
-      <section className="w-full section-navy py-16 md:py-20">
+      <section className="w-full bg-white py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex flex-col items-center gap-4">
             <CheckCircle className="w-16 h-16 text-fiber-success" />
-            <h2 className="text-2xl md:text-3xl font-bold text-white heading-section">
+            <h2 className="text-2xl md:text-3xl font-bold text-black heading-section">
               We Got Your Info!
             </h2>
-            <p className="text-white/80 text-lg max-w-xl">
+            <p className="text-gray-700 text-lg max-w-xl">
               A FiberFastUSA representative will reach out shortly to confirm
               availability and help you choose the perfect plan.
             </p>
@@ -79,15 +79,13 @@ export default function AvailabilitySection() {
   }
 
   return (
-    <section className="w-full section-navy py-16 md:py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-white pointer-events-none" />
-
+    <section className="w-full bg-white py-16 md:py-20 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white heading-section mb-3">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black heading-section mb-3">
             Check If Fiber Is Available at Your Address
           </h2>
-          <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
             Enter your details below and we&apos;ll confirm fiber availability in your area.
           </p>
         </div>
@@ -100,10 +98,10 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="name"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.fullName && (
-                <p className="text-red-400 text-xs mt-1">{errors.fullName.message}</p>
+                <p className="text-red-500 text-xs mt-1">{errors.fullName.message}</p>
               )}
             </div>
 
@@ -113,10 +111,10 @@ export default function AvailabilitySection() {
                 type="tel"
                 placeholder="Phone Number"
                 autoComplete="tel"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.phone && (
-                <p className="text-red-400 text-xs mt-1">{errors.phone.message}</p>
+                <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
               )}
             </div>
           </div>
@@ -127,10 +125,10 @@ export default function AvailabilitySection() {
               type="email"
               placeholder="Email Address"
               autoComplete="email"
-              className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+              className="w-full h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
             />
             {errors.email && (
-              <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
             )}
           </div>
 
@@ -141,10 +139,10 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Street Address"
                 autoComplete="street-address"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.serviceAddress && (
-                <p className="text-red-400 text-xs mt-1">{errors.serviceAddress.message}</p>
+                <p className="text-red-500 text-xs mt-1">{errors.serviceAddress.message}</p>
               )}
             </div>
 
@@ -154,16 +152,16 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="ZIP Code"
                 autoComplete="postal-code"
-                className="w-full h-12 px-4 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.zip && (
-                <p className="text-red-400 text-xs mt-1">{errors.zip.message}</p>
+                <p className="text-red-500 text-xs mt-1">{errors.zip.message}</p>
               )}
             </div>
           </div>
 
           {submitError && (
-            <p className="text-red-400 text-sm text-center">{submitError}</p>
+            <p className="text-red-500 text-sm text-center">{submitError}</p>
           )}
 
           <div className="pt-2">
@@ -171,7 +169,7 @@ export default function AvailabilitySection() {
               type="submit"
               disabled={isSubmitting}
               size="lg"
-              className="w-full sm:w-auto sm:min-w-[240px] mx-auto flex items-center justify-center gap-2 bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[52px] text-base font-semibold glow-teal"
+              className="w-full sm:w-auto sm:min-w-[240px] mx-auto flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white min-h-[52px] text-base font-semibold shadow-lg shadow-red-600/30"
             >
               {isSubmitting ? (
                 <>

@@ -14,7 +14,7 @@ export default function ServiceAreaSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-16 md:py-24 bg-muted/30">
+    <section className="w-full py-16 md:py-24 bg-white white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left — Content */}
@@ -47,7 +47,7 @@ export default function ServiceAreaSection() {
             </div>
 
             <Link href="/check-availability">
-              <Button className="bg-fiber-teal text-white hover:bg-fiber-teal/90 gap-2">
+              <Button className="bg-red-600 text-white hover:bg-red-700 gap-2 font-bold">
                 Check Your Address
                 <ArrowRight className="size-4" />
               </Button>

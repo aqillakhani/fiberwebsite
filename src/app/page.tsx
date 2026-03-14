@@ -5,8 +5,10 @@ import WhyFiberSection from "@/components/sections/why-fiber-section"
 import SpeedVisualization from "@/components/sections/speed-visualization"
 import PlansPreviewSection from "@/components/sections/plans-preview"
 import HowItWorksSection from "@/components/sections/how-it-works"
+import TrustSection from "@/components/sections/trust-section"
 import RepVerificationSection from "@/components/sections/rep-verification-section"
 import ServiceAreaSection from "@/components/sections/service-area-section"
+import AvailabilitySection from "@/components/sections/availability-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
 import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
@@ -58,8 +60,11 @@ export default function HomePage() {
       <SpeedVisualization />
       <PlansPreviewSection />
       <HowItWorksSection />
+      <div className="divider-gradient" />
+      <TrustSection />
       <RepVerificationSection />
       <ServiceAreaSection />
+      <AvailabilitySection />
       <TestimonialsSection />
       <HomepageFAQ />
       <FinalCTASection />
