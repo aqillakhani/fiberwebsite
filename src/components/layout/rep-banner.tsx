@@ -12,9 +12,9 @@ export function RepBanner() {
   const repName = rep?.name ?? repSlug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
 
   return (
-    <div className="w-full bg-fiber-teal/10 border-b border-fiber-teal/20">
+    <div className="w-full bg-black border-b border-black/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-center">
-        <p className="text-sm font-medium text-fiber-teal">
+        <p className="text-sm font-medium text-white">
           You&apos;re connected with <span className="font-bold">{repName}</span>, your local service specialist
         </p>
       </div>

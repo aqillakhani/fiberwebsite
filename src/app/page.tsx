@@ -7,7 +7,6 @@ import SpeedVisualization from "@/components/sections/speed-visualization"
 import PlansPreviewSection from "@/components/sections/plans-preview"
 import InlineCTA from "@/components/sections/inline-cta"
 import TrustSection from "@/components/sections/trust-section"
-import TestimonialsSection from "@/components/sections/testimonials-section"
 import AvailabilitySection from "@/components/sections/availability-section"
 import ServiceAreaSection from "@/components/sections/service-area-section"
 import RepVerificationSection from "@/components/sections/rep-verification-section"
@@ -58,15 +57,14 @@ export default function HomePage() {
       />
       <HeroSection />
       <HowItWorksSection />
+      <PlansPreviewSection />
       <WhyFiberSection />
       <SpeedVisualization />
-      <PlansPreviewSection />
       <InlineCTA
         heading="See if fiber is available at your address"
         ctaText="Check Your Address"
       />
       <TrustSection />
-      <TestimonialsSection />
       <AvailabilitySection />
       <InlineCTA
         heading="Still have questions? We're here to help."
