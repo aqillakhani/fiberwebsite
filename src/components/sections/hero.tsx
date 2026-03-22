@@ -104,9 +104,9 @@ export default function HeroSection() {
               <Link href="/check-availability" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 gap-2 min-h-[56px] text-lg font-semibold shadow-lg shadow-red-600/30 cta-pulse"
+                  className="w-full sm:w-auto bg-fiber-teal hover:bg-fiber-teal/90 text-white px-8 md:px-10 gap-2 min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-teal/30 cta-pulse"
                 >
-                  See If You Qualify
+                  Check Availability
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
@@ -124,29 +124,12 @@ export default function HeroSection() {
             {/* Microcopy below CTAs */}
             <p
               className={cn(
-                "text-sm text-white/60 mb-10 transition-all duration-700 delay-250",
+                "text-sm text-white/60 mb-6 transition-all duration-700 delay-250",
                 mounted ? "opacity-100" : "opacity-0"
               )}
             >
               Takes less than 30 seconds
             </p>
-
-            {/* Social proof badges */}
-            <div
-              className={cn(
-                "flex flex-wrap items-center gap-4 transition-all duration-700 delay-300",
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              )}
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
-                <span className="w-2 h-2 bg-green-500 rounded-full pulse-green" />
-                <span className="text-sm font-medium text-white/80">Trusted by 10,000+ homes</span>
-              </div>
-              <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
-                <span className="text-amber-400 text-sm">&#9733;</span>
-                <span className="text-sm font-medium text-white/80">4.9 average rating</span>
-              </div>
-            </div>
           </div>
 
           {/* Right side - Speed visualization */}

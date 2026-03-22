@@ -34,7 +34,7 @@ export default function InlineCTA({
         <Link href={href}>
           <Button
             size="lg"
-            className="bg-red-600 hover:bg-red-700 text-white min-h-[52px] px-8 gap-2 font-semibold shadow-lg shadow-red-600/30"
+            className="bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[52px] px-8 gap-2 font-semibold shadow-lg shadow-fiber-teal/30"
           >
             {ctaText}
             <ArrowRight className="w-5 h-5" />

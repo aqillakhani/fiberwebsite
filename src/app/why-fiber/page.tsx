@@ -400,7 +400,7 @@ export default function WhyFiberPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/check-availability"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition-all"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
             >
               Check Availability
             </Link>

@@ -283,9 +283,12 @@ export default function PricingPage() {
             </table>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 space-y-2">
             <p className="text-sm text-muted-foreground">
               All plans include free installation, free Wi-Fi router, no data caps, and no contracts.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Visa gift cards are delivered approximately 3 months after installation via email or mail — your choice.
             </p>
           </div>
         </div>

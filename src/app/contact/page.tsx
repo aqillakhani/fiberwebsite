@@ -69,7 +69,7 @@ export default function ContactPage() {
                 <CardContent>
                   <p className="text-sm font-medium">{COMPANY.hours}</p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Our team is ready to help during these hours.
+                    Our team is ready to help during these hours. We typically respond to messages within 24 hours.
                   </p>
                 </CardContent>
               </Card>

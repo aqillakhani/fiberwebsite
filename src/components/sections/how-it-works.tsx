@@ -136,7 +136,7 @@ export default function HowItWorksSection() {
           <Link href="/check-availability">
             <Button
               size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white"
+              className="bg-fiber-teal hover:bg-fiber-teal/90 text-white"
             >
               Check Your Address
             </Button>

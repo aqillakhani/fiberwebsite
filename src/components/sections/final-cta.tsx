@@ -17,16 +17,16 @@ export default function FinalCTASection() {
 
         {/* Subtext */}
         <p className="mb-8 text-lg text-white/80">
-          Join 10,000+ homes already enjoying blazing fast, reliable fiber. No contracts, no data caps — just speed you can count on.
+          Switch to blazing fast, reliable fiber internet. No contracts, no data caps — just speed you can count on.
         </p>
 
         {/* Primary CTA Button */}
         <Link href="/check-availability" className="mb-4">
           <Button
             size="lg"
-            className="min-h-[56px] bg-red-600 px-10 text-lg text-white hover:bg-red-700 shadow-lg shadow-red-600/30 cta-pulse gap-2"
+            className="min-h-[56px] bg-fiber-teal px-10 text-lg text-white hover:bg-fiber-teal/90 shadow-lg shadow-fiber-teal/30 cta-pulse gap-2"
           >
-            See If You Qualify
+            Check Availability
             <ArrowRight className="w-5 h-5" />
           </Button>
         </Link>

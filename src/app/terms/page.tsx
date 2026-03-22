@@ -149,9 +149,9 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold mb-4">Governing Law</h2>
             <p>
               These terms are governed by and construed in accordance with the laws of the
-              State of Colorado, without regard to its conflict of law provisions. You agree
+              State of Texas, without regard to its conflict of law provisions. You agree
               to submit to the exclusive jurisdiction of the state and federal courts
-              located in Denver, Colorado for any legal proceedings arising from these terms.
+              located in Dallas, Texas for any legal proceedings arising from these terms.
             </p>
           </div>
 

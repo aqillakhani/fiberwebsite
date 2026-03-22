@@ -175,7 +175,7 @@ export default function AvailabilitySection() {
               type="submit"
               disabled={isSubmitting}
               size="lg"
-              className="w-full sm:w-auto sm:min-w-[280px] flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white min-h-[56px] text-lg font-semibold shadow-lg shadow-red-600/30 cta-pulse"
+              className="w-full sm:w-auto sm:min-w-[280px] flex items-center justify-center gap-2 bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-teal/30 cta-pulse"
             >
               {isSubmitting ? (
                 <>

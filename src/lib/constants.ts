@@ -267,7 +267,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We help customers get connected to fiber in states across the country including Texas, Florida, California, Illinois, Ohio, Michigan, and more — with new areas being added regularly. Check availability at your address to see if we can help you switch.",
+    answer: "We help customers get connected to fiber internet across all 50 states. Check availability at your address to see if we can help you switch.",
   },
 ] as const;
 

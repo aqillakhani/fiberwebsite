@@ -26,16 +26,6 @@ export const metadata: Metadata = {
 export default async function AboutPage() {
   const reps = await getReps()
 
-  const serviceRegions = [
-    "Texas",
-    "Florida",
-    "California",
-    "Illinois",
-    "Ohio",
-    "Michigan",
-    "And expanding nationwide",
-  ]
-
   const valuePillars = [
     {
       icon: Zap,
@@ -139,21 +129,16 @@ export default async function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">Where We Operate</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our sales team helps customers get connected to fiber across the country, with new
-              areas added regularly.
+              Our sales team helps customers get connected to fiber internet across all 50 states.
+              No matter where you are, we can help you make the switch.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-3xl mx-auto">
-            {serviceRegions.map((region) => (
-              <div
-                key={region}
-                className="flex items-center gap-3 bg-card rounded-lg border border-border p-4"
-              >
-                <MapPin className="size-5 text-fiber-blue flex-shrink-0" />
-                <span className="font-medium text-foreground">{region}</span>
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="flex items-center gap-3 bg-card rounded-lg border border-border p-6">
+              <MapPin className="size-6 text-fiber-blue flex-shrink-0" />
+              <span className="text-lg font-semibold text-foreground">Serving customers nationwide across all 50 states</span>
+            </div>
           </div>
 
           <div className="text-center mt-8">

@@ -115,7 +115,7 @@ export function Header() {
             {/* Desktop CTA Button */}
             <Link href="/check-availability" className="hidden lg:block">
               <Button
-                className="bg-red-600 text-white hover:bg-red-700"
+                className="bg-fiber-teal text-white hover:bg-fiber-teal/90"
               >
                 Check Availability
               </Button>
@@ -162,7 +162,7 @@ export function Header() {
                   <SheetFooter className="flex flex-col gap-3">
                     <Link href="/check-availability" className="w-full">
                       <Button
-                        className="w-full bg-red-600 text-white hover:bg-red-700"
+                        className="w-full bg-fiber-teal text-white hover:bg-fiber-teal/90"
                       >
                         Check Availability
                       </Button>

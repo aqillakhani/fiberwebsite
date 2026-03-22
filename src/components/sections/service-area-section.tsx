@@ -19,6 +19,14 @@ const states = [
   "Colorado",
   "North Carolina",
   "Virginia",
+  "New York",
+  "Pennsylvania",
+  "Washington",
+  "Oregon",
+  "Nevada",
+  "Indiana",
+  "Missouri",
+  "Maryland",
 ]
 
 export default function ServiceAreaSection() {
@@ -53,12 +61,12 @@ export default function ServiceAreaSection() {
                 </span>
               ))}
               <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium">
-                + more states
+                + 30 more states
               </span>
             </div>
 
             <Link href="/check-availability">
-              <Button className="bg-red-600 text-white hover:bg-red-700 gap-2 font-bold">
+              <Button className="bg-fiber-teal text-white hover:bg-fiber-teal/90 gap-2 font-bold">
                 Check Your Address
                 <ArrowRight className="size-4" />
               </Button>
@@ -81,10 +89,10 @@ export default function ServiceAreaSection() {
               {/* Center stat */}
               <div className="text-center relative z-10">
                 <div className="text-5xl md:text-6xl font-bold text-fiber-teal mb-2">
-                  12+
+                  50
                 </div>
                 <div className="text-muted-foreground font-medium">
-                  States & Growing
+                  States Nationwide
                 </div>
                 <div className="mt-2 flex items-center justify-center gap-1.5">
                   <span className="w-2 h-2 bg-fiber-success rounded-full pulse-green" />

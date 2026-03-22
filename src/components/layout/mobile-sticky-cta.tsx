@@ -29,8 +29,8 @@ export function MobileStickyCtA() {
         <div className="flex flex-col items-center gap-1.5 max-w-7xl mx-auto">
           <p className="text-xs text-gray-500 font-medium">Check if fiber is available</p>
           <Link href="/check-availability" className="w-full">
-            <Button className="w-full bg-red-600 text-white hover:bg-red-700 min-h-[48px] text-base font-semibold">
-              See If You Qualify
+            <Button className="w-full bg-fiber-teal text-white hover:bg-fiber-teal/90 min-h-[48px] text-base font-semibold">
+              Check Availability
             </Button>
           </Link>
         </div>

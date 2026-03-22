@@ -135,11 +135,11 @@ export default function PlansPreviewSection() {
                     className={cn(
                       "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                       plan.isFeatured
-                        ? "bg-red-600 text-white hover:bg-red-700"
+                        ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
                         : "bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 font-bold"
                     )}
                   >
-                    See If You Qualify
+                    Get Started
                   </Link>
                 </CardContent>
               </Card>
