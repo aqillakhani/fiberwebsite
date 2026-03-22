@@ -209,6 +209,30 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     bio: "Helping communities get connected to better internet, one household at a time.",
     phone: "(469) 428-5942",
   },
+  {
+    id: "pio-carrillo",
+    slug: "pio-carrillo",
+    name: "Pio Carrillo",
+    role: "Fiber Sales Representative",
+    bio: "Dedicated to helping families discover the benefits of fast, reliable fiber internet.",
+    phone: "(469) 428-5942",
+  },
+  {
+    id: "amil-lakhani",
+    slug: "amil-lakhani",
+    name: "Amil Lakhani",
+    role: "Fiber Sales Representative",
+    bio: "Committed to making the fiber switch simple and seamless for every customer.",
+    phone: "(469) 428-5942",
+  },
+  {
+    id: "reggie-king",
+    slug: "reggie-king",
+    name: "Reggie King",
+    role: "Fiber Sales Representative",
+    bio: "Passionate about connecting neighborhoods with the fastest internet available.",
+    phone: "(469) 428-5942",
+  },
 ] as const;
 
 export const PLAN_INCLUDES = [
