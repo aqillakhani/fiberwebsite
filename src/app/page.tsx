@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import HeroSection from "@/components/sections/hero"
 import HowItWorksSection from "@/components/sections/how-it-works"
 import WhyFiberSection from "@/components/sections/why-fiber-section"
-import SpeedVisualization from "@/components/sections/speed-visualization"
 import PlansPreviewSection from "@/components/sections/plans-preview"
 import InlineCTA from "@/components/sections/inline-cta"
 import TrustSection from "@/components/sections/trust-section"
@@ -14,13 +13,13 @@ import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
 
 export const metadata: Metadata = {
-  title: "FiberFastUSA | Light-Speed Fiber Internet Built for Your Home",
+  title: "FiberFastUSA | Switch to Faster Fiber Internet",
   description:
-    "No contracts. No data caps. No surprises. Just fast. Fiber internet from 500 Mbps to 7 Gbps starting at $34.99/mo. Check availability at your address today.",
+    "FiberFastUSA helps you explore fiber internet options and make the switch. Plans from 500 Mbps to 7 Gbps starting at $34.99/mo. Check availability today.",
   openGraph: {
-    title: "FiberFastUSA | Light-Speed Fiber Internet Built for Your Home",
+    title: "FiberFastUSA | Switch to Faster Fiber Internet",
     description:
-      "Gigabit fiber internet starting at $34.99/mo. No contracts, no data caps. Check availability now.",
+      "Explore fiber internet plans starting at $34.99/mo. No contracts, no data caps. Check availability now.",
   },
 }
 
@@ -29,18 +28,9 @@ const localBusinessJsonLd = {
   "@type": "LocalBusiness",
   name: "FiberFastUSA",
   description:
-    "Fiber internet that actually delivers. Symmetric speeds up to 7 Gbps. No contracts, no data caps, no hidden fees.",
+    "FiberFastUSA helps customers explore fiber internet options and switch to faster, more reliable service.",
   url: "https://fiberfastusa.com",
-  telephone: "(888) 555-FAST",
-  email: "hello@fiberfastusa.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "123 Fiber Lane",
-    addressLocality: "Denver",
-    addressRegion: "CO",
-    postalCode: "80202",
-    addressCountry: "US",
-  },
+  telephone: "(469) 428-5942",
   priceRange: "$34.99 - $109.99/mo",
   areaServed: {
     "@type": "Country",
@@ -59,7 +49,6 @@ export default function HomePage() {
       <HowItWorksSection />
       <PlansPreviewSection />
       <WhyFiberSection />
-      <SpeedVisualization />
       <InlineCTA
         heading="See if fiber is available at your address"
         ctaText="Check Your Address"

@@ -6,15 +6,26 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
-const cities = [
-  "Denver", "Dallas", "Phoenix", "Tampa", "Nashville", "Atlanta",
+const states = [
+  "Texas",
+  "Florida",
+  "California",
+  "Illinois",
+  "Ohio",
+  "Michigan",
+  "Arizona",
+  "Georgia",
+  "Tennessee",
+  "Colorado",
+  "North Carolina",
+  "Virginia",
 ]
 
 export default function ServiceAreaSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white white-section">
+    <section className="w-full py-16 md:py-24 bg-white dark:bg-background white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left — Content */}
@@ -25,24 +36,24 @@ export default function ServiceAreaSection() {
             )}
           >
             <h2 className="heading-section text-foreground mb-4">
-              Serving Homes Nationwide
+              Areas We Serve
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              FiberFastUSA is expanding rapidly across the United States. Check if fiber is available at your address.
+              FiberFastUSA helps customers get connected to fiber internet across the United States. Our team operates in these areas and more.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
-              {cities.map((city) => (
+              {states.map((state) => (
                 <span
-                  key={city}
+                  key={state}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-fiber-teal/10 text-fiber-teal text-sm font-medium"
                 >
                   <MapPin className="size-3" />
-                  {city}
+                  {state}
                 </span>
               ))}
               <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium">
-                + more cities
+                + more states
               </span>
             </div>
 
@@ -70,14 +81,14 @@ export default function ServiceAreaSection() {
               {/* Center stat */}
               <div className="text-center relative z-10">
                 <div className="text-5xl md:text-6xl font-bold text-fiber-teal mb-2">
-                  50+
+                  12+
                 </div>
                 <div className="text-muted-foreground font-medium">
-                  Cities & Growing
+                  States & Growing
                 </div>
                 <div className="mt-2 flex items-center justify-center gap-1.5">
                   <span className="w-2 h-2 bg-fiber-success rounded-full pulse-green" />
-                  <span className="text-xs text-fiber-success font-medium">Expanding weekly</span>
+                  <span className="text-xs text-fiber-success font-medium">Expanding regularly</span>
                 </div>
               </div>
             </div>

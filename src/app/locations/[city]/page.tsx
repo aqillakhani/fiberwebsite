@@ -101,7 +101,7 @@ export default async function CityPage({ params }: CityPageProps) {
     name: `FiberFastUSA - ${cityData.name}, ${cityData.stateAbbr}`,
     description: `Fiber internet service in ${cityData.name}, ${cityData.state}. Speeds up to 7 Gbps with free installation, no contracts, and no data caps.`,
     url: `https://fiberfastusa.com/locations/${cityData.slug}`,
-    telephone: "(888) 555-FAST",
+    telephone: "(469) 428-5942",
     address: {
       "@type": "PostalAddress",
       addressLocality: cityData.name,

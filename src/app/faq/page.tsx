@@ -75,7 +75,7 @@ export default function FAQPage() {
           <div className="rounded-lg border bg-card p-6 sm:p-8 text-center">
             <h2 className="text-2xl font-bold">Still have questions?</h2>
             <p className="mt-2 text-muted-foreground">
-              Get in touch with our support team for personalized assistance.
+              Give us a call and our team will help you out.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">

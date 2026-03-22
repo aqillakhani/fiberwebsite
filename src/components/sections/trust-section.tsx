@@ -39,7 +39,7 @@ export default function TrustSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-20 md:py-28 bg-white white-section">
+    <section className="w-full py-20 md:py-28 bg-white dark:bg-background white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           className={cn(
@@ -93,8 +93,8 @@ export default function TrustSection() {
           <TrustCard
             icon={<Award className="w-6 h-6 text-white" />}
             iconBg="bg-fiber-success"
-            title="30-Day Guarantee"
-            description="Not satisfied? Full refund, no questions asked"
+            title="Trusted Nationwide"
+            description="Serving customers across multiple states and growing"
             delay={500}
             isVisible={isVisible}
           />

@@ -8,7 +8,7 @@ export type Rep = {
   readonly role: string
   readonly bio: string
   readonly phone: string
-  readonly email: string
+  readonly email: string | null
   readonly city: string | null
   readonly state: string | null
   readonly territory: string | null
@@ -24,7 +24,7 @@ function teamMemberToRep(member: (typeof TEAM_MEMBERS)[number]): Rep {
     role: member.role,
     bio: member.bio,
     phone: member.phone,
-    email: member.email,
+    email: null,
     city: null,
     state: null,
     territory: null,

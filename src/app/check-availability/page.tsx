@@ -48,7 +48,7 @@ export default async function CheckAvailabilityPage({
               Get Connected to Fiber Internet
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Check availability, choose your plan, and schedule your installation — all in under 2 minutes.
+              Check availability, explore plans, and get started — all in under 2 minutes.
             </p>
           </div>
 

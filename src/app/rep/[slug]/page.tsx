@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Check, Phone, Mail, Gift, Zap, Star, ShieldCheck, QrCode, Download } from "lucide-react"
+import { Check, Phone, Gift, Zap, Star, ShieldCheck, QrCode, Download } from "lucide-react"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -99,13 +99,6 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                   >
                     <Phone className="size-4 flex-shrink-0" />
                     <span className="font-medium">{rep.phone}</span>
-                  </a>
-                  <a
-                    href={`mailto:${rep.email}`}
-                    className="flex items-center gap-3 text-white/90 hover:text-white transition-colors break-all text-sm"
-                  >
-                    <Mail className="size-4 flex-shrink-0" />
-                    <span className="font-medium">{rep.email}</span>
                   </a>
                   {rep.territory && (
                     <p className="text-white/60 text-sm pt-1">

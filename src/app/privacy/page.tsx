@@ -135,7 +135,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
             <p className="mt-4">
-              To exercise any of these rights, please contact us at hello@fiberfastusa.com.
+              To exercise any of these rights, please call us at (469) 428-5942.
             </p>
           </div>
 
@@ -157,13 +157,7 @@ export default function PrivacyPage() {
             </p>
             <div className="mt-4 space-y-2">
               <p>
-                <strong>Email:</strong> hello@fiberfastusa.com
-              </p>
-              <p>
-                <strong>Phone:</strong> (888) 555-FAST
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Fiber Lane, Denver, CO 80202
+                <strong>Phone:</strong> (469) 428-5942
               </p>
             </div>
           </div>

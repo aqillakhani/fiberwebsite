@@ -97,7 +97,7 @@ export default function HowItWorksSection() {
   ]
 
   return (
-    <section className="w-full py-20 md:py-28 bg-white white-section">
+    <section className="w-full py-20 md:py-28 bg-white dark:bg-background white-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section title */}
         <h2 className="heading-section text-foreground text-center mb-12">

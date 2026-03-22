@@ -44,17 +44,8 @@ export default function RootLayout({
               url: "https://fiberfastusa.com",
               logo: "https://fiberfastusa.com/logo.png",
               description:
-                "Blazing-fast fiber internet with no contracts, no data caps, and no hidden fees.",
-              telephone: "(888) 555-FAST",
-              email: "hello@fiberfastusa.com",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Fiber Lane",
-                addressLocality: "Denver",
-                addressRegion: "CO",
-                postalCode: "80202",
-                addressCountry: "US",
-              },
+                "FiberFastUSA helps customers explore fiber internet options and switch to faster, more reliable service.",
+              telephone: "(469) 428-5942",
               sameAs: [
                 "https://facebook.com/fiberfastusa",
                 "https://x.com/fiberfastusa",

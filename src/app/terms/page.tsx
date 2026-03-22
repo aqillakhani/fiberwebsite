@@ -98,9 +98,8 @@ export default function TermsPage() {
               may cancel your service at any time by:
             </p>
             <ul className="mt-4 space-y-2">
-              <li>Calling customer support at (888) 555-FAST</li>
-              <li>Emailing hello@fiberfastusa.com</li>
-              <li>Providing written notice with 30 days notice</li>
+              <li>Calling customer support at (469) 428-5942</li>
+              <li>Providing written notice</li>
             </ul>
             <p className="mt-4">
               Cancellations are effective at the end of your current billing period. No
@@ -163,13 +162,7 @@ export default function TermsPage() {
             </p>
             <div className="mt-4 space-y-2">
               <p>
-                <strong>Email:</strong> hello@fiberfastusa.com
-              </p>
-              <p>
-                <strong>Phone:</strong> (888) 555-FAST
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Fiber Lane, Denver, CO 80202
+                <strong>Phone:</strong> (469) 428-5942
               </p>
             </div>
           </div>

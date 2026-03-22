@@ -33,12 +33,6 @@ export function Footer() {
               >
                 {COMPANY.phone}
               </a>
-              <a
-                href={`mailto:${COMPANY.email}`}
-                className="hover:text-foreground transition-colors"
-              >
-                {COMPANY.email}
-              </a>
             </div>
           </div>
 

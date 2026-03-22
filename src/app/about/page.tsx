@@ -6,9 +6,9 @@ import {
   Heart,
   MapPin,
   Users,
-  Award,
   CheckCircle,
   ArrowRight,
+  Headphones,
 } from "lucide-react"
 
 import { getReps } from "@/lib/reps"
@@ -16,10 +16,10 @@ import { getReps } from "@/lib/reps"
 export const metadata: Metadata = {
   title: "About Us | FiberFastUSA",
   description:
-    "Learn about FiberFastUSA's mission to bring reliable, fast, and affordable fiber internet to communities across America. Meet our team and discover our story.",
+    "Learn about FiberFastUSA's mission to help customers explore fiber internet options and switch to faster, more reliable service across the United States.",
   openGraph: {
     title: "About FiberFastUSA",
-    description: "Real people building real internet for communities nationwide.",
+    description: "We help customers get connected to faster fiber internet in areas where our team operates.",
   },
 }
 
@@ -27,11 +27,12 @@ export default async function AboutPage() {
   const reps = await getReps()
 
   const serviceRegions = [
-    "Denver, CO",
-    "Dallas, TX",
-    "Phoenix, AZ",
-    "Tampa, FL",
-    "Nashville, TN",
+    "Texas",
+    "Florida",
+    "California",
+    "Illinois",
+    "Ohio",
+    "Michigan",
     "And expanding nationwide",
   ]
 
@@ -40,27 +41,27 @@ export default async function AboutPage() {
       icon: Zap,
       title: "Speed",
       description:
-        "Blazing-fast fiber speeds from 500 Mbps to 7 Gbps with symmetric upload and download.",
+        "We connect customers with blazing-fast fiber plans from 500 Mbps to 7 Gbps with symmetric upload and download speeds.",
     },
     {
       icon: Shield,
-      title: "Reliability",
+      title: "Simplicity",
       description:
-        "99.9% uptime with dedicated fiber lines — no sharing bandwidth with your neighbors.",
+        "We guide customers through every step — from checking availability to choosing the right plan and getting connected.",
     },
     {
       icon: Heart,
-      title: "Simplicity",
+      title: "Trust",
       description:
-        "No contracts, no hidden fees, no data caps. Just great internet at a fair price.",
+        "No pressure, no gimmicks. We help you understand your options so you can make the best choice for your household.",
     },
   ]
 
   const trustItems = [
-    { icon: CheckCircle, label: "Licensed & Insured" },
+    { icon: CheckCircle, label: "Licensed & Authorized" },
     { icon: Users, label: "Local Teams Nationwide" },
-    { icon: Award, label: "5,000+ Homes Connected" },
-    { icon: CheckCircle, label: "30-Day Money-Back Guarantee" },
+    { icon: Headphones, label: "Guided Support" },
+    { icon: CheckCircle, label: "No Contracts Required" },
   ]
 
   return (
@@ -71,11 +72,11 @@ export default async function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <h1 className="heading-display text-white mb-6">
-              Bringing Real Internet to Real People
+              Helping You Switch to Better Internet
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
-              FiberFastUSA started with one simple idea: fiber internet shouldn&apos;t be
-              expensive or complicated. We&apos;re building the network America deserves.
+              FiberFastUSA helps customers explore fiber internet options and make the switch
+              to faster, more reliable service — with guidance every step of the way.
             </p>
           </div>
         </div>
@@ -85,10 +86,10 @@ export default async function AboutPage() {
       <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="heading-section text-foreground mb-4">Our Mission</h2>
+            <h2 className="heading-section text-foreground mb-4">What We Do</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We believe everyone deserves fast, reliable, and affordable internet — no matter
-              where they live.
+              We make switching to fiber internet simple, clear, and comfortable for customers
+              who want better home internet.
             </p>
           </div>
 
@@ -114,32 +115,32 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Why We Started */}
+      {/* Our Story */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="heading-section text-foreground mb-6">Why We Started</h2>
+          <h2 className="heading-section text-foreground mb-6">Our Story</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            We got tired of watching families across America deal with slow cable internet,
-            data caps that make no sense, and customer service that doesn&apos;t care. The big
-            ISPs promised change, but kept raising prices and lowering service. So we decided
-            to build something different.
+            We started FiberFastUSA because we saw too many families stuck with slow, expensive
+            internet and no clear path to something better. The big providers make the process
+            confusing on purpose. We decided to change that.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Fiber internet is the future. It&apos;s faster, more reliable, and can actually be
-            affordable and simple. That&apos;s what FiberFastUSA stands for — and we&apos;re
-            bringing it to communities nationwide, one neighborhood at a time.
+            Our team works directly with households to help them understand what fiber internet
+            is, whether it&apos;s available in their area, and how to make the switch. We focus
+            on making the process easy and transparent — so customers feel confident from the
+            first conversation to the moment they&apos;re connected.
           </p>
         </div>
       </section>
 
-      {/* Where We Serve */}
+      {/* Where We Operate */}
       <section className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="heading-section text-foreground mb-4">Where We Serve</h2>
+            <h2 className="heading-section text-foreground mb-4">Where We Operate</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We&apos;re actively expanding across the United States. New markets added every
-              month.
+              Our sales team helps customers get connected to fiber across the country, with new
+              areas added regularly.
             </p>
           </div>
 
@@ -197,11 +198,11 @@ export default async function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">Meet Our Team</h2>
             <p className="text-lg text-muted-foreground">
-              Real people building real internet for real people.
+              Our dedicated sales representatives help customers get connected to fiber every day.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reps.map((member) => (
               <Link
                 key={member.slug}
@@ -232,10 +233,10 @@ export default async function AboutPage() {
         <div className="absolute inset-0 bg-grid-white pointer-events-none" />
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to Experience the FiberFastUSA Difference?
+            Ready to Explore Fiber Internet?
           </h2>
           <p className="text-lg text-white/70 mb-8">
-            Check if fiber internet is available at your address and get started today.
+            Check if fiber is available at your address and let us guide you through the process.
           </p>
           <Link
             href="/check-availability"

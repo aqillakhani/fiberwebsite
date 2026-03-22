@@ -1,11 +1,9 @@
 export const COMPANY = {
   name: "FiberFastUSA",
-  tagline: "Fiber Internet That Actually Works",
-  phone: "(888) 555-FAST",
-  phoneHref: "tel:+18885553278",
-  email: "hello@fiberfastusa.com",
+  tagline: "Helping You Switch to Faster Fiber Internet",
+  phone: "(469) 428-5942",
+  phoneHref: "tel:+14694285942",
   hours: "Mon–Fri: 8am–8pm | Sat: 9am–5pm | Sun: Closed",
-  address: "123 Fiber Lane, Denver, CO 80202",
   socialLinks: {
     facebook: "https://facebook.com/fiberfastusa",
     twitter: "https://x.com/fiberfastusa",
@@ -160,45 +158,56 @@ export type TeamMember = {
   readonly role: string;
   readonly bio: string;
   readonly phone: string;
-  readonly email: string;
 };
 
 export const TEAM_MEMBERS: readonly TeamMember[] = [
   {
-    id: "sarah-johnson",
-    slug: "sarah-johnson",
-    name: "Sarah Johnson",
-    role: "Founder & CEO",
-    bio: "Former cable executive turned fiber advocate. 15 years of telecom experience.",
-    phone: "(888) 555-3278",
-    email: "sarah@fiberfastusa.com",
+    id: "oscar-salas",
+    slug: "oscar-salas",
+    name: "Oscar Salas",
+    role: "Fiber Sales Representative",
+    bio: "Helping families discover faster internet options and guiding them through the switch to fiber.",
+    phone: "(469) 428-5942",
   },
   {
-    id: "mike-chen",
-    slug: "mike-chen",
-    name: "Mike Chen",
-    role: "Head of Operations",
-    bio: "Infrastructure expert dedicated to building the fastest fiber network nationwide.",
-    phone: "(888) 555-3278",
-    email: "mike@fiberfastusa.com",
+    id: "obed-esparza",
+    slug: "obed-esparza",
+    name: "Obed Esparza",
+    role: "Fiber Sales Representative",
+    bio: "Dedicated to making the switch to fiber easy and stress-free for every customer.",
+    phone: "(469) 428-5942",
   },
   {
-    id: "james-rodriguez",
-    slug: "james-rodriguez",
-    name: "James Rodriguez",
-    role: "Lead Technician",
-    bio: "10+ years installing fiber. Every installation is handled with pride.",
-    phone: "(888) 555-3278",
-    email: "james@fiberfastusa.com",
+    id: "victor-pineda",
+    slug: "victor-pineda",
+    name: "Victor Pineda",
+    role: "Fiber Sales Representative",
+    bio: "Passionate about connecting households with reliable, high-speed fiber internet.",
+    phone: "(469) 428-5942",
   },
   {
-    id: "emma-wilson",
-    slug: "emma-wilson",
-    name: "Emma Wilson",
-    role: "Customer Success",
-    bio: "24/7 support that actually answers the phone. Because you matter.",
-    phone: "(888) 555-3278",
-    email: "emma@fiberfastusa.com",
+    id: "hector-vera",
+    slug: "hector-vera",
+    name: "Hector Vera",
+    role: "Fiber Sales Representative",
+    bio: "Focused on helping customers understand their options and find the perfect fiber plan.",
+    phone: "(469) 428-5942",
+  },
+  {
+    id: "gabriel-russa",
+    slug: "gabriel-russa",
+    name: "Gabriel Russa",
+    role: "Fiber Sales Representative",
+    bio: "Committed to providing a smooth, guided experience for customers switching to fiber.",
+    phone: "(469) 428-5942",
+  },
+  {
+    id: "jorge-gallardo",
+    slug: "jorge-gallardo",
+    name: "Jorge Gallardo",
+    role: "Fiber Sales Representative",
+    bio: "Helping communities get connected to better internet, one household at a time.",
+    phone: "(469) 428-5942",
   },
 ] as const;
 
@@ -208,7 +217,6 @@ export const PLAN_INCLUDES = [
   "24/7 local customer support",
   "No data caps — ever",
   "No contracts required",
-  "30-day money-back guarantee",
 ] as const;
 
 export const USE_CASES = [
@@ -223,27 +231,27 @@ export const USE_CASES = [
 export const FAQ_ITEMS = [
   {
     question: "How fast is fiber internet?",
-    answer: "FiberFastUSA offers plans from 500 Mbps up to 7 Gbps. Unlike cable, fiber delivers symmetric speeds — your upload speed matches your download speed. This means video calls, cloud backups, and file sharing are just as fast as streaming and browsing.",
+    answer: "Fiber internet plans range from 500 Mbps up to 7 Gbps. Unlike cable, fiber delivers symmetric speeds — your upload speed matches your download speed. This means video calls, cloud backups, and file sharing are just as fast as streaming and browsing.",
   },
   {
     question: "Is fiber available at my address?",
-    answer: "We're expanding rapidly across the United States. Use our Check Availability tool to see if your address is in our service area. If we're not there yet, sign up to be notified when we arrive in your area.",
+    answer: "Fiber availability depends on your location. Use our Check Availability tool to see if service is available at your address. If it's not available yet, sign up to be notified when it becomes available in your area.",
   },
   {
     question: "Is there a contract or commitment?",
-    answer: "No contracts, ever. All FiberFastUSA plans are month-to-month. You can cancel anytime with no early termination fees. We also offer a 30-day money-back guarantee.",
+    answer: "No contracts, ever. Fiber plans are month-to-month. You can cancel anytime with no early termination fees.",
   },
   {
     question: "Are there data caps?",
-    answer: "Absolutely not. All FiberFastUSA plans include unlimited data with no throttling, no caps, and no overage charges. Use as much internet as you want.",
+    answer: "Absolutely not. All fiber plans include unlimited data with no throttling, no caps, and no overage charges. Use as much internet as you want.",
   },
   {
     question: "How long does installation take?",
-    answer: "Professional installation typically takes 2-4 hours. Our technicians handle everything from running the fiber line to setting up your Wi-Fi router. Most customers are online the same day.",
+    answer: "Professional installation typically takes 2–4 hours. A certified technician handles everything from running the fiber line to setting up your Wi-Fi router. Most customers are online the same day.",
   },
   {
     question: "What equipment do I need?",
-    answer: "Nothing — we provide everything. Every plan includes a free Wi-Fi router (Wi-Fi 6E or Wi-Fi 7 depending on your plan) and an Optical Network Terminal (ONT). There are no equipment rental fees.",
+    answer: "Nothing — everything is provided. Every plan includes a free Wi-Fi router (Wi-Fi 6E or Wi-Fi 7 depending on your plan) and an Optical Network Terminal (ONT). There are no equipment rental fees.",
   },
   {
     question: "What's the difference between fiber and cable internet?",
@@ -251,7 +259,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "How do I cancel or change my plan?",
-    answer: "Call us or email support. Plan changes take effect on your next billing cycle. Cancellations can be done anytime — no fees, no hassle.",
+    answer: "Give us a call and we'll help you out. Plan changes take effect on your next billing cycle. Cancellations can be done anytime — no fees, no hassle.",
   },
   {
     question: "Do you offer business internet?",
@@ -259,7 +267,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We currently serve communities across the United States including Denver, Dallas, Phoenix, Tampa, Nashville, and more — with new areas being added every month. Check availability at your address to see if we're in your area.",
+    answer: "We help customers get connected to fiber in states across the country including Texas, Florida, California, Illinois, Ohio, Michigan, and more — with new areas being added regularly. Check availability at your address to see if we can help you switch.",
   },
 ] as const;
 
@@ -275,7 +283,6 @@ export const FOOTER_LINKS = {
   company: [
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
-    { href: "/careers", label: "Careers" },
     { href: "/verify-rep", label: "Verify a Rep" },
   ],
   services: [

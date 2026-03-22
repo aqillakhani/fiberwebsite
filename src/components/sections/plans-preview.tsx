@@ -13,7 +13,7 @@ export default function PlansPreviewSection() {
   const displayedPlans = PLANS.slice(0, 4)
 
   return (
-    <section className="w-full py-20 md:py-28 bg-white white-section">
+    <section className="w-full py-20 md:py-28 bg-white dark:bg-background white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div
@@ -136,7 +136,7 @@ export default function PlansPreviewSection() {
                       "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                       plan.isFeatured
                         ? "bg-red-600 text-white hover:bg-red-700"
-                        : "bg-white text-black border border-gray-300 hover:bg-gray-100 font-bold"
+                        : "bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 font-bold"
                     )}
                   >
                     See If You Qualify

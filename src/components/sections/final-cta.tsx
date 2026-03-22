@@ -46,7 +46,7 @@ export default function FinalCTASection() {
         {/* Divider and Trust Badge */}
         <div className="divider-gradient mb-4 w-full" />
         <p className="text-sm text-white/50">
-          No contracts. No data caps. 30-day money-back guarantee.
+          No contracts. No data caps. No hidden fees.
         </p>
       </div>
     </section>

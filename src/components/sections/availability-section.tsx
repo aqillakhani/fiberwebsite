@@ -64,16 +64,16 @@ export default function AvailabilitySection() {
 
   if (isSubmitted) {
     return (
-      <section className="w-full bg-white py-20 md:py-28">
+      <section className="w-full bg-white dark:bg-background py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex flex-col items-center gap-4">
             <CheckCircle className="w-16 h-16 text-fiber-success" />
-            <h2 className="text-2xl md:text-3xl font-bold text-black heading-section">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground heading-section">
               You&apos;re All Set!
             </h2>
-            <p className="text-gray-700 text-lg max-w-xl">
-              A FiberFastUSA specialist will reach out within 24 hours to confirm
-              availability and help you choose the perfect plan. Check your email for a confirmation.
+            <p className="text-muted-foreground text-lg max-w-xl">
+              A FiberFastUSA representative will reach out within 24 hours to confirm
+              availability and help you choose the perfect plan.
             </p>
           </div>
         </div>
@@ -82,16 +82,16 @@ export default function AvailabilitySection() {
   }
 
   return (
-    <section className="w-full bg-white py-20 md:py-28 relative overflow-hidden">
+    <section className="w-full bg-white dark:bg-background py-20 md:py-28 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black heading-section mb-3">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground heading-section mb-3">
             Check If Fiber Is Available at Your Address
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mb-2">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-2">
             Quick availability check — takes less than 30 seconds
           </p>
-          <p className="text-sm text-gray-400">Step 1 of 1</p>
+          <p className="text-sm text-muted-foreground/70">Step 1 of 1</p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -102,7 +102,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="name"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-foreground placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.fullName && (
                 <p className="text-red-500 text-xs mt-1">{errors.fullName.message}</p>
@@ -116,7 +116,7 @@ export default function AvailabilitySection() {
                 inputMode="tel"
                 placeholder="Phone Number"
                 autoComplete="tel"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-foreground placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.phone && (
                 <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
@@ -130,7 +130,7 @@ export default function AvailabilitySection() {
               type="email"
               placeholder="Email Address"
               autoComplete="email"
-              className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+              className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-foreground placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
             />
             {errors.email && (
               <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
@@ -144,7 +144,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Street Address"
                 autoComplete="street-address"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-foreground placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.serviceAddress && (
                 <p className="text-red-500 text-xs mt-1">{errors.serviceAddress.message}</p>
@@ -158,7 +158,7 @@ export default function AvailabilitySection() {
                 inputMode="numeric"
                 placeholder="ZIP Code"
                 autoComplete="postal-code"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 border border-gray-300 text-black placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-foreground placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
               />
               {errors.zip && (
                 <p className="text-red-500 text-xs mt-1">{errors.zip.message}</p>
@@ -189,7 +189,7 @@ export default function AvailabilitySection() {
                 </>
               )}
             </Button>
-            <div className="flex items-center gap-1.5 text-gray-400 text-xs">
+            <div className="flex items-center gap-1.5 text-muted-foreground text-xs">
               <Lock className="w-3 h-3" />
               <span>Your information is secure and never shared</span>
             </div>

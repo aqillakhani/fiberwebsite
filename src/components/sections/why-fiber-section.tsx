@@ -55,7 +55,7 @@ export default function WhyFiberSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white white-section">
+    <section className="w-full py-16 md:py-24 bg-white dark:bg-background white-section">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={cn(
