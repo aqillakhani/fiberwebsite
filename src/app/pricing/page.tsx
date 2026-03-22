@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Check, Zap, Gift } from "lucide-react"
+import { Check, Zap, Gift, Infinity } from "lucide-react"
 
 import { PLANS, PLAN_INCLUDES } from "@/lib/constants"
 import {
@@ -122,9 +122,12 @@ export default function PricingPage() {
                 <h3 className="text-lg font-semibold text-foreground mb-1">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-muted-foreground italic mb-4">
+                <p className="text-sm text-muted-foreground italic mb-2">
                   {plan.bestFor}
                 </p>
+                <span className="inline-flex items-center gap-1 rounded-full bg-fiber-blue/10 px-2.5 py-0.5 text-xs font-semibold text-fiber-blue mb-2">
+                  <Infinity className="size-3" /> Unlimited Data
+                </span>
 
                 <div className="text-4xl font-bold text-foreground mb-1">
                   ${plan.price}
@@ -229,6 +232,14 @@ export default function PricingPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
+                <tr>
+                  <td className="px-6 py-4 font-medium text-foreground">Data Cap</td>
+                  {PLANS.map((plan) => (
+                    <td key={plan.id} className="px-6 py-4 text-center text-sm font-semibold text-fiber-success">
+                      Unlimited
+                    </td>
+                  ))}
+                </tr>
                 <tr>
                   <td className="px-6 py-4 font-medium text-foreground">Download Speed</td>
                   {PLANS.map((plan) => (

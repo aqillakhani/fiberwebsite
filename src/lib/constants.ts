@@ -41,6 +41,7 @@ export const PLANS: readonly PlanTier[] = [
     description: "Great for streaming, browsing, and working from home.",
     isFeatured: false,
     features: [
+      "Unlimited data — no caps ever",
       "500 Mbps download",
       "500 Mbps upload",
       "Stream 4K on 3+ devices",
@@ -63,6 +64,7 @@ export const PLANS: readonly PlanTier[] = [
     description: "Our most popular plan. Blazing fast speeds for the whole family.",
     isFeatured: true,
     features: [
+      "Unlimited data — no caps ever",
       "1 Gbps download",
       "1 Gbps upload",
       "Stream 4K on 10+ devices",
@@ -87,6 +89,7 @@ export const PLANS: readonly PlanTier[] = [
     description: "Maximum performance for content creators, developers, and tech enthusiasts.",
     isFeatured: false,
     features: [
+      "Unlimited data — no caps ever",
       "2 Gbps download",
       "2 Gbps upload",
       "Unlimited devices",
@@ -111,6 +114,7 @@ export const PLANS: readonly PlanTier[] = [
     description: "Insane speeds for homes that demand the absolute best.",
     isFeatured: false,
     features: [
+      "Unlimited data — no caps ever",
       "5 Gbps download",
       "5 Gbps upload",
       "Unlimited devices",
@@ -136,6 +140,7 @@ export const PLANS: readonly PlanTier[] = [
     description: "The fastest residential internet available. Period.",
     isFeatured: false,
     features: [
+      "Unlimited data — no caps ever",
       "7 Gbps download",
       "7 Gbps upload",
       "Unlimited devices",
