@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { getReps } from "@/lib/reps"
+import { TEAM_MEMBERS } from "@/lib/constants"
 
-export default async function MeetTheTeam() {
-  const reps = await getReps()
+export default function MeetTheTeam() {
+  const reps = TEAM_MEMBERS.map((m) => ({ ...m, photo_url: null as string | null, city: null as string | null, state: null as string | null }))
 
   return (
     <section className="w-full py-16 md:py-24 bg-background">

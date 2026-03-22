@@ -11,7 +11,7 @@ import {
   Headphones,
 } from "lucide-react"
 
-import { getReps } from "@/lib/reps"
+import { TEAM_MEMBERS } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "About Us | FiberFastUSA",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function AboutPage() {
-  const reps = await getReps()
+export default function AboutPage() {
+  const reps = TEAM_MEMBERS
 
   const valuePillars = [
     {
