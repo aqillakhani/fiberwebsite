@@ -55,23 +55,23 @@
 }
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #42A5F5;
+  --foreground: #FFFFFF;
   --card: #FFFFFF;
-  --card-foreground: #0f172a;
+  --card-foreground: #000000;
   --popover: #FFFFFF;
-  --popover-foreground: #0f172a;
+  --popover-foreground: #000000;
   --primary: oklch(0.6 0.2 260);
   --primary-foreground: oklch(1 0 0);
-  --secondary: #e2e8f0;
-  --secondary-foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
-  --accent: #e2e8f0;
-  --accent-foreground: #0f172a;
+  --secondary: #3D9BE9;
+  --secondary-foreground: #FFFFFF;
+  --muted: #3D9BE9;
+  --muted-foreground: #FFFFFF;
+  --accent: #3D9BE9;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.7 0.19 22);
-  --border: #e2e8f0;
-  --input: #e2e8f0;
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.6 0.2 260);
   --chart-1: oklch(0.45 0.2 260);
   --chart-2: oklch(0.65 0.18 40);
@@ -150,13 +150,18 @@
     @apply font-sans scroll-smooth;
     font-size: 17px;
   }
-  /* Inside white cards/boxes, override text to readable dark */
+  /* Inside white cards/boxes, override all text to bold black */
+  .bg-card,
+  [class*="bg-card"],
   .white-section {
-    --foreground: #0f172a;
-    --muted-foreground: #475569;
-    --card-foreground: #0f172a;
+    --foreground: #000000;
+    --muted-foreground: #1a1a1a;
+    --card-foreground: #000000;
     --border: #e5e7eb;
+    font-weight: 700;
   }
+  .dark .bg-card,
+  .dark [class*="bg-card"],
   .dark .white-section {
     --foreground: #f1f5f9;
     --muted-foreground: #94a3b8;
