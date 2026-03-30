@@ -104,48 +104,48 @@
 }
 
 .dark {
-  --background: #111827;
-  --foreground: #F3F4F6;
-  --card: #1E293B;
-  --card-foreground: #F3F4F6;
-  --popover: #1E293B;
-  --popover-foreground: #F3F4F6;
-  --primary: #60A5FA;
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #1E40AF;
   --primary-foreground: #FFFFFF;
-  --secondary: #1E293B;
-  --secondary-foreground: #F3F4F6;
-  --muted: #1E293B;
-  --muted-foreground: #D1D5DB;
-  --accent: #2DD4BF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #111827;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --accent: #0D9488;
   --accent-foreground: #FFFFFF;
-  --destructive: #F87171;
-  --border: #334155;
-  --input: #334155;
-  --ring: #3B82F6;
-  --chart-1: #3B82F6;
-  --chart-2: #14B8A6;
-  --chart-3: #34D399;
-  --chart-4: #FBBF24;
-  --chart-5: #EF4444;
+  --destructive: #DC2626;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #1E40AF;
+  --chart-1: #1E40AF;
+  --chart-2: #0D9488;
+  --chart-3: #16A34A;
+  --chart-4: #F59E0B;
+  --chart-5: #DC2626;
   --sidebar: #0F172A;
-  --sidebar-foreground: #F3F4F6;
-  --sidebar-primary: #60A5FA;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #3B82F6;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #1E293B;
-  --sidebar-accent-foreground: #F3F4F6;
+  --sidebar-accent-foreground: #F8FAFC;
   --sidebar-border: #334155;
-  --sidebar-ring: #60A5FA;
-  /* Dark mode brand colors — brighter for visibility */
-  --fiber-blue: #60A5FA;
-  --fiber-blue-light: #1E3A5F;
-  --fiber-teal: #2DD4BF;
-  --fiber-teal-light: #134E4A;
-  --fiber-red: #F87171;
-  --fiber-red-light: #451A1A;
-  --fiber-yellow: #FBBF24;
-  --fiber-orange: #FB923C;
-  --fiber-success: #4ADE80;
-  --fiber-dark: #F3F4F6;
+  --sidebar-ring: #3B82F6;
+  /* Dark mode brand colors — strong on white cards */
+  --fiber-blue: #1E40AF;
+  --fiber-blue-light: #EFF6FF;
+  --fiber-teal: #0D9488;
+  --fiber-teal-light: #F0FDFA;
+  --fiber-red: #DC2626;
+  --fiber-red-light: #FEF2F2;
+  --fiber-yellow: #F59E0B;
+  --fiber-orange: #EA580C;
+  --fiber-success: #16A34A;
+  --fiber-dark: #111827;
 }
 
 @layer base {
@@ -169,16 +169,16 @@
     --border: #E5E7EB;
     font-weight: 700;
   }
-  /* Dark mode cards — lifted surface with visible border */
+  /* Dark mode cards — white cards with dark text on dark background */
   .dark .bg-card,
   .dark [class*="bg-card"],
   .dark .white-section {
-    --foreground: #F3F4F6;
-    --muted-foreground: #D1D5DB;
-    --card-foreground: #F3F4F6;
-    --border: #334155;
-    background: #1E293B;
-    border-color: #334155;
+    --foreground: #111827;
+    --muted-foreground: #6B7280;
+    --card-foreground: #111827;
+    --border: #E2E8F0;
+    background: #FFFFFF;
+    color: #111827;
   }
 }
 
@@ -235,16 +235,16 @@
     font-weight: 500;
   }
   .dark .card-premium {
-    border-color: #334155;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-color: #E2E8F0;
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.15);
   }
   .card-premium:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
   }
   .dark .card-premium:hover {
-    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
-    border-color: #475569;
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.25);
+    border-color: #CBD5E1;
   }
 
   /* Glass-morphism card */
@@ -255,8 +255,9 @@
     border-radius: 16px;
   }
   .dark .glass-card {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #111827;
   }
 
   /* Gradient border effect for featured cards — blue → teal */
@@ -479,36 +480,36 @@
     background: #0F172A;
   }
 
-  /* Treatment 2: Rhythm — light gray for visual breathing room */
+  /* Treatment 2: Rhythm — light gray / bluish-black */
   .bg-treatment-rhythm {
     background: #F9FAFB;
   }
   .dark .bg-treatment-rhythm {
-    background: #0F172A;
+    background: #111B2E;
   }
 
-  /* Treatment 3: Trust — light with blue warmth */
+  /* Treatment 3: Trust — light blue / deep blue-black */
   .bg-treatment-trust {
     background: linear-gradient(180deg, #EFF6FF 0%, #F0F9FF 100%);
   }
   .dark .bg-treatment-trust {
-    background: linear-gradient(180deg, rgba(59, 130, 246, 0.06) 0%, rgba(59, 130, 246, 0.10) 100%);
+    background: linear-gradient(180deg, #0F172A 0%, #131D33 100%);
   }
 
-  /* Treatment 4: Momentum — light with red-orange tint for CTAs */
+  /* Treatment 4: Momentum — warm tint / deep blue-black */
   .bg-treatment-momentum {
     background: linear-gradient(180deg, #FEF2F2 0%, #FFF7ED 100%);
   }
   .dark .bg-treatment-momentum {
-    background: linear-gradient(180deg, rgba(220, 38, 38, 0.06) 0%, rgba(234, 88, 12, 0.06) 100%);
+    background: linear-gradient(180deg, #0F172A 0%, #151C2F 100%);
   }
 
-  /* Treatment 5: Showcase — diagonal light gradient with blue to teal */
+  /* Treatment 5: Showcase — diagonal / deep bluish-black */
   .bg-treatment-showcase {
     background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
   }
   .dark .bg-treatment-showcase {
-    background: linear-gradient(135deg, #0F172A 0%, #162544 50%, #0F3433 100%);
+    background: linear-gradient(135deg, #0F172A 0%, #111D35 50%, #0F2430 100%);
   }
 
   /* Ensure readable text on treatment backgrounds — light mode */
@@ -522,15 +523,15 @@
     --card-foreground: #111827;
     --border: #E5E7EB;
   }
-  /* Ensure readable text on treatment backgrounds — dark mode */
+  /* Ensure readable text on treatment backgrounds — dark mode (white text on dark bg) */
   .dark .bg-treatment-emphasis,
   .dark .bg-treatment-rhythm,
   .dark .bg-treatment-trust,
   .dark .bg-treatment-momentum,
   .dark .bg-treatment-showcase {
-    --foreground: #F3F4F6;
-    --muted-foreground: #D1D5DB;
-    --card-foreground: #F3F4F6;
+    --foreground: #F8FAFC;
+    --muted-foreground: #CBD5E1;
+    --card-foreground: #111827;
     --border: #334155;
   }
 
