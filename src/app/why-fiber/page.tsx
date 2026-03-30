@@ -94,8 +94,8 @@ export default function WhyFiberPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="card-premium bg-card rounded-xl border border-border p-6 text-center">
-              <div className="w-14 h-14 rounded-full bg-fiber-blue/10 flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="size-7 text-fiber-blue" />
+              <div className="w-14 h-14 rounded-full bg-fiber-red/10 flex items-center justify-center mx-auto mb-4">
+                <Lightbulb className="size-7 text-fiber-red" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Light-Based Transmission</h3>
               <p className="text-sm text-muted-foreground">
@@ -104,8 +104,8 @@ export default function WhyFiberPage() {
               </p>
             </div>
             <div className="card-premium bg-card rounded-xl border border-border p-6 text-center">
-              <div className="w-14 h-14 rounded-full bg-fiber-teal/10 flex items-center justify-center mx-auto mb-4">
-                <Cable className="size-7 text-fiber-teal" />
+              <div className="w-14 h-14 rounded-full bg-fiber-red/10 flex items-center justify-center mx-auto mb-4">
+                <Cable className="size-7 text-fiber-red" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Dedicated Connection</h3>
               <p className="text-sm text-muted-foreground">
@@ -144,7 +144,7 @@ export default function WhyFiberPage() {
               <thead>
                 <tr className="border-b border-border bg-muted/50">
                   <th className="px-6 py-4 text-left font-semibold text-foreground">Feature</th>
-                  <th className="px-6 py-4 text-left font-semibold text-fiber-blue">Fiber Optic</th>
+                  <th className="px-6 py-4 text-left font-semibold text-fiber-red">Fiber Optic</th>
                   <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Copper Cable</th>
                   <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Tower / Satellite</th>
                 </tr>
@@ -220,11 +220,11 @@ export default function WhyFiberPage() {
                 ].map((row) => (
                   <tr key={row.feature}>
                     <td className="px-6 py-4 font-bold text-foreground">{row.feature}</td>
-                    <td className="px-6 py-4 bg-fiber-blue/5">
+                    <td className="px-6 py-4 bg-fiber-red/5">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0" />
                         <div>
-                          <span className="text-base font-black text-fiber-blue block">{row.fiber.stat}</span>
+                          <span className="text-base font-black text-fiber-red block">{row.fiber.stat}</span>
                           <span className="text-xs text-muted-foreground">{row.fiber.text}</span>
                         </div>
                       </div>
@@ -305,8 +305,8 @@ export default function WhyFiberPage() {
               return (
                 <div key={category.title} className="card-premium bg-card rounded-xl border border-border p-6">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-fiber-blue/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="size-5 text-fiber-blue" />
+                    <div className="w-10 h-10 rounded-lg bg-fiber-red/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="size-5 text-fiber-red" />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground pt-1.5">
                       {category.title}
@@ -400,7 +400,7 @@ export default function WhyFiberPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/check-availability"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-blue text-white font-semibold hover:bg-fiber-blue/90 transition-all glow-teal"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-red text-white font-semibold hover:bg-fiber-red/90 transition-all glow-teal"
             >
               Check Availability
             </Link>

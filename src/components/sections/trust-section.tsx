@@ -60,7 +60,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Headphones className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-blue"
+            iconBg="bg-fiber-red"
             title="24/7 Local Support"
             description="Real people, not bots — available around the clock"
             delay={100}
@@ -84,7 +84,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Wifi className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-blue"
+            iconBg="bg-fiber-red"
             title="Free Installation"
             description="Professional setup at no extra cost"
             delay={400}

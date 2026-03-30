@@ -150,7 +150,7 @@ export default function DoorModeForm({
   }
 
   const inputClasses =
-    "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+    "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -207,12 +207,12 @@ export default function DoorModeForm({
               className={cn(
                 "relative p-3 rounded-lg border-2 text-left transition-all",
                 selectedPlan === plan.id
-                  ? "border-fiber-teal bg-fiber-teal/5 ring-1 ring-fiber-teal"
-                  : "border-border hover:border-fiber-teal/50"
+                  ? "border-fiber-red bg-fiber-red/5 ring-1 ring-fiber-red"
+                  : "border-border hover:border-fiber-red/50"
               )}
             >
               {plan.isFeatured && (
-                <span className="absolute -top-2 right-2 text-[10px] font-bold bg-fiber-blue text-white px-1.5 py-0.5 rounded">
+                <span className="absolute -top-2 right-2 text-[10px] font-bold bg-fiber-red text-white px-1.5 py-0.5 rounded">
                   Popular
                 </span>
               )}
@@ -248,8 +248,8 @@ export default function DoorModeForm({
                 className={cn(
                   "p-2 rounded-lg border text-center transition-all",
                   selectedDate === dateStr
-                    ? "border-fiber-teal bg-fiber-teal/10 text-fiber-teal font-semibold"
-                    : "border-border hover:border-fiber-teal/50 text-foreground"
+                    ? "border-fiber-red bg-fiber-red/10 text-fiber-red font-semibold"
+                    : "border-border hover:border-fiber-red/50 text-foreground"
                 )}
               >
                 <div className="text-[10px] text-muted-foreground">{d.dayName}</div>
@@ -273,7 +273,7 @@ export default function DoorModeForm({
                 {...register("preferredInstallTime")}
                 type="radio"
                 value={time}
-                className="accent-fiber-teal"
+                className="accent-fiber-red"
               />
               {time === "no-preference" ? "Any Time" : time.charAt(0).toUpperCase() + time.slice(1)}
             </label>
@@ -330,7 +330,7 @@ export default function DoorModeForm({
         type="submit"
         disabled={isSubmitting}
         size="lg"
-        className="w-full flex items-center justify-center gap-2 bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[52px] text-base font-semibold glow-teal"
+        className="w-full flex items-center justify-center gap-2 bg-fiber-red hover:bg-fiber-red/90 text-white min-h-[52px] text-base font-semibold glow-teal"
       >
         {isSubmitting ? (
           <>

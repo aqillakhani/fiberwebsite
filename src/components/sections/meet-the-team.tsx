@@ -40,8 +40,8 @@ export default function MeetTheTeam() {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/10 via-fiber-teal/5 to-fiber-blue/10 flex items-center justify-center">
-                    <span className="text-5xl font-bold text-fiber-blue/20">
+                  <div className="aspect-square bg-gradient-to-br from-fiber-red/10 via-fiber-red/5 to-fiber-red/10 flex items-center justify-center">
+                    <span className="text-5xl font-bold text-fiber-red/20">
                       {firstLetter}
                     </span>
                   </div>
@@ -52,7 +52,7 @@ export default function MeetTheTeam() {
                   <h3 className="text-lg font-semibold text-foreground">
                     {rep.name}
                   </h3>
-                  <p className="text-sm text-fiber-blue font-medium">
+                  <p className="text-sm text-fiber-red font-medium">
                     {rep.role}
                   </p>
                   {(rep.city || rep.state) && (
@@ -65,7 +65,7 @@ export default function MeetTheTeam() {
                   </p>
                   <Link
                     href={`/rep/${rep.slug}`}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-teal hover:text-fiber-blue transition-colors"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-red hover:text-fiber-red transition-colors"
                   >
                     View Profile
                     <ArrowRight className="w-4 h-4" />

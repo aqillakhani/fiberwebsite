@@ -102,7 +102,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="name"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
               />
               {errors.fullName && (
                 <p className="text-destructive text-xs mt-1">{errors.fullName.message}</p>
@@ -116,7 +116,7 @@ export default function AvailabilitySection() {
                 inputMode="tel"
                 placeholder="Phone Number"
                 autoComplete="tel"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
               />
               {errors.phone && (
                 <p className="text-destructive text-xs mt-1">{errors.phone.message}</p>
@@ -130,7 +130,7 @@ export default function AvailabilitySection() {
               type="email"
               placeholder="Email Address"
               autoComplete="email"
-              className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+              className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
             />
             {errors.email && (
               <p className="text-destructive text-xs mt-1">{errors.email.message}</p>
@@ -144,7 +144,7 @@ export default function AvailabilitySection() {
                 type="text"
                 placeholder="Street Address"
                 autoComplete="street-address"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
               />
               {errors.serviceAddress && (
                 <p className="text-destructive text-xs mt-1">{errors.serviceAddress.message}</p>
@@ -158,7 +158,7 @@ export default function AvailabilitySection() {
                 inputMode="numeric"
                 placeholder="ZIP Code"
                 autoComplete="postal-code"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+                className="w-full h-12 md:h-12 px-4 rounded-lg bg-muted dark:bg-card border border-border dark:border-border text-foreground placeholder:text-muted-foreground dark:placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
               />
               {errors.zip && (
                 <p className="text-destructive text-xs mt-1">{errors.zip.message}</p>
@@ -175,7 +175,7 @@ export default function AvailabilitySection() {
               type="submit"
               disabled={isSubmitting}
               size="lg"
-              className="w-full sm:w-auto sm:min-w-[280px] flex items-center justify-center gap-2 bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-teal/30 cta-pulse"
+              className="w-full sm:w-auto sm:min-w-[280px] flex items-center justify-center gap-2 bg-fiber-red hover:bg-fiber-red/90 text-white min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-red/30 cta-pulse"
             >
               {isSubmitting ? (
                 <>

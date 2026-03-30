@@ -67,7 +67,7 @@ export default function CareerForm() {
     )
   }
 
-  const inputClasses = "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base"
+  const inputClasses = "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -157,7 +157,7 @@ export default function CareerForm() {
           {...register("whyInterested")}
           placeholder="Why are you interested in joining FiberFastUSA?"
           rows={4}
-          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base resize-none"
         />
         {errors.whyInterested && (
           <p className="text-destructive text-xs mt-1">{errors.whyInterested.message}</p>
@@ -172,7 +172,7 @@ export default function CareerForm() {
         type="submit"
         disabled={isSubmitting}
         size="lg"
-        className="w-full flex items-center justify-center gap-2 bg-fiber-teal hover:bg-fiber-teal/90 text-white min-h-[52px] text-base font-semibold glow-teal"
+        className="w-full flex items-center justify-center gap-2 bg-fiber-red hover:bg-fiber-red/90 text-white min-h-[52px] text-base font-semibold glow-teal"
       >
         {isSubmitting ? (
           <>

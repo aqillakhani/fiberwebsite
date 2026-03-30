@@ -29,19 +29,19 @@ export function PlanSelector({
               onClick={() => onSelect(plan.id)}
               className={cn(
                 "relative w-full rounded-lg p-5 text-left transition-all duration-200",
-                "border-2 border-border hover:border-fiber-blue/30",
-                isFeatured && "bg-gradient-to-br from-fiber-blue-light to-transparent",
+                "border-2 border-border hover:border-fiber-red/30",
+                isFeatured && "bg-gradient-to-br from-fiber-red-light to-transparent",
                 isSelected &&
                   isFeatured &&
-                  "border-fiber-blue bg-gradient-to-br from-fiber-blue-light to-transparent ring-2 ring-fiber-blue ring-offset-2",
+                  "border-fiber-red bg-gradient-to-br from-fiber-red-light to-transparent ring-2 ring-fiber-red ring-offset-2",
                 isSelected &&
                   !isFeatured &&
-                  "border-fiber-blue ring-2 ring-fiber-blue ring-offset-2",
+                  "border-fiber-red ring-2 ring-fiber-red ring-offset-2",
               )}
             >
               {/* Featured badge */}
               {isFeatured && (
-                <div className="absolute -top-3 right-4 inline-block bg-fiber-blue px-3 py-1 text-xs font-semibold text-white rounded-full">
+                <div className="absolute -top-3 right-4 inline-block bg-fiber-red px-3 py-1 text-xs font-semibold text-white rounded-full">
                   Most Popular
                 </div>
               )}
@@ -49,7 +49,7 @@ export function PlanSelector({
               {/* Radio indicator */}
               <div className="absolute top-4 right-4 h-5 w-5 rounded-full border-2 border-border">
                 {isSelected && (
-                  <div className="absolute inset-1 rounded-full bg-fiber-blue" />
+                  <div className="absolute inset-1 rounded-full bg-fiber-red" />
                 )}
               </div>
 

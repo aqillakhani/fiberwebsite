@@ -74,7 +74,7 @@ export default function RepVerificationSection() {
             <div className="pt-2">
               <Link
                 href="/verify-rep"
-                className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-teal transition-colors font-semibold text-sm"
+                className="inline-flex items-center gap-2 text-fiber-red hover:text-fiber-red transition-colors font-semibold text-sm"
               >
                 Verify Your Rep &rarr;
               </Link>

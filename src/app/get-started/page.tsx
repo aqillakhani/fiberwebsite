@@ -79,11 +79,11 @@ export default function GetStartedPage() {
                   className="relative bg-card rounded-xl border border-border p-6"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-fiber-blue/10 flex items-center justify-center">
-                      <Icon className="size-5 text-fiber-blue" />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-fiber-red/10 flex items-center justify-center">
+                      <Icon className="size-5 text-fiber-red" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-fiber-blue mb-1">Step {index + 1}</div>
+                      <div className="text-xs font-bold text-fiber-red mb-1">Step {index + 1}</div>
                       <h3 className="font-semibold text-foreground mb-1">{step.title}</h3>
                       <p className="text-sm text-muted-foreground">{step.description}</p>
                     </div>

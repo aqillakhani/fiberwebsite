@@ -54,11 +54,11 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-blue)] transition-colors"
+            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-red)] transition-colors"
           >
             <ZapIcon
               className="size-5"
-              style={{ color: "var(--fiber-blue)" }}
+              style={{ color: "var(--fiber-red)" }}
             />
             {COMPANY.name}
           </Link>
@@ -78,7 +78,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             <Link
               href="/check-availability"
-              className="px-3 py-2 text-sm font-medium text-[var(--fiber-blue)] hover:text-[var(--fiber-blue)]/80 transition-colors"
+              className="px-3 py-2 text-sm font-medium text-[var(--fiber-red)] hover:text-[var(--fiber-red)]/80 transition-colors"
             >
               Check Availability
             </Link>
@@ -115,7 +115,7 @@ export function Header() {
             {/* Desktop CTA Button */}
             <Link href="/check-availability" className="hidden lg:block">
               <Button
-                className="bg-fiber-teal text-white hover:bg-fiber-teal/90"
+                className="bg-fiber-red text-white hover:bg-fiber-red/90"
               >
                 Check Availability
               </Button>
@@ -135,7 +135,7 @@ export function Header() {
                     <div className="flex items-center gap-2">
                       <ZapIcon
                         className="size-5"
-                        style={{ color: "var(--fiber-blue)" }}
+                        style={{ color: "var(--fiber-red)" }}
                       />
                       <span className="font-bold">{COMPANY.name}</span>
                     </div>
@@ -144,7 +144,7 @@ export function Header() {
                   <nav className="flex flex-col gap-2 py-4">
                     <Link
                       href="/check-availability"
-                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-blue)] hover:text-[var(--fiber-blue)]/80 transition-colors"
+                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-red)] hover:text-[var(--fiber-red)]/80 transition-colors"
                     >
                       Check Availability
                     </Link>
@@ -162,7 +162,7 @@ export function Header() {
                   <SheetFooter className="flex flex-col gap-3">
                     <Link href="/check-availability" className="w-full">
                       <Button
-                        className="w-full bg-fiber-teal text-white hover:bg-fiber-teal/90"
+                        className="w-full bg-fiber-red text-white hover:bg-fiber-red/90"
                       >
                         Check Availability
                       </Button>

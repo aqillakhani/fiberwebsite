@@ -85,8 +85,8 @@ export function DatePicker({
               onClick={() => handleDateSelect(date)}
               className={`px-2 py-2 rounded text-center text-xs sm:text-sm font-medium transition-all ${
                 selectedDate === date
-                  ? 'bg-fiber-blue text-white border-2 border-fiber-blue shadow-md'
-                  : 'bg-muted text-foreground border-2 border-border hover:border-fiber-blue/30 hover:bg-fiber-blue/5'
+                  ? 'bg-fiber-red text-white border-2 border-fiber-red shadow-md'
+                  : 'bg-muted text-foreground border-2 border-border hover:border-fiber-red/30 hover:bg-fiber-red/5'
               }`}
             >
               {display}
@@ -112,7 +112,7 @@ export function DatePicker({
                 value={time}
                 checked={localSelectedTime === time}
                 onChange={() => handleTimeSelect(time)}
-                className="w-4 h-4 text-fiber-blue border-border focus:ring-2 focus:ring-fiber-blue"
+                className="w-4 h-4 text-fiber-red border-border focus:ring-2 focus:ring-fiber-red"
               />
               <span className="ml-2 text-sm text-foreground capitalize">
                 {time === 'no-preference' ? 'No Preference' : time}

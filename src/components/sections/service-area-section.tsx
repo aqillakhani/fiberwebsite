@@ -54,7 +54,7 @@ export default function ServiceAreaSection() {
               {states.map((state) => (
                 <span
                   key={state}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-fiber-teal/10 text-fiber-teal text-sm font-medium"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-fiber-red/10 text-fiber-red text-sm font-medium"
                 >
                   <MapPin className="size-3" />
                   {state}
@@ -66,7 +66,7 @@ export default function ServiceAreaSection() {
             </div>
 
             <Link href="/check-availability">
-              <Button className="bg-fiber-teal text-white hover:bg-fiber-teal/90 gap-2 font-bold">
+              <Button className="bg-fiber-red text-white hover:bg-fiber-red/90 gap-2 font-bold">
                 Check Your Address
                 <ArrowRight className="size-4" />
               </Button>
@@ -82,13 +82,13 @@ export default function ServiceAreaSection() {
           >
             <div className="relative w-full max-w-sm aspect-square flex items-center justify-center">
               {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full border border-fiber-blue/10" />
-              <div className="absolute inset-6 rounded-full border border-fiber-blue/15" />
-              <div className="absolute inset-12 rounded-full border border-fiber-blue/20" />
+              <div className="absolute inset-0 rounded-full border border-fiber-red/10" />
+              <div className="absolute inset-6 rounded-full border border-fiber-red/15" />
+              <div className="absolute inset-12 rounded-full border border-fiber-red/20" />
 
               {/* Center stat */}
               <div className="text-center relative z-10">
-                <div className="text-5xl md:text-6xl font-bold text-fiber-blue mb-2">
+                <div className="text-5xl md:text-6xl font-bold text-fiber-red mb-2">
                   50
                 </div>
                 <div className="text-muted-foreground font-medium">

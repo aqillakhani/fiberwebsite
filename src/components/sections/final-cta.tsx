@@ -24,7 +24,7 @@ export default function FinalCTASection() {
         <Link href="/check-availability" className="mb-4">
           <Button
             size="lg"
-            className="min-h-[56px] bg-fiber-teal px-10 text-lg text-white hover:bg-fiber-teal/90 shadow-lg shadow-fiber-teal/30 cta-pulse gap-2"
+            className="min-h-[56px] bg-fiber-red px-10 text-lg text-white hover:bg-fiber-red/90 shadow-lg shadow-fiber-red/30 cta-pulse gap-2"
           >
             Check Availability
             <ArrowRight className="w-5 h-5" />

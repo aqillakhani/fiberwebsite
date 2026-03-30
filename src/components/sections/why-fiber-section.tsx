@@ -39,7 +39,7 @@ const comparisons = [
     reliability: "Excellent",
     reliabilityColor: "text-fiber-success",
     barWidth: "w-full",
-    barColor: "bg-gradient-to-r from-fiber-blue to-fiber-teal",
+    barColor: "bg-gradient-to-r from-fiber-red to-fiber-red",
     cardClass: "gradient-border border-2 scale-[1.02] shadow-lg",
   },
 ]
@@ -90,7 +90,7 @@ export default function WhyFiberSection() {
                   className={cn(
                     "flex items-center justify-center w-10 h-10 rounded-lg",
                     item.type === "Fiber"
-                      ? "bg-fiber-blue/10 text-fiber-blue"
+                      ? "bg-fiber-red/10 text-fiber-red"
                       : "bg-muted text-muted-foreground"
                   )}
                 >
@@ -100,7 +100,7 @@ export default function WhyFiberSection() {
                   {item.type}
                 </h3>
                 {item.type === "Fiber" && (
-                  <span className="ml-auto text-xs font-semibold bg-fiber-blue/10 text-fiber-blue px-2 py-1 rounded-full">
+                  <span className="ml-auto text-xs font-semibold bg-fiber-red/10 text-fiber-red px-2 py-1 rounded-full">
                     Best
                   </span>
                 )}
@@ -145,7 +145,7 @@ export default function WhyFiberSection() {
               key={stat.label}
               className="text-center p-4 rounded-lg bg-muted/50"
             >
-              <stat.icon className="size-5 text-fiber-blue mx-auto mb-2" />
+              <stat.icon className="size-5 text-fiber-red mx-auto mb-2" />
               <div className="text-sm text-muted-foreground">{stat.label}</div>
               <div className="text-lg font-bold text-foreground">{stat.value}</div>
             </div>
@@ -155,7 +155,7 @@ export default function WhyFiberSection() {
         <div className="text-center">
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 text-fiber-teal hover:text-fiber-blue transition-colors font-semibold"
+            className="inline-flex items-center gap-2 text-fiber-red hover:text-fiber-red transition-colors font-semibold"
           >
             See Our Plans &rarr;
           </Link>

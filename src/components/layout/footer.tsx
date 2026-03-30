@@ -15,11 +15,11 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-blue)] transition-colors mb-4"
+              className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-red)] transition-colors mb-4"
             >
               <ZapIcon
                 className="size-5"
-                style={{ color: "var(--fiber-blue)" }}
+                style={{ color: "var(--fiber-red)" }}
               />
               {COMPANY.name}
             </Link>
