@@ -8,7 +8,6 @@ import InlineCTA from "@/components/sections/inline-cta"
 import TrustSection from "@/components/sections/trust-section"
 import AvailabilitySection from "@/components/sections/availability-section"
 import ServiceAreaSection from "@/components/sections/service-area-section"
-import RepVerificationSection from "@/components/sections/rep-verification-section"
 import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
 
@@ -60,7 +59,6 @@ export default function HomePage() {
         ctaText="Get Started Now"
       />
       <ServiceAreaSection />
-      <RepVerificationSection />
       <HomepageFAQ />
       <FinalCTASection />
     </main>

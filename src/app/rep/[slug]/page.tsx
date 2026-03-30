@@ -75,16 +75,17 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
               <div className="rounded-xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20">
                 {/* Photo or Placeholder */}
                 {rep.photo_url ? (
-                  <div className="aspect-square relative">
+                  <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
                     <Image
                       src={rep.photo_url}
                       alt={rep.name}
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover object-top"
                     />
                   </div>
                 ) : (
-                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/30 via-fiber-blue/20 to-fiber-blue/30 flex items-center justify-center">
+                  <div className="w-full bg-gradient-to-br from-fiber-blue/30 via-fiber-blue/20 to-fiber-blue/30 flex items-center justify-center" style={{ aspectRatio: "4/5" }}>
                     <span className="text-7xl font-bold text-white/30">
                       {firstName[0]}
                     </span>

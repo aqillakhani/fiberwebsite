@@ -29,18 +29,19 @@ export default function MeetTheTeam() {
                 key={rep.slug}
                 className="card-premium bg-card rounded-xl border border-border overflow-hidden flex flex-col h-full"
               >
-                {/* Photo or placeholder */}
+                {/* Photo or placeholder — standardized 4:5 portrait */}
                 {rep.photo_url ? (
-                  <div className="aspect-square relative">
+                  <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
                     <Image
                       src={rep.photo_url}
                       alt={rep.name}
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover object-top"
                     />
                   </div>
                 ) : (
-                  <div className="aspect-square bg-gradient-to-br from-fiber-blue/10 via-fiber-blue/5 to-fiber-blue/10 flex items-center justify-center">
+                  <div className="w-full bg-gradient-to-br from-fiber-blue/10 via-fiber-blue/5 to-fiber-blue/10 flex items-center justify-center" style={{ aspectRatio: "4/5" }}>
                     <span className="text-5xl font-bold text-fiber-blue/20">
                       {firstLetter}
                     </span>

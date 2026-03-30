@@ -169,6 +169,16 @@
     --border: #E5E7EB;
     font-weight: 700;
   }
+  /* Dark mode cards — brighter background, light text */
+  .dark .bg-card,
+  .dark [class*="bg-card"],
+  .dark .white-section {
+    --foreground: #F9FAFB;
+    --muted-foreground: #D1D5DB;
+    --card-foreground: #F9FAFB;
+    --border: #4B5563;
+    background: #1F2937;
+  }
 }
 
 /* Premium Design System Utilities */
@@ -469,7 +479,7 @@
     background: #F9FAFB;
   }
   .dark .bg-treatment-rhythm {
-    background: #374151;
+    background: #1F2937;
   }
 
   /* Treatment 3: Trust — light with blue warmth */
@@ -496,7 +506,7 @@
     background: linear-gradient(135deg, #1F2937 0%, #1e3a5c 50%, #134e4a 100%);
   }
 
-  /* Ensure readable dark text on light treatment backgrounds */
+  /* Ensure readable text on treatment backgrounds — light mode */
   .bg-treatment-emphasis,
   .bg-treatment-rhythm,
   .bg-treatment-trust,
@@ -506,6 +516,17 @@
     --muted-foreground: #6B7280;
     --card-foreground: #111827;
     --border: #E5E7EB;
+  }
+  /* Ensure readable text on treatment backgrounds — dark mode */
+  .dark .bg-treatment-emphasis,
+  .dark .bg-treatment-rhythm,
+  .dark .bg-treatment-trust,
+  .dark .bg-treatment-momentum,
+  .dark .bg-treatment-showcase {
+    --foreground: #F9FAFB;
+    --muted-foreground: #D1D5DB;
+    --card-foreground: #F9FAFB;
+    --border: #4B5563;
   }
 
   /* Floating glow orb for section backgrounds */

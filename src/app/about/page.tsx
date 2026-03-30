@@ -196,11 +196,11 @@ export default function AboutPage() {
                 className="group card-premium bg-card rounded-xl border border-border p-6 block"
               >
                 {member.image ? (
-                  <div className="relative h-36 rounded-lg overflow-hidden mb-4">
-                    <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  <div className="relative rounded-lg overflow-hidden mb-4" style={{ aspectRatio: "4/5" }}>
+                    <Image src={member.image} alt={member.name} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover object-top" />
                   </div>
                 ) : (
-                  <div className="bg-gradient-to-br from-fiber-blue/10 to-fiber-blue/5 rounded-lg h-36 mb-4 flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-fiber-blue/10 to-fiber-blue/5 rounded-lg mb-4 flex items-center justify-center" style={{ aspectRatio: "4/5" }}>
                     <span className="text-4xl font-bold text-fiber-blue/30">
                       {member.name.split(" ")[0][0]}
                     </span>

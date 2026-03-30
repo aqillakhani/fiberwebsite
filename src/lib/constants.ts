@@ -314,7 +314,6 @@ export const FOOTER_LINKS = {
   company: [
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
-    { href: "/verify-rep", label: "Verify a Rep" },
   ],
   services: [
     { href: "/pricing", label: "Plans & Pricing" },
