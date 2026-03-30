@@ -106,21 +106,21 @@
 .dark {
   --background: #111827;
   --foreground: #F9FAFB;
-  --card: #1F2937;
+  --card: #283548;
   --card-foreground: #F9FAFB;
-  --popover: #1F2937;
+  --popover: #283548;
   --popover-foreground: #F9FAFB;
   --primary: #3B82F6;
-  --primary-foreground: #111827;
+  --primary-foreground: #FFFFFF;
   --secondary: #374151;
   --secondary-foreground: #F9FAFB;
-  --muted: #1F2937;
-  --muted-foreground: #9CA3AF;
+  --muted: #283548;
+  --muted-foreground: #D1D5DB;
   --accent: #14B8A6;
-  --accent-foreground: #111827;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
-  --border: #374151;
-  --input: #374151;
+  --border: #475569;
+  --input: #475569;
   --ring: #3B82F6;
   --chart-1: #3B82F6;
   --chart-2: #14B8A6;
@@ -176,8 +176,8 @@
     --foreground: #F9FAFB;
     --muted-foreground: #D1D5DB;
     --card-foreground: #F9FAFB;
-    --border: #4B5563;
-    background: #1F2937;
+    --border: #475569;
+    background: #283548;
   }
 }
 
@@ -526,7 +526,7 @@
     --foreground: #F9FAFB;
     --muted-foreground: #D1D5DB;
     --card-foreground: #F9FAFB;
-    --border: #4B5563;
+    --border: #475569;
   }
 
   /* Floating glow orb for section backgrounds */
