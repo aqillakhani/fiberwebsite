@@ -104,7 +104,7 @@
 }
 
 .dark {
-  --background: #101B30;
+  --background: #14203A;
   --foreground: #F8FAFC;
   --card: #FFFFFF;
   --card-foreground: #111827;
@@ -127,11 +127,11 @@
   --chart-3: #16A34A;
   --chart-4: #F59E0B;
   --chart-5: #DC2626;
-  --sidebar: #101B30;
+  --sidebar: #14203A;
   --sidebar-foreground: #F8FAFC;
   --sidebar-primary: #3B82F6;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #162040;
+  --sidebar-accent: #1A2847;
   --sidebar-accent-foreground: #F8FAFC;
   --sidebar-border: #1E3050;
   --sidebar-ring: #3B82F6;
@@ -189,15 +189,15 @@
     background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 40%, #1E40AF 100%);
   }
   .dark .hero-gradient {
-    background: linear-gradient(135deg, #101B30 0%, #1E3A8A 40%, #101B30 100%);
+    background: linear-gradient(135deg, #14203A 0%, #1E3A8A 40%, #14203A 100%);
   }
 
   /* Section backgrounds — bluish-black matching hero family */
   .section-navy {
-    background: linear-gradient(180deg, #0E1A32 0%, #162040 100%);
+    background: linear-gradient(180deg, #14203A 0%, #1A2847 100%);
   }
   .dark .section-navy {
-    background: linear-gradient(180deg, #0E1A32 0%, #162040 100%);
+    background: linear-gradient(180deg, #14203A 0%, #1A2847 100%);
   }
 
   /* Subtle section gradient transitions */
@@ -205,7 +205,7 @@
     background: linear-gradient(180deg, transparent 0%, var(--fiber-blue-light) 50%, transparent 100%);
   }
   .dark .section-gradient {
-    background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.08) 50%, transparent 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.06) 50%, transparent 100%);
   }
 
   /* Subtle dot grid pattern overlay */
@@ -477,39 +477,39 @@
     background: #FFFFFF;
   }
   .dark .bg-treatment-emphasis {
-    background: #101B30;
+    background: #14203A;
   }
 
-  /* Treatment 2: Rhythm — subtle shift within bluish-black family */
+  /* Treatment 2: Rhythm — slightly deeper blue for alternating sections */
   .bg-treatment-rhythm {
     background: #F9FAFB;
   }
   .dark .bg-treatment-rhythm {
-    background: #122038;
+    background: #172544;
   }
 
-  /* Treatment 3: Trust — slightly warmer blue undertone */
+  /* Treatment 3: Trust — richer blue undertone for credibility */
   .bg-treatment-trust {
     background: linear-gradient(180deg, #EFF6FF 0%, #F0F9FF 100%);
   }
   .dark .bg-treatment-trust {
-    background: linear-gradient(180deg, #101B30 0%, #14213D 100%);
+    background: linear-gradient(180deg, #162340 0%, #1A2A4C 100%);
   }
 
-  /* Treatment 4: Momentum — hint of warmth in the blue-black */
+  /* Treatment 4: Momentum — slightly warm-shifted blue for CTAs */
   .bg-treatment-momentum {
     background: linear-gradient(180deg, #FEF2F2 0%, #FFF7ED 100%);
   }
   .dark .bg-treatment-momentum {
-    background: linear-gradient(180deg, #101B30 0%, #161E38 100%);
+    background: linear-gradient(180deg, #172544 0%, #1C2848 100%);
   }
 
-  /* Treatment 5: Showcase — diagonal within bluish-black family */
+  /* Treatment 5: Showcase — diagonal blue tones for premium sections */
   .bg-treatment-showcase {
     background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
   }
   .dark .bg-treatment-showcase {
-    background: linear-gradient(135deg, #101B30 0%, #142242 50%, #102438 100%);
+    background: linear-gradient(135deg, #14203A 0%, #1A2E52 50%, #162844 100%);
   }
 
   /* Ensure readable text on treatment backgrounds — light mode */
