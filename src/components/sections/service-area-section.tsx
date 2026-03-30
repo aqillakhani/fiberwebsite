@@ -54,13 +54,13 @@ export default function ServiceAreaSection() {
               {states.map((state) => (
                 <span
                   key={state}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-fiber-blue/10 text-fiber-blue text-sm font-medium"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 text-white text-sm font-medium"
                 >
                   <MapPin className="size-3" />
                   {state}
                 </span>
               ))}
-              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium">
+              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/10 text-white/70 text-sm font-medium">
                 + 30 more states
               </span>
             </div>
@@ -82,16 +82,16 @@ export default function ServiceAreaSection() {
           >
             <div className="relative w-full max-w-sm aspect-square flex items-center justify-center">
               {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full border border-fiber-blue/10" />
-              <div className="absolute inset-6 rounded-full border border-fiber-blue/15" />
-              <div className="absolute inset-12 rounded-full border border-fiber-blue/20" />
+              <div className="absolute inset-0 rounded-full border border-white/10" />
+              <div className="absolute inset-6 rounded-full border border-white/15" />
+              <div className="absolute inset-12 rounded-full border border-white/20" />
 
               {/* Center stat */}
               <div className="text-center relative z-10">
-                <div className="text-5xl md:text-6xl font-bold text-fiber-blue mb-2">
+                <div className="text-5xl md:text-6xl font-bold text-white mb-2">
                   50
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-white/70 font-medium">
                   States Nationwide
                 </div>
                 <div className="mt-2 flex items-center justify-center gap-1.5">
