@@ -104,7 +104,7 @@
 }
 
 .dark {
-  --background: #1E3A8A;
+  --background: #152A60;
   --foreground: #F8FAFC;
   --card: #FFFFFF;
   --card-foreground: #111827;
@@ -127,7 +127,7 @@
   --chart-3: #16A34A;
   --chart-4: #F59E0B;
   --chart-5: #DC2626;
-  --sidebar: #1E3A8A;
+  --sidebar: #152A60;
   --sidebar-foreground: #F8FAFC;
   --sidebar-primary: #60A5FA;
   --sidebar-primary-foreground: #FFFFFF;
@@ -189,15 +189,15 @@
     background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 40%, #1E40AF 100%);
   }
   .dark .hero-gradient {
-    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 40%, #1E3A8A 100%);
+    background: linear-gradient(135deg, #152A60 0%, #1E3A8A 40%, #152A60 100%);
   }
 
   /* Section backgrounds — bluish-black matching hero family */
   .section-navy {
-    background: linear-gradient(180deg, #1E3A8A 0%, #1A3278 100%);
+    background: linear-gradient(180deg, #152A60 0%, #1A3278 100%);
   }
   .dark .section-navy {
-    background: linear-gradient(180deg, #1E3A8A 0%, #1A3278 100%);
+    background: linear-gradient(180deg, #152A60 0%, #1A3278 100%);
   }
 
   /* Subtle section gradient transitions */
@@ -280,7 +280,7 @@
 
   /* Gradient text */
   .text-gradient-blue {
-    background: linear-gradient(135deg, var(--fiber-blue) 0%, #1E3A8A 100%);
+    background: linear-gradient(135deg, var(--fiber-blue) 0%, #152A60 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -477,7 +477,7 @@
     background: #FFFFFF;
   }
   .dark .bg-treatment-emphasis {
-    background: #1E3A8A;
+    background: #152A60;
   }
 
   /* Treatment 2: Rhythm — subtle darker shift for alternating sections */
@@ -493,7 +493,7 @@
     background: linear-gradient(180deg, #EFF6FF 0%, #F0F9FF 100%);
   }
   .dark .bg-treatment-trust {
-    background: linear-gradient(180deg, #1E3A8A 0%, #213F92 100%);
+    background: linear-gradient(180deg, #152A60 0%, #213F92 100%);
   }
 
   /* Treatment 4: Momentum — same family, hint of depth for CTAs */
@@ -509,7 +509,7 @@
     background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
   }
   .dark .bg-treatment-showcase {
-    background: linear-gradient(135deg, #1E3A8A 0%, #234298 50%, #1C3680 100%);
+    background: linear-gradient(135deg, #152A60 0%, #234298 50%, #1C3680 100%);
   }
 
   /* Ensure readable text on treatment backgrounds — light mode */
