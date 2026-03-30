@@ -81,7 +81,7 @@ export default function CareerForm() {
             className={inputClasses}
           />
           {errors.fullName && (
-            <p className="text-red-500 text-xs mt-1">{errors.fullName.message}</p>
+            <p className="text-destructive text-xs mt-1">{errors.fullName.message}</p>
           )}
         </div>
         <div>
@@ -93,7 +93,7 @@ export default function CareerForm() {
             className={inputClasses}
           />
           {errors.phone && (
-            <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
+            <p className="text-destructive text-xs mt-1">{errors.phone.message}</p>
           )}
         </div>
       </div>
@@ -107,7 +107,7 @@ export default function CareerForm() {
           className={inputClasses}
         />
         {errors.email && (
-          <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
+          <p className="text-destructive text-xs mt-1">{errors.email.message}</p>
         )}
       </div>
 
@@ -121,7 +121,7 @@ export default function CareerForm() {
             className={inputClasses}
           />
           {errors.city && (
-            <p className="text-red-500 text-xs mt-1">{errors.city.message}</p>
+            <p className="text-destructive text-xs mt-1">{errors.city.message}</p>
           )}
         </div>
         <div>
@@ -133,7 +133,7 @@ export default function CareerForm() {
             className={inputClasses}
           />
           {errors.state && (
-            <p className="text-red-500 text-xs mt-1">{errors.state.message}</p>
+            <p className="text-destructive text-xs mt-1">{errors.state.message}</p>
           )}
         </div>
       </div>
@@ -160,12 +160,12 @@ export default function CareerForm() {
           className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-teal focus:border-transparent text-base resize-none"
         />
         {errors.whyInterested && (
-          <p className="text-red-500 text-xs mt-1">{errors.whyInterested.message}</p>
+          <p className="text-destructive text-xs mt-1">{errors.whyInterested.message}</p>
         )}
       </div>
 
       {submitError && (
-        <p className="text-red-500 text-sm text-center">{submitError}</p>
+        <p className="text-destructive text-sm text-center">{submitError}</p>
       )}
 
       <Button

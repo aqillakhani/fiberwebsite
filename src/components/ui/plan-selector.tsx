@@ -29,27 +29,27 @@ export function PlanSelector({
               onClick={() => onSelect(plan.id)}
               className={cn(
                 "relative w-full rounded-lg p-5 text-left transition-all duration-200",
-                "border-2 border-gray-200 hover:border-gray-300",
-                isFeatured && "bg-gradient-to-br from-amber-50 to-transparent",
+                "border-2 border-border hover:border-fiber-blue/30",
+                isFeatured && "bg-gradient-to-br from-fiber-blue-light to-transparent",
                 isSelected &&
                   isFeatured &&
-                  "border-teal-500 bg-gradient-to-br from-amber-50 to-transparent ring-2 ring-teal-500 ring-offset-2",
+                  "border-fiber-blue bg-gradient-to-br from-fiber-blue-light to-transparent ring-2 ring-fiber-blue ring-offset-2",
                 isSelected &&
                   !isFeatured &&
-                  "border-teal-500 ring-2 ring-teal-500 ring-offset-2",
+                  "border-fiber-blue ring-2 ring-fiber-blue ring-offset-2",
               )}
             >
               {/* Featured badge */}
               {isFeatured && (
-                <div className="absolute -top-3 right-4 inline-block bg-teal-500 px-3 py-1 text-xs font-semibold text-white rounded-full">
+                <div className="absolute -top-3 right-4 inline-block bg-fiber-blue px-3 py-1 text-xs font-semibold text-white rounded-full">
                   Most Popular
                 </div>
               )}
 
               {/* Radio indicator */}
-              <div className="absolute top-4 right-4 h-5 w-5 rounded-full border-2 border-gray-300">
+              <div className="absolute top-4 right-4 h-5 w-5 rounded-full border-2 border-border">
                 {isSelected && (
-                  <div className="absolute inset-1 rounded-full bg-teal-500" />
+                  <div className="absolute inset-1 rounded-full bg-fiber-blue" />
                 )}
               </div>
 
@@ -57,18 +57,18 @@ export function PlanSelector({
               <div className="pr-12">
                 {/* Plan name and speed */}
                 <div className="mb-2">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-foreground">
                     {plan.name}
                   </h3>
-                  <p className="text-sm text-gray-600">{plan.speed}</p>
+                  <p className="text-sm text-muted-foreground">{plan.speed}</p>
                 </div>
 
                 {/* Price */}
                 <div className="mb-3">
-                  <span className="text-2xl font-bold text-gray-900">
+                  <span className="text-2xl font-bold text-foreground">
                     ${plan.price}
                   </span>
-                  <span className="text-sm text-gray-600">/mo</span>
+                  <span className="text-sm text-muted-foreground">/mo</span>
                 </div>
 
                 {/* Badges */}
@@ -92,7 +92,7 @@ export function PlanSelector({
 
       {/* Helper text */}
       <div className="text-center pt-2">
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-muted-foreground">
           Not sure? Our most popular plan is <span className="font-semibold">Gig 1</span>
         </p>
       </div>

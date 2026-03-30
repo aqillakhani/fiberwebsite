@@ -54,11 +54,11 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-teal)] transition-colors"
+            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-blue)] transition-colors"
           >
             <ZapIcon
               className="size-5"
-              style={{ color: "var(--fiber-teal)" }}
+              style={{ color: "var(--fiber-blue)" }}
             />
             {COMPANY.name}
           </Link>
@@ -67,7 +67,7 @@ export function Header() {
           {repDisplayName && repSlug && (
             <Link
               href={`/rep/${repSlug}`}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fiber-teal/10 text-fiber-teal text-xs font-medium hover:bg-fiber-teal/20 transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-fiber-accent/10 text-fiber-accent text-xs font-medium hover:bg-fiber-accent/20 transition-colors"
             >
               <span className="w-1.5 h-1.5 bg-fiber-success rounded-full" />
               Working with {repDisplayName}
@@ -78,7 +78,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             <Link
               href="/check-availability"
-              className="px-3 py-2 text-sm font-medium text-[var(--fiber-teal)] hover:text-[var(--fiber-teal)]/80 transition-colors"
+              className="px-3 py-2 text-sm font-medium text-[var(--fiber-blue)] hover:text-[var(--fiber-blue)]/80 transition-colors"
             >
               Check Availability
             </Link>
@@ -135,7 +135,7 @@ export function Header() {
                     <div className="flex items-center gap-2">
                       <ZapIcon
                         className="size-5"
-                        style={{ color: "var(--fiber-teal)" }}
+                        style={{ color: "var(--fiber-blue)" }}
                       />
                       <span className="font-bold">{COMPANY.name}</span>
                     </div>
@@ -144,7 +144,7 @@ export function Header() {
                   <nav className="flex flex-col gap-2 py-4">
                     <Link
                       href="/check-availability"
-                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-teal)] hover:text-[var(--fiber-teal)]/80 transition-colors"
+                      className="px-3 py-2 text-sm font-medium text-[var(--fiber-blue)] hover:text-[var(--fiber-blue)]/80 transition-colors"
                     >
                       Check Availability
                     </Link>
@@ -169,7 +169,7 @@ export function Header() {
                     </Link>
                     <Link href="/pricing" className="w-full">
                       <Button
-                        className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600 font-bold"
+                        className="w-full bg-white dark:bg-card text-foreground dark:text-foreground hover:bg-muted dark:hover:bg-muted border border-border dark:border-border font-bold"
                       >
                         View Plans
                       </Button>

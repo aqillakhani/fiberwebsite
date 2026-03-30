@@ -165,7 +165,7 @@ export default function DoorModeForm({
           className={inputClasses}
         />
         {errors.serviceAddress && (
-          <p className="text-red-500 text-xs">{errors.serviceAddress.message}</p>
+          <p className="text-destructive text-xs">{errors.serviceAddress.message}</p>
         )}
         <div className="grid grid-cols-3 gap-3">
           <input
@@ -191,7 +191,7 @@ export default function DoorModeForm({
           />
         </div>
         {(errors.city || errors.state || errors.zip) && (
-          <p className="text-red-500 text-xs">Please fill in city, state, and ZIP code</p>
+          <p className="text-destructive text-xs">Please fill in city, state, and ZIP code</p>
         )}
       </div>
 
@@ -212,7 +212,7 @@ export default function DoorModeForm({
               )}
             >
               {plan.isFeatured && (
-                <span className="absolute -top-2 right-2 text-[10px] font-bold bg-fiber-teal text-white px-1.5 py-0.5 rounded">
+                <span className="absolute -top-2 right-2 text-[10px] font-bold bg-fiber-blue text-white px-1.5 py-0.5 rounded">
                   Popular
                 </span>
               )}
@@ -222,7 +222,7 @@ export default function DoorModeForm({
                 ${plan.price}<span className="text-xs font-normal">/mo</span>
               </div>
               {plan.giftCard > 0 && (
-                <div className="text-[10px] text-fiber-teal font-medium mt-0.5">
+                <div className="text-[10px] text-foreground font-medium mt-0.5">
                   +${plan.giftCard} Gift Card
                 </div>
               )}
@@ -230,7 +230,7 @@ export default function DoorModeForm({
           ))}
         </div>
         {errors.selectedPlan && (
-          <p className="text-red-500 text-xs">{errors.selectedPlan.message}</p>
+          <p className="text-destructive text-xs">{errors.selectedPlan.message}</p>
         )}
       </div>
 
@@ -259,7 +259,7 @@ export default function DoorModeForm({
           })}
         </div>
         {errors.preferredInstallDate && (
-          <p className="text-red-500 text-xs">{errors.preferredInstallDate.message}</p>
+          <p className="text-destructive text-xs">{errors.preferredInstallDate.message}</p>
         )}
 
         {/* Time Preference */}
@@ -292,7 +292,7 @@ export default function DoorModeForm({
           className={inputClasses}
         />
         {errors.fullName && (
-          <p className="text-red-500 text-xs">{errors.fullName.message}</p>
+          <p className="text-destructive text-xs">{errors.fullName.message}</p>
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
@@ -304,7 +304,7 @@ export default function DoorModeForm({
               className={inputClasses}
             />
             {errors.phone && (
-              <p className="text-red-500 text-xs">{errors.phone.message}</p>
+              <p className="text-destructive text-xs">{errors.phone.message}</p>
             )}
           </div>
           <div>
@@ -316,14 +316,14 @@ export default function DoorModeForm({
               className={inputClasses}
             />
             {errors.email && (
-              <p className="text-red-500 text-xs">{errors.email.message}</p>
+              <p className="text-destructive text-xs">{errors.email.message}</p>
             )}
           </div>
         </div>
       </div>
 
       {submitError && (
-        <p className="text-red-500 text-sm text-center">{submitError}</p>
+        <p className="text-destructive text-sm text-center">{submitError}</p>
       )}
 
       <Button

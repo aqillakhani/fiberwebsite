@@ -47,7 +47,7 @@ export default function BenefitsSection() {
       icon: <Zap className="w-6 h-6 text-white" />,
       title: "Blazing Fast Speeds",
       description: "Up to 7 Gbps symmetric speeds. Stream, game, and work — all at once, all without lag.",
-      iconColor: "bg-fiber-teal"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Shield className="w-6 h-6 text-white" />,
@@ -65,7 +65,7 @@ export default function BenefitsSection() {
       icon: <Ban className="w-6 h-6 text-white" />,
       title: "No Contracts Required",
       description: "Month-to-month plans with no commitments. Cancel anytime, no fees.",
-      iconColor: "bg-fiber-teal"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Wifi className="w-6 h-6 text-white" />,

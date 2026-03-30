@@ -25,9 +25,9 @@ export function MobileStickyCtA() {
         isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
       )}
     >
-      <div className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-border shadow-[0_-4px_16px_rgba(0,0,0,0.1)] pb-safe pt-3 pb-4 px-4">
+      <div className="bg-white dark:bg-background border-t border-border shadow-[0_-4px_16px_rgba(0,0,0,0.1)] pb-safe pt-3 pb-4 px-4">
         <div className="flex flex-col items-center gap-1.5 max-w-7xl mx-auto">
-          <p className="text-xs text-gray-500 font-medium">Check if fiber is available</p>
+          <p className="text-xs text-muted-foreground font-medium">Check if fiber is available</p>
           <Link href="/check-availability" className="w-full">
             <Button className="w-full bg-fiber-teal text-white hover:bg-fiber-teal/90 min-h-[48px] text-base font-semibold">
               Check Availability

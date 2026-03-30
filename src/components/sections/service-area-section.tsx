@@ -82,13 +82,13 @@ export default function ServiceAreaSection() {
           >
             <div className="relative w-full max-w-sm aspect-square flex items-center justify-center">
               {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full border border-fiber-teal/10" />
-              <div className="absolute inset-6 rounded-full border border-fiber-teal/15" />
-              <div className="absolute inset-12 rounded-full border border-fiber-teal/20" />
+              <div className="absolute inset-0 rounded-full border border-fiber-blue/10" />
+              <div className="absolute inset-6 rounded-full border border-fiber-blue/15" />
+              <div className="absolute inset-12 rounded-full border border-fiber-blue/20" />
 
               {/* Center stat */}
               <div className="text-center relative z-10">
-                <div className="text-5xl md:text-6xl font-bold text-fiber-teal mb-2">
+                <div className="text-5xl md:text-6xl font-bold text-fiber-blue mb-2">
                   50
                 </div>
                 <div className="text-muted-foreground font-medium">

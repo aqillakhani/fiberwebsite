@@ -52,7 +52,7 @@ export default function MeetTheTeam() {
                   <h3 className="text-lg font-semibold text-foreground">
                     {rep.name}
                   </h3>
-                  <p className="text-sm text-fiber-teal font-medium">
+                  <p className="text-sm text-fiber-blue font-medium">
                     {rep.role}
                   </p>
                   {(rep.city || rep.state) && (
@@ -65,7 +65,7 @@ export default function MeetTheTeam() {
                   </p>
                   <Link
                     href={`/rep/${rep.slug}`}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-blue hover:text-fiber-teal transition-colors"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-fiber-teal hover:text-fiber-blue transition-colors"
                   >
                     View Profile
                     <ArrowRight className="w-4 h-4" />

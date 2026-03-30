@@ -288,7 +288,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
           <p className="text-muted-foreground">Enter your address to check fiber availability.</p>
 
           {useSaved && savedAddress && (
-            <div className="rounded-lg border border-fiber-teal/30 bg-fiber-teal/5 p-4">
+            <div className="rounded-lg border border-border bg-muted/30 p-4">
               <p className="text-sm font-medium text-foreground mb-2">Welcome back!</p>
               <p className="text-sm text-muted-foreground mb-3">
                 Use your saved address: {savedAddress.serviceAddress}, {savedAddress.city}?
@@ -324,7 +324,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
               className={inputClasses}
             />
             {errors.serviceAddress && (
-              <p className="text-red-500 text-xs">{errors.serviceAddress}</p>
+              <p className="text-destructive text-xs">{errors.serviceAddress}</p>
             )}
 
             <div className="grid grid-cols-3 gap-3">
@@ -354,7 +354,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
               />
             </div>
             {(errors.city || errors.state || errors.zip) && (
-              <p className="text-red-500 text-xs">Please fill in city, state, and ZIP code</p>
+              <p className="text-destructive text-xs">Please fill in city, state, and ZIP code</p>
             )}
           </div>
         </div>
@@ -380,7 +380,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                 )}
               >
                 {plan.isFeatured && (
-                  <span className="absolute -top-2.5 right-3 text-[10px] font-bold bg-fiber-teal text-white px-2 py-0.5 rounded-full">
+                  <span className="absolute -top-2.5 right-3 text-[10px] font-bold bg-fiber-blue text-white px-2 py-0.5 rounded-full">
                     Popular
                   </span>
                 )}
@@ -390,7 +390,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                   ${plan.price}<span className="text-xs font-normal text-muted-foreground">/mo</span>
                 </div>
                 {plan.giftCard > 0 && (
-                  <div className="text-xs text-fiber-teal font-medium mt-1">
+                  <div className="text-xs text-foreground font-medium mt-1">
                     +${plan.giftCard} Gift Card
                   </div>
                 )}
@@ -403,7 +403,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
             ))}
           </div>
           {errors.selectedPlan && (
-            <p className="text-red-500 text-xs">{errors.selectedPlan}</p>
+            <p className="text-destructive text-xs">{errors.selectedPlan}</p>
           )}
           <p className="text-sm text-muted-foreground text-center">
             Not sure? Our most popular plan is <span className="font-semibold">Gig 1</span>
@@ -439,7 +439,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
             })}
           </div>
           {errors.preferredInstallDate && (
-            <p className="text-red-500 text-xs">{errors.preferredInstallDate}</p>
+            <p className="text-destructive text-xs">{errors.preferredInstallDate}</p>
           )}
 
           <div>
@@ -481,7 +481,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
               onChange={(e) => updateField("fullName", e.target.value)}
               className={inputClasses}
             />
-            {errors.fullName && <p className="text-red-500 text-xs">{errors.fullName}</p>}
+            {errors.fullName && <p className="text-destructive text-xs">{errors.fullName}</p>}
 
             <input
               type="tel"
@@ -491,7 +491,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
               onChange={(e) => updateField("phone", e.target.value)}
               className={inputClasses}
             />
-            {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+            {errors.phone && <p className="text-destructive text-xs">{errors.phone}</p>}
 
             <input
               type="email"
@@ -501,11 +501,11 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
               onChange={(e) => updateField("email", e.target.value)}
               className={inputClasses}
             />
-            {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+            {errors.email && <p className="text-destructive text-xs">{errors.email}</p>}
           </div>
 
           {submitError && (
-            <p className="text-red-500 text-sm text-center">{submitError}</p>
+            <p className="text-destructive text-sm text-center">{submitError}</p>
           )}
         </div>
       )}

@@ -205,7 +205,7 @@ export default async function CityPage({ params }: CityPageProps) {
                   href="#check"
                   className={`inline-flex items-center justify-center w-full h-10 px-4 rounded-lg text-sm font-semibold transition-all ${
                     plan.isFeatured
-                      ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
+                      ? "bg-fiber-blue text-white hover:bg-fiber-blue/90"
                       : "border border-border hover:bg-accent text-foreground"
                   }`}
                 >
@@ -218,7 +218,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <div className="text-center mt-8">
             <Link
               href="/pricing"
-              className="inline-flex items-center gap-2 text-base font-semibold text-fiber-blue hover:underline"
+              className="inline-flex items-center gap-2 text-base font-semibold text-fiber-teal hover:underline"
             >
               View All Plans <ArrowRight className="size-4" />
             </Link>
@@ -275,7 +275,7 @@ export default async function CityPage({ params }: CityPageProps) {
           </p>
           <a
             href="#check"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-blue text-white font-semibold hover:bg-fiber-blue/90 transition-all glow-teal"
           >
             Check Your Address
           </a>

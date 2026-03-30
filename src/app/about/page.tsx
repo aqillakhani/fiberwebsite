@@ -144,7 +144,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/check-availability"
-              className="inline-flex items-center gap-2 text-fiber-blue font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-fiber-teal font-semibold hover:underline"
             >
               Check if we serve your area <ArrowRight className="size-4" />
             </Link>
@@ -199,12 +199,12 @@ export default function AboutPage() {
                     {member.name.split(" ")[0][0]}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-teal transition-colors">
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-blue transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-sm text-fiber-blue font-medium mb-2">{member.role}</p>
                 <p className="text-sm text-muted-foreground mb-3">{member.bio}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-teal">
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-blue">
                   View Profile <ArrowRight className="size-3" />
                 </span>
               </Link>
@@ -225,7 +225,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/check-availability"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-blue text-white font-semibold hover:bg-fiber-blue/90 transition-all glow-teal"
           >
             Check Availability
           </Link>

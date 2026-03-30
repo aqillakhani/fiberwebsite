@@ -144,7 +144,7 @@ export default function WhyFiberPage() {
               <thead>
                 <tr className="border-b border-border bg-muted/50">
                   <th className="px-6 py-4 text-left font-semibold text-foreground">Feature</th>
-                  <th className="px-6 py-4 text-left font-semibold text-fiber-teal">Fiber Optic</th>
+                  <th className="px-6 py-4 text-left font-semibold text-fiber-blue">Fiber Optic</th>
                   <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Copper Cable</th>
                   <th className="px-6 py-4 text-left font-semibold text-muted-foreground">Tower / Satellite</th>
                 </tr>
@@ -220,11 +220,11 @@ export default function WhyFiberPage() {
                 ].map((row) => (
                   <tr key={row.feature}>
                     <td className="px-6 py-4 font-bold text-foreground">{row.feature}</td>
-                    <td className="px-6 py-4 bg-fiber-teal/5">
+                    <td className="px-6 py-4 bg-fiber-blue/5">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="size-5 text-fiber-success flex-shrink-0" />
                         <div>
-                          <span className="text-base font-black text-fiber-teal block">{row.fiber.stat}</span>
+                          <span className="text-base font-black text-fiber-blue block">{row.fiber.stat}</span>
                           <span className="text-xs text-muted-foreground">{row.fiber.text}</span>
                         </div>
                       </div>
@@ -400,7 +400,7 @@ export default function WhyFiberPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/check-availability"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-teal text-white font-semibold hover:bg-fiber-teal/90 transition-all glow-teal"
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-blue text-white font-semibold hover:bg-fiber-blue/90 transition-all glow-teal"
             >
               Check Availability
             </Link>

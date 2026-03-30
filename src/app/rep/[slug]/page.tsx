@@ -139,7 +139,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-2">
                   {rep.name}
                 </h1>
-                <p className="text-lg text-fiber-teal font-semibold mb-4">
+                <p className="text-lg text-fiber-blue font-semibold mb-4">
                   {rep.role}
                 </p>
                 {(rep.city || rep.state) && (
@@ -209,7 +209,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
               >
                 {plan.isFeatured && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                    <Badge className="bg-fiber-teal text-white border-0 shadow-md">
+                    <Badge className="bg-fiber-blue text-white border-0 shadow-md">
                       <Star className="size-3 mr-1" />
                       Most Popular
                     </Badge>
@@ -269,7 +269,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                       className={cn(
                         "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                         plan.isFeatured
-                          ? "bg-fiber-teal text-white hover:bg-fiber-teal/90"
+                          ? "bg-fiber-blue text-white hover:bg-fiber-blue/90"
                           : "border border-border hover:bg-accent text-foreground"
                       )}
                     >
@@ -284,7 +284,7 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
           <div className="text-center mt-8">
             <Link
               href="/pricing"
-              className="text-base font-semibold text-fiber-blue hover:underline"
+              className="text-base font-semibold text-fiber-teal hover:underline"
             >
               View All Plans →
             </Link>

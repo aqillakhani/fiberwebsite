@@ -70,23 +70,23 @@ export function ConfirmationScreen({
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
             You&apos;re all set, {firstName}!
           </h1>
-          <p className="text-gray-600 text-lg mb-8">
+          <p className="text-muted-foreground text-lg mb-8">
             We&apos;re excited to bring FiberFast to you.
           </p>
 
           {/* What Happens Next */}
           <div className="bg-fiber-50 rounded-xl p-6 md:p-8 mb-8 text-left">
-            <h2 className="text-xl font-semibold text-gray-900 mb-6">What happens next</h2>
+            <h2 className="text-xl font-semibold text-foreground mb-6">What happens next</h2>
 
             <ol className="space-y-4">
               <li className="flex gap-4">
                 <span className="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-fiber-success text-white font-semibold text-sm">
                   1
                 </span>
-                <span className="text-gray-700 pt-1">
+                <span className="text-foreground pt-1">
                   {repDisplayName} will call you within 24 hours
                 </span>
               </li>
@@ -95,7 +95,7 @@ export function ConfirmationScreen({
                 <span className="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-fiber-success text-white font-semibold text-sm">
                   2
                 </span>
-                <span className="text-gray-700 pt-1">
+                <span className="text-foreground pt-1">
                   We&apos;ll confirm fiber availability at your address
                 </span>
               </li>
@@ -104,7 +104,7 @@ export function ConfirmationScreen({
                 <span className="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-fiber-success text-white font-semibold text-sm">
                   3
                 </span>
-                <span className="text-gray-700 pt-1">
+                <span className="text-foreground pt-1">
                   We&apos;ll schedule your installation for {displayDate}
                 </span>
               </li>
@@ -113,7 +113,7 @@ export function ConfirmationScreen({
                 <span className="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-fiber-success text-white font-semibold text-sm">
                   4
                 </span>
-                <span className="text-gray-700 pt-1">
+                <span className="text-foreground pt-1">
                   A technician will install your fiber connection (typically 2-4 hours)
                 </span>
               </li>
@@ -123,9 +123,9 @@ export function ConfirmationScreen({
           {/* Plan Summary */}
           {selectedPlan && resolvedPlanName && resolvedPlanPrice !== undefined && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 text-left">
-              <p className="text-gray-700">
+              <p className="text-foreground">
                 <span className="font-semibold">Your selected plan:</span>{' '}
-                <span className="text-gray-900">
+                <span className="text-foreground">
                   {resolvedPlanName} — ${resolvedPlanPrice}/mo
                 </span>
               </p>
@@ -135,7 +135,7 @@ export function ConfirmationScreen({
           {/* Gift Card Callout */}
           {giftCardAmount && giftCardAmount > 0 && (
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
-              <p className="text-gray-700">
+              <p className="text-foreground">
                 <span className="font-semibold text-amber-900">
                   Plus a ${giftCardAmount} Visa Gift Card!
                 </span>
@@ -146,14 +146,14 @@ export function ConfirmationScreen({
           {/* Door Mode Note */}
           {isDoorMode && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 text-left">
-              <p className="text-gray-700">
+              <p className="text-foreground">
                 You can close this page — {repDisplayName} has your info.
               </p>
             </div>
           )}
 
           {/* Contact Information */}
-          <div className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 mb-8 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div className="flex items-center justify-center gap-2 text-foreground dark:text-foreground mb-8 bg-muted dark:bg-card rounded-lg p-4">
             <Phone className="w-5 h-5 text-fiber-success flex-shrink-0" />
             <span>
               Questions? Call us at{' '}

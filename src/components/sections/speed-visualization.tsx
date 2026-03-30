@@ -7,8 +7,8 @@ const speeds = [
   { label: "DSL", speed: 25, unit: "Mbps", color: "bg-red-400/50", width: "0.36%", isFiber: false },
   { label: "Cable", speed: 700, unit: "Mbps", color: "bg-amber-400/50", width: "10%", isFiber: false },
   { label: "FiberFast 500", speed: 500, unit: "Mbps", color: "bg-fiber-blue", width: "7.1%", isFiber: true },
-  { label: "FiberFast Gig 1", speed: 1000, unit: "Mbps", color: "bg-fiber-teal", width: "14.3%", isFiber: true },
-  { label: "FiberFast Gig 7", speed: 7000, unit: "Mbps", color: "bg-gradient-to-r from-fiber-blue to-fiber-teal", width: "100%", isFiber: true, multiplier: "10x faster than cable" },
+  { label: "FiberFast Gig 1", speed: 1000, unit: "Mbps", color: "bg-fiber-blue", width: "14.3%", isFiber: true },
+  { label: "FiberFast Gig 7", speed: 7000, unit: "Mbps", color: "bg-gradient-to-r from-fiber-blue to-fiber-accent", width: "100%", isFiber: true, multiplier: "10x faster than cable" },
 ]
 
 export default function SpeedVisualization() {
@@ -50,7 +50,7 @@ export default function SpeedVisualization() {
                 </span>
                 <div className="flex items-center gap-2">
                   {item.multiplier && isVisible && (
-                    <span className="text-xs font-semibold text-fiber-teal bg-fiber-teal/10 px-2 py-0.5 rounded-full hidden sm:inline-block">
+                    <span className="text-xs font-semibold text-fiber-blue bg-fiber-blue/10 px-2 py-0.5 rounded-full hidden sm:inline-block">
                       {item.multiplier}
                     </span>
                   )}

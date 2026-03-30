@@ -17,7 +17,7 @@ function TrustCard({ icon, title, description, iconBg, delay, isVisible }: Trust
   return (
     <div
       className={cn(
-        "flex flex-col items-center text-center gap-3 p-6 rounded-xl border border-gray-100 dark:border-border bg-white dark:bg-card transition-all duration-700 hover:border-fiber-teal/30 hover:shadow-md",
+        "flex flex-col items-center text-center gap-3 p-6 rounded-xl border border-border dark:border-border bg-white dark:bg-card transition-all duration-700 hover:border-fiber-accent/30 hover:shadow-md",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       )}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
@@ -52,7 +52,7 @@ export default function TrustSection() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           <TrustCard
             icon={<ShieldCheck className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-teal"
+            iconBg="bg-fiber-accent"
             title="Licensed & Insured"
             description="Fully licensed and insured for your peace of mind"
             delay={0}
@@ -76,7 +76,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Clock className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-teal"
+            iconBg="bg-fiber-accent"
             title="99.9% Uptime"
             description="Enterprise-grade reliability for your home"
             delay={300}

@@ -75,7 +75,7 @@ export function DatePicker({
     <div className="space-y-6">
       {/* Date Grid */}
       <div>
-        <label className="block text-sm font-semibold text-gray-900 mb-3">
+        <label className="block text-sm font-semibold text-foreground mb-3">
           Installation Date
         </label>
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
@@ -85,8 +85,8 @@ export function DatePicker({
               onClick={() => handleDateSelect(date)}
               className={`px-2 py-2 rounded text-center text-xs sm:text-sm font-medium transition-all ${
                 selectedDate === date
-                  ? 'bg-teal-500 text-white border-2 border-teal-600 shadow-md'
-                  : 'bg-gray-100 text-gray-900 border-2 border-gray-200 hover:border-teal-300 hover:bg-teal-50'
+                  ? 'bg-fiber-blue text-white border-2 border-fiber-blue shadow-md'
+                  : 'bg-muted text-foreground border-2 border-border hover:border-fiber-blue/30 hover:bg-fiber-blue/5'
               }`}
             >
               {display}
@@ -97,7 +97,7 @@ export function DatePicker({
 
       {/* Time Preference */}
       <div>
-        <label className="block text-sm font-semibold text-gray-900 mb-3">
+        <label className="block text-sm font-semibold text-foreground mb-3">
           Time Preference
         </label>
         <div className="flex flex-wrap gap-3">
@@ -112,9 +112,9 @@ export function DatePicker({
                 value={time}
                 checked={localSelectedTime === time}
                 onChange={() => handleTimeSelect(time)}
-                className="w-4 h-4 text-teal-500 border-gray-300 focus:ring-2 focus:ring-teal-500"
+                className="w-4 h-4 text-fiber-blue border-border focus:ring-2 focus:ring-fiber-blue"
               />
-              <span className="ml-2 text-sm text-gray-700 capitalize">
+              <span className="ml-2 text-sm text-foreground capitalize">
                 {time === 'no-preference' ? 'No Preference' : time}
               </span>
             </label>
