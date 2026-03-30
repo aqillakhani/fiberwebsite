@@ -169,7 +169,7 @@ export function Header() {
                     </Link>
                     <Link href="/pricing" className="w-full">
                       <Button
-                        className="w-full bg-white dark:bg-card text-foreground dark:text-foreground hover:bg-muted dark:hover:bg-muted border border-border dark:border-border font-bold"
+                        className="w-full bg-card text-foreground hover:bg-muted border border-border font-bold"
                       >
                         View Plans
                       </Button>

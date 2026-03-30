@@ -47,8 +47,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden py-16 md:py-32 lg:py-40">
-      {/* Background with gradient and grid overlay */}
+      {/* Background with gradient, grid overlay and animated waves */}
       <div className="absolute inset-0 hero-gradient bg-grid-white" />
+      <div className="absolute inset-0 bg-waves-animated pointer-events-none" />
 
       {/* Animated fiber streaks */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -114,7 +115,7 @@ export default function HeroSection() {
               <Link href="/pricing" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-white text-foreground hover:bg-muted px-8 md:px-10 min-h-[56px] text-lg font-bold"
+                  className="w-full sm:w-auto bg-card text-foreground hover:bg-muted border border-border px-8 md:px-10 min-h-[56px] text-lg font-bold"
                 >
                   View Plans
                 </Button>
@@ -137,17 +138,17 @@ export default function HeroSection() {
             <Link
               href="/why-fiber#speed-comparison"
               className={cn(
-                "block w-full max-w-sm p-6 md:p-8 rounded-2xl border border-border dark:border-border bg-white dark:bg-card shadow-lg transition-all duration-700 delay-200 hover:shadow-xl hover:scale-[1.02] cursor-pointer",
+                "block w-full max-w-sm p-6 md:p-8 rounded-2xl border border-border bg-card shadow-lg transition-all duration-700 delay-200 hover:shadow-xl hover:scale-[1.02] cursor-pointer",
                 mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"
               )}
             >
               {/* Speed indicator */}
               <div className="mb-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-foreground dark:text-foreground mb-1">
+                  <div className="text-4xl font-bold text-foreground mb-1">
                     Up to <AnimatedCounter target={7} duration={1200} /> Gbps
                   </div>
-                  <div className="text-sm text-muted-foreground dark:text-muted-foreground font-semibold">Download & Upload Speed</div>
+                  <div className="text-sm text-muted-foreground font-semibold">Download & Upload Speed</div>
                 </div>
               </div>
 
@@ -156,28 +157,28 @@ export default function HeroSection() {
                 {/* Bar 1 - Tower/Satellite */}
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-muted-foreground dark:text-muted-foreground font-bold uppercase tracking-wide">Tower / Satellite</span>
+                    <span className="text-xs text-muted-foreground font-bold uppercase tracking-wide">Tower / Satellite</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <div className="text-[10px] text-muted-foreground dark:text-muted-foreground font-semibold mb-1">Download</div>
-                      <div className="w-full h-2 bg-muted dark:bg-muted rounded-full overflow-hidden">
+                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
+                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
                         <div
                           className="h-full bg-red-400 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: mounted ? "8%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-foreground dark:text-foreground mt-0.5">25 Mbps</div>
+                      <div className="text-[10px] font-bold text-foreground  mt-0.5">25 Mbps</div>
                     </div>
                     <div>
-                      <div className="text-[10px] text-muted-foreground dark:text-muted-foreground font-semibold mb-1">Upload</div>
-                      <div className="w-full h-2 bg-muted dark:bg-muted rounded-full overflow-hidden">
+                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
+                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
                         <div
                           className="h-full bg-red-400 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: mounted ? "4%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-foreground dark:text-foreground mt-0.5">3 Mbps</div>
+                      <div className="text-[10px] font-bold text-foreground  mt-0.5">3 Mbps</div>
                     </div>
                   </div>
                 </div>
@@ -185,28 +186,28 @@ export default function HeroSection() {
                 {/* Bar 2 - Copper Cable */}
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-muted-foreground dark:text-muted-foreground font-bold uppercase tracking-wide">Copper Cable</span>
+                    <span className="text-xs text-muted-foreground  font-bold uppercase tracking-wide">Copper Cable</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <div className="text-[10px] text-muted-foreground dark:text-muted-foreground font-semibold mb-1">Download</div>
-                      <div className="w-full h-2 bg-muted dark:bg-muted rounded-full overflow-hidden">
+                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
+                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
                         <div
                           className="h-full bg-amber-400 rounded-full transition-all duration-1000 ease-out delay-200"
                           style={{ width: mounted ? "30%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-foreground dark:text-foreground mt-0.5">700 Mbps</div>
+                      <div className="text-[10px] font-bold text-foreground  mt-0.5">700 Mbps</div>
                     </div>
                     <div>
-                      <div className="text-[10px] text-muted-foreground dark:text-muted-foreground font-semibold mb-1">Upload</div>
-                      <div className="w-full h-2 bg-muted dark:bg-muted rounded-full overflow-hidden">
+                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
+                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
                         <div
                           className="h-full bg-amber-400 rounded-full transition-all duration-1000 ease-out delay-200"
                           style={{ width: mounted ? "5%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-foreground dark:text-foreground mt-0.5">10 Mbps</div>
+                      <div className="text-[10px] font-bold text-foreground  mt-0.5">10 Mbps</div>
                     </div>
                   </div>
                 </div>
@@ -214,12 +215,12 @@ export default function HeroSection() {
                 {/* Bar 3 - Fiber Optic */}
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-foreground dark:text-foreground font-bold uppercase tracking-wide">Fiber Optic</span>
+                    <span className="text-xs text-foreground  font-bold uppercase tracking-wide">Fiber Optic</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <div className="text-[10px] text-muted-foreground dark:text-muted-foreground font-semibold mb-1">Download</div>
-                      <div className="w-full h-2.5 bg-muted dark:bg-muted rounded-full overflow-hidden">
+                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
+                      <div className="w-full h-2.5 bg-muted  rounded-full overflow-hidden">
                         <div
                           className="h-full bg-gradient-to-r from-fiber-red to-fiber-accent rounded-full transition-all duration-1200 ease-out delay-400 hero-elite-bar"
                           style={{ width: mounted ? "100%" : "0%" }}
@@ -228,8 +229,8 @@ export default function HeroSection() {
                       <div className="text-[10px] font-bold text-fiber-accent mt-0.5">7,000 Mbps</div>
                     </div>
                     <div>
-                      <div className="text-[10px] text-muted-foreground dark:text-muted-foreground font-semibold mb-1">Upload</div>
-                      <div className="w-full h-2.5 bg-muted dark:bg-muted rounded-full overflow-hidden">
+                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
+                      <div className="w-full h-2.5 bg-muted  rounded-full overflow-hidden">
                         <div
                           className="h-full bg-gradient-to-r from-fiber-red to-fiber-accent rounded-full transition-all duration-1200 ease-out delay-500 hero-elite-bar"
                           style={{ width: mounted ? "100%" : "0%" }}
@@ -242,10 +243,10 @@ export default function HeroSection() {
               </div>
 
               {/* Symmetric label */}
-              <div className="border-t border-border dark:border-border pt-4">
+              <div className="border-t border-border  pt-4">
                 <div className="text-center">
-                  <div className="text-sm font-bold text-foreground dark:text-foreground">Symmetric Upload & Download</div>
-                  <div className="text-xs text-muted-foreground dark:text-muted-foreground font-semibold mt-1">Only fiber gives you the same speed both ways</div>
+                  <div className="text-sm font-bold text-foreground ">Symmetric Upload & Download</div>
+                  <div className="text-xs text-muted-foreground  font-semibold mt-1">Only fiber gives you the same speed both ways</div>
                   <div className="text-xs text-fiber-red mt-2 font-bold">Click to see full comparison &rarr;</div>
                 </div>
               </div>

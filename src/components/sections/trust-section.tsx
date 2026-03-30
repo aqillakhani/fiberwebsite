@@ -17,7 +17,7 @@ function TrustCard({ icon, title, description, iconBg, delay, isVisible }: Trust
   return (
     <div
       className={cn(
-        "flex flex-col items-center text-center gap-3 p-6 rounded-xl border border-border dark:border-border bg-white dark:bg-card transition-all duration-700 hover:border-fiber-accent/30 hover:shadow-md",
+        "flex flex-col items-center text-center gap-3 p-6 rounded-xl border border-border bg-card transition-all duration-700 hover:border-fiber-accent/30 hover:shadow-md",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       )}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}

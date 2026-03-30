@@ -66,7 +66,7 @@ export default function PlansPreviewSection() {
                 <CardHeader className="pb-3">
                   {/* Plan Speed */}
                   <div className="mb-2">
-                    <div className="text-2xl font-bold text-fiber-red dark:text-fiber-red">
+                    <div className="text-2xl font-bold text-fiber-red">
                       {plan.speed}
                     </div>
                   </div>
@@ -136,7 +136,7 @@ export default function PlansPreviewSection() {
                       "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                       plan.isFeatured
                         ? "bg-fiber-red text-white hover:bg-fiber-red/90"
-                        : "bg-white dark:bg-card text-foreground dark:text-foreground border border-border dark:border-border hover:bg-muted dark:hover:bg-muted font-bold"
+                        : "bg-card text-foreground border border-border hover:bg-muted font-bold"
                     )}
                   >
                     Get Started
@@ -156,7 +156,7 @@ export default function PlansPreviewSection() {
         >
           <Link
             href="/pricing"
-            className="inline-flex items-center justify-center text-base font-semibold text-fiber-red dark:text-fiber-red hover:underline transition-colors"
+            className="inline-flex items-center justify-center text-base font-semibold text-fiber-red hover:underline transition-colors"
           >
             View All Plans
             <span className="ml-2">&rarr;</span>

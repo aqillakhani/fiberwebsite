@@ -6,8 +6,9 @@ import { COMPANY } from "@/lib/constants"
 export default function FinalCTASection() {
   return (
     <section className="section-navy relative w-full py-20 md:py-28">
-      {/* Grid overlay pattern */}
+      {/* Grid overlay + wave pattern */}
       <div className="absolute inset-0 bg-grid-white opacity-20" />
+      <div className="absolute inset-0 bg-waves-animated pointer-events-none" />
 
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
         {/* Main Heading */}

@@ -63,7 +63,7 @@ export function ConfirmationScreen({
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-fiber-50 to-white px-4 py-8">
       <div className="w-full max-w-2xl">
         {/* Success Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
+        <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12 text-center border border-border">
           {/* Checkmark Icon */}
           <div className="flex justify-center mb-6">
             <CheckCircle className="w-16 h-16 text-fiber-success" strokeWidth={1.5} />
