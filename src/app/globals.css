@@ -105,47 +105,47 @@
 
 .dark {
   --background: #111827;
-  --foreground: #F9FAFB;
-  --card: #283548;
-  --card-foreground: #F9FAFB;
-  --popover: #283548;
-  --popover-foreground: #F9FAFB;
-  --primary: #3B82F6;
+  --foreground: #F3F4F6;
+  --card: #1E293B;
+  --card-foreground: #F3F4F6;
+  --popover: #1E293B;
+  --popover-foreground: #F3F4F6;
+  --primary: #60A5FA;
   --primary-foreground: #FFFFFF;
-  --secondary: #374151;
-  --secondary-foreground: #F9FAFB;
-  --muted: #283548;
+  --secondary: #1E293B;
+  --secondary-foreground: #F3F4F6;
+  --muted: #1E293B;
   --muted-foreground: #D1D5DB;
-  --accent: #14B8A6;
+  --accent: #2DD4BF;
   --accent-foreground: #FFFFFF;
-  --destructive: #EF4444;
-  --border: #475569;
-  --input: #475569;
+  --destructive: #F87171;
+  --border: #334155;
+  --input: #334155;
   --ring: #3B82F6;
   --chart-1: #3B82F6;
   --chart-2: #14B8A6;
   --chart-3: #34D399;
   --chart-4: #FBBF24;
   --chart-5: #EF4444;
-  --sidebar: #111827;
-  --sidebar-foreground: #F9FAFB;
-  --sidebar-primary: #3B82F6;
-  --sidebar-primary-foreground: #111827;
-  --sidebar-accent: #374151;
-  --sidebar-accent-foreground: #F9FAFB;
-  --sidebar-border: #374151;
-  --sidebar-ring: #3B82F6;
-  /* Dark mode brand colors */
-  --fiber-blue: #3B82F6;
-  --fiber-blue-light: #DBEAFE;
-  --fiber-teal: #14B8A6;
-  --fiber-teal-light: #CCFBF1;
-  --fiber-red: #EF4444;
-  --fiber-red-light: #FEE2E2;
+  --sidebar: #0F172A;
+  --sidebar-foreground: #F3F4F6;
+  --sidebar-primary: #60A5FA;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1E293B;
+  --sidebar-accent-foreground: #F3F4F6;
+  --sidebar-border: #334155;
+  --sidebar-ring: #60A5FA;
+  /* Dark mode brand colors — brighter for visibility */
+  --fiber-blue: #60A5FA;
+  --fiber-blue-light: #1E3A5F;
+  --fiber-teal: #2DD4BF;
+  --fiber-teal-light: #134E4A;
+  --fiber-red: #F87171;
+  --fiber-red-light: #451A1A;
   --fiber-yellow: #FBBF24;
-  --fiber-orange: #F97316;
-  --fiber-success: #34D399;
-  --fiber-dark: #F9FAFB;
+  --fiber-orange: #FB923C;
+  --fiber-success: #4ADE80;
+  --fiber-dark: #F3F4F6;
 }
 
 @layer base {
@@ -169,15 +169,16 @@
     --border: #E5E7EB;
     font-weight: 700;
   }
-  /* Dark mode cards — brighter background, light text */
+  /* Dark mode cards — lifted surface with visible border */
   .dark .bg-card,
   .dark [class*="bg-card"],
   .dark .white-section {
-    --foreground: #F9FAFB;
+    --foreground: #F3F4F6;
     --muted-foreground: #D1D5DB;
-    --card-foreground: #F9FAFB;
-    --border: #475569;
-    background: #283548;
+    --card-foreground: #F3F4F6;
+    --border: #334155;
+    background: #1E293B;
+    border-color: #334155;
   }
 }
 
@@ -213,19 +214,19 @@
     background-size: 24px 24px;
   }
 
-  /* Radial glow effects */
+  /* Radial glow effects — subtle */
   .glow-blue {
-    box-shadow: 0 0 60px -10px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 4px 20px -4px rgba(30, 64, 175, 0.2);
   }
   .dark .glow-blue {
-    box-shadow: 0 0 60px -10px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 4px 20px -4px rgba(96, 165, 250, 0.15);
   }
 
   .glow-teal {
-    box-shadow: 0 0 40px -10px rgba(13, 148, 136, 0.4);
+    box-shadow: 0 4px 20px -4px rgba(13, 148, 136, 0.25);
   }
   .dark .glow-teal {
-    box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.3);
+    box-shadow: 0 4px 20px -4px rgba(45, 212, 191, 0.15);
   }
 
   /* Premium card styles */
@@ -233,12 +234,17 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
   }
+  .dark .card-premium {
+    border-color: #334155;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
   .card-premium:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
   }
   .dark .card-premium:hover {
-    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
+    border-color: #475569;
   }
 
   /* Glass-morphism card */
@@ -249,8 +255,8 @@
     border-radius: 16px;
   }
   .dark .glass-card {
-    background: rgba(59, 130, 246, 0.08);
-    border-color: rgba(59, 130, 246, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   /* Gradient border effect for featured cards — blue → teal */
@@ -339,15 +345,15 @@
     animation: cta-glow 2.5s ease-in-out infinite;
   }
   @keyframes cta-glow {
-    0%, 100% { box-shadow: 0 4px 14px rgba(30, 64, 175, 0.3); }
-    50% { box-shadow: 0 4px 28px rgba(30, 64, 175, 0.5); }
+    0%, 100% { box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2); }
+    50% { box-shadow: 0 4px 20px rgba(30, 64, 175, 0.35); }
   }
 
   /* Grid background pattern */
   .bg-grid-white {
     background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -382,8 +388,8 @@
     to { opacity: 1; transform: scale(1); }
   }
   @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 20px rgba(30, 64, 175, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(30, 64, 175, 0.5); }
+    0%, 100% { box-shadow: 0 0 12px rgba(30, 64, 175, 0.15); }
+    50% { box-shadow: 0 0 24px rgba(30, 64, 175, 0.3); }
   }
 
   /* Intersection observer scroll animation */
@@ -397,17 +403,15 @@
     transform: translateY(0);
   }
 
-  /* Hero heading blue highlight boxes behind text */
+  /* Hero heading — clean text, no background boxes */
   .hero-heading-shadow {
-    text-shadow: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     line-height: 1.15;
   }
   .hero-heading-shadow .hero-line {
-    background: #1E40AF;
-    padding: 2px 10px;
+    background: none;
+    padding: 0;
     display: inline;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
   }
 
   /* Hero animated fiber streaks */
@@ -445,24 +449,25 @@
     100% { transform: translateX(120%); opacity: 0; }
   }
 
-  /* Hero radial glow behind speed card */
+  /* Hero radial glow behind speed card — subtle */
   .hero-glow-orb {
-    background: radial-gradient(circle, rgba(30, 64, 175, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
     animation: glow-drift 6s ease-in-out infinite;
   }
   @keyframes glow-drift {
     0%, 100% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.15); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
   }
 
-  /* Hero speed card glow */
+  /* Hero speed card — clean border instead of glow */
   .hero-speed-card {
-    box-shadow: 0 0 80px -20px rgba(30, 64, 175, 0.15);
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  /* Elite bar glow effect */
+  /* Elite bar glow — subtle */
   .hero-elite-bar {
-    box-shadow: 0 0 8px rgba(30, 64, 175, 0.4);
+    box-shadow: 0 0 4px rgba(96, 165, 250, 0.3);
   }
 
   /* ── Background Treatment System (light) ── */
@@ -471,7 +476,7 @@
     background: #FFFFFF;
   }
   .dark .bg-treatment-emphasis {
-    background: #1F2937;
+    background: #0F172A;
   }
 
   /* Treatment 2: Rhythm — light gray for visual breathing room */
@@ -479,7 +484,7 @@
     background: #F9FAFB;
   }
   .dark .bg-treatment-rhythm {
-    background: #1F2937;
+    background: #0F172A;
   }
 
   /* Treatment 3: Trust — light with blue warmth */
@@ -503,7 +508,7 @@
     background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
   }
   .dark .bg-treatment-showcase {
-    background: linear-gradient(135deg, #1F2937 0%, #1e3a5c 50%, #134e4a 100%);
+    background: linear-gradient(135deg, #0F172A 0%, #162544 50%, #0F3433 100%);
   }
 
   /* Ensure readable text on treatment backgrounds — light mode */
@@ -523,10 +528,10 @@
   .dark .bg-treatment-trust,
   .dark .bg-treatment-momentum,
   .dark .bg-treatment-showcase {
-    --foreground: #F9FAFB;
+    --foreground: #F3F4F6;
     --muted-foreground: #D1D5DB;
-    --card-foreground: #F9FAFB;
-    --border: #475569;
+    --card-foreground: #F3F4F6;
+    --border: #334155;
   }
 
   /* Floating glow orb for section backgrounds */
