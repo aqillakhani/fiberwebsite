@@ -20,7 +20,7 @@ export default function InlineCTA({
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-12 md:py-16 bg-fiber-blue-light dark:bg-fiber-blue-dark/30">
+    <section className="w-full py-12 md:py-16 bg-treatment-momentum">
       <div
         ref={ref}
         className={cn(

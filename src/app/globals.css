@@ -455,6 +455,69 @@
     box-shadow: 0 0 8px rgba(10, 102, 255, 0.4);
   }
 
+  /* ── Background Treatment System ── */
+  /* Treatment 2: Emphasis — clean white for high-value sections */
+  .bg-treatment-emphasis {
+    background: #FFFFFF;
+  }
+  .dark .bg-treatment-emphasis {
+    background: var(--background);
+  }
+
+  /* Treatment 3: Rhythm — soft slate for visual breathing room */
+  .bg-treatment-rhythm {
+    background: #F1F5F9;
+  }
+  .dark .bg-treatment-rhythm {
+    background: #1E293B;
+  }
+
+  /* Treatment 4: Trust — subtle blue tint for credibility sections */
+  .bg-treatment-trust {
+    background: linear-gradient(180deg, #EFF6FF 0%, #F0F9FF 100%);
+  }
+  .dark .bg-treatment-trust {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.06) 0%, rgba(59, 130, 246, 0.10) 100%);
+  }
+
+  /* Treatment 5: Momentum — teal/green tint for conversion nudges */
+  .bg-treatment-momentum {
+    background: linear-gradient(180deg, #F0FDFA 0%, #ECFDF5 100%);
+  }
+  .dark .bg-treatment-momentum {
+    background: linear-gradient(180deg, rgba(45, 212, 191, 0.06) 0%, rgba(16, 185, 129, 0.08) 100%);
+  }
+
+  /* Treatment 6: Showcase — diagonal gradient for premium features */
+  .bg-treatment-showcase {
+    background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
+  }
+  .dark .bg-treatment-showcase {
+    background: linear-gradient(135deg, #1E293B 0%, #1a3a5c 50%, #0f2744 100%);
+  }
+
+  /* Ensure readable text on all treatment backgrounds */
+  .bg-treatment-emphasis,
+  .bg-treatment-rhythm,
+  .bg-treatment-trust,
+  .bg-treatment-momentum,
+  .bg-treatment-showcase {
+    --foreground: #0F172A;
+    --muted-foreground: #475569;
+    --card-foreground: #0F172A;
+    --border: #E2E8F0;
+  }
+  .dark .bg-treatment-emphasis,
+  .dark .bg-treatment-rhythm,
+  .dark .bg-treatment-trust,
+  .dark .bg-treatment-momentum,
+  .dark .bg-treatment-showcase {
+    --foreground: #F8FAFC;
+    --muted-foreground: #94A3B8;
+    --card-foreground: #F8FAFC;
+    --border: #334155;
+  }
+
   /* Floating glow orb for section backgrounds */
   .glow-orb {
     position: absolute;

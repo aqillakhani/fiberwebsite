@@ -39,7 +39,7 @@ const steps = [
 export default function GetStartedPage() {
   return (
     <main>
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
@@ -59,7 +59,7 @@ export default function GetStartedPage() {
       </section>
 
       {/* What Happens Next */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

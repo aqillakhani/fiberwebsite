@@ -81,7 +81,7 @@ export default function WhyFiberPage() {
       </section>
 
       {/* How Fiber Works */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -128,7 +128,7 @@ export default function WhyFiberPage() {
       </section>
 
       {/* Comparison Table: Fiber vs Cable vs Tower/Satellite */}
-      <section id="speed-comparison" className="py-16 md:py-24 bg-white white-section scroll-mt-20">
+      <section id="speed-comparison" className="py-16 md:py-24 bg-treatment-rhythm scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -254,7 +254,7 @@ export default function WhyFiberPage() {
       </section>
 
       {/* Benefits of Fiber */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -291,7 +291,7 @@ export default function WhyFiberPage() {
       </section>
 
       {/* Who Benefits Most */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-treatment-trust">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -323,7 +323,7 @@ export default function WhyFiberPage() {
       </section>
 
       {/* Common Myths */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">

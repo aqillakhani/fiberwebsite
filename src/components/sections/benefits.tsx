@@ -82,7 +82,7 @@ export default function BenefitsSection() {
   ]
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white dark:bg-background white-section">
+    <section className="w-full py-16 md:py-24 bg-treatment-rhythm">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className={cn(
           "heading-section text-foreground text-center mb-12 transition-all duration-700",

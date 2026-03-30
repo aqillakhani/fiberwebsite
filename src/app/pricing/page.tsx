@@ -96,7 +96,7 @@ export default function PricingPage() {
       </section>
 
       {/* Plan Cards */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {PLANS.map((plan) => (
@@ -175,7 +175,7 @@ export default function PricingPage() {
       </section>
 
       {/* All Plans Include */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -198,7 +198,7 @@ export default function PricingPage() {
       </section>
 
       {/* Feature Comparison Table */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -306,7 +306,7 @@ export default function PricingPage() {
       </section>
 
       {/* Not Sure CTA + Plan Recommender */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-16 md:py-20 bg-treatment-showcase">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
@@ -323,7 +323,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing FAQ */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">

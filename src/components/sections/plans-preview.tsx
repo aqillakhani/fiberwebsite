@@ -13,7 +13,7 @@ export default function PlansPreviewSection() {
   const displayedPlans = PLANS.slice(0, 4)
 
   return (
-    <section className="w-full py-20 md:py-28 bg-white dark:bg-background white-section">
+    <section className="w-full py-20 md:py-28 bg-treatment-emphasis">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div

@@ -33,7 +33,7 @@ export default function ServiceAreaSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white dark:bg-background white-section">
+    <section className="w-full py-16 md:py-24 bg-treatment-showcase">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left — Content */}

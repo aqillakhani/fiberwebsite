@@ -64,7 +64,7 @@ export default function AvailabilitySection() {
 
   if (isSubmitted) {
     return (
-      <section className="w-full bg-white dark:bg-background py-20 md:py-28">
+      <section className="w-full bg-treatment-emphasis py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex flex-col items-center gap-4">
             <CheckCircle className="w-16 h-16 text-fiber-success" />
@@ -82,7 +82,7 @@ export default function AvailabilitySection() {
   }
 
   return (
-    <section className="w-full bg-white dark:bg-background py-20 md:py-28 relative overflow-hidden">
+    <section className="w-full bg-treatment-emphasis py-20 md:py-28 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground heading-section mb-3">

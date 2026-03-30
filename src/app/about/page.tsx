@@ -73,7 +73,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">What We Do</h2>
@@ -106,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="heading-section text-foreground mb-6">Our Story</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -124,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* Where We Operate */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">Where We Operate</h2>
@@ -153,7 +153,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trust Signals */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-treatment-trust">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">
@@ -178,7 +178,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-4">Meet Our Team</h2>

@@ -39,7 +39,7 @@ export default function TrustSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
   return (
-    <section className="w-full py-20 md:py-28 bg-white dark:bg-background white-section">
+    <section className="w-full py-20 md:py-28 bg-treatment-trust">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           className={cn(

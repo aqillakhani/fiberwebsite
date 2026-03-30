@@ -144,7 +144,7 @@ export default async function CityPage({ params }: CityPageProps) {
       </section>
 
       {/* Availability Form */}
-      <section id="check" className="py-16 md:py-20 bg-muted/30">
+      <section id="check" className="py-16 md:py-20 bg-treatment-trust">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="heading-section text-foreground mb-3">
@@ -161,7 +161,7 @@ export default async function CityPage({ params }: CityPageProps) {
       </section>
 
       {/* Plans Preview */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-treatment-emphasis">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="heading-section text-foreground mb-3">
@@ -227,7 +227,7 @@ export default async function CityPage({ params }: CityPageProps) {
       </section>
 
       {/* Why Fiber in This City */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-treatment-rhythm">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="heading-section text-foreground mb-8 text-center">
             Why {cityData.name} Residents Choose Fiber
