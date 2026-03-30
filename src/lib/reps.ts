@@ -27,7 +27,7 @@ function teamMemberToRep(member: (typeof TEAM_MEMBERS)[number]): Rep {
     city: null,
     state: null,
     territory: null,
-    photo_url: null,
+    photo_url: member.image ?? null,
     is_active: true,
   }
 }

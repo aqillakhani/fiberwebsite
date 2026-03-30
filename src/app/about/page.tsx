@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import {
   Zap,
   Shield,
@@ -91,8 +92,8 @@ export default function AboutPage() {
                   key={pillar.title}
                   className="card-premium bg-card rounded-xl border border-border p-6 text-center"
                 >
-                  <div className="w-14 h-14 rounded-full bg-fiber-red/10 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="size-7 text-fiber-red" />
+                  <div className="w-14 h-14 rounded-full bg-fiber-blue/10 flex items-center justify-center mx-auto mb-4">
+                    <Icon className="size-7 text-fiber-blue" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {pillar.title}
@@ -136,7 +137,7 @@ export default function AboutPage() {
 
           <div className="flex justify-center">
             <div className="flex items-center gap-3 bg-card rounded-lg border border-border p-6">
-              <MapPin className="size-6 text-fiber-red flex-shrink-0" />
+              <MapPin className="size-6 text-fiber-blue flex-shrink-0" />
               <span className="text-lg font-semibold text-foreground">Serving customers nationwide across all 50 states</span>
             </div>
           </div>
@@ -144,7 +145,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/check-availability"
-              className="inline-flex items-center gap-2 text-fiber-red font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-fiber-blue font-semibold hover:underline"
             >
               Check if we serve your area <ArrowRight className="size-4" />
             </Link>
@@ -194,17 +195,23 @@ export default function AboutPage() {
                 href={`/rep/${member.slug}`}
                 className="group card-premium bg-card rounded-xl border border-border p-6 block"
               >
-                <div className="bg-gradient-to-br from-fiber-red/10 to-fiber-red/5 rounded-lg h-36 mb-4 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-fiber-red/30">
-                    {member.name.split(" ")[0][0]}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-red transition-colors">
+                {member.image ? (
+                  <div className="relative h-36 rounded-lg overflow-hidden mb-4">
+                    <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  </div>
+                ) : (
+                  <div className="bg-gradient-to-br from-fiber-blue/10 to-fiber-blue/5 rounded-lg h-36 mb-4 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-fiber-blue/30">
+                      {member.name.split(" ")[0][0]}
+                    </span>
+                  </div>
+                )}
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-blue transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-sm text-fiber-red font-medium mb-2">{member.role}</p>
+                <p className="text-sm text-fiber-blue font-medium mb-2">{member.role}</p>
                 <p className="text-sm text-muted-foreground mb-3">{member.bio}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-red">
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-blue">
                   View Profile <ArrowRight className="size-3" />
                 </span>
               </Link>
@@ -225,7 +232,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/check-availability"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-red text-white font-semibold hover:bg-fiber-red/90 transition-all glow-teal"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-blue text-white font-semibold hover:bg-fiber-blue/90 transition-all glow-blue"
           >
             Check Availability
           </Link>

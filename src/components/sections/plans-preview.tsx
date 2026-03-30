@@ -28,7 +28,7 @@ export default function PlansPreviewSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             All-in pricing with no hidden fees. Free installation. Free router. No contracts.
           </p>
-          <p className="text-base font-bold text-fiber-red">
+          <p className="text-base font-bold text-fiber-blue">
             Schedule your install today — no payment required upfront.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function PlansPreviewSection() {
               {/* Most Popular Badge */}
               {plan.isFeatured && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <Badge className="bg-fiber-red text-white border-0 shadow-md">
+                  <Badge className="bg-fiber-yellow text-black border-0 shadow-md">
                     Most Popular
                   </Badge>
                 </div>
@@ -60,13 +60,13 @@ export default function PlansPreviewSection() {
                   "card-premium flex flex-col h-full rounded-xl transition-all duration-300",
                   plan.isFeatured
                     ? "gradient-border border-2 shadow-lg hover:shadow-xl"
-                    : "hover:border-fiber-red/30"
+                    : "hover:border-fiber-blue/30"
                 )}
               >
                 <CardHeader className="pb-3">
                   {/* Plan Speed */}
                   <div className="mb-2">
-                    <div className="text-2xl font-bold text-fiber-red">
+                    <div className="text-2xl font-bold text-fiber-blue">
                       {plan.speed}
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function PlansPreviewSection() {
                     className={cn(
                       "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
                       plan.isFeatured
-                        ? "bg-fiber-red text-white hover:bg-fiber-red/90"
+                        ? "bg-fiber-blue text-white hover:bg-fiber-blue/90"
                         : "bg-card text-foreground border border-border hover:bg-muted font-bold"
                     )}
                   >
@@ -156,7 +156,7 @@ export default function PlansPreviewSection() {
         >
           <Link
             href="/pricing"
-            className="inline-flex items-center justify-center text-base font-semibold text-fiber-red hover:underline transition-colors"
+            className="inline-flex items-center justify-center text-base font-semibold text-fiber-blue hover:underline transition-colors"
           >
             View All Plans
             <span className="ml-2">&rarr;</span>

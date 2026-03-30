@@ -52,7 +52,7 @@ export default function TrustSection() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           <TrustCard
             icon={<ShieldCheck className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-accent"
+            iconBg="bg-fiber-teal"
             title="Licensed & Insured"
             description="Fully licensed and insured for your peace of mind"
             delay={0}
@@ -60,7 +60,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Headphones className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-red"
+            iconBg="bg-fiber-blue"
             title="24/7 Local Support"
             description="Real people, not bots — available around the clock"
             delay={100}
@@ -76,7 +76,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Clock className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-accent"
+            iconBg="bg-fiber-teal"
             title="99.9% Uptime"
             description="Enterprise-grade reliability for your home"
             delay={300}
@@ -84,7 +84,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Wifi className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-red"
+            iconBg="bg-fiber-blue"
             title="Free Installation"
             description="Professional setup at no extra cost"
             delay={400}
@@ -92,7 +92,7 @@ export default function TrustSection() {
           />
           <TrustCard
             icon={<Award className="w-6 h-6 text-white" />}
-            iconBg="bg-fiber-success"
+            iconBg="bg-fiber-orange"
             title="Trusted Nationwide"
             description="Serving customers across multiple states and growing"
             delay={500}

@@ -46,12 +46,6 @@ export default function RootLayout({
               description:
                 "FiberFastUSA helps customers explore fiber internet options and switch to faster, more reliable service.",
               telephone: "(469) 428-5942",
-              sameAs: [
-                "https://facebook.com/fiberfastusa",
-                "https://x.com/fiberfastusa",
-                "https://instagram.com/fiberfastusa",
-                "https://linkedin.com/company/fiberfastusa",
-              ],
               areaServed: {
                 "@type": "Country",
                 name: "United States",

@@ -47,7 +47,7 @@ export default function BenefitsSection() {
       icon: <Zap className="w-6 h-6 text-white" />,
       title: "Blazing Fast Speeds",
       description: "Up to 7 Gbps symmetric speeds. Stream, game, and work — all at once, all without lag.",
-      iconColor: "bg-fiber-red"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Shield className="w-6 h-6 text-white" />,
@@ -59,19 +59,19 @@ export default function BenefitsSection() {
       icon: <Infinity className="w-6 h-6 text-white" />,
       title: "No Data Caps — Ever",
       description: "Unlimited data with no throttling and no overage charges. Use as much as you want.",
-      iconColor: "bg-fiber-red"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Ban className="w-6 h-6 text-white" />,
       title: "No Contracts Required",
       description: "Month-to-month plans with no commitments. Cancel anytime, no fees.",
-      iconColor: "bg-fiber-red"
+      iconColor: "bg-fiber-orange"
     },
     {
       icon: <Wifi className="w-6 h-6 text-white" />,
       title: "Free Equipment",
       description: "Every plan includes a free premium Wi-Fi router and professional installation.",
-      iconColor: "bg-fiber-red"
+      iconColor: "bg-fiber-blue"
     },
     {
       icon: <Headphones className="w-6 h-6 text-white" />,

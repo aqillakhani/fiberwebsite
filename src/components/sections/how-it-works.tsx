@@ -15,11 +15,11 @@ function DesktopStep({ number, icon, title, description, isLast = false }: StepP
     <div className="flex flex-col items-center relative flex-1">
       {/* Connector line between steps (positioned absolutely behind circles) */}
       {!isLast && (
-        <div className="absolute top-7 left-1/2 w-[calc(100%+1rem)] h-0.5 border-t-2 border-dashed border-fiber-red/30 z-0" />
+        <div className="absolute top-7 left-1/2 w-[calc(100%+1rem)] h-0.5 border-t-2 border-dashed border-fiber-blue/30 z-0" />
       )}
 
       {/* Number badge circle */}
-      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-fiber-red text-white font-bold text-lg mb-4 relative z-10 flex-shrink-0">
+      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-fiber-blue text-white font-bold text-lg mb-4 relative z-10 flex-shrink-0">
         {number}
       </div>
 
@@ -43,11 +43,11 @@ function MobileStep({ number, icon, title, description }: StepProps) {
   return (
     <div className="flex gap-6 relative">
       {/* Vertical line on the left (except for last item) */}
-      <div className="absolute left-6 top-14 w-0.5 h-[calc(100%+1rem)] bg-fiber-red/30" />
+      <div className="absolute left-6 top-14 w-0.5 h-[calc(100%+1rem)] bg-fiber-blue/30" />
 
       {/* Number badge and icon */}
       <div className="flex flex-col items-center flex-shrink-0 relative z-10">
-        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-fiber-red text-white font-bold text-lg mb-4">
+        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-fiber-blue text-white font-bold text-lg mb-4">
           {number}
         </div>
         <div className="text-muted-foreground">
@@ -136,7 +136,7 @@ export default function HowItWorksSection() {
           <Link href="/check-availability">
             <Button
               size="lg"
-              className="bg-fiber-red hover:bg-fiber-red/90 text-white"
+              className="bg-fiber-blue hover:bg-fiber-blue/90 text-white"
             >
               Check Your Address
             </Button>

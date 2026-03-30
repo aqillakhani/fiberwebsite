@@ -47,9 +47,8 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden py-16 md:py-32 lg:py-40">
-      {/* Background with gradient, grid overlay and animated waves */}
+      {/* Background with gradient, grid overlay */}
       <div className="absolute inset-0 hero-gradient bg-grid-white" />
-      <div className="absolute inset-0 bg-waves-animated pointer-events-none" />
 
       {/* Animated fiber streaks */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -105,7 +104,7 @@ export default function HeroSection() {
               <Link href="/check-availability" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-fiber-red hover:bg-fiber-red/90 text-white px-8 md:px-10 gap-2 min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-red/30 cta-pulse"
+                  className="w-full sm:w-auto bg-fiber-blue hover:bg-fiber-blue/90 text-white px-8 md:px-10 gap-2 min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-blue/30 cta-pulse"
                 >
                   Check Availability
                   <ArrowRight className="w-5 h-5" />
@@ -222,21 +221,21 @@ export default function HeroSection() {
                       <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
                       <div className="w-full h-2.5 bg-muted  rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-fiber-red to-fiber-accent rounded-full transition-all duration-1200 ease-out delay-400 hero-elite-bar"
+                          className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full transition-all duration-1200 ease-out delay-400 hero-elite-bar"
                           style={{ width: mounted ? "100%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-fiber-accent mt-0.5">7,000 Mbps</div>
+                      <div className="text-[10px] font-bold text-fiber-blue mt-0.5">7,000 Mbps</div>
                     </div>
                     <div>
                       <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
                       <div className="w-full h-2.5 bg-muted  rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-fiber-red to-fiber-accent rounded-full transition-all duration-1200 ease-out delay-500 hero-elite-bar"
+                          className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full transition-all duration-1200 ease-out delay-500 hero-elite-bar"
                           style={{ width: mounted ? "100%" : "0%" }}
                         />
                       </div>
-                      <div className="text-[10px] font-bold text-fiber-accent mt-0.5">7,000 Mbps</div>
+                      <div className="text-[10px] font-bold text-fiber-blue mt-0.5">7,000 Mbps</div>
                     </div>
                   </div>
                 </div>
@@ -247,7 +246,7 @@ export default function HeroSection() {
                 <div className="text-center">
                   <div className="text-sm font-bold text-foreground ">Symmetric Upload & Download</div>
                   <div className="text-xs text-muted-foreground  font-semibold mt-1">Only fiber gives you the same speed both ways</div>
-                  <div className="text-xs text-fiber-red mt-2 font-bold">Click to see full comparison &rarr;</div>
+                  <div className="text-xs text-fiber-blue mt-2 font-bold">Click to see full comparison &rarr;</div>
                 </div>
               </div>
             </Link>

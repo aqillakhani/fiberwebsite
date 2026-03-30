@@ -57,8 +57,8 @@ export default function RepVerificationSection() {
                 )}
                 style={{ transitionDelay: isVisible ? `${(i + 1) * 150}ms` : "0ms" }}
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-fiber-accent/10 flex items-center justify-center">
-                  <point.icon className="size-5 text-fiber-accent" />
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-fiber-teal/10 flex items-center justify-center">
+                  <point.icon className="size-5 text-fiber-teal" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">
@@ -74,7 +74,7 @@ export default function RepVerificationSection() {
             <div className="pt-2">
               <Link
                 href="/verify-rep"
-                className="inline-flex items-center gap-2 text-fiber-red hover:text-fiber-red transition-colors font-semibold text-sm"
+                className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-blue transition-colors font-semibold text-sm"
               >
                 Verify Your Rep &rarr;
               </Link>
@@ -88,12 +88,12 @@ export default function RepVerificationSection() {
                 key={rep.id}
                 href={`/rep/${rep.slug}`}
                 className={cn(
-                  "flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-fiber-accent/30 transition-all duration-700",
+                  "flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-fiber-blue/30 transition-all duration-700",
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
                 )}
                 style={{ transitionDelay: isVisible ? `${(i + 1) * 150}ms` : "0ms" }}
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-fiber-accent/10 flex items-center justify-center text-fiber-accent font-bold text-sm">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-fiber-blue/10 flex items-center justify-center text-fiber-blue font-bold text-sm">
                   {rep.name.split(" ").map((n) => n[0]).join("")}
                 </div>
                 <div className="flex-1 min-w-0">

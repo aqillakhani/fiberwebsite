@@ -233,7 +233,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
   }
 
   const inputClasses =
-    "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-red focus:border-transparent text-base"
+    "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-blue focus:border-transparent text-base"
 
   const steps = ["Address", "Plan", "Install Date", "Your Info"]
 
@@ -254,7 +254,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                   isComplete
                     ? "bg-fiber-success text-white"
                     : isActive
-                      ? "bg-fiber-red text-white"
+                      ? "bg-fiber-blue text-white"
                       : "bg-muted text-muted-foreground"
                 )}
               >
@@ -298,7 +298,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                   type="button"
                   size="sm"
                   onClick={applySavedAddress}
-                  className="bg-fiber-red hover:bg-fiber-red/90 text-white"
+                  className="bg-fiber-blue hover:bg-fiber-blue/90 text-white"
                 >
                   Use Saved Address
                 </Button>
@@ -375,12 +375,12 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                 className={cn(
                   "relative p-4 rounded-xl border-2 text-left transition-all",
                   data.selectedPlan === plan.id
-                    ? "border-fiber-red bg-fiber-red/5 ring-1 ring-fiber-red"
-                    : "border-border hover:border-fiber-red/50"
+                    ? "border-fiber-blue bg-fiber-blue/5 ring-1 ring-fiber-blue"
+                    : "border-border hover:border-fiber-blue/50"
                 )}
               >
                 {plan.isFeatured && (
-                  <span className="absolute -top-2.5 right-3 text-[10px] font-bold bg-fiber-red text-white px-2 py-0.5 rounded-full">
+                  <span className="absolute -top-2.5 right-3 text-[10px] font-bold bg-fiber-blue text-white px-2 py-0.5 rounded-full">
                     Popular
                   </span>
                 )}
@@ -428,8 +428,8 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                   className={cn(
                     "p-2 rounded-lg border text-center transition-all",
                     data.preferredInstallDate === dateStr
-                      ? "border-fiber-red bg-fiber-red/10 text-fiber-red font-semibold"
-                      : "border-border hover:border-fiber-red/50 text-foreground"
+                      ? "border-fiber-blue bg-fiber-blue/10 text-fiber-blue font-semibold"
+                      : "border-border hover:border-fiber-blue/50 text-foreground"
                   )}
                 >
                   <div className="text-[10px] text-muted-foreground">{d.dayName}</div>
@@ -456,7 +456,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
                     value={time}
                     checked={data.preferredInstallTime === time}
                     onChange={() => updateField("preferredInstallTime", time)}
-                    className="accent-fiber-red"
+                    className="accent-fiber-blue"
                   />
                   {time === "no-preference" ? "Any Time" : time.charAt(0).toUpperCase() + time.slice(1)}
                 </label>
@@ -530,7 +530,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
           <Button
             type="button"
             onClick={nextStep}
-            className="flex items-center gap-2 bg-fiber-red hover:bg-fiber-red/90 text-white min-h-[48px] px-8 font-semibold"
+            className="flex items-center gap-2 bg-fiber-blue hover:bg-fiber-blue/90 text-white min-h-[48px] px-8 font-semibold"
           >
             Continue
             <ArrowRight className="size-4" />
@@ -540,7 +540,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
             type="button"
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="flex items-center gap-2 bg-fiber-red hover:bg-fiber-red/90 text-white min-h-[48px] px-8 font-semibold glow-teal"
+            className="flex items-center gap-2 bg-fiber-blue hover:bg-fiber-blue/90 text-white min-h-[48px] px-8 font-semibold glow-blue"
           >
             {isSubmitting ? (
               <>

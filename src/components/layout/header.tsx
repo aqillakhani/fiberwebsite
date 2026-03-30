@@ -3,11 +3,12 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
-import { ZapIcon, MenuIcon, SunIcon, MoonIcon } from "lucide-react"
+import { MenuIcon, SunIcon, MoonIcon } from "lucide-react"
 
 import { COMPANY, NAV_LINKS, TEAM_MEMBERS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Logo } from "@/components/ui/logo"
 import { useAttribution } from "@/components/providers/attribution-provider"
 import {
   Sheet,
@@ -52,15 +53,8 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-red)] transition-colors"
-          >
-            <ZapIcon
-              className="size-5"
-              style={{ color: "var(--fiber-red)" }}
-            />
-            {COMPANY.name}
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <Logo size="md" />
           </Link>
 
           {/* Rep Attribution Badge */}
@@ -115,7 +109,7 @@ export function Header() {
             {/* Desktop CTA Button */}
             <Link href="/check-availability" className="hidden lg:block">
               <Button
-                className="bg-fiber-red text-white hover:bg-fiber-red/90"
+                className="bg-fiber-blue text-white hover:bg-fiber-blue/90"
               >
                 Check Availability
               </Button>
@@ -132,13 +126,7 @@ export function Header() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-full sm:w-80">
                   <SheetHeader>
-                    <div className="flex items-center gap-2">
-                      <ZapIcon
-                        className="size-5"
-                        style={{ color: "var(--fiber-red)" }}
-                      />
-                      <span className="font-bold">{COMPANY.name}</span>
-                    </div>
+                    <Logo size="sm" />
                   </SheetHeader>
 
                   <nav className="flex flex-col gap-2 py-4">
@@ -162,7 +150,7 @@ export function Header() {
                   <SheetFooter className="flex flex-col gap-3">
                     <Link href="/check-availability" className="w-full">
                       <Button
-                        className="w-full bg-fiber-red text-white hover:bg-fiber-red/90"
+                        className="w-full bg-fiber-blue text-white hover:bg-fiber-blue/90"
                       >
                         Check Availability
                       </Button>

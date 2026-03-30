@@ -78,7 +78,7 @@ export function ConfirmationScreen({
           </p>
 
           {/* What Happens Next */}
-          <div className="bg-fiber-50 rounded-xl p-6 md:p-8 mb-8 text-left">
+          <div className="bg-white rounded-xl p-6 md:p-8 mb-8 text-left">
             <h2 className="text-xl font-semibold text-foreground mb-6">What happens next</h2>
 
             <ol className="space-y-4">
@@ -122,7 +122,7 @@ export function ConfirmationScreen({
 
           {/* Plan Summary */}
           {selectedPlan && resolvedPlanName && resolvedPlanPrice !== undefined && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 text-left">
+            <div className="bg-fiber-blue/5 border border-fiber-blue/20 rounded-lg p-4 mb-6 text-left">
               <p className="text-foreground">
                 <span className="font-semibold">Your selected plan:</span>{' '}
                 <span className="text-foreground">
@@ -134,9 +134,9 @@ export function ConfirmationScreen({
 
           {/* Gift Card Callout */}
           {giftCardAmount && giftCardAmount > 0 && (
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+            <div className="bg-fiber-orange/5 border border-fiber-orange/20 rounded-lg p-4 mb-6">
               <p className="text-foreground">
-                <span className="font-semibold text-amber-900">
+                <span className="font-semibold text-fiber-orange">
                   Plus a ${giftCardAmount} Visa Gift Card!
                 </span>
               </p>
@@ -145,7 +145,7 @@ export function ConfirmationScreen({
 
           {/* Door Mode Note */}
           {isDoorMode && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 text-left">
+            <div className="bg-fiber-success/5 border border-fiber-success/20 rounded-lg p-4 mb-6 text-left">
               <p className="text-foreground">
                 You can close this page — {repDisplayName} has your info.
               </p>
@@ -157,7 +157,7 @@ export function ConfirmationScreen({
             <Phone className="w-5 h-5 text-fiber-success flex-shrink-0" />
             <span>
               Questions? Call us at{' '}
-              <a href="tel:+14694285942" className="font-semibold text-fiber-success hover:text-fiber-600 transition-colors">
+              <a href="tel:+14694285942" className="font-semibold text-fiber-success hover:text-fiber-success/80 transition-colors">
                 (469) 428-5942
               </a>
             </span>
@@ -167,13 +167,13 @@ export function ConfirmationScreen({
           {onBackToHome ? (
             <Button
               onClick={onBackToHome}
-              className="w-full bg-fiber-success hover:bg-fiber-600 text-white font-semibold py-3 rounded-lg transition-colors"
+              className="w-full bg-fiber-blue hover:bg-fiber-blue/90 text-white font-semibold py-3 rounded-lg transition-colors"
             >
               Back to Home
             </Button>
           ) : (
             <Link href="/">
-              <Button className="w-full bg-fiber-success hover:bg-fiber-600 text-white font-semibold py-3 rounded-lg transition-colors">
+              <Button className="w-full bg-fiber-blue hover:bg-fiber-blue/90 text-white font-semibold py-3 rounded-lg transition-colors">
                 Back to Home
               </Button>
             </Link>

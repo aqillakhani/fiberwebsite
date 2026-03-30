@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ZapIcon, FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon } from "lucide-react"
+import Image from "next/image"
 
 import { COMPANY, FOOTER_LINKS } from "@/lib/constants"
 
@@ -17,10 +17,7 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-red)] transition-colors mb-4"
             >
-              <ZapIcon
-                className="size-5"
-                style={{ color: "var(--fiber-red)" }}
-              />
+              <Image src="/logo.png" alt="FiberFastUSA" width={32} height={32} className="w-8 h-8" />
               {COMPANY.name}
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
@@ -92,46 +89,6 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               &copy; {currentYear} {COMPANY.name}. All rights reserved.
             </p>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
-              <a
-                href={COMPANY.socialLinks.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="size-5" />
-              </a>
-              <a
-                href={COMPANY.socialLinks.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Twitter"
-              >
-                <TwitterIcon className="size-5" />
-              </a>
-              <a
-                href={COMPANY.socialLinks.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="size-5" />
-              </a>
-              <a
-                href={COMPANY.socialLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon className="size-5" />
-              </a>
-            </div>
           </div>
         </div>
       </div>

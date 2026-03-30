@@ -110,13 +110,13 @@ export default function PricingPage() {
               >
                 {plan.isFeatured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-red px-3 py-1 text-xs font-semibold text-white">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-yellow px-3 py-1 text-xs font-semibold text-black">
                       <Zap className="size-3" /> Most Popular
                     </span>
                   </div>
                 )}
 
-                <div className="text-2xl font-bold text-fiber-red mb-1">
+                <div className="text-2xl font-bold text-fiber-blue mb-1">
                   {plan.speed}
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-1">
@@ -125,7 +125,7 @@ export default function PricingPage() {
                 <p className="text-sm text-muted-foreground italic mb-2">
                   {plan.bestFor}
                 </p>
-                <span className="inline-flex items-center gap-1 rounded-full bg-fiber-red/10 px-2.5 py-0.5 text-xs font-semibold text-fiber-red mb-2">
+                <span className="inline-flex items-center gap-1 rounded-full bg-fiber-blue/10 px-2.5 py-0.5 text-xs font-semibold text-fiber-blue mb-2">
                   <Infinity className="size-3" /> Unlimited Data
                 </span>
 
@@ -142,7 +142,7 @@ export default function PricingPage() {
                     </span>
                   )}
                   {plan.giftCard > 0 && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-red/10 px-3 py-1 text-xs font-semibold text-fiber-red">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-fiber-orange/10 px-3 py-1 text-xs font-semibold text-fiber-orange">
                       <Gift className="size-3" />
                       +${plan.giftCard} Visa Gift Card
                     </span>
@@ -162,7 +162,7 @@ export default function PricingPage() {
                   href={`/check-availability?plan=${plan.id}`}
                   className={`inline-flex items-center justify-center w-full h-11 px-4 rounded-lg text-sm font-semibold transition-all ${
                     plan.isFeatured
-                      ? "bg-fiber-red text-white hover:bg-fiber-red/90 glow-teal"
+                      ? "bg-fiber-blue text-white hover:bg-fiber-blue/90 glow-blue"
                       : "border border-border hover:bg-accent text-foreground"
                   }`}
                 >
@@ -218,12 +218,12 @@ export default function PricingPage() {
                     <th
                       key={plan.id}
                       className={`px-6 py-4 text-center font-semibold ${
-                        plan.isFeatured ? "text-fiber-red" : "text-foreground"
+                        plan.isFeatured ? "text-fiber-blue" : "text-foreground"
                       }`}
                     >
                       {plan.name}
                       {plan.isFeatured && (
-                        <span className="block text-xs text-fiber-red/70 font-normal mt-0.5">
+                        <span className="block text-xs text-fiber-blue/70 font-normal mt-0.5">
                           Most Popular
                         </span>
                       )}
@@ -284,7 +284,7 @@ export default function PricingPage() {
                   <td className="px-6 py-4 font-medium text-foreground">Price</td>
                   {PLANS.map((plan) => (
                     <td key={plan.id} className={`px-6 py-4 text-center font-semibold ${
-                      plan.isFeatured ? "text-fiber-red" : "text-foreground"
+                      plan.isFeatured ? "text-fiber-blue" : "text-foreground"
                     }`}>
                       ${plan.price}/mo
                     </td>
@@ -357,7 +357,7 @@ export default function PricingPage() {
           </p>
           <Link
             href="/check-availability"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-red text-white font-semibold hover:bg-fiber-red/90 transition-all glow-teal gap-2"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-red text-white font-semibold hover:bg-fiber-red/90 transition-all glow-blue gap-2"
           >
             <Zap className="size-5" />
             Check Your Address

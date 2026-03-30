@@ -32,7 +32,7 @@ export default function DoorModeView({ rep, prefilledAddress, prefilledPlan }: D
         {/* Minimal header */}
         <header className="border-b border-border px-4 py-3">
           <Link href="/" className="text-lg font-bold text-foreground">
-            Fiber<span className="text-fiber-red">Fast</span>USA
+            Fiber<span className="text-fiber-blue">Fast</span>USA
           </Link>
         </header>
 
@@ -55,7 +55,7 @@ export default function DoorModeView({ rep, prefilledAddress, prefilledPlan }: D
       {/* Minimal header — logo only */}
       <header className="border-b border-border px-4 py-3">
         <Link href="/" className="text-lg font-bold text-foreground">
-          Fiber<span className="text-fiber-red">Fast</span>USA
+          Fiber<span className="text-fiber-blue">Fast</span>USA
         </Link>
       </header>
 
@@ -67,7 +67,7 @@ export default function DoorModeView({ rep, prefilledAddress, prefilledPlan }: D
               <Image src={rep.photo_url} alt={rep.name} fill className="object-cover" />
             </div>
           ) : (
-            <div className="size-14 rounded-full bg-gradient-to-br from-fiber-red/30 via-fiber-red/20 to-fiber-red/30 flex items-center justify-center flex-shrink-0">
+            <div className="size-14 rounded-full bg-gradient-to-br from-fiber-blue/30 via-fiber-blue/20 to-fiber-blue/30 flex items-center justify-center flex-shrink-0">
               <span className="text-2xl font-bold text-foreground/40">
                 {firstName[0]}
               </span>

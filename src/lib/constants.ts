@@ -4,12 +4,6 @@ export const COMPANY = {
   phone: "(469) 428-5942",
   phoneHref: "tel:+14694285942",
   hours: "Mon–Fri: 8am–8pm | Sat: 9am–5pm | Sun: Closed",
-  socialLinks: {
-    facebook: "https://facebook.com/fiberfastusa",
-    twitter: "https://x.com/fiberfastusa",
-    instagram: "https://instagram.com/fiberfastusa",
-    linkedin: "https://linkedin.com/company/fiberfastusa",
-  },
 } as const;
 
 export type PlanTier = {
@@ -163,6 +157,7 @@ export type TeamMember = {
   readonly role: string;
   readonly bio: string;
   readonly phone: string;
+  readonly image?: string;
 };
 
 export const TEAM_MEMBERS: readonly TeamMember[] = [
@@ -173,6 +168,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Helping families discover faster internet options and guiding them through the switch to fiber.",
     phone: "(469) 428-5942",
+    image: "/reps/oscar-salas.jpeg",
   },
   {
     id: "obed-esparza",
@@ -189,6 +185,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Passionate about connecting households with reliable, high-speed fiber internet.",
     phone: "(469) 428-5942",
+    image: "/reps/victor-pineda.jpeg",
   },
   {
     id: "hector-vera",
@@ -197,6 +194,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Focused on helping customers understand their options and find the perfect fiber plan.",
     phone: "(469) 428-5942",
+    image: "/reps/hector-vera.jpeg",
   },
   {
     id: "gabriel-russa",
@@ -205,6 +203,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Committed to providing a smooth, guided experience for customers switching to fiber.",
     phone: "(469) 428-5942",
+    image: "/reps/gabriel-russa.jpeg",
   },
   {
     id: "jorge-gallardo",
@@ -221,6 +220,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Dedicated to helping families discover the benefits of fast, reliable fiber internet.",
     phone: "(469) 428-5942",
+    image: "/reps/pio-carrillo.jpeg",
   },
   {
     id: "amil-lakhani",
@@ -229,6 +229,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Committed to making the fiber switch simple and seamless for every customer.",
     phone: "(469) 428-5942",
+    image: "/reps/amil-lakhani.jpeg",
   },
   {
     id: "reggie-king",
@@ -237,6 +238,7 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
     role: "Fiber Sales Representative",
     bio: "Passionate about connecting neighborhoods with the fastest internet available.",
     phone: "(469) 428-5942",
+    image: "/reps/reggie-king.jpeg",
   },
 ] as const;
 
@@ -324,6 +326,5 @@ export const FOOTER_LINKS = {
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Support" },
     { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
   ],
 } as const;
