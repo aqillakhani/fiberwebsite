@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import {
   Zap,
   Shield,
@@ -11,8 +10,6 @@ import {
   ArrowRight,
   Headphones,
 } from "lucide-react"
-
-import { TEAM_MEMBERS } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "About Us | FiberFastUSA",
@@ -25,8 +22,6 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
-  const reps = TEAM_MEMBERS
-
   const valuePillars = [
     {
       icon: Zap,
@@ -174,48 +169,6 @@ export default function AboutPage() {
                 </div>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 md:py-24 bg-treatment-rhythm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="heading-section text-foreground mb-4">Meet Our Team</h2>
-            <p className="text-lg text-muted-foreground">
-              Our dedicated sales representatives help customers get connected to fiber every day.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {reps.map((member) => (
-              <Link
-                key={member.slug}
-                href={`/rep/${member.slug}`}
-                className="group card-premium bg-card rounded-xl border border-border p-6 block"
-              >
-                {member.image ? (
-                  <div className="relative rounded-lg overflow-hidden mb-4" style={{ aspectRatio: "4/5" }}>
-                    <Image src={member.image} alt={member.name} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover object-top" />
-                  </div>
-                ) : (
-                  <div className="bg-gradient-to-br from-fiber-blue/10 to-fiber-blue/5 rounded-lg mb-4 flex items-center justify-center" style={{ aspectRatio: "4/5" }}>
-                    <span className="text-4xl font-bold text-fiber-blue/30">
-                      {member.name.split(" ")[0][0]}
-                    </span>
-                  </div>
-                )}
-                <h3 className="text-lg font-semibold text-foreground group-hover:text-fiber-blue transition-colors">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-fiber-blue font-medium mb-2">{member.role}</p>
-                <p className="text-sm text-muted-foreground mb-3">{member.bio}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-fiber-blue">
-                  View Profile <ArrowRight className="size-3" />
-                </span>
-              </Link>
-            ))}
           </div>
         </div>
       </section>

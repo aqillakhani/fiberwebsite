@@ -97,7 +97,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased`}
       >
-        <ThemeProviderComponent attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProviderComponent attribute="class" defaultTheme="dark" enableSystem={false}>
           <Suspense>
             <AttributionProvider>
               <Header />

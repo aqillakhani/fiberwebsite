@@ -1,8 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ShieldCheck, UserCheck, MapPin } from "lucide-react"
-import { TEAM_MEMBERS } from "@/lib/constants"
+import { ShieldCheck, UserCheck, MapPin, BadgeCheck, Clock, FileCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 
@@ -24,9 +23,23 @@ const trustPoints = [
   },
 ]
 
+const verificationSteps = [
+  {
+    icon: BadgeCheck,
+    label: "Company-issued ID verified",
+  },
+  {
+    icon: FileCheck,
+    label: "Background screening passed",
+  },
+  {
+    icon: Clock,
+    label: "Active & in good standing",
+  },
+]
+
 export default function RepVerificationSection() {
   const { ref, isVisible } = useIntersectionObserver()
-  const displayReps = TEAM_MEMBERS.slice(0, 3)
 
   return (
     <section className="w-full py-20 md:py-28 bg-treatment-trust">
@@ -81,35 +94,34 @@ export default function RepVerificationSection() {
             </div>
           </div>
 
-          {/* Mini rep cards */}
-          <div className="space-y-3">
-            {displayReps.map((rep, i) => (
-              <Link
-                key={rep.id}
-                href={`/rep/${rep.slug}`}
-                className={cn(
-                  "flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-fiber-blue/30 transition-all duration-700",
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
-                )}
-                style={{ transitionDelay: isVisible ? `${(i + 1) * 150}ms` : "0ms" }}
-              >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-fiber-blue/10 flex items-center justify-center text-fiber-blue font-bold text-sm">
-                  {rep.name.split(" ").map((n) => n[0]).join("")}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-foreground text-sm">
-                    {rep.name}
+          {/* Verification checklist (replaces mini rep cards) */}
+          <div
+            className={cn(
+              "rounded-xl border border-border bg-card p-6 transition-all duration-700",
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
+            )}
+            style={{ transitionDelay: isVisible ? "150ms" : "0ms" }}
+          >
+            <h3 className="font-semibold text-foreground mb-4">
+              Every Rep Goes Through
+            </h3>
+            <div className="space-y-4">
+              {verificationSteps.map((step, i) => (
+                <div
+                  key={step.label}
+                  className={cn(
+                    "flex items-center gap-3 transition-all duration-700",
+                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
+                  )}
+                  style={{ transitionDelay: isVisible ? `${(i + 2) * 150}ms` : "0ms" }}
+                >
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-fiber-success/10 flex items-center justify-center">
+                    <step.icon className="size-4 text-fiber-success" />
                   </div>
-                  <div className="text-xs text-muted-foreground truncate">
-                    {rep.role}
-                  </div>
+                  <span className="text-sm text-foreground font-medium">{step.label}</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 bg-fiber-success rounded-full" />
-                  <span className="text-xs text-fiber-success font-medium">Verified</span>
-                </div>
-              </Link>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

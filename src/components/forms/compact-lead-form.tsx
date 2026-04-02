@@ -83,7 +83,7 @@ export default function CompactLeadForm({ repId, repName, source = "rep-page" }:
     )
   }
 
-  const inputClasses = "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-blue focus:border-transparent text-base"
+  const inputClasses = "w-full h-12 px-4 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-base"
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
