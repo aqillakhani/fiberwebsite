@@ -10,6 +10,8 @@ import { getSavedAddress, saveAddress } from "@/lib/address-memory"
 import { PLANS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import { ConfirmationScreen } from "@/components/ui/confirmation-screen"
+import { AddressAutocomplete } from "@/components/ui/address-autocomplete"
+import { ProviderResults } from "@/components/ui/provider-results"
 
 type QualificationFlowProps = {
   prefilledAddress?: string
@@ -80,6 +82,8 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
     email: "",
   })
 
+  const [addressQuery, setAddressQuery] = useState<string>(prefilledAddress ?? "")
+
   const [submitted, setSubmitted] = useState<{
     firstName: string
     planId: string
@@ -108,6 +112,9 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
       email: savedAddress.email,
       phone: savedAddress.phone,
     }))
+    setAddressQuery(
+      `${savedAddress.serviceAddress}, ${savedAddress.city}, ${savedAddress.state}${savedAddress.zip ? ` ${savedAddress.zip}` : ""}`
+    )
     setUseSaved(false)
   }
 
@@ -235,6 +242,9 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
   const inputClasses =
     "w-full h-12 px-4 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-blue focus:border-transparent text-base"
 
+  const manualInputClasses =
+    "w-full h-12 px-4 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-fiber-blue focus:border-transparent text-base shadow-sm"
+
   const steps = ["Address", "Plan", "Install Date", "Your Info"]
 
   return (
@@ -285,7 +295,7 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
       {step === 1 && (
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-foreground">Where do you need service?</h2>
-          <p className="text-muted-foreground">Enter your address to check fiber availability.</p>
+          <p className="text-muted-foreground">Start typing your address — we&rsquo;ll check what&rsquo;s available.</p>
 
           {useSaved && savedAddress && (
             <div className="rounded-lg border border-border bg-muted/30 p-4">
@@ -315,47 +325,89 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
           )}
 
           <div className="space-y-3">
-            <input
-              type="text"
-              placeholder="Street Address"
-              autoComplete="street-address"
-              value={data.serviceAddress}
-              onChange={(e) => updateField("serviceAddress", e.target.value)}
-              className={inputClasses}
+            <AddressAutocomplete
+              value={addressQuery}
+              onValueChange={(v) => {
+                setAddressQuery(v)
+                if (errors.serviceAddress) {
+                  setErrors((prev) => {
+                    const next = { ...prev }
+                    delete next.serviceAddress
+                    return next
+                  })
+                }
+              }}
+              onSelect={(s) => {
+                setAddressQuery(s.label)
+                setData((prev) => ({
+                  ...prev,
+                  serviceAddress: s.street,
+                  city: s.city,
+                  state: s.state,
+                  zip: s.zip,
+                }))
+                setErrors({})
+              }}
+              placeholder="Start typing your address…"
+              ariaLabel="Service address"
             />
             {errors.serviceAddress && (
               <p className="text-destructive text-xs">{errors.serviceAddress}</p>
             )}
 
-            <div className="grid grid-cols-3 gap-3">
-              <input
-                type="text"
-                placeholder="City"
-                autoComplete="address-level2"
-                value={data.city}
-                onChange={(e) => updateField("city", e.target.value)}
-                className={inputClasses}
+            {data.state && data.serviceAddress && (
+              <ProviderResults
+                state={data.state}
+                city={data.city}
+                nextStepLabel="Tap Continue to choose your plan and lock in your install date."
               />
-              <input
-                type="text"
-                placeholder="State"
-                autoComplete="address-level1"
-                value={data.state}
-                onChange={(e) => updateField("state", e.target.value)}
-                className={inputClasses}
-              />
-              <input
-                type="text"
-                placeholder="ZIP"
-                autoComplete="postal-code"
-                value={data.zip}
-                onChange={(e) => updateField("zip", e.target.value)}
-                className={inputClasses}
-              />
-            </div>
-            {(errors.city || errors.state || errors.zip) && (
-              <p className="text-destructive text-xs">Please fill in city, state, and ZIP code</p>
             )}
+
+            <details className="group">
+              <summary className="text-xs text-muted-foreground cursor-pointer hover:text-foreground transition-colors">
+                Address not showing up? Enter it manually
+              </summary>
+              <div className="mt-3 space-y-3">
+                <input
+                  type="text"
+                  placeholder="Street Address"
+                  autoComplete="street-address"
+                  value={data.serviceAddress}
+                  onChange={(e) => updateField("serviceAddress", e.target.value)}
+                  className={manualInputClasses}
+                />
+                <div className="grid grid-cols-3 gap-3">
+                  <input
+                    type="text"
+                    placeholder="City"
+                    autoComplete="address-level2"
+                    value={data.city}
+                    onChange={(e) => updateField("city", e.target.value)}
+                    className={manualInputClasses}
+                  />
+                  <input
+                    type="text"
+                    placeholder="State"
+                    autoComplete="address-level1"
+                    maxLength={2}
+                    value={data.state}
+                    onChange={(e) => updateField("state", e.target.value.toUpperCase())}
+                    className={manualInputClasses}
+                  />
+                  <input
+                    type="text"
+                    placeholder="ZIP"
+                    autoComplete="postal-code"
+                    value={data.zip}
+                    onChange={(e) => updateField("zip", e.target.value)}
+                    className={manualInputClasses}
+                  />
+                </div>
+                {(errors.city || errors.state || errors.zip) && (
+                  <p className="text-destructive text-xs">Please fill in city, state, and ZIP code</p>
+                )}
+              </div>
+            </details>
           </div>
         </div>
       )}

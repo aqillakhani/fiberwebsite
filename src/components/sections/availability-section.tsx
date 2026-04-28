@@ -9,6 +9,8 @@ import { ArrowRight, CheckCircle, Loader2, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { submitLead } from "@/actions/submit-lead"
 import { useAttribution } from "@/components/providers/attribution-provider"
+import { AddressAutocomplete } from "@/components/ui/address-autocomplete"
+import { ProviderResults } from "@/components/ui/provider-results"
 
 const availabilityFormSchema = z.object({
   fullName: z.string().min(2, "Name is required"),
@@ -29,10 +31,16 @@ export default function AvailabilitySection() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const { repSlug } = useAttribution()
 
+  const [addressQuery, setAddressQuery] = useState<string>("")
+  const [resolvedCity, setResolvedCity] = useState<string>("")
+  const [resolvedState, setResolvedState] = useState<string>("")
+
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
+    clearErrors,
   } = useForm<AvailabilityFormValues>({
     resolver: zodResolver(availabilityFormSchema),
   })
@@ -46,8 +54,8 @@ export default function AvailabilitySection() {
       email: data.email,
       phone: data.phone,
       serviceAddress: data.serviceAddress,
-      city: "",
-      state: "",
+      city: resolvedCity,
+      state: resolvedState,
       zip: data.zip,
       source: "homepage-availability",
       repId: repSlug,
@@ -137,33 +145,40 @@ export default function AvailabilitySection() {
             )}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="sm:col-span-2">
-              <input
-                {...register("serviceAddress")}
-                type="text"
-                placeholder="Street Address"
-                autoComplete="street-address"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-blue focus:border-transparent text-base"
-              />
-              {errors.serviceAddress && (
-                <p className="text-destructive text-xs mt-1">{errors.serviceAddress.message}</p>
-              )}
-            </div>
+          <div className="space-y-3">
+            <input type="hidden" {...register("serviceAddress")} />
+            <input type="hidden" {...register("zip")} />
 
-            <div>
-              <input
-                {...register("zip")}
-                type="text"
-                inputMode="numeric"
-                placeholder="ZIP Code"
-                autoComplete="postal-code"
-                className="w-full h-12 md:h-12 px-4 rounded-lg bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-fiber-blue focus:border-transparent text-base"
+            <AddressAutocomplete
+              value={addressQuery}
+              onValueChange={(v) => {
+                setAddressQuery(v)
+                if (errors.serviceAddress) clearErrors("serviceAddress")
+              }}
+              onSelect={(s) => {
+                setAddressQuery(s.label)
+                setResolvedCity(s.city)
+                setResolvedState(s.state)
+                setValue("serviceAddress", s.street, { shouldValidate: true })
+                setValue("zip", s.zip, { shouldValidate: true })
+                clearErrors(["serviceAddress", "zip"])
+              }}
+              placeholder="Street address — start typing…"
+              ariaLabel="Service address"
+            />
+            {(errors.serviceAddress || errors.zip) && (
+              <p className="text-destructive text-xs">
+                {errors.serviceAddress?.message ?? errors.zip?.message ?? "Please pick an address from the list"}
+              </p>
+            )}
+
+            {resolvedState && (
+              <ProviderResults
+                state={resolvedState}
+                city={resolvedCity}
+                nextStepLabel="Fill in the rest below and we'll lock in your install."
               />
-              {errors.zip && (
-                <p className="text-destructive text-xs mt-1">{errors.zip.message}</p>
-              )}
-            </div>
+            )}
           </div>
 
           {submitError && (
