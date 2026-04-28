@@ -172,13 +172,7 @@ export default function AvailabilitySection() {
               </p>
             )}
 
-            {resolvedState && (
-              <ProviderResults
-                state={resolvedState}
-                city={resolvedCity}
-                nextStepLabel="Fill in the rest below and we'll lock in your install."
-              />
-            )}
+            {resolvedState && <ProviderResults state={resolvedState} />}
           </div>
 
           {submitError && (

@@ -358,8 +358,8 @@ export default function QualificationFlow({ prefilledAddress, prefilledPlan }: Q
             {data.state && data.serviceAddress && (
               <ProviderResults
                 state={data.state}
-                city={data.city}
-                nextStepLabel="Tap Continue to choose your plan and lock in your install date."
+                onContinue={nextStep}
+                continueLabel="See Plans"
               />
             )}
 
