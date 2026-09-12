@@ -1,48 +1,37 @@
-type EventParams = Record<string, string | number | boolean>;
+/**
+ * Browser-side analytics. GA4 (`gtag`) and Meta Pixel (`fbq`) are loaded by the root layout when their
+ * public env vars exist. The server sends the matching Meta `Lead` via the Conversions API with the same
+ * `eventID`, so Meta deduplicates the pair.
+ */
 
-export function trackEvent(eventName: string, params?: EventParams) {
+type EventParams = Record<string, string | number | boolean | null | undefined>;
+
+export interface LeadTrackingPayload {
+  leadId: string;
+  source: string;
+  status: string;
+  isp: string | null;
+}
+
+export function trackEvent(eventName: string, params?: EventParams): void {
   if (typeof window === "undefined") return;
+  if (typeof window.gtag === "function") window.gtag("event", eventName, params);
+}
 
-  // Google Analytics 4
-  if (typeof window.gtag === "function") {
-    window.gtag("event", eventName, params);
-  }
-
-  // Meta Pixel
-  if (typeof window.fbq === "function") {
-    window.fbq("track", eventName, params);
+export function trackLead({ leadId, source, status, isp }: LeadTrackingPayload): void {
+  trackEvent("generate_lead", { lead_id: leadId, source, serviceability_status: status, isp: isp ?? "unknown" });
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", "Lead", { content_name: source, content_category: status }, { eventID: leadId });
   }
 }
 
-export function trackLeadSubmitted(source: string, plan?: string) {
-  trackEvent("lead_submitted", { source, plan: plan ?? "none" });
-  trackEvent("Lead", { source, content_name: plan ?? "general" });
+export function trackAddressChecked(status: string, isp: string | null): void {
+  trackEvent("address_checked", { serviceability_status: status, isp: isp ?? "unknown" });
 }
 
-export function trackAvailabilityCheck(address: string) {
-  trackEvent("availability_check", { address_partial: address.slice(0, 20) });
-}
-
-export function trackPlanSelected(planId: string) {
-  trackEvent("plan_selected", { plan: planId });
-}
-
-export function trackRepVerified(repId: string) {
-  trackEvent("rep_verified", { rep_id: repId });
-}
-
-export function trackDoorModeView(repSlug: string) {
-  trackEvent("door_mode_view", { rep_slug: repSlug });
-}
-
-export function trackDoorModeSubmit(repSlug: string, planId: string) {
-  trackEvent("door_mode_submit", { rep_slug: repSlug, plan: planId });
-}
-
-// Type declarations for analytics globals
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
-    fbq: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }

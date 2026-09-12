@@ -20,7 +20,7 @@ export default function SpeedVisualization() {
         <div
           className={cn(
             "text-center mb-12 transition-all duration-700",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            "opacity-100 translate-y-0"
           )}
         >
           <h2 className="heading-section text-foreground mb-3">
@@ -37,7 +37,7 @@ export default function SpeedVisualization() {
               key={item.label}
               className={cn(
                 "transition-all duration-700",
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
+                "opacity-100 translate-x-0"
               )}
               style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}
             >
@@ -68,7 +68,7 @@ export default function SpeedVisualization() {
                     "h-full rounded-full transition-all duration-1000 ease-out",
                     item.color,
                     item.isFiber && item.width === "100%" && "shadow-[0_0_8px_rgba(56,182,255,0.4)]",
-                    isVisible ? "" : "!w-0"
+                    ""
                   )}
                   style={{
                     width: isVisible ? item.width : "0%",

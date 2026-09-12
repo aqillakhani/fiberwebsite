@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { useTheme } from "next-themes"
-import { MenuIcon, SunIcon, MoonIcon } from "lucide-react"
+import { MenuIcon } from "lucide-react"
 
 import { COMPANY, NAV_LINKS, TEAM_MEMBERS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
@@ -20,17 +19,11 @@ import {
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
   const { repSlug } = useAttribution()
 
   // Resolve rep name from slug
   const repMember = repSlug ? TEAM_MEMBERS.find((m) => m.slug === repSlug) : null
   const repDisplayName = repMember ? repMember.name.split(" ")[0] : null
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,23 +82,6 @@ export function Header() {
 
           {/* Right section */}
           <div className="flex items-center gap-2 lg:gap-3">
-            {/* Dark mode toggle */}
-            {mounted && (
-              <Button
-                variant="ghost"
-                size="icon-sm"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="lg:flex"
-              >
-                {theme === "dark" ? (
-                  <SunIcon className="size-4" />
-                ) : (
-                  <MoonIcon className="size-4" />
-                )}
-                <span className="sr-only">Toggle theme</span>
-              </Button>
-            )}
-
             {/* Desktop CTA Button */}
             <Link href="/check-availability" className="hidden lg:block">
               <Button

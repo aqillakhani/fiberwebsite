@@ -1,0 +1,21 @@
+// Manual smoke: `node e2e/door-flow.smoke.mjs <screenshot-dir> "<street, city ST zip>"` against `next start -p 3102`.
+import { chromium } from "@playwright/test";
+const [out, address] = process.argv.slice(2);
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+page.on("console", (m) => { if (m.type() === "error") console.log("console.error:", m.text().slice(0, 300)); });
+await page.goto("http://localhost:3102/r/oscar-salas?utm_source=test&utm_campaign=smoke");
+await page.getByLabel("Street address").fill(address);
+await page.getByRole("button", { name: "Check address" }).click();
+await page.getByText("Change address").waitFor({ timeout: 30000 });
+console.log("result:", await page.locator("h3").first().innerText());
+console.log("isp pressed:", await page.locator('button[aria-pressed="true"]').allInnerTexts());
+await page.screenshot({ path: `${out}/door-result.png`, fullPage: true });
+await page.getByLabel("Homeowner's name").fill("Test Homeowner");
+await page.getByLabel("Mobile number").fill("(469) 555-0100");
+await page.getByRole("checkbox").check();
+await page.getByRole("button", { name: /Send to closer/ }).click();
+await page.waitForTimeout(8000);
+console.log("after submit:", (await page.locator("main").innerText()).slice(0, 300).replace(/\n+/g, " | "));
+await page.screenshot({ path: `${out}/door-submit.png`, fullPage: true });
+await browser.close();

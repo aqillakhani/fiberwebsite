@@ -60,7 +60,7 @@ export default function WhyFiberSection() {
         <div
           className={cn(
             "text-center mb-12 transition-all duration-700",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            "opacity-100 translate-y-0"
           )}
         >
           <h2 className="heading-section text-foreground mb-3">
@@ -79,9 +79,7 @@ export default function WhyFiberSection() {
               className={cn(
                 "rounded-xl p-6 bg-card transition-all duration-700",
                 item.cardClass,
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-6"
+                "opacity-100 translate-y-0"
               )}
               style={{ transitionDelay: isVisible ? `${i * 150}ms` : "0ms" }}
             >

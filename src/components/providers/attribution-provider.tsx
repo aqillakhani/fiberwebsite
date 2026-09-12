@@ -1,47 +1,33 @@
-"use client"
+"use client";
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
-import { useSearchParams } from "next/navigation"
-import { getRepAttribution, setRepAttribution, resolveRepAttribution } from "@/lib/attribution"
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+
+import { REP_COOKIE, REP_MODE_COOKIE, parseCookieHeader } from "@/lib/attribution-cookies";
 
 type AttributionContextValue = {
-  repSlug: string | undefined
+  /** Canvasser / rep slug, e.g. "oscar-salas". Written by middleware from ?rep= or /r/:slug. */
+  repSlug: string | undefined;
+  /** True while a canvasser is working a shift from their QR link (ffusa_mode cookie). */
+  isRepMode: boolean;
+};
+
+const AttributionContext = createContext<AttributionContextValue>({ repSlug: undefined, isRepMode: false });
+
+export function useAttribution(): AttributionContextValue {
+  return useContext(AttributionContext);
 }
 
-const AttributionContext = createContext<AttributionContextValue>({ repSlug: undefined })
-
-export function useAttribution() {
-  return useContext(AttributionContext)
-}
-
+/**
+ * Cookies are set server-side by `src/middleware.ts`; this provider only reads them after mount,
+ * so it never suspends and never forces the layout into client-side rendering.
+ */
 export function AttributionProvider({ children }: { children: ReactNode }) {
-  const searchParams = useSearchParams()
-  const [repSlug, setRepSlug] = useState<string | undefined>(undefined)
+  const [value, setValue] = useState<AttributionContextValue>({ repSlug: undefined, isRepMode: false });
 
   useEffect(() => {
-    const urlRep = searchParams.get("rep")
-    const resolved = resolveRepAttribution(undefined, urlRep)
+    const cookies = parseCookieHeader(document.cookie);
+    setValue({ repSlug: cookies[REP_COOKIE] || undefined, isRepMode: cookies[REP_MODE_COOKIE] === "1" });
+  }, []);
 
-    // If URL has rep param, always update the cookie
-    if (urlRep) {
-      setRepAttribution(urlRep)
-    }
-
-    // If no URL param but cookie exists, use cookie
-    if (!resolved) {
-      const cookie = getRepAttribution()
-      if (cookie) {
-        setRepSlug(cookie)
-        return
-      }
-    }
-
-    setRepSlug(resolved)
-  }, [searchParams])
-
-  return (
-    <AttributionContext.Provider value={{ repSlug }}>
-      {children}
-    </AttributionContext.Provider>
-  )
+  return <AttributionContext.Provider value={value}>{children}</AttributionContext.Provider>;
 }

@@ -1,0 +1,77 @@
+[
+  {
+    "address": "307 Central Ave, Newark OH 43055",
+    "home_key": "307 CENTRAL AVENUE|43055",
+    "home_hash": "1eb8eb87d0e05e61498f57764c400e5604ec567f5a2d101c69ef2ad3d3fbf9b3"
+  },
+  {
+    "address": "307 central ave., newark, oh 43055-1234",
+    "home_key": "307 CENTRAL AVENUE|43055",
+    "home_hash": "1eb8eb87d0e05e61498f57764c400e5604ec567f5a2d101c69ef2ad3d3fbf9b3"
+  },
+  {
+    "address": "4215 H AVENUE, CLEGHORN IA 51046",
+    "home_key": "4215 H AVENUE|51046",
+    "home_hash": "2929084784d79cad479197b8411d87bd217d77fc25a7604d03b7c1bcf4733d0a"
+  },
+  {
+    "address": "1196 330th Ave, Randolph IA 51649",
+    "home_key": "1196 330TH AVENUE|51649",
+    "home_hash": "db7cabe2f7a413ea32f072c51336ba3cc164ec399f83a4afcdfac3b2bdf2963a"
+  },
+  {
+    "address": "12 N. Main St Apt 4B, Dallas TX 75201",
+    "home_key": "12 NORTH MAIN STREET|75201",
+    "home_hash": "2a36e9dc3b68fb70d35af670af00f3c92f6f60a90fc2434bb333fabd3b60ddbb"
+  },
+  {
+    "address": "12 North Main Street, Dallas, TX 75201",
+    "home_key": "12 NORTH MAIN STREET|75201",
+    "home_hash": "2a36e9dc3b68fb70d35af670af00f3c92f6f60a90fc2434bb333fabd3b60ddbb"
+  },
+  {
+    "address": "900 W Hwy 80 #12, Forney TX 75126",
+    "home_key": "900 WEST HIGHWAY 80 12|75126",
+    "home_hash": "a0fe4379061bdc8cedaa4615026bf4281e832ca3af7caaee128e22c1cd36aa5c"
+  },
+  {
+    "address": "1 SW Pkwy Blvd Ste 200, Plano TX 75024",
+    "home_key": "1 SOUTHWEST PARKWAY BOULEVARD|75024",
+    "home_hash": "24149a8f4ece42763000755ea847a0db4a07fb981bc46f5ecf3c61e12b921cee"
+  },
+  {
+    "address": "55 Oak Ln, Unit 3, Tampa FL 33601",
+    "home_key": "55 OAK LANE|33601",
+    "home_hash": "2ec807b251277f499281620e41a76e221071e55c22c7bb55321e04a52702f513"
+  },
+  {
+    "address": "10000 Elm Dr, Spring TX 77379",
+    "home_key": "10000 ELM DRIVE|77379",
+    "home_hash": "4cd86061a7fde803fb7dc67a0427c92659a6b45011fd4512045255d272489849"
+  },
+  {
+    "address": "77379 Elm Dr, Spring TX",
+    "home_key": "77379 ELM DRIVE|77379",
+    "home_hash": "aeed663458d15ec53e01f1f2943b44dba286dc87ee5dc5c11168ba9b18139777"
+  },
+  {
+    "address": "  200   S   Broadway  Cir , Lexington KY 40502 ",
+    "home_key": "200 SOUTH BROADWAY CIRCLE|40502",
+    "home_hash": "6949e84989a3551007b86bff5b1c9d01face8c0f5e629b4ac226c7483b2e0dc5"
+  },
+  {
+    "address": "",
+    "home_key": "|",
+    "home_hash": "cbe5cfdf7c2118a9c3d78ef1d684f3afa089201352886449a06a6511cfef74a7"
+  },
+  {
+    "address": "No Zip Here Rd",
+    "home_key": "NO ZIP HERE ROAD|",
+    "home_hash": "f98a2f6fe29d3cdb90db19e8cea38a5d08a54a6171a51c054671f99f0888914c"
+  },
+  {
+    "address": "Ünïcode Straße 5, Somewhere TX 75000",
+    "home_key": "ÜNÏCODE STRASSE 5|75000",
+    "home_hash": "3e0d5d242a0d0a4bf4bab5badfd38491c62bb4403a2d5c291f15696dcc83d79e"
+  }
+]

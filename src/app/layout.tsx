@@ -3,13 +3,8 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-import { ThemeProviderComponent } from "@/components/layout/theme-provider";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { MobileStickyCtA } from "@/components/layout/mobile-sticky-cta";
-import { RepBanner } from "@/components/layout/rep-banner";
-import { Suspense } from "react";
 import { AttributionProvider } from "@/components/providers/attribution-provider";
+import { SERVICE_STATES } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,10 +12,13 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fiberfastusa.com";
+
 export const metadata: Metadata = {
-  title: "FiberFastUSA | Fiber Internet That Actually Works",
+  metadataBase: new URL(SITE_URL),
+  title: "FiberFastUSA | Is fiber live at your address?",
   description:
-    "Experience blazing-fast fiber internet with FiberFastUSA. Gigabit speeds, no data caps, no contracts. Check availability in your area today.",
+    "Type your address and get a real answer about fiber internet at your home. No contracts, no data caps, free installation. A specialist calls you back within minutes.",
 };
 
 export default function RootLayout({
@@ -28,11 +26,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+  // Placeholders like "G-XXXX" / "0000…" must never reach production: only well-formed ids load a script.
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.match(/^G-[A-Z0-9]{6,}$/) ? process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID : undefined;
+  const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID?.match(/^[1-9]\d{9,}$/) ? process.env.NEXT_PUBLIC_META_PIXEL_ID : undefined;
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"
@@ -46,10 +45,7 @@ export default function RootLayout({
               description:
                 "FiberFastUSA helps customers explore fiber internet options and switch to faster, more reliable service.",
               telephone: "(469) 428-5942",
-              areaServed: {
-                "@type": "Country",
-                name: "United States",
-              },
+              areaServed: SERVICE_STATES.map((name) => ({ "@type": "State", name })),
             }),
           }}
         />
@@ -94,20 +90,8 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-        <ThemeProviderComponent attribute="class" defaultTheme="dark" enableSystem={false}>
-          <Suspense>
-            <AttributionProvider>
-              <Header />
-              <RepBanner />
-              {children}
-              <Footer />
-              <MobileStickyCtA />
-            </AttributionProvider>
-          </Suspense>
-        </ThemeProviderComponent>
+      <body className="font-sans">
+        <AttributionProvider>{children}</AttributionProvider>
       </body>
     </html>
   );

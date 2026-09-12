@@ -1,258 +1,47 @@
-"use client"
+import { PhoneCall, ShieldCheck, Timer } from "lucide-react";
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { LeadForm } from "@/components/lead/lead-form";
+import { CLOSER_SLA_MINUTES } from "@/components/lead/serviceability-copy";
 
-function AnimatedCounter({ target, duration = 1500 }: { target: number; duration?: number }) {
-  const [count, setCount] = useState(0)
-  const [started, setStarted] = useState(false)
+const PROOF_POINTS = [
+  { Icon: Timer, text: `A fiber specialist calls within ~${CLOSER_SLA_MINUTES} min` },
+  { Icon: ShieldCheck, text: "Authorized partner — we sell the fiber that is actually at your address" },
+  { Icon: PhoneCall, text: "No payment or signature online. Everything is confirmed on your call." },
+];
 
-  useEffect(() => {
-    const timer = setTimeout(() => setStarted(true), 300)
-    return () => clearTimeout(timer)
-  }, [])
-
-  useEffect(() => {
-    if (!started) return
-    const steps = 40
-    const increment = target / steps
-    const stepDuration = duration / steps
-    let current = 0
-
-    const interval = setInterval(() => {
-      current += increment
-      if (current >= target) {
-        setCount(target)
-        clearInterval(interval)
-      } else {
-        setCount(Math.round(current))
-      }
-    }, stepDuration)
-
-    return () => clearInterval(interval)
-  }, [started, target, duration])
-
-  return <>{count.toLocaleString()}</>
-}
-
+/** Server-rendered: the headline and the form shell are in the HTML before any JavaScript runs. */
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
-    <section className="relative w-full overflow-hidden py-16 md:py-32 lg:py-40">
-      {/* Background with gradient, grid overlay */}
-      <div className="absolute inset-0 hero-gradient bg-grid-white" />
+    <section className="relative overflow-hidden border-b border-gray-200 bg-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#EFF6FF_0%,_transparent_55%)]" aria-hidden />
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.05fr_1fr] md:items-center md:py-24 lg:px-8">
+        <div>
+          <p className="mb-4 inline-flex items-center rounded-full border border-blue-200 bg-fiber-blue-light px-3 py-1 text-xs font-semibold uppercase tracking-wide text-fiber-blue">
+            Fiber internet, checked by address
+          </p>
+          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            Is fiber live at <span className="text-fiber-blue">your address</span>?
+          </h1>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-600">
+            Type your address and get a real answer — which fiber network reaches your home, or when it will.
+            Then a specialist calls to set it up. No contracts, no data caps, free installation.
+          </p>
+          <ul className="mt-8 space-y-3">
+            {PROOF_POINTS.map(({ Icon, text }) => (
+              <li key={text} className="flex items-start gap-3 text-sm text-gray-700">
+                <Icon className="mt-0.5 size-5 shrink-0 text-fiber-blue" aria-hidden />
+                {text}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      {/* Animated fiber streaks */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="fiber-streak fiber-streak-1" />
-        <div className="fiber-streak fiber-streak-2" />
-        <div className="fiber-streak fiber-streak-3" />
-      </div>
-
-      {/* Pulsing radial glow behind speed card */}
-      <div className="absolute top-1/2 right-[15%] -translate-y-1/2 w-[500px] h-[500px] rounded-full hero-glow-orb pointer-events-none hidden md:block" />
-
-      {/* Content container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-[1fr_1fr] gap-8 lg:gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="flex flex-col justify-center">
-            <h1
-              className={cn(
-                "heading-display text-5xl md:text-6xl lg:text-8xl font-extrabold mb-6 leading-tight text-white hero-heading-shadow transition-all duration-700",
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              )}
-            >
-              <span className="hero-line sm:whitespace-nowrap">Light-Speed Fiber</span>
-              <br />
-              <span className="hero-line sm:whitespace-nowrap">Built for You</span>
-            </h1>
-
-            <p
-              className={cn(
-                "text-lg md:text-xl text-white/90 mb-3 leading-relaxed max-w-xl transition-all duration-700 delay-100",
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              )}
-            >
-              Blazing symmetric speeds up to 7 Gbps. Stream, game, and work from home — all at the same time, without a hiccup.
-            </p>
-
-            <p
-              className={cn(
-                "text-base text-white/70 mb-8 max-w-xl transition-all duration-700 delay-150",
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              )}
-            >
-              No contracts. No data caps. No hidden fees. Starting at $34.99/mo.
-            </p>
-
-            {/* CTA Buttons */}
-            <div
-              className={cn(
-                "flex flex-col sm:flex-row gap-4 mb-3 transition-all duration-700 delay-200",
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              )}
-            >
-              <Link href="/check-availability" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-fiber-blue hover:bg-fiber-blue/90 text-white px-8 md:px-10 gap-2 min-h-[56px] text-lg font-semibold shadow-lg shadow-fiber-blue/30 cta-pulse"
-                >
-                  Check Availability
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </Link>
-
-              <Link href="/pricing" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-card text-foreground hover:bg-muted border border-border px-8 md:px-10 min-h-[56px] text-lg font-bold"
-                >
-                  View Plans
-                </Button>
-              </Link>
-            </div>
-
-            {/* Microcopy below CTAs */}
-            <p
-              className={cn(
-                "text-sm text-white/60 mb-6 transition-all duration-700 delay-250",
-                mounted ? "opacity-100" : "opacity-0"
-              )}
-            >
-              Takes less than 30 seconds
-            </p>
-          </div>
-
-          {/* Right side - Speed visualization */}
-          <div className="flex items-center justify-center">
-            <Link
-              href="/why-fiber#speed-comparison"
-              className={cn(
-                "block w-full max-w-sm p-6 md:p-8 rounded-2xl border border-border bg-card shadow-lg transition-all duration-700 delay-200 hover:shadow-xl hover:scale-[1.02] cursor-pointer",
-                mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"
-              )}
-            >
-              {/* Speed indicator */}
-              <div className="mb-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-foreground mb-1">
-                    Up to <AnimatedCounter target={7} duration={1200} /> Gbps
-                  </div>
-                  <div className="text-sm text-muted-foreground font-semibold">Download & Upload Speed</div>
-                </div>
-              </div>
-
-              {/* Speed comparison bars */}
-              <div className="space-y-5 mb-6">
-                {/* Bar 1 - Tower/Satellite */}
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-muted-foreground font-bold uppercase tracking-wide">Tower / Satellite</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
-                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-red-400 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: mounted ? "8%" : "0%" }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-bold text-foreground  mt-0.5">25 Mbps</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
-                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-red-400 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: mounted ? "4%" : "0%" }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-bold text-foreground  mt-0.5">3 Mbps</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bar 2 - Copper Cable */}
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-muted-foreground  font-bold uppercase tracking-wide">Copper Cable</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
-                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-amber-400 rounded-full transition-all duration-1000 ease-out delay-200"
-                          style={{ width: mounted ? "30%" : "0%" }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-bold text-foreground  mt-0.5">700 Mbps</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
-                      <div className="w-full h-2 bg-muted  rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-amber-400 rounded-full transition-all duration-1000 ease-out delay-200"
-                          style={{ width: mounted ? "5%" : "0%" }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-bold text-foreground  mt-0.5">10 Mbps</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bar 3 - Fiber Optic */}
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-foreground  font-bold uppercase tracking-wide">Fiber Optic</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Download</div>
-                      <div className="w-full h-2.5 bg-muted  rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full transition-all duration-1200 ease-out delay-400 hero-elite-bar"
-                          style={{ width: mounted ? "100%" : "0%" }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-bold text-fiber-blue mt-0.5">7,000 Mbps</div>
-                    </div>
-                    <div>
-                      <div className="text-[10px] text-muted-foreground  font-semibold mb-1">Upload</div>
-                      <div className="w-full h-2.5 bg-muted  rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-fiber-blue to-fiber-teal rounded-full transition-all duration-1200 ease-out delay-500 hero-elite-bar"
-                          style={{ width: mounted ? "100%" : "0%" }}
-                        />
-                      </div>
-                      <div className="text-[10px] font-bold text-fiber-blue mt-0.5">7,000 Mbps</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Symmetric label */}
-              <div className="border-t border-border  pt-4">
-                <div className="text-center">
-                  <div className="text-sm font-bold text-foreground ">Symmetric Upload & Download</div>
-                  <div className="text-xs text-muted-foreground  font-semibold mt-1">Only fiber gives you the same speed both ways</div>
-                  <div className="text-xs text-fiber-blue mt-2 font-bold">Click to see full comparison &rarr;</div>
-                </div>
-              </div>
-            </Link>
-          </div>
+        <div id="check" className="scroll-mt-24 rounded-2xl border border-gray-200 bg-white p-5 shadow-[0_20px_60px_-30px_rgba(30,64,175,0.35)] sm:p-7">
+          <h2 className="text-lg font-bold text-gray-900">Check your address</h2>
+          <p className="mb-4 text-sm text-gray-500">Free, takes about 30 seconds.</p>
+          <LeadForm source="home-hero" />
         </div>
       </div>
     </section>
-  )
+  );
 }

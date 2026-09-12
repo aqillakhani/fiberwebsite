@@ -6,6 +6,16 @@ export const COMPANY = {
   hours: "Mon–Fri: 8am–8pm | Sat: 9am–5pm | Sun: Closed",
 } as const;
 
+/**
+ * States with ≥1,000 sellable fiber homes in map_pin (fiberfast-marketing footprint roll-up, 2026-09-11).
+ * Used for schema.org areaServed only — the address check decides serviceability, never this list.
+ */
+export const SERVICE_STATES = [
+  "Texas", "Ohio", "Florida", "North Carolina", "Kentucky", "Georgia", "Iowa", "Pennsylvania",
+  "Wisconsin", "New York", "Alabama", "Oklahoma", "Kansas", "Nebraska", "South Carolina", "Arkansas",
+  "New Jersey", "Minnesota", "Illinois", "New Mexico", "Virginia", "Missouri",
+] as const;
+
 export type PlanTier = {
   readonly id: string;
   readonly name: string;
@@ -266,7 +276,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Is fiber available at my address?",
-    answer: "Fiber availability depends on your location. Use our Check Availability tool to see if service is available at your address. If it's not available yet, sign up to be notified when it becomes available in your area.",
+    answer: "Enter your street address on this page. We check the real fiber footprint for that exact home and tell you if it is live, coming soon, or not reachable yet. If it is coming soon we call you the day it goes live.",
   },
   {
     question: "Is there a contract or commitment?",
@@ -293,12 +303,16 @@ export const FAQ_ITEMS = [
     answer: "Give us a call and we'll help you out. Plan changes take effect on your next billing cycle. Cancellations can be done anytime — no fees, no hassle.",
   },
   {
+    question: "Do you record calls?",
+    answer: "Yes. Our specialists tell you at the start of every call that it is recorded, and we keep the recording so there is always a clear record of what was agreed.",
+  },
+  {
     question: "Do you offer business internet?",
     answer: "We currently focus on residential service. Business fiber plans are coming soon. Contact us if you're interested and we'll notify you when business plans launch.",
   },
   {
     question: "What areas do you serve?",
-    answer: "We help customers get connected to fiber internet across all 50 states. Check availability at your address to see if we can help you switch.",
+    answer: "We are an authorized partner for several fiber networks (Kinetic, Brightspeed and Frontier today) across 20+ states. Enter your address and we tell you which one — if any — is live at your home.",
   },
 ] as const;
 
@@ -318,7 +332,6 @@ export const FOOTER_LINKS = {
   services: [
     { href: "/pricing", label: "Plans & Pricing" },
     { href: "/check-availability", label: "Check Availability" },
-    { href: "/get-started", label: "Get Started" },
     { href: "/why-fiber", label: "Why Fiber" },
   ],
   support: [

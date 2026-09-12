@@ -74,19 +74,19 @@ export default function HowItWorksSection() {
       number: 1,
       icon: <MapPin className="w-6 h-6" />,
       title: "Check Your Address",
-      description: "Enter your address to see if fiber is available in your area",
+      description: "Enter your address and see which fiber network is live at your home",
     },
     {
       number: 2,
       icon: <FileText className="w-6 h-6" />,
-      title: "Choose Your Plan",
-      description: "Pick the speed tier that fits your household's needs",
+      title: "Get a Call in Minutes",
+      description: "A fiber specialist calls on a recorded line, confirms pricing and answers questions",
     },
     {
       number: 3,
       icon: <Wrench className="w-6 h-6" />,
       title: "Schedule Install",
-      description: "Free professional installation at a time that works for you",
+      description: "We book the free professional installation with the fiber provider for you",
     },
     {
       number: 4,

@@ -1,0 +1,213 @@
+"use client";
+
+import { useCallback, useState } from "react";
+import { useForm, type UseFormReturn } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { submitLead, type LeadSubmitSuccess } from "@/actions/submit-lead";
+import type { AddressSuggestion } from "@/app/api/address-autocomplete/route";
+import { trackLead } from "@/lib/analytics";
+import { CONSENT_TEXT_VERSION } from "@/lib/consent";
+import type { ServiceabilityResult } from "@/lib/serviceability/classify";
+import { leadSchema, type LeadInput } from "@/lib/validations/lead-schema";
+
+export type LeadFormStep = "address" | "details" | "done";
+export type LeadFormMode = "public" | "rep";
+
+export interface ResolvedAddress {
+  street: string;
+  city: string;
+  state: string;
+  zip: string;
+  lat?: number;
+  lon?: number;
+  /** picked = chosen from suggestions; resolved = geocoder's best match for typed text; typed = parsed locally, no coordinates. */
+  accuracy: "picked" | "resolved" | "typed";
+}
+
+export interface UseLeadFormOptions {
+  mode: LeadFormMode;
+  source: string;
+}
+
+export interface LeadFormState {
+  step: LeadFormStep;
+  form: UseFormReturn<LeadInput>;
+  address: ResolvedAddress | null;
+  serviceability: ServiceabilityResult | null;
+  isCheckingAddress: boolean;
+  addressError: string | null;
+  isSubmitting: boolean;
+  submitError: string | null;
+  result: LeadSubmitSuccess | null;
+  chooseSuggestion: (suggestion: AddressSuggestion) => Promise<void>;
+  resolveTypedAddress: (typed: string) => Promise<void>;
+  changeAddress: () => void;
+  submit: () => Promise<void>;
+  reset: () => void;
+}
+
+const ADDRESS_UNRESOLVED = "We couldn't find that address. Pick one from the list or add the city and ZIP.";
+
+export function useLeadForm({ mode, source }: UseLeadFormOptions): LeadFormState {
+  const [step, setStep] = useState<LeadFormStep>("address");
+  const [address, setAddress] = useState<ResolvedAddress | null>(null);
+  const [serviceability, setServiceability] = useState<ServiceabilityResult | null>(null);
+  const [isCheckingAddress, setIsCheckingAddress] = useState(false);
+  const [addressError, setAddressError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [result, setResult] = useState<LeadSubmitSuccess | null>(null);
+
+  const form = useForm<LeadInput>({
+    resolver: zodResolver(leadSchema),
+    defaultValues: emptyLead(source),
+  });
+
+  const acceptAddress = useCallback(
+    async (resolved: ResolvedAddress) => {
+      setAddress(resolved);
+      form.setValue("serviceAddress", resolved.street);
+      form.setValue("city", resolved.city);
+      form.setValue("state", resolved.state);
+      form.setValue("zip", resolved.zip);
+      form.setValue("lat", resolved.lat);
+      form.setValue("lon", resolved.lon);
+      form.setValue("addressAccuracy", resolved.accuracy);
+      const check = await fetchServiceability(resolved);
+      setServiceability(check);
+      form.setValue("serviceabilityStatus", check?.status ?? "unknown");
+      if (mode === "rep" && check?.isp) form.setValue("ispDeclared", toLeadIsp(check.isp));
+      setStep("details");
+    },
+    [form, mode]
+  );
+
+  const chooseSuggestion = useCallback(
+    async (suggestion: AddressSuggestion) => {
+      setAddressError(null);
+      setIsCheckingAddress(true);
+      await acceptAddress({ ...suggestion, lat: toNumber(suggestion.lat), lon: toNumber(suggestion.lon), accuracy: "picked" });
+      setIsCheckingAddress(false);
+    },
+    [acceptAddress]
+  );
+
+  const resolveTypedAddress = useCallback(
+    async (typed: string) => {
+      setAddressError(null);
+      setIsCheckingAddress(true);
+      const suggestion = await lookupFirstSuggestion(typed);
+      const resolved = suggestion
+        ? { ...suggestion, lat: toNumber(suggestion.lat), lon: toNumber(suggestion.lon), accuracy: "resolved" as const }
+        : parseTypedAddress(typed);
+      if (!resolved) {
+        setAddressError(ADDRESS_UNRESOLVED);
+        setIsCheckingAddress(false);
+        return;
+      }
+      await acceptAddress(resolved);
+      setIsCheckingAddress(false);
+    },
+    [acceptAddress]
+  );
+
+  const submit = useCallback(async () => {
+    setSubmitError(null);
+    const isValid = await form.trigger();
+    if (!isValid) return;
+    setIsSubmitting(true);
+    const outcome = await submitLead(form.getValues());
+    setIsSubmitting(false);
+    if (!outcome.success) {
+      setSubmitError(outcome.error);
+      return;
+    }
+    trackLead({ leadId: outcome.leadId, source, status: outcome.serviceabilityStatus, isp: outcome.isp });
+    setResult(outcome);
+    setStep("done");
+  }, [form, source]);
+
+  const reset = useCallback(() => {
+    form.reset(emptyLead(source));
+    setAddress(null);
+    setServiceability(null);
+    setResult(null);
+    setSubmitError(null);
+    setAddressError(null);
+    setStep("address");
+  }, [form, source]);
+
+  const changeAddress = useCallback(() => {
+    setServiceability(null);
+    setStep("address");
+  }, []);
+
+  return {
+    step, form, address, serviceability, isCheckingAddress, addressError, isSubmitting, submitError, result,
+    chooseSuggestion, resolveTypedAddress, changeAddress, submit, reset,
+  };
+}
+
+function emptyLead(source: string): LeadInput {
+  return {
+    fullName: "",
+    phone: "",
+    email: "",
+    serviceAddress: "",
+    city: "",
+    state: "",
+    zip: "",
+    consentContact: false,
+    consentTextVersion: CONSENT_TEXT_VERSION,
+    source,
+    website: "",
+  };
+}
+
+async function fetchServiceability(resolved: ResolvedAddress): Promise<ServiceabilityResult | null> {
+  const params = new URLSearchParams({ address: `${resolved.street}, ${resolved.city} ${resolved.state} ${resolved.zip}` });
+  if (resolved.lat !== undefined && resolved.lon !== undefined) {
+    params.set("lat", String(resolved.lat));
+    params.set("lon", String(resolved.lon));
+  }
+  try {
+    const response = await fetch(`/api/serviceability?${params}`);
+    return response.ok ? ((await response.json()) as ServiceabilityResult) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function lookupFirstSuggestion(typed: string): Promise<AddressSuggestion | null> {
+  try {
+    const response = await fetch(`/api/address-autocomplete?q=${encodeURIComponent(typed)}`);
+    if (!response.ok) return null;
+    const body = (await response.json()) as { suggestions: AddressSuggestion[] };
+    return body.suggestions[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+// "123 Main St, Newark OH 43055" / "123 Main St, Newark, OH, 43055" — the geocoder misses many rural
+// homes the fiber footprint knows, so a well-formed typed address still gets an exact-hash lookup.
+const TYPED_ADDRESS = /^([^,]+),\s*([^,]+?),?\s+([A-Za-z]{2}),?\s+(\d{5})(?:-\d{4})?$/;
+
+function parseTypedAddress(typed: string): ResolvedAddress | null {
+  const match = TYPED_ADDRESS.exec(typed.trim());
+  if (!match) return null;
+  const [, street, city, state, zip] = match;
+  return { street: street.trim(), city: city.trim(), state: state.toUpperCase(), zip, accuracy: "typed" };
+}
+
+function toNumber(raw: string): number | undefined {
+  const parsed = Number(raw);
+  return Number.isFinite(parsed) ? parsed : undefined;
+}
+
+const ISP_ALIASES: Record<string, LeadInput["ispDeclared"]> = { kinetic: "kinetic", brightspeed: "brightspeed", frontier: "frontier" };
+
+function toLeadIsp(isp: string): LeadInput["ispDeclared"] {
+  return ISP_ALIASES[isp] ?? "other";
+}

@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -103,130 +101,29 @@
   --fiber-dark: #111827;
 }
 
-.dark {
-  --background: #152A60;
-  --foreground: #F8FAFC;
-  --card: #FFFFFF;
-  --card-foreground: #111827;
-  --popover: #FFFFFF;
-  --popover-foreground: #111827;
-  --primary: #1E40AF;
-  --primary-foreground: #FFFFFF;
-  --secondary: #F1F5F9;
-  --secondary-foreground: #111827;
-  --muted: #F1F5F9;
-  --muted-foreground: #64748B;
-  --accent: #0D9488;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
-  --ring: #1E40AF;
-  --chart-1: #1E40AF;
-  --chart-2: #0D9488;
-  --chart-3: #16A34A;
-  --chart-4: #F59E0B;
-  --chart-5: #DC2626;
-  --sidebar: #152A60;
-  --sidebar-foreground: #F8FAFC;
-  --sidebar-primary: #60A5FA;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #1A3278;
-  --sidebar-accent-foreground: #F8FAFC;
-  --sidebar-border: #2D4DA0;
-  --sidebar-ring: #3B82F6;
-  /* Dark mode brand colors — strong on white cards */
-  --fiber-blue: #1E40AF;
-  --fiber-blue-light: #EFF6FF;
-  --fiber-teal: #0D9488;
-  --fiber-teal-light: #F0FDFA;
-  --fiber-red: #DC2626;
-  --fiber-red-light: #FEF2F2;
-  --fiber-yellow: #F59E0B;
-  --fiber-orange: #EA580C;
-  --fiber-success: #16A34A;
-  --fiber-dark: #111827;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-semibold text-[17px];
+    @apply bg-background text-foreground font-normal text-base antialiased;
   }
   html {
     @apply font-sans scroll-smooth;
-    font-size: 17px;
-  }
-  /* Inside cards/boxes — light theme text readability */
-  .bg-card,
-  [class*="bg-card"],
-  .white-section {
-    --foreground: #111827;
-    --muted-foreground: #6B7280;
-    --card-foreground: #111827;
-    --border: #E5E7EB;
-    font-weight: 700;
-  }
-  /* Dark mode cards — white cards with dark text on dark background */
-  .dark .bg-card,
-  .dark [class*="bg-card"],
-  .dark .white-section {
-    --foreground: #111827;
-    --muted-foreground: #6B7280;
-    --card-foreground: #111827;
-    --border: #E2E8F0;
-    background: #FFFFFF;
-    color: #111827;
   }
 }
 
 /* Premium Design System Utilities */
 @layer utilities {
-  /* Hero gradient backgrounds — deep blue gradient */
-  .hero-gradient {
-    background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 40%, #1E40AF 100%);
-  }
-  .dark .hero-gradient {
-    background: linear-gradient(135deg, #152A60 0%, #1E3A8A 40%, #152A60 100%);
-  }
 
   /* Section backgrounds — bluish-black matching hero family */
   .section-navy {
     background: linear-gradient(180deg, #152A60 0%, #1A3278 100%);
   }
-  .dark .section-navy {
-    background: linear-gradient(180deg, #152A60 0%, #1A3278 100%);
-  }
-
-  /* Subtle section gradient transitions */
-  .section-gradient {
-    background: linear-gradient(180deg, transparent 0%, var(--fiber-blue-light) 50%, transparent 100%);
-  }
-  .dark .section-gradient {
-    background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.06) 50%, transparent 100%);
-  }
-
-  /* Subtle dot grid pattern overlay */
-  .dot-pattern {
-    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
 
   /* Radial glow effects — subtle */
   .glow-blue {
     box-shadow: 0 4px 20px -4px rgba(30, 64, 175, 0.2);
-  }
-  .dark .glow-blue {
-    box-shadow: 0 4px 20px -4px rgba(96, 165, 250, 0.15);
-  }
-
-  .glow-teal {
-    box-shadow: 0 4px 20px -4px rgba(13, 148, 136, 0.25);
-  }
-  .dark .glow-teal {
-    box-shadow: 0 4px 20px -4px rgba(45, 212, 191, 0.15);
   }
 
   /* Premium card styles */
@@ -234,30 +131,9 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
   }
-  .dark .card-premium {
-    border-color: #E2E8F0;
-    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.15);
-  }
   .card-premium:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
-  }
-  .dark .card-premium:hover {
-    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.25);
-    border-color: #CBD5E1;
-  }
-
-  /* Glass-morphism card */
-  .glass-card {
-    background: rgba(30, 64, 175, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(30, 64, 175, 0.1);
-    border-radius: 16px;
-  }
-  .dark .glass-card {
-    background: rgba(255, 255, 255, 0.92);
-    border-color: rgba(0, 0, 0, 0.08);
-    color: #111827;
   }
 
   /* Gradient border effect for featured cards — blue → teal */
@@ -277,37 +153,9 @@
     mask-composite: exclude;
     pointer-events: none;
   }
-
-  /* Gradient text */
-  .text-gradient-blue {
-    background: linear-gradient(135deg, var(--fiber-blue) 0%, #152A60 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .text-gradient-teal {
-    background: linear-gradient(135deg, var(--fiber-blue) 0%, var(--fiber-teal) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Animated pulse for status indicators */
-  .pulse-green {
-    animation: pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
   @keyframes pulse-green {
     0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4); }
     50% { box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
-  }
-
-  /* Speed bar animation — blue → teal */
-  .speed-bar {
-    background: linear-gradient(90deg, var(--fiber-blue), var(--fiber-teal));
-    border-radius: 9999px;
-    height: 4px;
-    animation: speed-fill 1.5s ease-out forwards;
-    transform-origin: left;
   }
   @keyframes speed-fill {
     from { transform: scaleX(0); }
@@ -334,13 +182,6 @@
     font-size: clamp(1.75rem, 4vw, 3rem);
   }
 
-  .heading-subsection {
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-    font-weight: 700;
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-  }
-
   /* CTA pulse/glow animation — blue */
   .cta-pulse {
     animation: cta-glow 2.5s ease-in-out infinite;
@@ -356,20 +197,6 @@
       linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
-  }
-
-  /* Scroll-triggered animations */
-  .animate-fade-in-up {
-    animation: fade-in-up 0.5s ease-out both;
-  }
-  .animate-slide-in-left {
-    animation: slide-in-left 0.5s ease-out both;
-  }
-  .animate-slide-in-right {
-    animation: slide-in-right 0.5s ease-out both;
-  }
-  .animate-scale-in {
-    animation: scale-in 0.4s ease-out both;
   }
 
   @keyframes fade-in-up {
@@ -388,87 +215,15 @@
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
   }
-  @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 12px rgba(30, 64, 175, 0.15); }
-    50% { box-shadow: 0 0 24px rgba(30, 64, 175, 0.3); }
-  }
-
-  /* Intersection observer scroll animation */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  }
-  .animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Hero heading — clean text, no background boxes */
-  .hero-heading-shadow {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    line-height: 1.15;
-  }
-  .hero-heading-shadow .hero-line {
-    background: none;
-    padding: 0;
-    display: inline;
-  }
-
-  /* Hero animated fiber streaks */
-  .fiber-streak {
-    position: absolute;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--fiber-teal), var(--fiber-blue), transparent);
-    opacity: 0.15;
-    border-radius: 9999px;
-  }
-  .fiber-streak-1 {
-    top: 20%;
-    left: -10%;
-    width: 60%;
-    animation: streak-move 8s ease-in-out infinite;
-  }
-  .fiber-streak-2 {
-    top: 55%;
-    left: -5%;
-    width: 45%;
-    animation: streak-move 12s ease-in-out 2s infinite;
-    opacity: 0.1;
-  }
-  .fiber-streak-3 {
-    top: 75%;
-    left: -15%;
-    width: 70%;
-    animation: streak-move 10s ease-in-out 4s infinite;
-    opacity: 0.08;
-  }
   @keyframes streak-move {
     0%, 100% { transform: translateX(0); opacity: 0; }
     20% { opacity: 0.15; }
     80% { opacity: 0.15; }
     100% { transform: translateX(120%); opacity: 0; }
   }
-
-  /* Hero radial glow behind speed card — subtle */
-  .hero-glow-orb {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
-    animation: glow-drift 6s ease-in-out infinite;
-  }
   @keyframes glow-drift {
     0%, 100% { transform: translate(-50%, -50%) scale(1); }
     50% { transform: translate(-50%, -50%) scale(1.1); }
-  }
-
-  /* Hero speed card — clean border instead of glow */
-  .hero-speed-card {
-    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Elite bar glow — subtle */
-  .hero-elite-bar {
-    box-shadow: 0 0 4px rgba(96, 165, 250, 0.3);
   }
 
   /* ── Background Treatment System (light) ── */
@@ -476,40 +231,20 @@
   .bg-treatment-emphasis {
     background: #FFFFFF;
   }
-  .dark .bg-treatment-emphasis {
-    background: #152A60;
-  }
 
   /* Treatment 2: Rhythm — subtle darker shift for alternating sections */
   .bg-treatment-rhythm {
     background: #F9FAFB;
-  }
-  .dark .bg-treatment-rhythm {
-    background: #1A3278;
   }
 
   /* Treatment 3: Trust — slightly lighter blue for credibility */
   .bg-treatment-trust {
     background: linear-gradient(180deg, #EFF6FF 0%, #F0F9FF 100%);
   }
-  .dark .bg-treatment-trust {
-    background: linear-gradient(180deg, #152A60 0%, #213F92 100%);
-  }
-
-  /* Treatment 4: Momentum — same family, hint of depth for CTAs */
-  .bg-treatment-momentum {
-    background: linear-gradient(180deg, #FEF2F2 0%, #FFF7ED 100%);
-  }
-  .dark .bg-treatment-momentum {
-    background: linear-gradient(180deg, #1A3278 0%, #1E3880 100%);
-  }
 
   /* Treatment 5: Showcase — diagonal within the hero blue family */
   .bg-treatment-showcase {
     background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
-  }
-  .dark .bg-treatment-showcase {
-    background: linear-gradient(135deg, #152A60 0%, #234298 50%, #1C3680 100%);
   }
 
   /* Ensure readable text on treatment backgrounds — light mode */
@@ -522,27 +257,6 @@
     --muted-foreground: #6B7280;
     --card-foreground: #111827;
     --border: #E5E7EB;
-  }
-  /* Ensure readable text on treatment backgrounds — dark mode (white text on dark bg) */
-  .dark .bg-treatment-emphasis,
-  .dark .bg-treatment-rhythm,
-  .dark .bg-treatment-trust,
-  .dark .bg-treatment-momentum,
-  .dark .bg-treatment-showcase {
-    --foreground: #F8FAFC;
-    --muted-foreground: #CBD5E1;
-    --card-foreground: #111827;
-    --border: #334155;
-  }
-
-  /* Floating glow orb for section backgrounds */
-  .glow-orb {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(circle, var(--fiber-blue) 0%, transparent 70%);
-    opacity: 0.04;
-    animation: orb-float 15s ease-in-out infinite;
   }
   @keyframes orb-float {
     0%, 100% { transform: translate(0, 0) scale(1); }

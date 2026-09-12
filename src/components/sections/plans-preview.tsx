@@ -19,7 +19,7 @@ export default function PlansPreviewSection() {
         <div
           className={cn(
             "mb-16 text-center transition-all duration-700",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            "opacity-100 translate-y-0"
           )}
         >
           <h2 className="heading-section text-foreground mb-3">
@@ -41,7 +41,7 @@ export default function PlansPreviewSection() {
               className={cn(
                 "relative transition-all duration-700",
                 plan.isFeatured && "lg:scale-105 lg:z-10",
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                "opacity-100 translate-y-0"
               )}
               style={{ transitionDelay: isVisible ? `${index * 100 + 200}ms` : "0ms" }}
             >
@@ -151,7 +151,7 @@ export default function PlansPreviewSection() {
         <div
           className={cn(
             "text-center transition-all duration-700 delay-700",
-            isVisible ? "opacity-100" : "opacity-0"
+            "opacity-100"
           )}
         >
           <Link
