@@ -33,9 +33,9 @@ const comparisons = [
   {
     type: "Fiber",
     icon: Wifi,
-    speed: "Up to 7 Gbps",
+    speed: "1–7 Gbps by network",
     latency: "<5ms",
-    upload: "7 Gbps",
+    upload: "Same as download",
     reliability: "Excellent",
     reliabilityColor: "text-fiber-success",
     barWidth: "w-full",
@@ -45,7 +45,7 @@ const comparisons = [
 ]
 
 const stats = [
-  { icon: Zap, label: "Speed", value: "Up to 7 Gbps" },
+  { icon: Zap, label: "Speed", value: "Multi-gig" },
   { icon: Clock, label: "Latency", value: "<5ms" },
   { icon: Upload, label: "Upload", value: "Symmetric" },
   { icon: Shield, label: "Reliability", value: "99.9% uptime" },

@@ -153,13 +153,13 @@ export default function WhyFiberPage() {
                 {[
                   {
                     feature: "Download Speed",
-                    fiber: { stat: "7,000 Mbps", text: "Up to 7 Gbps", good: true },
+                    fiber: { stat: "Multi-gig", text: "1–7 Gbps depending on network", good: true },
                     cable: { text: "Up to 700 Mbps", bad: true },
                     satellite: { text: "Up to 25 Mbps", bad: true },
                   },
                   {
                     feature: "Upload Speed",
-                    fiber: { stat: "7,000 Mbps", text: "Symmetric — same as download", good: true },
+                    fiber: { stat: "Symmetric", text: "Upload equals download", good: true },
                     cable: { text: "10-50 Mbps", bad: true },
                     satellite: { text: "3 Mbps", bad: true },
                   },
@@ -195,7 +195,7 @@ export default function WhyFiberPage() {
                   },
                   {
                     feature: "Monthly Price",
-                    fiber: { stat: "$34.99", text: "Starting price/mo", good: true },
+                    fiber: { stat: "Promo-driven", text: "Confirmed for your network on the call", good: true },
                     cable: { text: "From $49.99/mo", bad: true },
                     satellite: { text: "From $64.99/mo", bad: true },
                   },
@@ -339,7 +339,7 @@ export default function WhyFiberPage() {
               {
                 myth: "Fiber internet is too expensive",
                 reality:
-                  "Fiber plans start at just $34.99/mo — often comparable to or cheaper than cable. Plus, you get symmetric speeds, no data caps, and no hidden fees. When you factor in the total value, fiber is the better deal.",
+                  "Fiber pricing depends on the network at your address and is often comparable to or cheaper than cable. Plus, you get symmetric speeds, no data caps, and no hidden fees. When you factor in the total value, fiber is the better deal.",
               },
               {
                 myth: "I don&apos;t need that much speed",

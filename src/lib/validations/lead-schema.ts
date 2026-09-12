@@ -8,7 +8,7 @@ import { SERVICEABILITY_STATUSES } from "@/lib/serviceability/classify";
  * reads it from cookies so the client cannot spoof it.
  */
 
-export const LEAD_ISPS = ["kinetic", "brightspeed", "frontier", "att", "ripple", "other", "unknown"] as const;
+export const LEAD_ISPS = ["kinetic", "brightspeed", "frontier", "att", "ripple", "tmobile", "other", "unknown"] as const;
 export type LeadIsp = (typeof LEAD_ISPS)[number];
 
 export const CURRENT_PROVIDERS = ["spectrum", "att", "xfinity", "optimum", "frontier", "other", "none"] as const;

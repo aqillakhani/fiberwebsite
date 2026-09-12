@@ -31,6 +31,7 @@ export type PlanTier = {
   readonly features: readonly string[];
 };
 
+// Frontier rate card (the site was built for Frontier first). Other networks: see src/data/isp-plans.ts.
 export const PLANS: readonly PlanTier[] = [
   {
     id: "fast-500",
@@ -252,27 +253,10 @@ export const TEAM_MEMBERS: readonly TeamMember[] = [
   },
 ] as const;
 
-export const PLAN_INCLUDES = [
-  "Free professional installation",
-  "Free Wi-Fi router included",
-  "24/7 local customer support",
-  "No data caps — ever",
-  "No contracts required",
-] as const;
-
-export const USE_CASES = [
-  { id: "streaming", label: "Streaming (Netflix, YouTube, etc.)" },
-  { id: "gaming", label: "Online Gaming" },
-  { id: "wfh", label: "Work From Home" },
-  { id: "smart-home", label: "Smart Home Devices" },
-  { id: "family", label: "Family Use (5+ people)" },
-  { id: "content", label: "Content Creation / Uploads" },
-] as const;
-
 export const FAQ_ITEMS = [
   {
     question: "How fast is fiber internet?",
-    answer: "Fiber internet plans range from 500 Mbps up to 7 Gbps. Unlike cable, fiber delivers symmetric speeds — your upload speed matches your download speed. This means video calls, cloud backups, and file sharing are just as fast as streaming and browsing.",
+    answer: "Fiber plans on the networks we sell start around 300–500 Mbps and go up to multi-gig (1–7 Gbps depending on the network). Unlike cable, fiber delivers symmetric speeds — your upload speed matches your download speed. This means video calls, cloud backups, and file sharing are just as fast as streaming and browsing.",
   },
   {
     question: "Is fiber available at my address?",
@@ -280,11 +264,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Is there a contract or commitment?",
-    answer: "No contracts, ever. Fiber plans are month-to-month. You can cancel anytime with no early termination fees.",
+    answer: "The networks we sell today offer month-to-month fiber plans with no early termination fees. If a specific plan or promo carries a term, the specialist tells you before you agree to anything.",
   },
   {
     question: "Are there data caps?",
-    answer: "Absolutely not. All fiber plans include unlimited data with no throttling, no caps, and no overage charges. Use as much internet as you want.",
+    answer: "No. Every fiber plan we sell includes unlimited data with no throttling, no caps, and no overage charges.",
   },
   {
     question: "How long does installation take?",
@@ -292,7 +276,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What equipment do I need?",
-    answer: "Nothing — everything is provided. Every plan includes a free Wi-Fi router (Wi-Fi 6E or Wi-Fi 7 depending on your plan) and an Optical Network Terminal (ONT). There are no equipment rental fees.",
+    answer: "Nothing to buy. The network installs an Optical Network Terminal (ONT) and provides a Wi-Fi router. Whether the router is included free or carries a small monthly fee depends on the network and plan — the specialist tells you the exact number on the call.",
   },
   {
     question: "What's the difference between fiber and cable internet?",
@@ -300,7 +284,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "How do I cancel or change my plan?",
-    answer: "Give us a call and we'll help you out. Plan changes take effect on your next billing cycle. Cancellations can be done anytime — no fees, no hassle.",
+    answer: "Give us a call and we'll point you to the right place. Plan changes and cancellations go through the network that serves you; month-to-month plans can be cancelled anytime without early termination fees.",
   },
   {
     question: "Do you record calls?",
@@ -312,7 +296,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We are an authorized partner for several fiber networks (Kinetic, Brightspeed and Frontier today) across 20+ states. Enter your address and we tell you which one — if any — is live at your home.",
+    answer: "We are an authorized partner for several fiber networks — Kinetic, Brightspeed, Frontier, AT&T, Ripple and T-Mobile Fiber — across 20+ states. Enter your address and we tell you which one, if any, is live at your home.",
   },
 ] as const;
 

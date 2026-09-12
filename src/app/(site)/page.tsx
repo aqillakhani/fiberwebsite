@@ -27,7 +27,6 @@ const localBusinessJsonLd = {
     "FiberFastUSA helps customers explore fiber internet options and switch to faster, more reliable service.",
   url: "https://fiberfastusa.com",
   telephone: "(469) 428-5942",
-  priceRange: "$34.99 - $109.99/mo",
   areaServed: SERVICE_STATES.map((name) => ({ "@type": "State", name })),
 }
 

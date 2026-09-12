@@ -5,7 +5,7 @@ import { Phone, ShieldCheck, QrCode, Download, Check } from "lucide-react"
 
 import { getRepBySlug, getAllRepSlugs } from "@/lib/reps"
 import { LeadForm } from "@/components/lead/lead-form"
-import RepPlanSection from "@/components/rep/rep-plan-section"
+import { NetworkPlans } from "@/components/plans/network-plans"
 import RepFaqSection from "@/components/rep/rep-faq-section"
 
 interface RepProfilePageProps {
@@ -158,8 +158,16 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
         </div>
       </section>
 
-      {/* ── 3. CHOOSE YOUR PLAN — Interactive cards ── */}
-      <RepPlanSection repName={firstName} />
+      {/* -- 3. PLANS BY NETWORK -- */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Plans depend on your network</h2>
+            <p className="text-muted-foreground">{firstName} checks your address first, then walks you through that network&apos;s plans.</p>
+          </div>
+          <NetworkPlans compact />
+        </div>
+      </section>
 
       {/* ── 4. LEAD FORM — Contact & scheduling ── */}
       <section id="lead-form" className="py-16 md:py-20 scroll-mt-20">

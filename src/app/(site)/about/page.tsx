@@ -27,7 +27,7 @@ export default function AboutPage() {
       icon: Zap,
       title: "Speed",
       description:
-        "We connect customers with blazing-fast fiber plans from 500 Mbps to 7 Gbps with symmetric upload and download speeds.",
+        "We connect customers with the fiber network that actually reaches their home — symmetric speeds from 300 Mbps to multi-gig, depending on the network.",
     },
     {
       icon: Shield,

@@ -1,168 +1,43 @@
-"use client"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-import Link from "next/link"
-import { Check, Zap, Gift } from "lucide-react"
-import { PLANS } from "@/lib/constants"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
-import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
+import { NETWORKS } from "@/data/isp-plans";
 
+/** Home page: which networks we sell, and that the address check decides the price list. */
 export default function PlansPreviewSection() {
-  const { ref, isVisible } = useIntersectionObserver()
-  const displayedPlans = PLANS.slice(0, 4)
-
   return (
-    <section className="w-full py-20 md:py-28 bg-treatment-emphasis">
-      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div
-          className={cn(
-            "mb-16 text-center transition-all duration-700",
-            "opacity-100 translate-y-0"
-          )}
-        >
-          <h2 className="heading-section text-foreground mb-3">
-            Simple, Transparent Pricing
+    <section className="w-full bg-white py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+            One address check. {NETWORKS.length} fiber networks.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
-            All-in pricing with no hidden fees. Free installation. Free router. No contracts.
-          </p>
-          <p className="text-base font-bold text-fiber-blue">
-            Schedule your install today — no payment required upfront.
+          <p className="mt-3 text-lg text-gray-600">
+            Each network sets its own plans and promos. We tell you which one reaches your home, then walk you through
+            that network&apos;s prices on the call.
           </p>
         </div>
-
-        {/* Plans Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {displayedPlans.map((plan, index) => (
-            <div
-              key={plan.id}
-              className={cn(
-                "relative transition-all duration-700",
-                plan.isFeatured && "lg:scale-105 lg:z-10",
-                "opacity-100 translate-y-0"
-              )}
-              style={{ transitionDelay: isVisible ? `${index * 100 + 200}ms` : "0ms" }}
-            >
-              {/* Most Popular Badge */}
-              {plan.isFeatured && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <Badge className="bg-fiber-yellow text-black border-0 shadow-md">
-                    Most Popular
-                  </Badge>
-                </div>
-              )}
-
-              {/* Card */}
-              <Card
-                className={cn(
-                  "card-premium flex flex-col h-full rounded-xl transition-all duration-300",
-                  plan.isFeatured
-                    ? "gradient-border border-2 shadow-lg hover:shadow-xl"
-                    : "hover:border-fiber-blue/30"
-                )}
-              >
-                <CardHeader className="pb-3">
-                  {/* Plan Speed */}
-                  <div className="mb-2">
-                    <div className="text-2xl font-bold text-fiber-blue">
-                      {plan.speed}
-                    </div>
-                  </div>
-
-                  {/* Plan Name */}
-                  <CardTitle className="text-xl text-foreground mb-2">
-                    {plan.name}
-                  </CardTitle>
-
-                  {/* Best For Tagline */}
-                  <p className="text-sm text-muted-foreground italic">
-                    {plan.bestFor}
-                  </p>
-                </CardHeader>
-
-                <CardContent className="flex flex-col flex-grow">
-                  {/* Price */}
-                  <div className="mb-6">
-                    <div className="text-3xl font-bold text-foreground">
-                      ${plan.price}
-                      <span className="text-sm text-muted-foreground font-normal ml-1">
-                        /mo
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Badges: Free Months & Gift Card */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {plan.freeMonths !== null && (
-                      <Badge className="bg-green-600 text-white border-green-700 shadow-sm shadow-green-600/20 flex items-center gap-1.5 px-3 py-1 text-sm font-bold animate-pulse-subtle">
-                        <Zap className="size-3.5" />
-                        {plan.freeMonths} Months FREE
-                      </Badge>
-                    )}
-                    {plan.giftCard > 0 && (
-                      <Badge className="bg-amber-500 text-white border-amber-600 shadow-sm shadow-amber-500/20 flex items-center gap-1.5 px-3 py-1 text-sm font-bold">
-                        <Gift className="size-3.5" />
-                        ${plan.giftCard} Gift Card
-                      </Badge>
-                    )}
-                  </div>
-
-                  {/* Features */}
-                  <div className="space-y-3 mb-8 flex-grow">
-                    <div className="flex items-start gap-3">
-                      <Check className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
-                      <span className="text-sm font-semibold text-foreground">Free Professional Installation</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Check className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
-                      <span className="text-sm font-semibold text-foreground">Free Wi-Fi Router Included</span>
-                    </div>
-                    {plan.features.slice(0, 2).map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <Check className="size-5 text-fiber-success flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* CTA Button */}
-                  <Link
-                    href={`/check-availability?plan=${plan.id}`}
-                    className={cn(
-                      "inline-flex items-center justify-center w-full h-9 px-4 rounded-lg text-sm font-semibold transition-all duration-300",
-                      plan.isFeatured
-                        ? "bg-fiber-blue text-white hover:bg-fiber-blue/90"
-                        : "bg-card text-foreground border border-border hover:bg-muted font-bold"
-                    )}
-                  >
-                    Get Started
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {NETWORKS.map((network) => (
+            <li key={network.id} className="rounded-xl border border-gray-200 p-5">
+              <p className="font-bold text-gray-900">{network.name}</p>
+              <p className="mt-1 text-sm text-gray-500">{network.states}</p>
+              <p className="mt-2 text-sm text-gray-700">{startingPriceLabel(network.plans)}</p>
+            </li>
           ))}
-        </div>
-
-        {/* View All Plans Link */}
-        <div
-          className={cn(
-            "text-center transition-all duration-700 delay-700",
-            "opacity-100"
-          )}
-        >
-          <Link
-            href="/pricing"
-            className="inline-flex items-center justify-center text-base font-semibold text-fiber-blue hover:underline transition-colors"
-          >
-            View All Plans
-            <span className="ml-2">&rarr;</span>
+        </ul>
+        <div className="mt-8 text-center">
+          <Link href="/pricing" className="inline-flex items-center gap-2 font-semibold text-fiber-blue hover:underline">
+            See plans by network <ArrowRight className="size-4" aria-hidden />
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
+}
+
+function startingPriceLabel(plans: (typeof NETWORKS)[number]["plans"]): string {
+  if (!plans) return "Pricing confirmed on your call";
+  const lowest = Math.min(...plans.map((plan) => plan.price));
+  return `Plans from $${lowest.toFixed(2)}/mo`;
 }

@@ -9,6 +9,7 @@ export const ISP_DISPLAY_NAMES: Record<string, string> = {
   frontier: "Frontier",
   att: "AT&T",
   ripple: "Ripple",
+  tmobile: "T-Mobile Fiber",
 };
 
 export type ResultTone = "success" | "info" | "neutral";

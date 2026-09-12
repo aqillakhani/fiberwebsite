@@ -15,6 +15,7 @@ const ISP_OPTIONS: ReadonlyArray<{ value: LeadIsp; label: string }> = [
   { value: "frontier", label: "Frontier" },
   { value: "att", label: "AT&T Fiber" },
   { value: "ripple", label: "Ripple" },
+  { value: "tmobile", label: "T-Mobile Fiber" },
   { value: "other", label: "Other" },
 ];
 
