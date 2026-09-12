@@ -109,14 +109,24 @@ export default async function RepProfilePage({ params, searchParams }: RepProfil
                   <QrCode className="size-4" />
                   <span className="font-medium">Share this page</span>
                 </div>
-                <a
-                  href={`/api/qr/${rep.slug}?size=600`}
-                  download={`${rep.slug}-qr.png`}
-                  className="inline-flex items-center gap-2 text-xs text-fiber-blue hover:text-fiber-blue/80 transition-colors"
-                >
-                  <Download className="size-3" />
-                  Download QR Code
-                </a>
+                <div className="flex flex-wrap gap-x-4 gap-y-2">
+                  <a
+                    href={`/api/qr/${rep.slug}?size=600`}
+                    download={`${rep.slug}-qr.png`}
+                    className="inline-flex items-center gap-2 text-xs text-white/80 transition-colors hover:text-white"
+                  >
+                    <Download className="size-3" />
+                    QR code
+                  </a>
+                  <a
+                    href={`/api/qr/${rep.slug}/card`}
+                    download={`${rep.slug}-card.png`}
+                    className="inline-flex items-center gap-2 text-xs text-white/80 transition-colors hover:text-white"
+                  >
+                    <Download className="size-3" />
+                    Digital card
+                  </a>
+                </div>
               </div>
             </div>
 

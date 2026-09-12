@@ -1,160 +1,80 @@
-import { ImageResponse } from "next/og"
-import { NextRequest, NextResponse } from "next/server"
-import QRCode from "qrcode"
+import { ImageResponse } from "next/og";
+import { NextRequest, NextResponse } from "next/server";
+import QRCode from "qrcode";
 
-import { getRepBySlug } from "@/lib/reps"
+import { loadInterFonts } from "@/lib/og-fonts";
+import { SITE_URL, repShortUrl } from "@/lib/rep-links";
+import { getRepBySlug, type Rep } from "@/lib/reps";
 
-export const runtime = "nodejs"
+export const runtime = "nodejs";
 
-export async function GET(
-  _request: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
-) {
-  const { slug } = await params
+/** Screen version of the printed business card (same design as fiberfast-marketing/creative/business-cards). */
+const CARD = { width: 600, height: 343 };
+const COLORS = { blue: "#1F4E8C", red: "#D3252E", navy: "#0F2A4A", ink: "#1F2937", muted: "#5B6B7F" };
+const CACHE_HEADER = "public, max-age=86400, s-maxage=86400";
 
+const cardHost = SITE_URL.replace(/^https?:\/\//, "");
+
+export async function GET(request: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   if (!slug || slug.length < 2) {
-    return NextResponse.json({ error: "Invalid slug" }, { status: 400 })
+    return NextResponse.json({ error: "Invalid slug" }, { status: 400 });
   }
-
-  const rep = await getRepBySlug(slug)
+  const rep = await getRepBySlug(slug);
   if (!rep) {
-    return NextResponse.json({ error: "Rep not found" }, { status: 404 })
+    return NextResponse.json({ error: "Rep not found" }, { status: 404 });
   }
-
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fiberfastusa.com"
-  const repUrl = `${baseUrl}/rep/${encodeURIComponent(slug)}?door=1`
 
   try {
-    const qrDataUrl = await QRCode.toDataURL(repUrl, {
-      width: 200,
+    const qrDataUrl = await QRCode.toDataURL(repShortUrl(slug), {
+      errorCorrectionLevel: "H",
+      width: 320,
       margin: 1,
-      color: { dark: "#0A2540", light: "#FFFFFF" },
-    })
+      color: { dark: COLORS.navy, light: "#FFFFFF" },
+    });
+    // Brand PNGs are fetched from this deployment so previews and production each serve their own copy.
+    const assetOrigin = request.nextUrl.origin;
+    const fonts = await loadInterFonts();
+    return new ImageResponse(<BusinessCard rep={rep} qrDataUrl={qrDataUrl} assetOrigin={assetOrigin} />, {
+      ...CARD,
+      fonts,
+      headers: { "Cache-Control": CACHE_HEADER },
+    });
+  } catch (error) {
+    console.error(`Business card render failed for rep "${slug}"`, error);
+    return NextResponse.json({ error: "Failed to generate business card" }, { status: 500 });
+  }
+}
 
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "600px",
-            height: "400px",
-            backgroundColor: "#0A2540",
-            fontFamily: "sans-serif",
-            padding: "40px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              gap: "40px",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: "8px",
-                flex: 1,
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "14px",
-                  color: "#14B8A6",
-                  fontWeight: 700,
-                  letterSpacing: "1px",
-                  textTransform: "uppercase" as const,
-                }}
-              >
-                FiberFastUSA
-              </div>
-              <div
-                style={{
-                  fontSize: "28px",
-                  color: "#FFFFFF",
-                  fontWeight: 700,
-                  lineHeight: 1.2,
-                }}
-              >
-                {rep.name}
-              </div>
-              <div
-                style={{
-                  fontSize: "14px",
-                  color: "#94A3B8",
-                  fontWeight: 500,
-                }}
-              >
-                {rep.role}
-              </div>
-              {(rep.city || rep.territory) && (
-                <div style={{ fontSize: "12px", color: "#94A3B8", marginTop: "4px" }}>
-                  {rep.city && rep.state ? `${rep.city}, ${rep.state}` : rep.territory || ""}
-                </div>
-              )}
-              {rep.phone && (
-                <div style={{ fontSize: "13px", color: "#CBD5E1", marginTop: "8px" }}>
-                  {rep.phone}
-                </div>
-              )}
-              {rep.email && (
-                <div style={{ fontSize: "13px", color: "#CBD5E1" }}>
-                  {rep.email}
-                </div>
-              )}
-              <div
-                style={{
-                  fontSize: "11px",
-                  color: "#64748B",
-                  marginTop: "12px",
-                }}
-              >
-                Scan to get started
-              </div>
+function BusinessCard({ rep, qrDataUrl, assetOrigin }: { rep: Rep; qrDataUrl: string; assetOrigin: string }) {
+  return (
+    <div style={{ display: "flex", width: CARD.width, height: CARD.height, backgroundColor: "#FFFFFF", fontFamily: "Inter, sans-serif" }}>
+      <div style={{ display: "flex", width: 44, height: "100%", backgroundColor: COLORS.blue }} />
+      <div style={{ display: "flex", width: 5, height: "100%", backgroundColor: COLORS.red }} />
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, padding: "30px 30px 28px 30px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${assetOrigin}/brand/globe.png`} width={38} height={38} alt="" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${assetOrigin}/brand/wordmark.png`} width={116} height={25} alt="FiberFast USA" />
+        </div>
+        <div style={{ display: "flex", flex: 1, alignItems: "center", gap: 26 }}>
+          <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+            <div style={{ fontSize: 34, fontWeight: 800, color: COLORS.navy, lineHeight: 1.05 }}>{rep.name}</div>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, color: COLORS.blue, marginTop: 8 }}>
+              {rep.role.toUpperCase()}
             </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={qrDataUrl}
-              width={180}
-              height={180}
-              alt="QR Code"
-              style={{ borderRadius: "12px" }}
-            />
+            <svg width="46" height="3" viewBox="0 0 46 3" style={{ marginTop: 14 }}><rect width="46" height="3" fill={COLORS.red} /></svg>
+            <div style={{ fontSize: 15, fontWeight: 500, color: COLORS.ink, marginTop: 22 }}>{rep.phone}</div>
+            <div style={{ fontSize: 15, fontWeight: 500, color: COLORS.ink, marginTop: 6 }}>{`${cardHost}/r/${rep.slug}`}</div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              justifyContent: "center",
-              marginTop: "24px",
-              borderTop: "1px solid #1E3A5F",
-              paddingTop: "16px",
-              fontSize: "12px",
-              color: "#64748B",
-            }}
-          >
-            fiberfastusa.com/rep/{slug}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={qrDataUrl} width={160} height={160} alt="QR code" style={{ borderRadius: 10, border: `1px solid #D7DFEA` }} />
+            <div style={{ fontSize: 10, fontWeight: 600, color: COLORS.muted, letterSpacing: 1 }}>SCAN · CHECK YOUR ADDRESS</div>
           </div>
         </div>
-      ),
-      {
-        width: 600,
-        height: 400,
-        headers: {
-          "Cache-Control": "public, max-age=86400, s-maxage=86400",
-        },
-      }
-    )
-  } catch {
-    return NextResponse.json(
-      { error: "Failed to generate business card" },
-      { status: 500 }
-    )
-  }
+      </div>
+    </div>
+  );
 }
