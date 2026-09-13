@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { Check, PhoneCall } from "lucide-react";
+import { Check, Gift, PhoneCall, ShieldCheck } from "lucide-react";
 
-import { NETWORKS, type NetworkCatalog } from "@/data/isp-plans";
-import type { PlanTier } from "@/lib/constants";
+import { NETWORKS, type NetworkCatalog, type RatePlan } from "@/data/isp-plans";
 import { cn } from "@/lib/utils";
 
 interface NetworkPlansProps {
@@ -46,12 +45,25 @@ function NetworkSection({ network, compact }: { network: NetworkCatalog; compact
         <p className="text-sm text-gray-500">Sold in {network.states}</p>
       </div>
       <p className="mt-1 text-sm text-gray-600">{network.note}</p>
-      {plans ? (
-        <div className={cn("mt-6 grid gap-4", compact ? "sm:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5")}>
-          {plans.map((plan) => (
-            <PlanCard key={plan.id} plan={plan} />
+      {network.includes.length > 0 && (
+        <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-700">
+          {network.includes.map((item) => (
+            <li key={item} className="flex items-center gap-1.5">
+              <Check className="size-4 text-fiber-success" aria-hidden />
+              {item}
+            </li>
           ))}
-        </div>
+        </ul>
+      )}
+      {plans ? (
+        <>
+          <div className={cn("mt-6 grid gap-4", compact ? "sm:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-3", !compact && (plans.length > 5 ? "xl:grid-cols-6" : "xl:grid-cols-5"))}>
+            {plans.map((plan) => (
+              <PlanCard key={plan.id} plan={plan} />
+            ))}
+          </div>
+          <PlanFootnote network={network} />
+        </>
       ) : (
         <CallToConfirm network={network} />
       )}
@@ -59,7 +71,7 @@ function NetworkSection({ network, compact }: { network: NetworkCatalog; compact
   );
 }
 
-function PlanCard({ plan }: { plan: PlanTier }) {
+function PlanCard({ plan }: { plan: RatePlan }) {
   return (
     <article className={cn("flex flex-col rounded-xl border p-5", plan.isFeatured ? "border-fiber-blue shadow-md" : "border-gray-200")}>
       <p className="text-sm font-semibold text-fiber-blue">{plan.speed}</p>
@@ -68,16 +80,41 @@ function PlanCard({ plan }: { plan: PlanTier }) {
         ${plan.price.toFixed(2)}
         <span className="text-sm font-medium text-gray-500">/mo</span>
       </p>
-      <p className="text-xs text-gray-500">{plan.bestFor}</p>
+      {plan.listPrice !== null && (
+        <p className="text-xs text-gray-500">
+          <s>${plan.listPrice.toFixed(2)}</s> without AutoPay
+        </p>
+      )}
       <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
-        {plan.features.slice(0, 4).map((feature) => (
-          <li key={feature} className="flex gap-2">
+        {plan.giftCard !== null && (
+          <li className="flex gap-2 font-semibold text-gray-900">
+            <Gift className="mt-0.5 size-4 shrink-0 text-fiber-red" aria-hidden />${plan.giftCard} prepaid card
+          </li>
+        )}
+        {plan.priceGuaranteeYears !== null && (
+          <li className="flex gap-2">
+            <ShieldCheck className="mt-0.5 size-4 shrink-0 text-fiber-blue" aria-hidden />
+            {plan.priceGuaranteeYears}-year price guarantee
+          </li>
+        )}
+        {plan.perks.map((perk) => (
+          <li key={perk} className="flex gap-2">
             <Check className="mt-0.5 size-4 shrink-0 text-fiber-success" aria-hidden />
-            {feature}
+            {perk}
           </li>
         ))}
       </ul>
     </article>
+  );
+}
+
+function PlanFootnote({ network }: { network: NetworkCatalog }) {
+  return (
+    <p className="mt-4 text-xs text-gray-500">
+      {network.promoNote ? `${network.promoNote} ` : ""}
+      Prices read from {network.shortName}&apos;s order page on {network.checkedOn}; taxes extra unless stated. Your exact plans and
+      promos are confirmed on the call.
+    </p>
   );
 }
 

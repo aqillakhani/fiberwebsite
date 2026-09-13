@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { NETWORKS } from "@/data/isp-plans";
+import { NETWORKS, lowestPrice, type RatePlan } from "@/data/isp-plans";
 
 /** Home page: which networks we sell, and that the address check decides the price list. */
 export default function PlansPreviewSection() {
@@ -36,8 +36,7 @@ export default function PlansPreviewSection() {
   );
 }
 
-function startingPriceLabel(plans: (typeof NETWORKS)[number]["plans"]): string {
+function startingPriceLabel(plans: readonly RatePlan[] | null): string {
   if (!plans) return "Pricing confirmed on your call";
-  const lowest = Math.min(...plans.map((plan) => plan.price));
-  return `Plans from $${lowest.toFixed(2)}/mo`;
+  return `Plans from $${lowestPrice(plans).toFixed(2)}/mo`;
 }
