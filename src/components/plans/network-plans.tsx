@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Check, Gift, PhoneCall, ShieldCheck } from "lucide-react";
+import { Check, Gift, PhoneCall, ShieldCheck, Tag } from "lucide-react";
 
-import { NETWORKS, type NetworkCatalog, type RatePlan } from "@/data/isp-plans";
+import { NETWORKS, promoLabel, type NetworkCatalog, type RatePlan } from "@/data/isp-plans";
 import { cn } from "@/lib/utils";
 
 interface NetworkPlansProps {
@@ -72,6 +72,7 @@ function NetworkSection({ network, compact }: { network: NetworkCatalog; compact
 }
 
 function PlanCard({ plan }: { plan: RatePlan }) {
+  const promo = promoLabel(plan);
   return (
     <article className={cn("flex flex-col rounded-xl border p-5", plan.isFeatured ? "border-fiber-blue shadow-md" : "border-gray-200")}>
       <p className="text-sm font-semibold text-fiber-blue">{plan.speed}</p>
@@ -83,6 +84,12 @@ function PlanCard({ plan }: { plan: RatePlan }) {
       {plan.listPrice !== null && (
         <p className="text-xs text-gray-500">
           <s>${plan.listPrice.toFixed(2)}</s> without AutoPay
+        </p>
+      )}
+      {promo && (
+        <p className="mt-2 inline-flex items-start gap-1.5 rounded-md bg-fiber-red-light px-2 py-1 text-xs font-semibold text-fiber-red">
+          <Tag className="mt-0.5 size-3.5 shrink-0" aria-hidden />
+          {promo}
         </p>
       )}
       <ul className="mt-4 space-y-1.5 text-sm text-gray-700">
