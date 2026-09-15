@@ -7,7 +7,7 @@ import { CLOSER_SLA_MINUTES } from "@/components/lead/serviceability-copy";
 export const metadata: Metadata = {
   title: "Check Fiber Availability at Your Address | FiberFastUSA",
   description:
-    "Enter your street address and see which fiber network is live at your home. A fiber specialist calls within minutes to confirm pricing and book free installation.",
+    "Enter your address, pick the provider and speed you want, and a specialist calls within minutes with the best promo and price available at your home.",
   alternates: { canonical: "/check-availability" },
   openGraph: {
     title: "Check Fiber Availability at Your Address",
@@ -28,11 +28,11 @@ export default function CheckAvailabilityPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-20 lg:px-8">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
-            Is fiber live at your address?
+            Find the best internet offer at your address
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            We check the real fiber footprint for your exact home — not your ZIP code — and tell you which network
-            reaches it. Then a specialist calls to set everything up.
+            Type your address, pick the provider and speed you want, and a specialist shops every provider at your
+            home for the best promo and lowest price — then calls to set everything up.
           </p>
         </div>
 

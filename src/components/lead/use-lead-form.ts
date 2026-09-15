@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { useForm, type UseFormReturn } from "react-hook-form";
+import { useForm, type DefaultValues, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { submitLead, type LeadSubmitSuccess } from "@/actions/submit-lead";
@@ -9,7 +9,7 @@ import type { AddressSuggestion } from "@/app/api/address-autocomplete/route";
 import { trackLead } from "@/lib/analytics";
 import { CONSENT_TEXT_VERSION } from "@/lib/consent";
 import type { ServiceabilityResult } from "@/lib/serviceability/classify";
-import { leadSchema, type LeadInput } from "@/lib/validations/lead-schema";
+import { LEAD_ISPS, leadSchema, type LeadInput, type LeadIsp } from "@/lib/validations/lead-schema";
 
 export type LeadFormStep = "address" | "details" | "done";
 export type LeadFormMode = "public" | "rep";
@@ -49,7 +49,7 @@ export interface LeadFormState {
 
 const ADDRESS_UNRESOLVED = "We couldn't find that address. Pick one from the list or add the city and ZIP.";
 
-export function useLeadForm({ mode, source }: UseLeadFormOptions): LeadFormState {
+export function useLeadForm({ source }: UseLeadFormOptions): LeadFormState {
   const [step, setStep] = useState<LeadFormStep>("address");
   const [address, setAddress] = useState<ResolvedAddress | null>(null);
   const [serviceability, setServiceability] = useState<ServiceabilityResult | null>(null);
@@ -77,10 +77,11 @@ export function useLeadForm({ mode, source }: UseLeadFormOptions): LeadFormState
       const check = await fetchServiceability(resolved);
       setServiceability(check);
       form.setValue("serviceabilityStatus", check?.status ?? "unknown");
-      if (mode === "rep" && check?.isp) form.setValue("ispDeclared", toLeadIsp(check.isp));
+      const suggested = toLeadIsp(check?.isp);
+      if (suggested) form.setValue("ispDeclared", suggested);
       setStep("details");
     },
-    [form, mode]
+    [form]
   );
 
   const chooseSuggestion = useCallback(
@@ -149,11 +150,13 @@ export function useLeadForm({ mode, source }: UseLeadFormOptions): LeadFormState
   };
 }
 
-function emptyLead(source: string): LeadInput {
+function emptyLead(source: string): DefaultValues<LeadInput> {
   return {
-    fullName: "",
+    firstName: "",
+    lastName: "",
     phone: "",
     email: "",
+    dateOfBirth: "",
     serviceAddress: "",
     city: "",
     state: "",
@@ -206,8 +209,7 @@ function toNumber(raw: string): number | undefined {
   return Number.isFinite(parsed) ? parsed : undefined;
 }
 
-const ISP_ALIASES: Record<string, LeadInput["ispDeclared"]> = { kinetic: "kinetic", brightspeed: "brightspeed", frontier: "frontier" };
-
-function toLeadIsp(isp: string): LeadInput["ispDeclared"] {
-  return ISP_ALIASES[isp] ?? "other";
+/** Map ISP ids match the form's provider ids; anything else is not pre-selected (the homeowner picks). */
+function toLeadIsp(isp: string | null | undefined): LeadIsp | undefined {
+  return isp && (LEAD_ISPS as readonly string[]).includes(isp) ? (isp as LeadIsp) : undefined;
 }

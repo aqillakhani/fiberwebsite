@@ -1,31 +1,30 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import type { LeadIsp } from "@/lib/validations/lead-schema";
 
-interface IspSelectProps {
-  value: LeadIsp | undefined;
-  suggested: string | null;
-  onChange: (isp: LeadIsp) => void;
+export interface ChipOption<TValue extends string> {
+  value: TValue;
+  label: string;
 }
 
-const ISP_OPTIONS: ReadonlyArray<{ value: LeadIsp; label: string }> = [
-  { value: "kinetic", label: "Kinetic" },
-  { value: "brightspeed", label: "Brightspeed" },
-  { value: "frontier", label: "Frontier" },
-  { value: "att", label: "AT&T Fiber" },
-  { value: "ripple", label: "Ripple" },
-  { value: "tmobile", label: "T-Mobile Fiber" },
-  { value: "other", label: "Other" },
-];
+interface ChoiceChipsProps<TValue extends string> {
+  legend: string;
+  options: ReadonlyArray<ChipOption<TValue>>;
+  value: TValue | undefined;
+  /** Option the map suggests; shown with an "on map" badge. */
+  suggested?: string | null;
+  error?: string;
+  large?: boolean;
+  onChange: (value: TValue) => void;
+}
 
-/** Canvasser-only: which fiber they are pitching at this door. Pre-selected from map_pin when we have data. */
-export function IspSelect({ value, suggested, onChange }: IspSelectProps) {
+/** One-tap single choice. Big enough for a canvasser's thumb in rep mode. */
+export function ChoiceChips<TValue extends string>({ legend, options, value, suggested, error, large, onChange }: ChoiceChipsProps<TValue>) {
   return (
     <fieldset className="space-y-2">
-      <legend className="text-sm font-semibold text-gray-900">Which fiber are you pitching here?</legend>
+      <legend className="text-sm font-semibold text-gray-900">{legend}</legend>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-        {ISP_OPTIONS.map((option) => {
+        {options.map((option) => {
           const isSelected = value === option.value;
           const isSuggested = suggested === option.value;
           return (
@@ -35,8 +34,9 @@ export function IspSelect({ value, suggested, onChange }: IspSelectProps) {
               aria-pressed={isSelected}
               onClick={() => onChange(option.value)}
               className={cn(
-                "relative h-14 rounded-lg border-2 px-3 text-base font-semibold transition-colors",
+                "relative rounded-lg border-2 px-3 text-left font-semibold leading-tight transition-colors",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fiber-blue focus-visible:ring-offset-2",
+                large ? "h-14 text-base" : "min-h-11 py-2 text-sm",
                 isSelected ? "border-fiber-blue bg-fiber-blue-light text-fiber-blue" : "border-gray-200 bg-white text-gray-800 hover:border-gray-300"
               )}
             >
@@ -50,6 +50,11 @@ export function IspSelect({ value, suggested, onChange }: IspSelectProps) {
           );
         })}
       </div>
+      {error && (
+        <p role="alert" className="text-sm text-fiber-red">
+          {error}
+        </p>
+      )}
     </fieldset>
   );
 }

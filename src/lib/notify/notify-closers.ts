@@ -44,7 +44,8 @@ function buildAlertText(lead: LeadRecord): string {
     `New lead ${formatLeadNumber(lead.lead_number)} (${channel})`,
     `${lead.full_name} · ${formatPhone(lead.phone)}`,
     `${lead.service_address}, ${lead.city ?? ""} ${lead.state ?? ""} ${lead.zip ?? ""}`,
-    `Serviceability: ${status.toUpperCase()} — ${isp}${lead.current_provider ? ` · currently on ${lead.current_provider}` : ""}`,
+    `Wants: ${lead.isp_declared ?? "best option"} · speed ${lead.preferred_speed ?? "?"}${lead.current_provider ? ` · currently on ${lead.current_provider}` : ""}`,
+    `Map says: ${status.toUpperCase()} — ${isp}`,
     `Call within the SLA; consent ${lead.consent_text_version ?? "n/a"} captured ${lead.consent_at ?? ""}`,
   ].join("\n");
 }

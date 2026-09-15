@@ -22,7 +22,7 @@ export function LeadForm({ mode = "public", source }: LeadFormProps) {
   const state = useLeadForm({ mode, source });
 
   if (state.step === "done" && state.result) {
-    const firstName = state.form.getValues("fullName").trim().split(/\s+/)[0] || "there";
+    const firstName = state.form.getValues("firstName").trim() || "there";
     return <LeadConfirmation mode={mode} result={state.result} firstName={firstName} onNextDoor={state.reset} />;
   }
 

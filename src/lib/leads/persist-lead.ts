@@ -39,9 +39,13 @@ export async function insertLead(
   const { data: row, error } = await supabase
     .from("public_leads")
     .insert({
-      full_name: data.fullName,
+      first_name: data.firstName,
+      last_name: data.lastName,
+      full_name: `${data.firstName} ${data.lastName}`,
       phone: data.phone,
-      email: data.email || null,
+      email: data.email,
+      date_of_birth: data.dateOfBirth || null,
+      preferred_speed: data.preferredSpeed,
       service_address: data.serviceAddress,
       city: data.city,
       state: data.state,
@@ -50,7 +54,7 @@ export async function insertLead(
       lon: data.lon ?? null,
       address_accuracy: data.addressAccuracy ?? null,
       address_hash: serviceability?.addressHash ?? null,
-      isp_declared: data.ispDeclared ?? null,
+      isp_declared: data.ispDeclared,
       current_provider: data.currentProvider ?? null,
       serviceability_status: serviceability?.status ?? null,
       serviceability,

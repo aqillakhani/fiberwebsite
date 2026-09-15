@@ -52,7 +52,7 @@ function toIntakePayload(lead: LeadRecord) {
     lead_channel: lead.lead_channel,
     source: lead.source,
     submitted_at: lead.created_at,
-    contact: { full_name: lead.full_name, phone: lead.phone, email: lead.email },
+    contact: { full_name: lead.full_name, first_name: lead.first_name, last_name: lead.last_name, phone: lead.phone, email: lead.email, date_of_birth: lead.date_of_birth },
     address: {
       line1: lead.service_address,
       city: lead.city,
@@ -64,6 +64,7 @@ function toIntakePayload(lead: LeadRecord) {
       address_hash: lead.address_hash,
     },
     isp_declared: lead.isp_declared,
+    preferred_speed: lead.preferred_speed,
     current_provider: lead.current_provider,
     serviceability: lead.serviceability,
     rep_slug: lead.rep_slug,

@@ -151,12 +151,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What areas do you serve?",
-    answer: "We are an authorized partner for several fiber networks — Kinetic, Brightspeed, Frontier, AT&T, Ripple and T-Mobile Fiber — across 20+ states. Enter your address and we tell you which one, if any, is live at your home.",
+    answer: "Nationwide. We work with almost every internet provider — Kinetic, Brightspeed, Frontier, AT&T Fiber, Verizon Fios, T-Mobile Fiber, Metronet, Google Fiber, Ripple, Spectrum, Xfinity, Optimum, Cox and more. Enter your address and we shop all of them for you.",
   },
 ] as const;
 
 export const NAV_LINKS = [
-  { href: "/pricing", label: "Pricing" },
   { href: "/why-fiber", label: "Why Fiber" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
@@ -169,7 +168,6 @@ export const FOOTER_LINKS = {
     { href: "/contact", label: "Contact" },
   ],
   services: [
-    { href: "/pricing", label: "Plans & Pricing" },
     { href: "/check-availability", label: "Check Availability" },
     { href: "/why-fiber", label: "Why Fiber" },
   ],

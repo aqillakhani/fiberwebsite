@@ -131,13 +131,6 @@ export function Header() {
                         Check Availability
                       </Button>
                     </Link>
-                    <Link href="/pricing" className="w-full">
-                      <Button
-                        className="w-full bg-card text-foreground hover:bg-muted border border-border font-bold"
-                      >
-                        View Plans
-                      </Button>
-                    </Link>
                     <a
                       href={COMPANY.phoneHref}
                       className="text-center text-sm text-muted-foreground hover:text-foreground transition-colors"

@@ -74,13 +74,13 @@ export default function HowItWorksSection() {
       number: 1,
       icon: <MapPin className="w-6 h-6" />,
       title: "Check Your Address",
-      description: "Enter your address and see which fiber network is live at your home",
+      description: "Enter your address, then pick the provider and speed you want",
     },
     {
       number: 2,
       icon: <FileText className="w-6 h-6" />,
       title: "Get a Call in Minutes",
-      description: "A fiber specialist calls on a recorded line, confirms pricing and answers questions",
+      description: "A fiber specialist calls on a recorded line, shops every provider at your address and reads you the best offer",
     },
     {
       number: 3,

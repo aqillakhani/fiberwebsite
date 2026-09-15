@@ -11,6 +11,7 @@ import {
   TRACKED_QUERY_KEYS,
   type StoredAttribution,
 } from "@/lib/attribution-cookies";
+import { isAdminPath, isAuthorizedAdmin, unauthorizedResponse } from "@/lib/admin-auth";
 
 const REP_SHORT_LINK = /^\/r\/([a-z0-9-]+)\/?$/i;
 const SLUG_PATTERN = /^[a-z0-9-]{1,64}$/i;
@@ -19,7 +20,10 @@ export const config = {
   matcher: ["/((?!_next/|api/|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|ico|webp|txt|xml)$).*)"],
 };
 
-export function middleware(request: NextRequest): NextResponse {
+export function middleware(request: NextRequest): NextResponse | Response {
+  if (isAdminPath(request.nextUrl.pathname) && !isAuthorizedAdmin(request.headers.get("authorization"))) {
+    return unauthorizedResponse();
+  }
   const shortLink = request.nextUrl.pathname.match(REP_SHORT_LINK);
   if (shortLink) return redirectShortLink(request, shortLink[1]);
 

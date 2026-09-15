@@ -10,7 +10,6 @@ import {
   Cable,
   Lightbulb,
   Shield,
-  ArrowRight,
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -403,12 +402,6 @@ export default function WhyFiberPage() {
               className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-fiber-blue text-white font-semibold hover:bg-fiber-blue/90 transition-all glow-blue"
             >
               Check Availability
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center h-12 px-8 rounded-lg border border-white/20 text-white font-semibold hover:bg-white/10 transition-all gap-2"
-            >
-              View Plans <ArrowRight className="size-4" />
             </Link>
           </div>
         </div>

@@ -6,8 +6,12 @@ export interface LeadRecord {
   lead_number: number;
   created_at: string;
   full_name: string;
+  first_name: string | null;
+  last_name: string | null;
   phone: string;
   email: string | null;
+  date_of_birth: string | null;
+  preferred_speed: string | null;
   service_address: string;
   city: string | null;
   state: string | null;
@@ -39,6 +43,7 @@ export interface LeadRecord {
   consent_at: string | null;
   consent_ip: string | null;
   consent_user_agent: string | null;
+  status: "new" | "contacted" | "qualified" | "converted" | "closed";
   crm_sync_status: "pending" | "synced" | "failed";
   crm_sync_attempts: number;
   crm_pin_id: string | null;

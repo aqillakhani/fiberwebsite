@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "FAQ | FiberFastUSA",
   description:
-    "Find answers to frequently asked questions about FiberFastUSA fiber internet plans, installation, pricing, and service.",
+    "Find answers to frequently asked questions about FiberFastUSA how we find your best internet offer, installation, and service.",
   openGraph: {
     title: "Fiber Internet FAQs | FiberFastUSA",
     description: "Get answers to your top questions about fast, reliable fiber internet service.",

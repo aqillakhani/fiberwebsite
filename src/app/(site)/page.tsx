@@ -5,7 +5,7 @@ import { SERVICE_STATES } from "@/lib/constants"
 import HeroSection from "@/components/sections/hero"
 import HowItWorksSection from "@/components/sections/how-it-works"
 import WhyFiberSection from "@/components/sections/why-fiber-section"
-import PlansPreviewSection from "@/components/sections/plans-preview"
+import ProvidersSection from "@/components/sections/providers-section"
 import HomepageFAQ from "@/components/sections/homepage-faq"
 import FinalCTASection from "@/components/sections/final-cta"
 
@@ -39,7 +39,7 @@ export default function HomePage() {
       />
       <HeroSection />
       <HowItWorksSection />
-      <PlansPreviewSection />
+      <ProvidersSection />
       <WhyFiberSection />
       <HomepageFAQ />
       <FinalCTASection />

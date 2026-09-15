@@ -152,10 +152,10 @@ export default function WhyFiberSection() {
 
         <div className="text-center">
           <Link
-            href="/pricing"
+            href="/check-availability"
             className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-blue transition-colors font-semibold"
           >
-            See Our Plans &rarr;
+            Find my best offer &rarr;
           </Link>
         </div>
       </div>

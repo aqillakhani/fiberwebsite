@@ -4,9 +4,9 @@ import { Loader2 } from "lucide-react";
 import { Controller, type UseFormReturn } from "react-hook-form";
 
 import { cn } from "@/lib/utils";
-import { CURRENT_PROVIDERS, type LeadInput } from "@/lib/validations/lead-schema";
+import { CURRENT_PROVIDERS, ISP_LABELS, LEAD_ISPS, PREFERRED_SPEEDS, SPEED_LABELS, type LeadInput } from "@/lib/validations/lead-schema";
+import { ChoiceChips } from "./choice-chips";
 import { ConsentCheckbox } from "./consent-checkbox";
-import { IspSelect } from "./isp-select";
 import type { LeadFormMode } from "./use-lead-form";
 
 interface ContactStepProps {
@@ -18,6 +18,9 @@ interface ContactStepProps {
   submitError: string | null;
   onSubmit: () => void;
 }
+
+const ISP_OPTIONS = LEAD_ISPS.map((value) => ({ value, label: ISP_LABELS[value] }));
+const SPEED_OPTIONS = PREFERRED_SPEEDS.map((value) => ({ value, label: SPEED_LABELS[value] }));
 
 const PROVIDER_LABELS: Record<(typeof CURRENT_PROVIDERS)[number], string> = {
   spectrum: "Spectrum",
@@ -31,7 +34,11 @@ const PROVIDER_LABELS: Record<(typeof CURRENT_PROVIDERS)[number], string> = {
 
 export function ContactStep({ mode, form, suggestedIsp, ctaLabel, isSubmitting, submitError, onSubmit }: ContactStepProps) {
   const isRep = mode === "rep";
-  const { register, control, formState: { errors } } = form;
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = form;
   const fieldClass = cn(
     "w-full rounded-lg border border-gray-300 bg-white px-3 text-gray-900 shadow-sm placeholder:text-gray-400",
     "focus:border-transparent focus:outline-none focus:ring-2 focus:ring-fiber-blue aria-invalid:border-fiber-red",
@@ -40,44 +47,76 @@ export function ContactStep({ mode, form, suggestedIsp, ctaLabel, isSubmitting, 
 
   return (
     <form
-      className="space-y-4"
+      className="space-y-5"
       onSubmit={(event) => {
         event.preventDefault();
         onSubmit();
       }}
       noValidate
     >
-      {isRep && (
-        <Controller
-          control={control}
-          name="ispDeclared"
-          render={({ field }) => <IspSelect value={field.value} suggested={suggestedIsp} onChange={field.onChange} />}
-        />
-      )}
+      <Controller
+        control={control}
+        name="ispDeclared"
+        render={({ field }) => (
+          <ChoiceChips
+            legend={isRep ? "Which provider are you pitching?" : "Which provider do you want?"}
+            options={ISP_OPTIONS}
+            value={field.value}
+            suggested={suggestedIsp}
+            error={errors.ispDeclared?.message}
+            large={isRep}
+            onChange={field.onChange}
+          />
+        )}
+      />
+
+      <Controller
+        control={control}
+        name="preferredSpeed"
+        render={({ field }) => (
+          <ChoiceChips
+            legend="What speed do you want?"
+            options={SPEED_OPTIONS}
+            value={field.value}
+            error={errors.preferredSpeed?.message}
+            large={isRep}
+            onChange={field.onChange}
+          />
+        )}
+      />
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label={isRep ? "Homeowner's name" : "Your name"} error={errors.fullName?.message}>
-          <input {...register("fullName")} autoComplete="name" className={fieldClass} aria-invalid={Boolean(errors.fullName)} />
+        <Field label="First name" error={errors.firstName?.message}>
+          <input {...register("firstName")} autoComplete="given-name" className={fieldClass} aria-invalid={Boolean(errors.firstName)} />
         </Field>
-        <Field label="Mobile number" error={errors.phone?.message} hint="We call this number">
-          <input {...register("phone")} type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} aria-invalid={Boolean(errors.phone)} />
+        <Field label="Last name" error={errors.lastName?.message}>
+          <input {...register("lastName")} autoComplete="family-name" className={fieldClass} aria-invalid={Boolean(errors.lastName)} />
         </Field>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Email (optional)" error={errors.email?.message}>
+        <Field label="Mobile number" error={errors.phone?.message} hint="We call this number">
+          <input {...register("phone")} type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} aria-invalid={Boolean(errors.phone)} />
+        </Field>
+        <Field label="Email" error={errors.email?.message}>
           <input {...register("email")} type="email" inputMode="email" autoComplete="email" className={fieldClass} aria-invalid={Boolean(errors.email)} />
         </Field>
-        {!isRep && (
-          <Field label="Current internet provider (optional)">
-            <select {...register("currentProvider", { setValueAs: (value) => value || undefined })} className={fieldClass} defaultValue="">
-              <option value="">Select one</option>
-              {CURRENT_PROVIDERS.map((provider) => (
-                <option key={provider} value={provider}>{PROVIDER_LABELS[provider]}</option>
-              ))}
-            </select>
-          </Field>
-        )}
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Field label="Date of birth (optional)" error={errors.dateOfBirth?.message} hint="Speeds up the order">
+          <input {...register("dateOfBirth")} type="date" autoComplete="bday" className={fieldClass} aria-invalid={Boolean(errors.dateOfBirth)} />
+        </Field>
+        <Field label="Current internet provider (optional)">
+          <select {...register("currentProvider", { setValueAs: (value) => value || undefined })} className={fieldClass} defaultValue="">
+            <option value="">Select one</option>
+            {CURRENT_PROVIDERS.map((provider) => (
+              <option key={provider} value={provider}>
+                {PROVIDER_LABELS[provider]}
+              </option>
+            ))}
+          </select>
+        </Field>
       </div>
 
       {/* Honeypot: hidden from people, filled by bots. */}
@@ -95,7 +134,11 @@ export function ContactStep({ mode, form, suggestedIsp, ctaLabel, isSubmitting, 
         )}
       />
 
-      {submitError && <p role="alert" className="text-sm text-fiber-red">{submitError}</p>}
+      {submitError && (
+        <p role="alert" className="text-sm text-fiber-red">
+          {submitError}
+        </p>
+      )}
 
       <button
         type="submit"
@@ -121,7 +164,11 @@ function Field({ label, hint, error, children }: { label: string; hint?: string;
         {hint && <span className="text-xs font-normal text-gray-500">{hint}</span>}
       </span>
       {children}
-      {error && <span role="alert" className="block text-sm text-fiber-red">{error}</span>}
+      {error && (
+        <span role="alert" className="block text-sm text-fiber-red">
+          {error}
+        </span>
+      )}
     </label>
   );
 }
