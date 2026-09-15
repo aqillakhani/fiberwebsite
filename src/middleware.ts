@@ -12,6 +12,7 @@ import {
   type StoredAttribution,
 } from "@/lib/attribution-cookies";
 import { isAdminPath, isAuthorizedAdmin, unauthorizedResponse } from "@/lib/admin-auth";
+import { isLanguage, LANGUAGE_COOKIE, LANGUAGE_MAX_AGE_SECONDS } from "@/lib/i18n/lead-copy";
 
 const REP_SHORT_LINK = /^\/r\/([a-z0-9-]+)\/?$/i;
 const SLUG_PATTERN = /^[a-z0-9-]{1,64}$/i;
@@ -29,8 +30,15 @@ export function middleware(request: NextRequest): NextResponse | Response {
 
   const response = NextResponse.next();
   applyRepCookie(request, response);
+  applyLanguageCookie(request, response);
   applyAttributionCookie(request, response);
   return response;
+}
+
+/** `?lang=es` (business cards, ads, a rep's link) switches the form and door page to Spanish for a year. */
+function applyLanguageCookie(request: NextRequest, response: NextResponse): void {
+  const lang = request.nextUrl.searchParams.get("lang");
+  if (isLanguage(lang)) response.cookies.set(LANGUAGE_COOKIE, lang, { path: "/", maxAge: LANGUAGE_MAX_AGE_SECONDS, sameSite: "lax" });
 }
 
 /** /r/:slug is what the QR badge encodes: remember the rep, enter rep mode, land on /door/:slug. */

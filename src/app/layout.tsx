@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 import { AttributionProvider } from "@/components/providers/attribution-provider";
+import { LanguageProvider } from "@/components/providers/language-provider";
 import { SERVICE_STATES } from "@/lib/constants";
 
 const inter = Inter({
@@ -91,7 +92,9 @@ export default function RootLayout({
         )}
       </head>
       <body className="font-sans">
-        <AttributionProvider>{children}</AttributionProvider>
+        <AttributionProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </AttributionProvider>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { CONSENT_TEXT } from "@/lib/consent";
+import { useLanguage } from "@/components/providers/language-provider";
 import { cn } from "@/lib/utils";
 
 interface ConsentCheckboxProps {
@@ -15,6 +15,7 @@ interface ConsentCheckboxProps {
  * large tap target in rep mode. The text version is stored with the lead (see lib/consent.ts).
  */
 export function ConsentCheckbox({ checked, error, large, onChange }: ConsentCheckboxProps) {
+  const { copy } = useLanguage();
   return (
     <div className="space-y-1">
       <label className={cn("flex cursor-pointer items-start gap-3 rounded-lg border p-3", error ? "border-fiber-red bg-fiber-red-light" : "border-gray-200 bg-gray-50")}>
@@ -27,7 +28,7 @@ export function ConsentCheckbox({ checked, error, large, onChange }: ConsentChec
           className={cn("mt-0.5 shrink-0 accent-fiber-blue", large ? "size-6" : "size-5")}
         />
         <span id="consent-text" className={cn("leading-snug text-gray-700", large ? "text-sm" : "text-xs")}>
-          {CONSENT_TEXT}
+          {copy.consentText}
         </span>
       </label>
       {error && <p role="alert" className="text-sm text-fiber-red">{error}</p>}

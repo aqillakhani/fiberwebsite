@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { formatLeadNumber, type LeadRecord } from "@/lib/leads/lead-record";
-import { listRecentLeads, LEADS_PAGE_SIZE } from "@/lib/leads/list-leads";
+import { formatLeadNumber } from "@/lib/leads/lead-record";
+import { listRecentLeads, LEADS_PAGE_SIZE, type LeadListItem } from "@/lib/leads/list-leads";
 import { ISP_LABELS, SPEED_LABELS, type LeadIsp, type PreferredSpeed } from "@/lib/validations/lead-schema";
 
 export const metadata: Metadata = { title: "Leads | FiberFastUSA admin", robots: { index: false, follow: false } };
@@ -61,7 +61,7 @@ export default async function AdminLeadsPage() {
   );
 }
 
-function LeadRow({ lead }: { lead: LeadRecord }) {
+function LeadRow({ lead }: { lead: LeadListItem }) {
   const name = lead.first_name ? `${lead.first_name} ${lead.last_name ?? ""}`.trim() : lead.full_name;
   const mapIsp = lead.serviceability?.isp ? ` — ${labelIsp(lead.serviceability.isp)}` : "";
   return (
@@ -76,6 +76,9 @@ function LeadRow({ lead }: { lead: LeadRecord }) {
         <a href={`tel:+1${lead.phone}`} className="text-fiber-blue hover:underline">
           {formatPhone(lead.phone)}
         </a>
+        {lead.contact_preference === "text" && (
+          <div className="mt-1 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800">Prefers text first</div>
+        )}
       </td>
       <td className="px-3 py-2 text-gray-700">{lead.email ?? "—"}</td>
       <td className="px-3 py-2 text-gray-700">

@@ -2,6 +2,7 @@
 
 import { CheckCircle2, Clock, HelpCircle, MapPin } from "lucide-react";
 
+import { useLanguage } from "@/components/providers/language-provider";
 import type { ServiceabilityResult as ServiceabilityLookup } from "@/lib/serviceability/classify";
 import { cn } from "@/lib/utils";
 import { resultCopy, type ResultTone } from "./serviceability-copy";
@@ -21,7 +22,8 @@ const TONE_STYLES: Record<ResultTone, { card: string; icon: string; Icon: typeof
 };
 
 export function ServiceabilityResult({ mode, address, result, onChangeAddress }: ServiceabilityResultProps) {
-  const copy = resultCopy(result, mode, address.street);
+  const { copy: text } = useLanguage();
+  const copy = resultCopy(result, mode, address.street, text);
   const { card, icon, Icon } = TONE_STYLES[copy.tone];
 
   return (
@@ -37,7 +39,7 @@ export function ServiceabilityResult({ mode, address, result, onChangeAddress }:
               {address.street}, {address.city}, {address.state} {address.zip}
             </span>
             <button type="button" onClick={onChangeAddress} className="font-medium text-fiber-blue underline-offset-2 hover:underline">
-              Change address
+              {text.address.changeAddress}
             </button>
           </div>
         </div>

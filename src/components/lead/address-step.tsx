@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
 
 import type { AddressSuggestion } from "@/app/api/address-autocomplete/route";
+import { useLanguage } from "@/components/providers/language-provider";
 import { AddressAutocomplete } from "@/components/ui/address-autocomplete";
 import { cn } from "@/lib/utils";
 import type { LeadFormMode } from "./use-lead-form";
@@ -14,12 +15,15 @@ interface AddressStepProps {
   error: string | null;
   onPick: (suggestion: AddressSuggestion) => void;
   onResolveTyped: (typed: string) => void;
+  /** Address carried in from the sticky bar (?address=); shown in the field while it is being checked. */
+  initialValue?: string;
 }
 
 const MIN_TYPED_LENGTH = 8;
 
-export function AddressStep({ mode, isChecking, error, onPick, onResolveTyped }: AddressStepProps) {
-  const [typed, setTyped] = useState("");
+export function AddressStep({ mode, isChecking, error, onPick, onResolveTyped, initialValue = "" }: AddressStepProps) {
+  const [typed, setTyped] = useState(initialValue);
+  const { copy } = useLanguage();
   const isRep = mode === "rep";
   const canSubmit = typed.trim().length >= MIN_TYPED_LENGTH && !isChecking;
 
@@ -31,7 +35,7 @@ export function AddressStep({ mode, isChecking, error, onPick, onResolveTyped }:
   return (
     <form onSubmit={handleSubmit} className="space-y-3" aria-busy={isChecking}>
       <label className="block text-sm font-semibold text-gray-900" htmlFor="lead-address">
-        {isRep ? "Homeowner's street address" : "Street address"}
+        {isRep ? copy.address.labelRep : copy.address.label}
       </label>
       <div className="flex flex-col gap-2 sm:flex-row">
         <AddressAutocomplete
@@ -40,8 +44,8 @@ export function AddressStep({ mode, isChecking, error, onPick, onResolveTyped }:
           onSelect={onPick}
           disabled={isChecking}
           autoFocus={isRep}
-          placeholder="123 Main St, City, ST 12345"
-          ariaLabel="Street address"
+          placeholder={copy.address.placeholder}
+          ariaLabel={copy.address.label}
           className="flex-1"
           inputClassName={cn(isRep && "h-14 text-lg")}
         />
@@ -56,13 +60,13 @@ export function AddressStep({ mode, isChecking, error, onPick, onResolveTyped }:
           )}
         >
           {isChecking ? <Loader2 className="size-5 animate-spin" aria-hidden /> : <ArrowRight className="size-5" aria-hidden />}
-          {isChecking ? "Checking" : "Check address"}
+          {isChecking ? copy.address.checking : copy.address.check}
         </button>
       </div>
       {error ? (
         <p role="alert" className="text-sm text-fiber-red">{error}</p>
       ) : (
-        <p className="text-xs text-gray-500">We check the fiber footprint for this exact address. No credit check, no payment.</p>
+        <p className="text-xs text-gray-500">{copy.address.hint}</p>
       )}
     </form>
   );

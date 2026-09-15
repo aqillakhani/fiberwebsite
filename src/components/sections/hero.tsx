@@ -1,6 +1,7 @@
 import { PhoneCall, ShieldCheck, Timer } from "lucide-react";
 
 import { LeadForm } from "@/components/lead/lead-form";
+import { LanguageToggle } from "@/components/lead/language-toggle";
 import { CLOSER_SLA_MINUTES } from "@/components/lead/serviceability-copy";
 
 const PROOF_POINTS = [
@@ -47,8 +48,13 @@ export default function HeroSection() {
         </div>
 
         <div id="check" className="bg-card scroll-mt-24 rounded-2xl border border-white/15 p-5 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)] sm:p-7">
-          <h2 className="text-lg font-bold text-gray-900">Check your address</h2>
-          <p className="mb-4 text-sm text-gray-500">Free, takes about a minute. No payment online.</p>
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h2 className="text-lg font-bold text-gray-900">Check your address</h2>
+              <p className="mb-4 text-sm text-gray-500">Free, takes about a minute. No payment online.</p>
+            </div>
+            <LanguageToggle />
+          </div>
           <LeadForm source="home-hero" />
         </div>
       </div>

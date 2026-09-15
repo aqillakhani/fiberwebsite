@@ -1,14 +1,15 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useForm, type DefaultValues, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { submitLead, type LeadSubmitSuccess } from "@/actions/submit-lead";
 import type { AddressSuggestion } from "@/app/api/address-autocomplete/route";
 import { trackLead } from "@/lib/analytics";
-import { CONSENT_TEXT_VERSION } from "@/lib/consent";
 import type { ServiceabilityResult } from "@/lib/serviceability/classify";
+import { parseCookieHeader } from "@/lib/attribution-cookies";
+import { isLanguage, LANGUAGE_COOKIE, LEAD_COPY, type Language } from "@/lib/i18n/lead-copy";
 import { LEAD_ISPS, leadSchema, type LeadInput, type LeadIsp } from "@/lib/validations/lead-schema";
 
 export type LeadFormStep = "address" | "details" | "done";
@@ -28,6 +29,10 @@ export interface ResolvedAddress {
 export interface UseLeadFormOptions {
   mode: LeadFormMode;
   source: string;
+  /** Checked automatically once on mount (from the sticky bar's ?address=). */
+  initialAddress?: string;
+  /** Version of the consent wording currently on screen (English or Spanish); stored with the lead. */
+  consentTextVersion: string;
 }
 
 export interface LeadFormState {
@@ -47,9 +52,7 @@ export interface LeadFormState {
   reset: () => void;
 }
 
-const ADDRESS_UNRESOLVED = "We couldn't find that address. Pick one from the list or add the city and ZIP.";
-
-export function useLeadForm({ source }: UseLeadFormOptions): LeadFormState {
+export function useLeadForm({ source, initialAddress, consentTextVersion }: UseLeadFormOptions): LeadFormState {
   const [step, setStep] = useState<LeadFormStep>("address");
   const [address, setAddress] = useState<ResolvedAddress | null>(null);
   const [serviceability, setServiceability] = useState<ServiceabilityResult | null>(null);
@@ -103,7 +106,7 @@ export function useLeadForm({ source }: UseLeadFormOptions): LeadFormState {
         ? { ...suggestion, lat: toNumber(suggestion.lat), lon: toNumber(suggestion.lon), accuracy: "resolved" as const }
         : parseTypedAddress(typed);
       if (!resolved) {
-        setAddressError(ADDRESS_UNRESOLVED);
+        setAddressError(LEAD_COPY[readLanguageCookie()].address.unresolved);
         setIsCheckingAddress(false);
         return;
       }
@@ -113,8 +116,16 @@ export function useLeadForm({ source }: UseLeadFormOptions): LeadFormState {
     [acceptAddress]
   );
 
+  const autoChecked = useRef(false);
+  useEffect(() => {
+    if (!initialAddress || autoChecked.current) return;
+    autoChecked.current = true;
+    void resolveTypedAddress(initialAddress);
+  }, [initialAddress, resolveTypedAddress]);
+
   const submit = useCallback(async () => {
     setSubmitError(null);
+    form.setValue("consentTextVersion", consentTextVersion);
     const isValid = await form.trigger();
     if (!isValid) return;
     setIsSubmitting(true);
@@ -127,7 +138,7 @@ export function useLeadForm({ source }: UseLeadFormOptions): LeadFormState {
     trackLead({ leadId: outcome.leadId, source, status: outcome.serviceabilityStatus, isp: outcome.isp });
     setResult(outcome);
     setStep("done");
-  }, [form, source]);
+  }, [form, source, consentTextVersion]);
 
   const reset = useCallback(() => {
     form.reset(emptyLead(source));
@@ -162,7 +173,7 @@ function emptyLead(source: string): DefaultValues<LeadInput> {
     state: "",
     zip: "",
     consentContact: false,
-    consentTextVersion: CONSENT_TEXT_VERSION,
+    consentTextVersion: LEAD_COPY.en.consentTextVersion,
     source,
     website: "",
   };
@@ -202,6 +213,11 @@ function parseTypedAddress(typed: string): ResolvedAddress | null {
   if (!match) return null;
   const [, street, city, state, zip] = match;
   return { street: street.trim(), city: city.trim(), state: state.toUpperCase(), zip, accuracy: "typed" };
+}
+
+function readLanguageCookie(): Language {
+  const stored = parseCookieHeader(typeof document === "undefined" ? "" : document.cookie)[LANGUAGE_COOKIE];
+  return isLanguage(stored) ? stored : "en";
 }
 
 function toNumber(raw: string): number | undefined {

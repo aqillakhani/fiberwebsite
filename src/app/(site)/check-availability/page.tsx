@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PhoneCall, ShieldCheck, Timer, Wifi } from "lucide-react";
 
 import { LeadForm } from "@/components/lead/lead-form";
+import { LanguageToggle } from "@/components/lead/language-toggle";
 import { CLOSER_SLA_MINUTES } from "@/components/lead/serviceability-copy";
 
 export const metadata: Metadata = {
@@ -22,7 +23,15 @@ const TRUST_SIGNALS = [
   { Icon: PhoneCall, label: "Nothing to pay online" },
 ];
 
-export default function CheckAvailabilityPage() {
+interface CheckAvailabilityPageProps {
+  searchParams: Promise<{ address?: string | string[] }>;
+}
+
+const MAX_ADDRESS_LENGTH = 200;
+
+export default async function CheckAvailabilityPage({ searchParams }: CheckAvailabilityPageProps) {
+  const { address } = await searchParams;
+  const initialAddress = typeof address === "string" ? address.trim().slice(0, MAX_ADDRESS_LENGTH) : undefined;
   return (
     <main className="bg-treatment-trust">
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-20 lg:px-8">
@@ -45,8 +54,11 @@ export default function CheckAvailabilityPage() {
           ))}
         </ul>
 
-        <div className="mx-auto max-w-2xl bg-card rounded-2xl border border-white/15 p-6 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)] md:p-10">
-          <LeadForm source="check-availability" />
+        <div id="check" className="mx-auto max-w-2xl bg-card scroll-mt-24 rounded-2xl border border-white/15 p-6 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.55)] md:p-10">
+          <div className="mb-4 flex justify-end">
+            <LanguageToggle />
+          </div>
+          <LeadForm source="check-availability" initialAddress={initialAddress || undefined} />
         </div>
       </section>
     </main>

@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Wifi } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { PROVIDERS } from "@/data/providers";
 
@@ -15,19 +16,26 @@ export default function ProvidersSection() {
             specialist shops every provider at your address for the best promo and the lowest price.
           </p>
         </div>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {PROVIDERS.map((provider) => (
-            <li key={provider.id} className="bg-card card-premium flex items-start gap-3 rounded-xl p-4">
-              <Wifi className="mt-0.5 size-5 shrink-0 text-fiber-blue" aria-hidden />
-              <div>
-                <p className="font-bold text-gray-900">{provider.name}</p>
-                <p className="text-sm text-gray-500">{provider.where}</p>
+            <li key={provider.id} className="bg-card card-premium flex flex-col items-center gap-3 rounded-xl px-4 py-5 text-center">
+              <div className="flex h-12 w-full items-center justify-center">
+                <Image
+                  src={provider.logo}
+                  alt={provider.name}
+                  width={160}
+                  height={48}
+                  unoptimized
+                  className="h-auto max-h-12 w-auto max-w-[150px] object-contain"
+                />
               </div>
+              <p className="text-xs text-gray-500">{provider.where}</p>
             </li>
           ))}
         </ul>
         <p className="mt-4 text-center text-xs text-blue-200/70">
-          Availability depends on your exact address. Provider names are trademarks of their owners.
+          Availability depends on your exact address. Provider names and logos are trademarks of their owners; FiberFastUSA is
+          an independent sales partner.
         </p>
         <div className="mt-8 text-center">
           <Link href="/check-availability" className="inline-flex items-center gap-2 font-semibold text-fiber-sky hover:underline">
