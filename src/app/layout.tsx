@@ -41,7 +41,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "FiberFastUSA",
               url: "https://fiberfastusa.com",
-              logo: "https://fiberfastusa.com/logo.png",
+              logo: "https://fiberfastusa.com/brand/lockup.png",
               description:
                 "FiberFastUSA helps customers explore fiber internet options and switch to faster, more reliable service.",
               telephone: "(469) 428-5942",

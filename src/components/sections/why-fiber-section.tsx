@@ -141,9 +141,9 @@ export default function WhyFiberSection() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-4 rounded-lg bg-muted/50"
+              className="text-center p-4 rounded-lg border border-white/10 bg-white/5"
             >
-              <stat.icon className="size-5 text-fiber-blue mx-auto mb-2" />
+              <stat.icon className="size-5 text-fiber-sky mx-auto mb-2" />
               <div className="text-sm text-muted-foreground">{stat.label}</div>
               <div className="text-lg font-bold text-foreground">{stat.value}</div>
             </div>
@@ -153,7 +153,7 @@ export default function WhyFiberSection() {
         <div className="text-center">
           <Link
             href="/check-availability"
-            className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-blue transition-colors font-semibold"
+            className="inline-flex items-center gap-2 text-fiber-sky hover:text-white transition-colors font-semibold"
           >
             Find my best offer &rarr;
           </Link>

@@ -53,44 +53,49 @@
   --color-fiber-orange: var(--fiber-orange);
   --color-fiber-success: var(--fiber-success);
   --color-fiber-dark: var(--fiber-dark);
+  --color-fiber-sky: var(--fiber-sky);
+  --color-fiber-navy: var(--fiber-navy);
+  --color-fiber-navy-light: var(--fiber-navy-light);
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #111827;
+  /* Navy theme (the original fiberfastusa.com look): deep navy pages, white cards, light-blue accents */
+  --background: #152A60;
+  --foreground: #F8FAFC;
   --card: #FFFFFF;
   --card-foreground: #111827;
   --popover: #FFFFFF;
   --popover-foreground: #111827;
   --primary: #1E40AF;
   --primary-foreground: #FFFFFF;
-  --secondary: #F9FAFB;
+  --secondary: #F1F5F9;
   --secondary-foreground: #111827;
-  --muted: #F3F4F6;
-  --muted-foreground: #6B7280;
+  --muted: #F1F5F9;
+  --muted-foreground: #CBD5E1;
   --accent: #0D9488;
   --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
-  --border: #E5E7EB;
-  --input: #E5E7EB;
-  --ring: #1E40AF;
+  --border: #2D4DA0;
+  --input: #E2E8F0;
+  --ring: #60A5FA;
   --chart-1: #1E40AF;
   --chart-2: #0D9488;
   --chart-3: #16A34A;
   --chart-4: #F59E0B;
   --chart-5: #DC2626;
   --radius: 0.75rem;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #111827;
-  --sidebar-primary: #1E40AF;
+  --sidebar: #152A60;
+  --sidebar-foreground: #F8FAFC;
+  --sidebar-primary: #60A5FA;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F3F4F6;
-  --sidebar-accent-foreground: #1E40AF;
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #1E40AF;
-  /* Brand color tokens — Blue, Teal, Red, Yellow, Orange, Success, Dark */
+  --sidebar-accent: #1A3278;
+  --sidebar-accent-foreground: #F8FAFC;
+  --sidebar-border: #2D4DA0;
+  --sidebar-ring: #3B82F6;
+  /* Brand color tokens — Blue, Sky (light blue accent), Teal, Red, Yellow, Orange, Success, Dark, Navy */
   --fiber-blue: #1E40AF;
   --fiber-blue-light: #EFF6FF;
+  --fiber-sky: #60A5FA;
   --fiber-teal: #0D9488;
   --fiber-teal-light: #F0FDFA;
   --fiber-red: #DC2626;
@@ -99,6 +104,8 @@
   --fiber-orange: #EA580C;
   --fiber-success: #16A34A;
   --fiber-dark: #111827;
+  --fiber-navy: #152A60;
+  --fiber-navy-light: #1A3278;
 }
 
 @layer base {
@@ -111,10 +118,60 @@
   html {
     @apply font-sans scroll-smooth;
   }
+  /* White cards on the navy page: dark text and light borders inside them */
+  .bg-card,
+  [class*="bg-card"],
+  .bg-white,
+  .white-section {
+    --foreground: #111827;
+    --muted-foreground: #6B7280;
+    --card-foreground: #111827;
+    --border: #E5E7EB;
+    --ring: #1E40AF;
+    color: #111827;
+  }
 }
 
 /* Premium Design System Utilities */
 @layer utilities {
+
+  /* Hero gradient — deep navy sweep */
+  .hero-gradient {
+    background: linear-gradient(135deg, #152A60 0%, #1E3A8A 40%, #152A60 100%);
+  }
+
+  /* Hero animated fiber streaks */
+  .fiber-streak {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--fiber-sky), var(--fiber-teal), transparent);
+    opacity: 0.15;
+    border-radius: 9999px;
+  }
+  .fiber-streak-1 {
+    top: 20%;
+    left: -10%;
+    width: 60%;
+    animation: streak-move 8s ease-in-out infinite;
+  }
+  .fiber-streak-2 {
+    top: 55%;
+    left: -5%;
+    width: 45%;
+    animation: streak-move 12s ease-in-out 2s infinite;
+  }
+  .fiber-streak-3 {
+    top: 75%;
+    left: -15%;
+    width: 70%;
+    animation: streak-move 10s ease-in-out 4s infinite;
+  }
+
+  /* Hero radial glow behind the form card */
+  .hero-glow-orb {
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.12) 0%, transparent 70%);
+    animation: glow-drift 6s ease-in-out infinite;
+  }
 
   /* Section backgrounds — bluish-black matching hero family */
   .section-navy {
@@ -123,7 +180,7 @@
 
   /* Radial glow effects — subtle */
   .glow-blue {
-    box-shadow: 0 4px 20px -4px rgba(30, 64, 175, 0.2);
+    box-shadow: 0 4px 20px -4px rgba(96, 165, 250, 0.45);
   }
 
   /* Premium card styles */
@@ -133,7 +190,7 @@
   }
   .card-premium:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.35);
   }
 
   /* Gradient border effect for featured cards — blue → teal */
@@ -226,37 +283,42 @@
     50% { transform: translate(-50%, -50%) scale(1.1); }
   }
 
-  /* ── Background Treatment System (light) ── */
-  /* Treatment 1: Emphasis — clean white for high-value sections */
+  /* ── Background Treatment System (navy) ── */
   .bg-treatment-emphasis {
-    background: #FFFFFF;
+    background: #152A60;
   }
-
-  /* Treatment 2: Rhythm — subtle darker shift for alternating sections */
   .bg-treatment-rhythm {
-    background: #F9FAFB;
+    background: #1A3278;
   }
-
-  /* Treatment 3: Trust — slightly lighter blue for credibility */
   .bg-treatment-trust {
-    background: linear-gradient(180deg, #EFF6FF 0%, #F0F9FF 100%);
+    background: linear-gradient(180deg, #152A60 0%, #213F92 100%);
   }
-
-  /* Treatment 5: Showcase — diagonal within the hero blue family */
+  .bg-treatment-momentum {
+    background: linear-gradient(180deg, #1A3278 0%, #1E3880 100%);
+  }
   .bg-treatment-showcase {
-    background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 50%, #F0FDFA 100%);
+    background: linear-gradient(135deg, #152A60 0%, #234298 50%, #1C3680 100%);
   }
-
-  /* Ensure readable text on treatment backgrounds — light mode */
+  /* White text on navy treatments; cards inside stay white with dark text (see @layer base) */
   .bg-treatment-emphasis,
   .bg-treatment-rhythm,
   .bg-treatment-trust,
   .bg-treatment-momentum,
   .bg-treatment-showcase {
-    --foreground: #111827;
-    --muted-foreground: #6B7280;
+    --foreground: #F8FAFC;
+    --muted-foreground: #CBD5E1;
     --card-foreground: #111827;
-    --border: #E5E7EB;
+    --border: #2D4DA0;
+  }
+
+  /* Floating glow orb for section backgrounds */
+  .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, var(--fiber-sky) 0%, transparent 70%);
+    opacity: 0.08;
+    animation: orb-float 15s ease-in-out infinite;
   }
   @keyframes orb-float {
     0%, 100% { transform: translate(0, 0) scale(1); }

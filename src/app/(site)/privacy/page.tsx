@@ -162,7 +162,7 @@ export default function PrivacyPage() {
             </div>
           </div>
 
-          <div className="rounded-lg border bg-muted/50 p-4 mt-8">
+          <div className="rounded-lg border border-white/15 bg-white/5 p-4 mt-8">
             <p className="text-sm text-muted-foreground">
               FiberFastUSA reserves the right to update this privacy policy at any time.
               We will notify you of material changes by posting the updated policy on our

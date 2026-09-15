@@ -56,7 +56,7 @@ function BusinessCard({ rep, qrDataUrl, assetOrigin }: { rep: Rep; qrDataUrl: st
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${assetOrigin}/brand/globe.png`} width={38} height={38} alt="" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${assetOrigin}/brand/wordmark.png`} width={116} height={25} alt="FiberFast USA" />
+          <img src={`${assetOrigin}/brand/wordmark.png`} width={116} height={17} alt="FiberFast USA" />
         </div>
         <div style={{ display: "flex", flex: 1, alignItems: "center", gap: 26 }}>
           <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { Logo } from "@/components/ui/logo"
 
 import { COMPANY, FOOTER_LINKS } from "@/lib/constants"
 
@@ -13,12 +13,8 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo & Description */}
           <div>
-            <Link
-              href="/"
-              className="flex items-center gap-2 font-bold text-lg text-foreground hover:text-[var(--fiber-red)] transition-colors mb-4"
-            >
-              <Image src="/logo.png" alt="FiberFastUSA" width={32} height={32} className="w-8 h-8" />
-              {COMPANY.name}
+            <Link href="/" className="mb-4 inline-flex transition-opacity hover:opacity-80">
+              <Logo size="sm" />
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               {COMPANY.tagline}

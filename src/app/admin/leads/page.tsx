@@ -13,7 +13,8 @@ const SUPABASE_TABLE_URL = "https://supabase.com/dashboard/project/ufpltthmbejpo
 export default async function AdminLeadsPage() {
   const leads = await listRecentLeads();
   return (
-    <main className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6">
+    <main className="bg-white min-h-screen text-gray-900">
+      <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6">
       <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-2xl font-extrabold text-gray-900">Inbound leads</h1>
@@ -54,6 +55,7 @@ export default async function AdminLeadsPage() {
             )}
           </tbody>
         </table>
+      </div>
       </div>
     </main>
   );

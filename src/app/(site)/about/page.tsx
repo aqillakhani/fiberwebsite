@@ -140,7 +140,7 @@ export default function AboutPage() {
           <div className="text-center mt-8">
             <Link
               href="/check-availability"
-              className="inline-flex items-center gap-2 text-fiber-blue font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-fiber-sky font-semibold hover:underline"
             >
               Check if we serve your area <ArrowRight className="size-4" />
             </Link>

@@ -23,7 +23,7 @@ export default function DoorModeView({ rep }: DoorModeViewProps) {
     <div className="min-h-screen bg-white">
       <header className="border-b border-gray-200 px-4 py-3">
         <Link href="/" aria-label="FiberFastUSA home">
-          <Logo />
+          <Logo tone="dark" />
         </Link>
       </header>
 

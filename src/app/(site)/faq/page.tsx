@@ -42,7 +42,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Hero Section */}
-      <section className="border-b bg-muted/30 py-12 sm:py-16 lg:py-20">
+      <section className="hero-gradient bg-grid-white border-b py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
@@ -70,7 +70,7 @@ export default function FAQPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t bg-muted/30 py-12 sm:py-16 lg:py-20">
+      <section className="bg-treatment-rhythm border-t py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-lg border bg-card p-6 sm:p-8 text-center">
             <h2 className="text-2xl font-bold">Still have questions?</h2>

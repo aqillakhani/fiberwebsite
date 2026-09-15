@@ -53,7 +53,7 @@ export default function HomepageFAQ() {
         <div className="text-center mt-8">
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2 text-fiber-blue hover:text-fiber-blue transition-colors font-semibold"
+            className="inline-flex items-center gap-2 text-fiber-sky hover:text-white transition-colors font-semibold"
           >
             View All FAQs &rarr;
           </Link>
