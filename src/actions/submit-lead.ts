@@ -23,6 +23,8 @@ export interface LeadSubmitSuccess {
   leadNumber: string;
   serviceabilityStatus: ServiceabilityStatus;
   isp: string | null;
+  /** Set client-side only: the lead is saved on the device and will be submitted when the network returns. */
+  queued?: boolean;
 }
 export interface LeadSubmitFailure {
   success: false;

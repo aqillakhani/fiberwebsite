@@ -170,6 +170,7 @@ export const FOOTER_LINKS = {
   services: [
     { href: "/check-availability", label: "Check Availability" },
     { href: "/why-fiber", label: "Why Fiber" },
+    { href: "/fiber", label: "Fiber by City" },
   ],
   support: [
     { href: "/faq", label: "FAQ" },

@@ -1,0 +1,10070 @@
+{
+ "generatedAt": "2026-09-15T21:15:31+00:00",
+ "source": "analytics/footprint/zips.csv (map_pin, read-only)",
+ "minHomes": 200,
+ "locations": [
+  {
+   "slug": "ashville",
+   "city": "Ashville",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 1517,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 9,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1517,
+     "comingSoon": 9,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "35953"
+   ],
+   "lat": 33.82432,
+   "lon": -86.24198
+  },
+  {
+   "slug": "newton",
+   "city": "Newton",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 755,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 755,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "36352"
+   ],
+   "lat": 31.23405,
+   "lon": -85.61514
+  },
+  {
+   "slug": "odenville",
+   "city": "Odenville",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 587,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 869,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 587,
+     "comingSoon": 869,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "35120"
+   ],
+   "lat": 33.6819,
+   "lon": -86.45897
+  },
+  {
+   "slug": "summerdale",
+   "city": "Summerdale",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 577,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 577,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "36580"
+   ],
+   "lat": 30.45431,
+   "lon": -87.79615
+  },
+  {
+   "slug": "foley",
+   "city": "Foley",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 564,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 564,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "36535"
+   ],
+   "lat": 30.3526,
+   "lon": -87.75534
+  },
+  {
+   "slug": "falkville",
+   "city": "Falkville",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 425,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 425,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "35622"
+   ],
+   "lat": 34.36761,
+   "lon": -86.91016
+  },
+  {
+   "slug": "springville",
+   "city": "Springville",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 392,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 354,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 392,
+     "comingSoon": 354,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "35146"
+   ],
+   "lat": 33.78993,
+   "lon": -86.40271
+  },
+  {
+   "slug": "steele",
+   "city": "Steele",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 342,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 42,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 342,
+     "comingSoon": 42,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "35987"
+   ],
+   "lat": 33.88527,
+   "lon": -86.28608
+  },
+  {
+   "slug": "memphis",
+   "city": "Memphis",
+   "state": "AL",
+   "stateSlug": "al",
+   "stateName": "Alabama",
+   "verifiedLiveHomes": 303,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 303,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "35461"
+   ],
+   "lat": 33.42895,
+   "lon": -88.23061
+  },
+  {
+   "slug": "harrison",
+   "city": "Harrison",
+   "state": "AR",
+   "stateSlug": "ar",
+   "stateName": "Arkansas",
+   "verifiedLiveHomes": 2713,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 940,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2713,
+     "comingSoon": 940,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "72601",
+    "72602"
+   ],
+   "lat": 36.22824,
+   "lon": -93.09551
+  },
+  {
+   "slug": "bearden",
+   "city": "Bearden",
+   "state": "AR",
+   "stateSlug": "ar",
+   "stateName": "Arkansas",
+   "verifiedLiveHomes": 429,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 429,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "71720"
+   ],
+   "lat": 33.72711,
+   "lon": -92.61801
+  },
+  {
+   "slug": "cresson",
+   "city": "Cresson",
+   "state": "CT",
+   "stateSlug": "ct",
+   "stateName": "Connecticut",
+   "verifiedLiveHomes": 740,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 239,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 740,
+     "comingSoon": 239,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76035"
+   ],
+   "lat": 32.5613,
+   "lon": -97.62491
+  },
+  {
+   "slug": "live-oak",
+   "city": "Live Oak",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 6964,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1104,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 6964,
+     "comingSoon": 1104,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32060",
+    "32064"
+   ],
+   "lat": 30.28449,
+   "lon": -83.02088
+  },
+  {
+   "slug": "alachua",
+   "city": "Alachua",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 5528,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 65,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 5528,
+     "comingSoon": 65,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32615"
+   ],
+   "lat": 29.79136,
+   "lon": -82.49642
+  },
+  {
+   "slug": "high-springs",
+   "city": "High Springs",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 5504,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 147,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 5504,
+     "comingSoon": 147,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32643"
+   ],
+   "lat": 29.8345,
+   "lon": -82.6036
+  },
+  {
+   "slug": "callahan",
+   "city": "Callahan",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 4787,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 592,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4787,
+     "comingSoon": 592,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32011"
+   ],
+   "lat": 30.54483,
+   "lon": -81.81622
+  },
+  {
+   "slug": "interlachen",
+   "city": "Interlachen",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 4517,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 5688,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4517,
+     "comingSoon": 5688,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32148",
+    "32189"
+   ],
+   "lat": 29.65458,
+   "lon": -81.87272
+  },
+  {
+   "slug": "fort-white",
+   "city": "Fort White",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 4314,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1369,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4314,
+     "comingSoon": 1369,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32028",
+    "32038"
+   ],
+   "lat": 29.88347,
+   "lon": -82.69271
+  },
+  {
+   "slug": "jasper",
+   "city": "Jasper",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 2778,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2778,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32052"
+   ],
+   "lat": 30.51368,
+   "lon": -82.98404
+  },
+  {
+   "slug": "hawthorne",
+   "city": "Hawthorne",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 2552,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 936,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2552,
+     "comingSoon": 936,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32640"
+   ],
+   "lat": 29.65173,
+   "lon": -81.99929
+  },
+  {
+   "slug": "lake-city",
+   "city": "Lake City",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 2532,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 27,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2532,
+     "comingSoon": 27,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32024",
+    "32025",
+    "32055"
+   ],
+   "lat": 30.09549,
+   "lon": -82.67996
+  },
+  {
+   "slug": "bell",
+   "city": "Bell",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 2050,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 12,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2050,
+     "comingSoon": 12,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32619"
+   ],
+   "lat": 29.74094,
+   "lon": -82.88494
+  },
+  {
+   "slug": "lake-butler",
+   "city": "Lake Butler",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 2034,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 394,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2034,
+     "comingSoon": 394,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32054"
+   ],
+   "lat": 29.99639,
+   "lon": -82.39244
+  },
+  {
+   "slug": "crescent-city",
+   "city": "Crescent City",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1893,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 536,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1893,
+     "comingSoon": 536,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32112"
+   ],
+   "lat": 29.43514,
+   "lon": -81.53559
+  },
+  {
+   "slug": "branford",
+   "city": "Branford",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1671,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1671,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32008",
+    "32088"
+   ],
+   "lat": 29.93843,
+   "lon": -82.92411
+  },
+  {
+   "slug": "keystone-heights",
+   "city": "Keystone Heights",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1560,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 355,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1560,
+     "comingSoon": 355,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32656"
+   ],
+   "lat": 29.80639,
+   "lon": -81.9249
+  },
+  {
+   "slug": "mayo",
+   "city": "Mayo",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1487,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 46,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1487,
+     "comingSoon": 46,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32066"
+   ],
+   "lat": 30.0914,
+   "lon": -83.19788
+  },
+  {
+   "slug": "jennings",
+   "city": "Jennings",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1459,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1459,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32053"
+   ],
+   "lat": 30.55851,
+   "lon": -83.12846
+  },
+  {
+   "slug": "melrose",
+   "city": "Melrose",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1187,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2050,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1187,
+     "comingSoon": 2050,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32666"
+   ],
+   "lat": 29.73072,
+   "lon": -82.03512
+  },
+  {
+   "slug": "hilliard",
+   "city": "Hilliard",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1175,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1082,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1175,
+     "comingSoon": 1082,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32046"
+   ],
+   "lat": 30.67425,
+   "lon": -81.93598
+  },
+  {
+   "slug": "pomona-park",
+   "city": "Pomona Park",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1105,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1105,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32181"
+   ],
+   "lat": 29.47405,
+   "lon": -81.59421
+  },
+  {
+   "slug": "trenton",
+   "city": "Trenton",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1072,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 119,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1072,
+     "comingSoon": 119,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32693"
+   ],
+   "lat": 29.66717,
+   "lon": -82.81284
+  },
+  {
+   "slug": "waldo",
+   "city": "Waldo",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 1023,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1023,
+     "comingSoon": 4,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32694"
+   ],
+   "lat": 29.77538,
+   "lon": -82.1413
+  },
+  {
+   "slug": "wellborn",
+   "city": "Wellborn",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 887,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 142,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 887,
+     "comingSoon": 142,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32094"
+   ],
+   "lat": 30.20961,
+   "lon": -82.82082
+  },
+  {
+   "slug": "hampton",
+   "city": "Hampton",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 725,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 86,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 725,
+     "comingSoon": 86,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32044"
+   ],
+   "lat": 29.85862,
+   "lon": -82.1556
+  },
+  {
+   "slug": "white-springs",
+   "city": "White Springs",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 718,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 718,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32069",
+    "32096"
+   ],
+   "lat": 30.38253,
+   "lon": -82.68095
+  },
+  {
+   "slug": "citra",
+   "city": "Citra",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 709,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 290,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 709,
+     "comingSoon": 290,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32113"
+   ],
+   "lat": 29.40617,
+   "lon": -82.10756
+  },
+  {
+   "slug": "obrien",
+   "city": "Obrien",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 516,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 516,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32071"
+   ],
+   "lat": 30.0417,
+   "lon": -82.93848
+  },
+  {
+   "slug": "hastings",
+   "city": "Hastings",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 487,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1276,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 487,
+     "comingSoon": 1276,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32145"
+   ],
+   "lat": 29.67736,
+   "lon": -81.4644
+  },
+  {
+   "slug": "gainesville",
+   "city": "Gainesville",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 457,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 60,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 457,
+     "comingSoon": 60,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32601",
+    "32605",
+    "32606",
+    "32607",
+    "32608",
+    "32609",
+    "32641",
+    "32653"
+   ],
+   "lat": 29.68712,
+   "lon": -82.36269
+  },
+  {
+   "slug": "bryceville",
+   "city": "Bryceville",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 422,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 333,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 422,
+     "comingSoon": 333,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32009"
+   ],
+   "lat": 30.43953,
+   "lon": -81.94782
+  },
+  {
+   "slug": "florahome",
+   "city": "Florahome",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 360,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 724,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 360,
+     "comingSoon": 724,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32140"
+   ],
+   "lat": 29.76543,
+   "lon": -81.87599
+  },
+  {
+   "slug": "mcalpin",
+   "city": "Mcalpin",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 348,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 348,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32062"
+   ],
+   "lat": 30.13643,
+   "lon": -82.95802
+  },
+  {
+   "slug": "georgetown",
+   "city": "Georgetown",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 293,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 293,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32139"
+   ],
+   "lat": 29.40057,
+   "lon": -81.61521
+  },
+  {
+   "slug": "starke",
+   "city": "Starke",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 270,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 17,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 270,
+     "comingSoon": 17,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32091"
+   ],
+   "lat": 29.86742,
+   "lon": -82.12816
+  },
+  {
+   "slug": "brooker",
+   "city": "Brooker",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 269,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 42,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 269,
+     "comingSoon": 42,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32622"
+   ],
+   "lat": 29.91263,
+   "lon": -82.31328
+  },
+  {
+   "slug": "tallahassee",
+   "city": "Tallahassee",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 221,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 221,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32301",
+    "32303",
+    "32304",
+    "32305",
+    "32308",
+    "32309",
+    "32310",
+    "32311",
+    "32312",
+    "32317"
+   ],
+   "lat": 30.45974,
+   "lon": -84.26608
+  },
+  {
+   "slug": "newberry",
+   "city": "Newberry",
+   "state": "FL",
+   "stateSlug": "fl",
+   "stateName": "Florida",
+   "verifiedLiveHomes": 209,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 209,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "32669"
+   ],
+   "lat": 29.70383,
+   "lon": -82.59485
+  },
+  {
+   "slug": "dalton",
+   "city": "Dalton",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 3924,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2727,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3924,
+     "comingSoon": 2727,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "30719",
+    "30720",
+    "30721",
+    "30722"
+   ],
+   "lat": 34.82756,
+   "lon": -84.94222
+  },
+  {
+   "slug": "canton",
+   "city": "Canton",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 2626,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1079,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2626,
+     "comingSoon": 1079,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "30114",
+    "30115"
+   ],
+   "lat": 34.20539,
+   "lon": -84.46953
+  },
+  {
+   "slug": "fitzgerald",
+   "city": "Fitzgerald",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 1355,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1355,
+     "comingSoon": 4,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31750"
+   ],
+   "lat": 31.72316,
+   "lon": -83.24636
+  },
+  {
+   "slug": "valdosta",
+   "city": "Valdosta",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 893,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 893,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31601",
+    "31602",
+    "31605",
+    "31606"
+   ],
+   "lat": 30.85988,
+   "lon": -83.24376
+  },
+  {
+   "slug": "maysville",
+   "city": "Maysville",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 881,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 21,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 881,
+     "comingSoon": 21,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "30558"
+   ],
+   "lat": 34.23958,
+   "lon": -83.58069
+  },
+  {
+   "slug": "midway",
+   "city": "Midway",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 707,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 707,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31320"
+   ],
+   "lat": 31.80335,
+   "lon": -81.43364
+  },
+  {
+   "slug": "moultrie",
+   "city": "Moultrie",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 692,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 12,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 692,
+     "comingSoon": 12,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31768",
+    "31788"
+   ],
+   "lat": 31.1583,
+   "lon": -83.78048
+  },
+  {
+   "slug": "homerville",
+   "city": "Homerville",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 419,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 160,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 419,
+     "comingSoon": 160,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31634"
+   ],
+   "lat": 31.03719,
+   "lon": -82.73626
+  },
+  {
+   "slug": "richland",
+   "city": "Richland",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 357,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 357,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31825"
+   ],
+   "lat": 32.08951,
+   "lon": -84.6602
+  },
+  {
+   "slug": "jefferson",
+   "city": "Jefferson",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 298,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1720,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 298,
+     "comingSoon": 1720,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "30549"
+   ],
+   "lat": 34.08444,
+   "lon": -83.61523
+  },
+  {
+   "slug": "leesburg",
+   "city": "Leesburg",
+   "state": "GA",
+   "stateSlug": "ga",
+   "stateName": "Georgia",
+   "verifiedLiveHomes": 263,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 92,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 263,
+     "comingSoon": 92,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "31763"
+   ],
+   "lat": 31.708,
+   "lon": -84.17041
+  },
+  {
+   "slug": "fairfield",
+   "city": "Fairfield",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 1674,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1674,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52556"
+   ],
+   "lat": 41.00035,
+   "lon": -91.96495
+  },
+  {
+   "slug": "creston",
+   "city": "Creston",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 915,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 188,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 915,
+     "comingSoon": 188,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50801"
+   ],
+   "lat": 41.0577,
+   "lon": -94.36527
+  },
+  {
+   "slug": "monroe",
+   "city": "Monroe",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 887,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 43,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 887,
+     "comingSoon": 43,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50170"
+   ],
+   "lat": 41.52099,
+   "lon": -93.10406
+  },
+  {
+   "slug": "adair",
+   "city": "Adair",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 565,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 565,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50002"
+   ],
+   "lat": 41.50081,
+   "lon": -94.64561
+  },
+  {
+   "slug": "maxwell",
+   "city": "Maxwell",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 538,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 538,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50161"
+   ],
+   "lat": 41.89091,
+   "lon": -93.39837
+  },
+  {
+   "slug": "durant",
+   "city": "Durant",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 499,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 499,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52747"
+   ],
+   "lat": 41.5997,
+   "lon": -90.90749
+  },
+  {
+   "slug": "delhi",
+   "city": "Delhi",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 455,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 58,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 455,
+     "comingSoon": 58,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52223"
+   ],
+   "lat": 42.42118,
+   "lon": -91.35862
+  },
+  {
+   "slug": "schleswig",
+   "city": "Schleswig",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 449,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 449,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "51461"
+   ],
+   "lat": 42.16282,
+   "lon": -95.43527
+  },
+  {
+   "slug": "alden",
+   "city": "Alden",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 410,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 410,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50006"
+   ],
+   "lat": 42.51781,
+   "lon": -93.37591
+  },
+  {
+   "slug": "dows",
+   "city": "Dows",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 407,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 407,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50071"
+   ],
+   "lat": 42.65702,
+   "lon": -93.50262
+  },
+  {
+   "slug": "stanwood",
+   "city": "Stanwood",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 369,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 369,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52337"
+   ],
+   "lat": 41.89175,
+   "lon": -91.15104
+  },
+  {
+   "slug": "fonda",
+   "city": "Fonda",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 357,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 17,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 357,
+     "comingSoon": 17,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50540"
+   ],
+   "lat": 42.58524,
+   "lon": -94.84472
+  },
+  {
+   "slug": "lime-springs",
+   "city": "Lime Springs",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 306,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 12,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 306,
+     "comingSoon": 12,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52155"
+   ],
+   "lat": 43.44955,
+   "lon": -92.28134
+  },
+  {
+   "slug": "albia",
+   "city": "Albia",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 293,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 143,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 293,
+     "comingSoon": 143,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52531"
+   ],
+   "lat": 41.01974,
+   "lon": -92.81671
+  },
+  {
+   "slug": "clearfield",
+   "city": "Clearfield",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 292,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 13,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 292,
+     "comingSoon": 13,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50840"
+   ],
+   "lat": 40.80144,
+   "lon": -94.47688
+  },
+  {
+   "slug": "arlington",
+   "city": "Arlington",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 280,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 280,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50606"
+   ],
+   "lat": 42.74852,
+   "lon": -91.67066
+  },
+  {
+   "slug": "elma",
+   "city": "Elma",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 280,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 280,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50628"
+   ],
+   "lat": 43.24531,
+   "lon": -92.43851
+  },
+  {
+   "slug": "delmar",
+   "city": "Delmar",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 277,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 277,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52037"
+   ],
+   "lat": 42.00107,
+   "lon": -90.60722
+  },
+  {
+   "slug": "seymour",
+   "city": "Seymour",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 267,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 158,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 267,
+     "comingSoon": 158,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52590"
+   ],
+   "lat": 40.6831,
+   "lon": -93.11891
+  },
+  {
+   "slug": "bussey",
+   "city": "Bussey",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 262,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 36,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 262,
+     "comingSoon": 36,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50044"
+   ],
+   "lat": 41.2001,
+   "lon": -92.88764
+  },
+  {
+   "slug": "ute",
+   "city": "Ute",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 258,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 258,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "51060"
+   ],
+   "lat": 42.0503,
+   "lon": -95.7044
+  },
+  {
+   "slug": "lytton",
+   "city": "Lytton",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 245,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 245,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50561"
+   ],
+   "lat": 42.4241,
+   "lon": -94.85904
+  },
+  {
+   "slug": "salem",
+   "city": "Salem",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 219,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 219,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "52649"
+   ],
+   "lat": 40.85418,
+   "lon": -91.61982
+  },
+  {
+   "slug": "hazleton",
+   "city": "Hazleton",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 210,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 169,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 210,
+     "comingSoon": 169,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "50641"
+   ],
+   "lat": 42.61803,
+   "lon": -91.90343
+  },
+  {
+   "slug": "primghar",
+   "city": "Primghar",
+   "state": "IA",
+   "stateSlug": "ia",
+   "stateName": "Iowa",
+   "verifiedLiveHomes": 200,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 200,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "51245"
+   ],
+   "lat": 43.08792,
+   "lon": -95.62733
+  },
+  {
+   "slug": "dixon",
+   "city": "Dixon",
+   "state": "IL",
+   "stateSlug": "il",
+   "stateName": "Illinois",
+   "verifiedLiveHomes": 1390,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1390,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "61021"
+   ],
+   "lat": 41.83675,
+   "lon": -89.48836
+  },
+  {
+   "slug": "pekin",
+   "city": "Pekin",
+   "state": "IL",
+   "stateSlug": "il",
+   "stateName": "Illinois",
+   "verifiedLiveHomes": 696,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 696,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "61554"
+   ],
+   "lat": 40.56296,
+   "lon": -89.63127
+  },
+  {
+   "slug": "hiawatha",
+   "city": "Hiawatha",
+   "state": "KS",
+   "stateSlug": "ks",
+   "stateName": "Kansas",
+   "verifiedLiveHomes": 1259,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1259,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "66434"
+   ],
+   "lat": 39.854,
+   "lon": -95.53315
+  },
+  {
+   "slug": "galena",
+   "city": "Galena",
+   "state": "KS",
+   "stateSlug": "ks",
+   "stateName": "Kansas",
+   "verifiedLiveHomes": 1241,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1241,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "66739"
+   ],
+   "lat": 37.06911,
+   "lon": -94.6361
+  },
+  {
+   "slug": "burlington",
+   "city": "Burlington",
+   "state": "KS",
+   "stateSlug": "ks",
+   "stateName": "Kansas",
+   "verifiedLiveHomes": 1142,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1142,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "66839"
+   ],
+   "lat": 38.19485,
+   "lon": -95.7447
+  },
+  {
+   "slug": "riverton",
+   "city": "Riverton",
+   "state": "KS",
+   "stateSlug": "ks",
+   "stateName": "Kansas",
+   "verifiedLiveHomes": 251,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 251,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "66770"
+   ],
+   "lat": 37.07617,
+   "lon": -94.70328
+  },
+  {
+   "slug": "buffalo",
+   "city": "Buffalo",
+   "state": "KS",
+   "stateSlug": "ks",
+   "stateName": "Kansas",
+   "verifiedLiveHomes": 208,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 208,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "66717"
+   ],
+   "lat": 37.7079,
+   "lon": -95.69127
+  },
+  {
+   "slug": "ashland",
+   "city": "Ashland",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 8065,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 390,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 8065,
+     "comingSoon": 390,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "41101",
+    "41102"
+   ],
+   "lat": 38.45157,
+   "lon": -82.67467
+  },
+  {
+   "slug": "lexington",
+   "city": "Lexington",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 3082,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 19530,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3082,
+     "comingSoon": 19530,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "40502",
+    "40503",
+    "40504",
+    "40505",
+    "40508",
+    "40509",
+    "40510",
+    "40511",
+    "40513",
+    "40514",
+    "40515",
+    "40516",
+    "40517"
+   ],
+   "lat": 38.02586,
+   "lon": -84.51207
+  },
+  {
+   "slug": "greenup",
+   "city": "Greenup",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 903,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 419,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 903,
+     "comingSoon": 419,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "41144"
+   ],
+   "lat": 38.59161,
+   "lon": -82.84911
+  },
+  {
+   "slug": "vanceburg",
+   "city": "Vanceburg",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 523,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 315,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 523,
+     "comingSoon": 315,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "41179"
+   ],
+   "lat": 38.58844,
+   "lon": -83.3532
+  },
+  {
+   "slug": "nicholasville",
+   "city": "Nicholasville",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 504,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 75,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 504,
+     "comingSoon": 75,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "40356"
+   ],
+   "lat": 37.92343,
+   "lon": -84.493
+  },
+  {
+   "slug": "loretto",
+   "city": "Loretto",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 479,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 36,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 479,
+     "comingSoon": 36,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "40037"
+   ],
+   "lat": 37.62975,
+   "lon": -85.39575
+  },
+  {
+   "slug": "evarts",
+   "city": "Evarts",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 303,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 303,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "40828"
+   ],
+   "lat": 36.86411,
+   "lon": -83.19279
+  },
+  {
+   "slug": "east-bernstadt",
+   "city": "East Bernstadt",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 208,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 27,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 208,
+     "comingSoon": 27,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "40729"
+   ],
+   "lat": 37.23149,
+   "lon": -84.11563
+  },
+  {
+   "slug": "hazard",
+   "city": "Hazard",
+   "state": "KY",
+   "stateSlug": "ky",
+   "stateName": "Kentucky",
+   "verifiedLiveHomes": 202,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 202,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "41701"
+   ],
+   "lat": 37.27539,
+   "lon": -83.21943
+  },
+  {
+   "slug": "zimmerman",
+   "city": "Zimmerman",
+   "state": "MN",
+   "stateSlug": "mn",
+   "stateName": "Minnesota",
+   "verifiedLiveHomes": 1721,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1144,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1721,
+     "comingSoon": 1144,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "55398"
+   ],
+   "lat": 45.44486,
+   "lon": -93.5924
+  },
+  {
+   "slug": "fair-haven-township",
+   "city": "Fair Haven Township",
+   "state": "MN",
+   "stateSlug": "mn",
+   "stateName": "Minnesota",
+   "verifiedLiveHomes": 427,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 210,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 427,
+     "comingSoon": 210,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "55382"
+   ],
+   "lat": 45.32127,
+   "lon": -94.17199
+  },
+  {
+   "slug": "ashland",
+   "city": "Ashland",
+   "state": "MO",
+   "stateSlug": "mo",
+   "stateName": "Missouri",
+   "verifiedLiveHomes": 494,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 494,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "65010"
+   ],
+   "lat": 38.77353,
+   "lon": -92.25884
+  },
+  {
+   "slug": "sarcoxie",
+   "city": "Sarcoxie",
+   "state": "MO",
+   "stateSlug": "mo",
+   "stateName": "Missouri",
+   "verifiedLiveHomes": 373,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 373,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "64862"
+   ],
+   "lat": 37.06814,
+   "lon": -94.12455
+  },
+  {
+   "slug": "mount-airy",
+   "city": "Mount Airy",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 8181,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 8181,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27030"
+   ],
+   "lat": 36.50131,
+   "lon": -80.60818
+  },
+  {
+   "slug": "rockwell",
+   "city": "Rockwell",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 3399,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 373,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3399,
+     "comingSoon": 373,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28138"
+   ],
+   "lat": 35.52884,
+   "lon": -80.43872
+  },
+  {
+   "slug": "concord",
+   "city": "Concord",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 2543,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3436,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2543,
+     "comingSoon": 3436,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28025",
+    "28027"
+   ],
+   "lat": 35.36886,
+   "lon": -80.60788
+  },
+  {
+   "slug": "salisbury",
+   "city": "Salisbury",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 2425,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1162,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2425,
+     "comingSoon": 1162,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28144",
+    "28146",
+    "28147"
+   ],
+   "lat": 35.62471,
+   "lon": -80.4934
+  },
+  {
+   "slug": "new-bern",
+   "city": "New Bern",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1543,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1543,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28560",
+    "28562"
+   ],
+   "lat": 35.05894,
+   "lon": -77.0423
+  },
+  {
+   "slug": "sanford",
+   "city": "Sanford",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1440,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 23080,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1440,
+     "comingSoon": 23080,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27330",
+    "27332"
+   ],
+   "lat": 35.42874,
+   "lon": -79.15806
+  },
+  {
+   "slug": "harrisburg",
+   "city": "Harrisburg",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1309,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2312,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1309,
+     "comingSoon": 2312,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28075"
+   ],
+   "lat": 35.30687,
+   "lon": -80.64103
+  },
+  {
+   "slug": "morehead-city",
+   "city": "Morehead City",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1220,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1220,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28557"
+   ],
+   "lat": 34.74444,
+   "lon": -76.75527
+  },
+  {
+   "slug": "tryon",
+   "city": "Tryon",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1197,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 166,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1197,
+     "comingSoon": 166,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28782"
+   ],
+   "lat": 35.22269,
+   "lon": -82.23005
+  },
+  {
+   "slug": "mount-pleasant",
+   "city": "Mount Pleasant",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1175,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 83,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1175,
+     "comingSoon": 83,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28124"
+   ],
+   "lat": 35.39977,
+   "lon": -80.43139
+  },
+  {
+   "slug": "beaufort",
+   "city": "Beaufort",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1117,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1117,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28516"
+   ],
+   "lat": 34.76414,
+   "lon": -76.66021
+  },
+  {
+   "slug": "marshville",
+   "city": "Marshville",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1071,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 478,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1071,
+     "comingSoon": 478,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28103"
+   ],
+   "lat": 35.00934,
+   "lon": -80.37102
+  },
+  {
+   "slug": "waxhaw",
+   "city": "Waxhaw",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1033,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4829,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1033,
+     "comingSoon": 4829,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28173"
+   ],
+   "lat": 34.94033,
+   "lon": -80.75008
+  },
+  {
+   "slug": "newport",
+   "city": "Newport",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1027,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1027,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28570"
+   ],
+   "lat": 34.73811,
+   "lon": -76.89238
+  },
+  {
+   "slug": "matthews",
+   "city": "Matthews",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 1015,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3179,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1015,
+     "comingSoon": 3179,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28104",
+    "28105"
+   ],
+   "lat": 35.08017,
+   "lon": -80.71005
+  },
+  {
+   "slug": "lilesville",
+   "city": "Lilesville",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 765,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 8,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 765,
+     "comingSoon": 8,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28091"
+   ],
+   "lat": 34.96448,
+   "lon": -79.97183
+  },
+  {
+   "slug": "laurel-hill",
+   "city": "Laurel Hill",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 685,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 923,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 685,
+     "comingSoon": 923,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28351"
+   ],
+   "lat": 34.82543,
+   "lon": -79.55541
+  },
+  {
+   "slug": "lucama",
+   "city": "Lucama",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 642,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 642,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27851"
+   ],
+   "lat": 35.64389,
+   "lon": -78.00619
+  },
+  {
+   "slug": "wadesboro",
+   "city": "Wadesboro",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 596,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1128,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 596,
+     "comingSoon": 1128,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28170"
+   ],
+   "lat": 34.96422,
+   "lon": -80.0713
+  },
+  {
+   "slug": "denton",
+   "city": "Denton",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 580,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 104,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 580,
+     "comingSoon": 104,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27239"
+   ],
+   "lat": 35.63748,
+   "lon": -80.12826
+  },
+  {
+   "slug": "indian-trail",
+   "city": "Indian Trail",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 576,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2263,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 576,
+     "comingSoon": 2263,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28079"
+   ],
+   "lat": 35.0645,
+   "lon": -80.6434
+  },
+  {
+   "slug": "gold-hill",
+   "city": "Gold Hill",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 544,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 406,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 544,
+     "comingSoon": 406,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28071"
+   ],
+   "lat": 35.5111,
+   "lon": -80.34582
+  },
+  {
+   "slug": "angier",
+   "city": "Angier",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 541,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 541,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27501"
+   ],
+   "lat": 35.49113,
+   "lon": -78.71629
+  },
+  {
+   "slug": "cameron",
+   "city": "Cameron",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 535,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3063,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 508,
+     "comingSoon": 3063,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 27,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28326"
+   ],
+   "lat": 35.32406,
+   "lon": -79.20067
+  },
+  {
+   "slug": "kannapolis",
+   "city": "Kannapolis",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 523,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3249,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 523,
+     "comingSoon": 3249,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28081",
+    "28083"
+   ],
+   "lat": 35.49452,
+   "lon": -80.63755
+  },
+  {
+   "slug": "granite-falls",
+   "city": "Granite Falls",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 478,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 478,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28630"
+   ],
+   "lat": 35.81331,
+   "lon": -81.38389
+  },
+  {
+   "slug": "louisburg",
+   "city": "Louisburg",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 405,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 405,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27549"
+   ],
+   "lat": 36.07367,
+   "lon": -78.27881
+  },
+  {
+   "slug": "columbus",
+   "city": "Columbus",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 399,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 482,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 399,
+     "comingSoon": 482,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28722"
+   ],
+   "lat": 35.2505,
+   "lon": -82.15033
+  },
+  {
+   "slug": "china-grove",
+   "city": "China Grove",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 387,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 160,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 387,
+     "comingSoon": 160,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28023"
+   ],
+   "lat": 35.56568,
+   "lon": -80.59531
+  },
+  {
+   "slug": "whiteville",
+   "city": "Whiteville",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 381,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 381,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28472"
+   ],
+   "lat": 34.30958,
+   "lon": -78.72642
+  },
+  {
+   "slug": "mooresville",
+   "city": "Mooresville",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 377,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 114,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 376,
+     "comingSoon": 114,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 1,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28115",
+    "28117"
+   ],
+   "lat": 35.87449,
+   "lon": -80.72295
+  },
+  {
+   "slug": "lillington",
+   "city": "Lillington",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 372,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 603,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 367,
+     "comingSoon": 603,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 5,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27546"
+   ],
+   "lat": 35.35619,
+   "lon": -78.90913
+  },
+  {
+   "slug": "hudson",
+   "city": "Hudson",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 325,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 325,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28638"
+   ],
+   "lat": 35.83773,
+   "lon": -81.44021
+  },
+  {
+   "slug": "new-london",
+   "city": "New London",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 324,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 20,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 324,
+     "comingSoon": 20,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28127"
+   ],
+   "lat": 35.43312,
+   "lon": -80.14219
+  },
+  {
+   "slug": "aberdeen",
+   "city": "Aberdeen",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 319,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 469,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 319,
+     "comingSoon": 469,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28315"
+   ],
+   "lat": 35.1041,
+   "lon": -79.43739
+  },
+  {
+   "slug": "pinebluff",
+   "city": "Pinebluff",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 303,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 303,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28373"
+   ],
+   "lat": 35.08453,
+   "lon": -79.48085
+  },
+  {
+   "slug": "coats",
+   "city": "Coats",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 292,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 292,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27521"
+   ],
+   "lat": 35.3896,
+   "lon": -78.63851
+  },
+  {
+   "slug": "wingate",
+   "city": "Wingate",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 287,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 139,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 287,
+     "comingSoon": 139,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28174"
+   ],
+   "lat": 34.99605,
+   "lon": -80.44497
+  },
+  {
+   "slug": "yanceyville",
+   "city": "Yanceyville",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 271,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 271,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27379"
+   ],
+   "lat": 36.41192,
+   "lon": -79.38816
+  },
+  {
+   "slug": "polkton",
+   "city": "Polkton",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 268,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 57,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 268,
+     "comingSoon": 57,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28135"
+   ],
+   "lat": 35.03762,
+   "lon": -80.19348
+  },
+  {
+   "slug": "midland",
+   "city": "Midland",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 265,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 253,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 265,
+     "comingSoon": 253,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28107"
+   ],
+   "lat": 35.27895,
+   "lon": -80.52935
+  },
+  {
+   "slug": "peachland",
+   "city": "Peachland",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 261,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 112,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 261,
+     "comingSoon": 112,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28133"
+   ],
+   "lat": 34.99293,
+   "lon": -80.28269
+  },
+  {
+   "slug": "la-grange",
+   "city": "La Grange",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 256,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 256,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28551"
+   ],
+   "lat": 35.32927,
+   "lon": -77.73124
+  },
+  {
+   "slug": "stella",
+   "city": "Stella",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 246,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 246,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28582"
+   ],
+   "lat": 34.76399,
+   "lon": -77.12055
+  },
+  {
+   "slug": "swansboro",
+   "city": "Swansboro",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 241,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 241,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28584"
+   ],
+   "lat": 34.75679,
+   "lon": -77.07649
+  },
+  {
+   "slug": "wake-forest",
+   "city": "Wake Forest",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 234,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 234,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27587"
+   ],
+   "lat": 35.95416,
+   "lon": -78.46333
+  },
+  {
+   "slug": "dunn",
+   "city": "Dunn",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 228,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 228,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28334"
+   ],
+   "lat": 35.36908,
+   "lon": -78.64575
+  },
+  {
+   "slug": "jackson-springs",
+   "city": "Jackson Springs",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 218,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 215,
+     "comingSoon": 0,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 3,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27281"
+   ],
+   "lat": 35.18129,
+   "lon": -79.63491
+  },
+  {
+   "slug": "clayton",
+   "city": "Clayton",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 210,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 210,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27520"
+   ],
+   "lat": 35.68465,
+   "lon": -78.50776
+  },
+  {
+   "slug": "moncure",
+   "city": "Moncure",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 203,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 203,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "27559"
+   ],
+   "lat": 35.57315,
+   "lon": -79.0156
+  },
+  {
+   "slug": "morven",
+   "city": "Morven",
+   "state": "NC",
+   "stateSlug": "nc",
+   "stateName": "North Carolina",
+   "verifiedLiveHomes": 203,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 87,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 203,
+     "comingSoon": 87,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "28119",
+    "29709"
+   ],
+   "lat": 34.8398,
+   "lon": -80.03597
+  },
+  {
+   "slug": "plattsmouth",
+   "city": "Plattsmouth",
+   "state": "NE",
+   "stateSlug": "ne",
+   "stateName": "Nebraska",
+   "verifiedLiveHomes": 480,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1514,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 480,
+     "comingSoon": 1514,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "68048"
+   ],
+   "lat": 40.92398,
+   "lon": -95.88707
+  },
+  {
+   "slug": "clay-center",
+   "city": "Clay Center",
+   "state": "NE",
+   "stateSlug": "ne",
+   "stateName": "Nebraska",
+   "verifiedLiveHomes": 428,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 428,
+     "comingSoon": 2,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "68933"
+   ],
+   "lat": 40.52323,
+   "lon": -98.05453
+  },
+  {
+   "slug": "denton",
+   "city": "Denton",
+   "state": "NE",
+   "stateSlug": "ne",
+   "stateName": "Nebraska",
+   "verifiedLiveHomes": 336,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 336,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "68339"
+   ],
+   "lat": 40.72872,
+   "lon": -96.85117
+  },
+  {
+   "slug": "dwight",
+   "city": "Dwight",
+   "state": "NE",
+   "stateSlug": "ne",
+   "stateName": "Nebraska",
+   "verifiedLiveHomes": 240,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 240,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "68635"
+   ],
+   "lat": 41.08322,
+   "lon": -97.02017
+  },
+  {
+   "slug": "crete",
+   "city": "Crete",
+   "state": "NE",
+   "stateSlug": "ne",
+   "stateName": "Nebraska",
+   "verifiedLiveHomes": 218,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 13,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 218,
+     "comingSoon": 13,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "68333"
+   ],
+   "lat": 40.61863,
+   "lon": -96.95399
+  },
+  {
+   "slug": "johnson",
+   "city": "Johnson",
+   "state": "NE",
+   "stateSlug": "ne",
+   "stateName": "Nebraska",
+   "verifiedLiveHomes": 217,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 217,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "68378"
+   ],
+   "lat": 40.41075,
+   "lon": -95.99875
+  },
+  {
+   "slug": "frankford-township",
+   "city": "Frankford Township",
+   "state": "NJ",
+   "stateSlug": "nj",
+   "stateName": "New Jersey",
+   "verifiedLiveHomes": 1982,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1982,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "07822",
+    "07826",
+    "07860"
+   ],
+   "lat": 41.14327,
+   "lon": -74.76945
+  },
+  {
+   "slug": "montague",
+   "city": "Montague",
+   "state": "NJ",
+   "stateSlug": "nj",
+   "stateName": "New Jersey",
+   "verifiedLiveHomes": 716,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 716,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "07827"
+   ],
+   "lat": 41.31839,
+   "lon": -74.73504
+  },
+  {
+   "slug": "truth-or-consequences",
+   "city": "Truth Or Consequences",
+   "state": "NM",
+   "stateSlug": "nm",
+   "stateName": "New Mexico",
+   "verifiedLiveHomes": 593,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 593,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "87901"
+   ],
+   "lat": 33.13081,
+   "lon": -107.25526
+  },
+  {
+   "slug": "chama",
+   "city": "Chama",
+   "state": "NM",
+   "stateSlug": "nm",
+   "stateName": "New Mexico",
+   "verifiedLiveHomes": 492,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 159,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 492,
+     "comingSoon": 159,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "87520"
+   ],
+   "lat": 36.89664,
+   "lon": -106.58242
+  },
+  {
+   "slug": "norwich-norwich",
+   "city": "Norwich Norwich",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 2438,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 2438,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "13815"
+   ],
+   "lat": 42.5349,
+   "lon": -75.51921
+  },
+  {
+   "slug": "hastings",
+   "city": "Hastings",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 1036,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 377,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1036,
+     "comingSoon": 377,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "13036",
+    "13076",
+    "13103"
+   ],
+   "lat": 43.32627,
+   "lon": -76.14236
+  },
+  {
+   "slug": "cicero",
+   "city": "Cicero",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 671,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 688,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 671,
+     "comingSoon": 688,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "13029"
+   ],
+   "lat": 43.22842,
+   "lon": -76.14515
+  },
+  {
+   "slug": "west-monroe",
+   "city": "West Monroe",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 593,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 25,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 593,
+     "comingSoon": 25,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "13167"
+   ],
+   "lat": 43.30271,
+   "lon": -76.07817
+  },
+  {
+   "slug": "poland",
+   "city": "Poland",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 346,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 293,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 346,
+     "comingSoon": 293,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "14733",
+    "14747"
+   ],
+   "lat": 42.14256,
+   "lon": -79.14347
+  },
+  {
+   "slug": "volney",
+   "city": "Volney",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 338,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 279,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 338,
+     "comingSoon": 279,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "13069"
+   ],
+   "lat": 43.33534,
+   "lon": -76.36427
+  },
+  {
+   "slug": "charlotte",
+   "city": "Charlotte",
+   "state": "NY",
+   "stateSlug": "ny",
+   "stateName": "New York",
+   "verifiedLiveHomes": 258,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 76,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 258,
+     "comingSoon": 76,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "14782"
+   ],
+   "lat": 42.27161,
+   "lon": -79.25921
+  },
+  {
+   "slug": "newark",
+   "city": "Newark",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 15690,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 56,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 15690,
+     "comingSoon": 56,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43055"
+   ],
+   "lat": 40.06927,
+   "lon": -82.40888
+  },
+  {
+   "slug": "elyria",
+   "city": "Elyria",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 15540,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 69,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 15538,
+     "comingSoon": 69,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 2,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44035"
+   ],
+   "lat": 41.36644,
+   "lon": -82.15553
+  },
+  {
+   "slug": "ashtabula",
+   "city": "Ashtabula",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 8913,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 49,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 8913,
+     "comingSoon": 49,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44004"
+   ],
+   "lat": 41.87231,
+   "lon": -80.79838
+  },
+  {
+   "slug": "ridgeville",
+   "city": "Ridgeville",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 6382,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 590,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 6382,
+     "comingSoon": 590,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44039"
+   ],
+   "lat": 41.38238,
+   "lon": -82.01676
+  },
+  {
+   "slug": "aurora",
+   "city": "Aurora",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 5348,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 682,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 5348,
+     "comingSoon": 682,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44023",
+    "44202"
+   ],
+   "lat": 41.35634,
+   "lon": -81.34021
+  },
+  {
+   "slug": "madison-township",
+   "city": "Madison Township",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 4879,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 453,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4879,
+     "comingSoon": 453,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44057"
+   ],
+   "lat": 41.8072,
+   "lon": -81.05827
+  },
+  {
+   "slug": "leroy",
+   "city": "Leroy",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 4868,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 687,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4868,
+     "comingSoon": 687,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44024",
+    "44086"
+   ],
+   "lat": 41.62734,
+   "lon": -81.12643
+  },
+  {
+   "slug": "mount-vernon",
+   "city": "Mount Vernon",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 4794,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 4794,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43050"
+   ],
+   "lat": 40.39517,
+   "lon": -82.48151
+  },
+  {
+   "slug": "sagamore-hills-twp",
+   "city": "Sagamore Hills Twp",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 4551,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 381,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4551,
+     "comingSoon": 381,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44067"
+   ],
+   "lat": 41.31676,
+   "lon": -81.53775
+  },
+  {
+   "slug": "geneva",
+   "city": "Geneva",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 4178,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 7,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4178,
+     "comingSoon": 7,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44041"
+   ],
+   "lat": 41.80347,
+   "lon": -80.94533
+  },
+  {
+   "slug": "heath",
+   "city": "Heath",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 3157,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 69,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3156,
+     "comingSoon": 69,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 1,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43056"
+   ],
+   "lat": 39.99479,
+   "lon": -82.43044
+  },
+  {
+   "slug": "kenton",
+   "city": "Kenton",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 2883,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2883,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43326"
+   ],
+   "lat": 40.64756,
+   "lon": -83.60736
+  },
+  {
+   "slug": "station",
+   "city": "Station",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 2678,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 46,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2678,
+     "comingSoon": 46,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44028"
+   ],
+   "lat": 41.31841,
+   "lon": -81.91635
+  },
+  {
+   "slug": "granville-twp",
+   "city": "Granville Twp",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 2491,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 130,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2491,
+     "comingSoon": 130,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43001",
+    "43023"
+   ],
+   "lat": 40.08056,
+   "lon": -82.54229
+  },
+  {
+   "slug": "lima",
+   "city": "Lima",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 2439,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 2439,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "45804",
+    "45805",
+    "45806"
+   ],
+   "lat": 40.70829,
+   "lon": -84.14216
+  },
+  {
+   "slug": "macedonia",
+   "city": "Macedonia",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 2026,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2026,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44056"
+   ],
+   "lat": 41.31867,
+   "lon": -81.49905
+  },
+  {
+   "slug": "roaming-shores",
+   "city": "Roaming Shores",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 2008,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 10,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2008,
+     "comingSoon": 10,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44084",
+    "44085"
+   ],
+   "lat": 41.63766,
+   "lon": -80.86457
+  },
+  {
+   "slug": "twinsburg",
+   "city": "Twinsburg",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1897,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 445,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1897,
+     "comingSoon": 445,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44087"
+   ],
+   "lat": 41.32369,
+   "lon": -81.44935
+  },
+  {
+   "slug": "hudson",
+   "city": "Hudson",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1814,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 591,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1814,
+     "comingSoon": 591,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44236"
+   ],
+   "lat": 41.25482,
+   "lon": -81.44908
+  },
+  {
+   "slug": "perry-township",
+   "city": "Perry Township",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1745,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1745,
+     "comingSoon": 3,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44077",
+    "44081"
+   ],
+   "lat": 41.73678,
+   "lon": -81.16006
+  },
+  {
+   "slug": "marysville",
+   "city": "Marysville",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1734,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1734,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43040"
+   ],
+   "lat": 40.23624,
+   "lon": -83.36769
+  },
+  {
+   "slug": "lake",
+   "city": "Lake",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1401,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1401,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44012"
+   ],
+   "lat": 41.50457,
+   "lon": -81.98876
+  },
+  {
+   "slug": "delta",
+   "city": "Delta",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1292,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 112,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1292,
+     "comingSoon": 112,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43515"
+   ],
+   "lat": 41.5761,
+   "lon": -84.00474
+  },
+  {
+   "slug": "lagrange",
+   "city": "Lagrange",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1271,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1271,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44050"
+   ],
+   "lat": 41.2436,
+   "lon": -82.12685
+  },
+  {
+   "slug": "richfield",
+   "city": "Richfield",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1264,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 20,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1264,
+     "comingSoon": 20,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44286"
+   ],
+   "lat": 41.23238,
+   "lon": -81.64487
+  },
+  {
+   "slug": "etna-twp",
+   "city": "Etna Twp",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1153,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1153,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43018",
+    "43062",
+    "43068"
+   ],
+   "lat": 39.96434,
+   "lon": -82.70415
+  },
+  {
+   "slug": "newbury",
+   "city": "Newbury",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1135,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 48,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1135,
+     "comingSoon": 48,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44065"
+   ],
+   "lat": 41.46854,
+   "lon": -81.23948
+  },
+  {
+   "slug": "paulding",
+   "city": "Paulding",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1095,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 5,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1095,
+     "comingSoon": 5,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "45879"
+   ],
+   "lat": 41.1427,
+   "lon": -84.58065
+  },
+  {
+   "slug": "novelty",
+   "city": "Novelty",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 1023,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 36,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1023,
+     "comingSoon": 36,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44072"
+   ],
+   "lat": 41.4734,
+   "lon": -81.33559
+  },
+  {
+   "slug": "mason-war-oh",
+   "city": "Mason War Oh",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 980,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 980,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "45040"
+   ],
+   "lat": 39.35118,
+   "lon": -84.30581
+  },
+  {
+   "slug": "cortland",
+   "city": "Cortland",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 938,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 938,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44410"
+   ],
+   "lat": 41.33119,
+   "lon": -80.71681
+  },
+  {
+   "slug": "middlefield",
+   "city": "Middlefield",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 931,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 24,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 931,
+     "comingSoon": 24,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44062"
+   ],
+   "lat": 41.44164,
+   "lon": -81.05559
+  },
+  {
+   "slug": "powhatan-point",
+   "city": "Powhatan Point",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 869,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 869,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43942"
+   ],
+   "lat": 39.86514,
+   "lon": -80.81035
+  },
+  {
+   "slug": "grafton",
+   "city": "Grafton",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 766,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 766,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44044"
+   ],
+   "lat": 41.29342,
+   "lon": -82.08102
+  },
+  {
+   "slug": "chagrin-falls",
+   "city": "Chagrin Falls",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 757,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 757,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44022"
+   ],
+   "lat": 41.43765,
+   "lon": -81.33877
+  },
+  {
+   "slug": "north-kingsville",
+   "city": "North Kingsville",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 734,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 734,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44030",
+    "44068"
+   ],
+   "lat": 41.90645,
+   "lon": -80.66867
+  },
+  {
+   "slug": "buckeye-lake",
+   "city": "Buckeye Lake",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 695,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 695,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43008",
+    "43025"
+   ],
+   "lat": 39.93892,
+   "lon": -82.47356
+  },
+  {
+   "slug": "st-paris",
+   "city": "St Paris",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 624,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 624,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43072"
+   ],
+   "lat": 40.12763,
+   "lon": -83.9614
+  },
+  {
+   "slug": "conneaut",
+   "city": "Conneaut",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 618,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 618,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44048"
+   ],
+   "lat": 41.87539,
+   "lon": -80.66255
+  },
+  {
+   "slug": "jefferson",
+   "city": "Jefferson",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 586,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 26,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 323,
+     "comingSoon": 26,
+     "verified": true
+    },
+    {
+     "id": "brightspeed",
+     "homes": 263,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44047"
+   ],
+   "lat": 41.70163,
+   "lon": -80.76998
+  },
+  {
+   "slug": "austinburg",
+   "city": "Austinburg",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 459,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 459,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44010"
+   ],
+   "lat": 41.76954,
+   "lon": -80.85197
+  },
+  {
+   "slug": "peninsula",
+   "city": "Peninsula",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 425,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 425,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44264"
+   ],
+   "lat": 41.2376,
+   "lon": -81.54762
+  },
+  {
+   "slug": "hinckley-township",
+   "city": "Hinckley Township",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 424,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 424,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44233"
+   ],
+   "lat": 41.23372,
+   "lon": -81.71515
+  },
+  {
+   "slug": "quaker-city",
+   "city": "Quaker City",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 373,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 373,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43773"
+   ],
+   "lat": 39.94911,
+   "lon": -81.29252
+  },
+  {
+   "slug": "north-lewisburg",
+   "city": "North Lewisburg",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 337,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 337,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43060"
+   ],
+   "lat": 40.22277,
+   "lon": -83.55754
+  },
+  {
+   "slug": "lordstown",
+   "city": "Lordstown",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 262,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 262,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44481"
+   ],
+   "lat": 41.16644,
+   "lon": -80.86205
+  },
+  {
+   "slug": "eden-twp",
+   "city": "Eden Twp",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 260,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 260,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43071"
+   ],
+   "lat": 40.20132,
+   "lon": -82.32727
+  },
+  {
+   "slug": "jackson-center",
+   "city": "Jackson Center",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 252,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 252,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "45334"
+   ],
+   "lat": 40.43898,
+   "lon": -84.03817
+  },
+  {
+   "slug": "west-farmington",
+   "city": "West Farmington",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 246,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 246,
+     "comingSoon": 4,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44491"
+   ],
+   "lat": 41.36627,
+   "lon": -81.01574
+  },
+  {
+   "slug": "mantua",
+   "city": "Mantua",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 242,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 242,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44255"
+   ],
+   "lat": 41.32768,
+   "lon": -81.25822
+  },
+  {
+   "slug": "coolville",
+   "city": "Coolville",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 226,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 226,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "45723"
+   ],
+   "lat": 39.24748,
+   "lon": -81.77914
+  },
+  {
+   "slug": "centerville",
+   "city": "Centerville",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 221,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 221,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43718"
+   ],
+   "lat": 40.06848,
+   "lon": -81.05513
+  },
+  {
+   "slug": "quincy",
+   "city": "Quincy",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 214,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 214,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "43343"
+   ],
+   "lat": 40.29699,
+   "lon": -83.96881
+  },
+  {
+   "slug": "streetsboro",
+   "city": "Streetsboro",
+   "state": "OH",
+   "stateSlug": "oh",
+   "stateName": "Ohio",
+   "verifiedLiveHomes": 205,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 205,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "44241"
+   ],
+   "lat": 41.26122,
+   "lon": -81.36483
+  },
+  {
+   "slug": "broken-arrow",
+   "city": "Broken Arrow",
+   "state": "OK",
+   "stateSlug": "ok",
+   "stateName": "Oklahoma",
+   "verifiedLiveHomes": 5756,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 6777,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 5756,
+     "comingSoon": 6777,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "74011",
+    "74012",
+    "74014"
+   ],
+   "lat": 36.04914,
+   "lon": -95.77846
+  },
+  {
+   "slug": "tulsa",
+   "city": "Tulsa",
+   "state": "OK",
+   "stateSlug": "ok",
+   "stateName": "Oklahoma",
+   "verifiedLiveHomes": 287,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 350,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 287,
+     "comingSoon": 350,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "74104",
+    "74106",
+    "74108",
+    "74133",
+    "74134"
+   ],
+   "lat": 36.1065,
+   "lon": -95.82534
+  },
+  {
+   "slug": "fayetteville",
+   "city": "Fayetteville",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 1617,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1617,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "17222"
+   ],
+   "lat": 39.91365,
+   "lon": -77.54232
+  },
+  {
+   "slug": "bedford",
+   "city": "Bedford",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 1354,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1354,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15522"
+   ],
+   "lat": 40.01833,
+   "lon": -78.50674
+  },
+  {
+   "slug": "flinton",
+   "city": "Flinton",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 1196,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 253,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1196,
+     "comingSoon": 253,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15940",
+    "16640"
+   ],
+   "lat": 40.69916,
+   "lon": -78.57325
+  },
+  {
+   "slug": "penn-township",
+   "city": "Penn Township",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 625,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1016,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 625,
+     "comingSoon": 1016,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15644",
+    "17543",
+    "17545"
+   ],
+   "lat": 40.25382,
+   "lon": -77.45435
+  },
+  {
+   "slug": "fox",
+   "city": "Fox",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 616,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 92,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 616,
+     "comingSoon": 92,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15846",
+    "15857"
+   ],
+   "lat": 41.38111,
+   "lon": -78.58215
+  },
+  {
+   "slug": "west-cocalico-township",
+   "city": "West Cocalico Township",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 575,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 125,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 575,
+     "comingSoon": 125,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "17517"
+   ],
+   "lat": 40.25213,
+   "lon": -76.15789
+  },
+  {
+   "slug": "clearville",
+   "city": "Clearville",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 385,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 385,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15535"
+   ],
+   "lat": 39.8428,
+   "lon": -78.42202
+  },
+  {
+   "slug": "ridgway-township",
+   "city": "Ridgway_township",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 305,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 95,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 305,
+     "comingSoon": 95,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15845",
+    "15853"
+   ],
+   "lat": 41.35841,
+   "lon": -79.01332
+  },
+  {
+   "slug": "east-brady",
+   "city": "East Brady",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 282,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 108,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 282,
+     "comingSoon": 108,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "16028"
+   ],
+   "lat": 40.9721,
+   "lon": -79.62705
+  },
+  {
+   "slug": "everett",
+   "city": "Everett",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 237,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 237,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "15537"
+   ],
+   "lat": 39.98857,
+   "lon": -78.38145
+  },
+  {
+   "slug": "warriors-mark",
+   "city": "Warriors Mark",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 230,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 123,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 230,
+     "comingSoon": 123,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "16877"
+   ],
+   "lat": 40.72881,
+   "lon": -78.08443
+  },
+  {
+   "slug": "blandburg",
+   "city": "Blandburg",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 220,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 220,
+     "comingSoon": 3,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "16619"
+   ],
+   "lat": 40.66335,
+   "lon": -78.49389
+  },
+  {
+   "slug": "fallentimber",
+   "city": "Fallentimber",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 220,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 287,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 220,
+     "comingSoon": 287,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "16639"
+   ],
+   "lat": 40.68603,
+   "lon": -78.47523
+  },
+  {
+   "slug": "kittanning",
+   "city": "Kittanning",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 207,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 49,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 207,
+     "comingSoon": 49,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "16201"
+   ],
+   "lat": 40.80667,
+   "lon": -79.48212
+  },
+  {
+   "slug": "coolspring",
+   "city": "Coolspring",
+   "state": "PA",
+   "stateSlug": "pa",
+   "stateName": "Pennsylvania",
+   "verifiedLiveHomes": 205,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 165,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 205,
+     "comingSoon": 165,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "16137"
+   ],
+   "lat": 41.28389,
+   "lon": -80.20495
+  },
+  {
+   "slug": "lexington",
+   "city": "Lexington",
+   "state": "SC",
+   "stateSlug": "sc",
+   "stateName": "South Carolina",
+   "verifiedLiveHomes": 2485,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 7724,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2485,
+     "comingSoon": 7724,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "29072",
+    "29073"
+   ],
+   "lat": 33.95755,
+   "lon": -81.24974
+  },
+  {
+   "slug": "landrum",
+   "city": "Landrum",
+   "state": "SC",
+   "stateSlug": "sc",
+   "stateName": "South Carolina",
+   "verifiedLiveHomes": 555,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 40,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 555,
+     "comingSoon": 40,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "29356"
+   ],
+   "lat": 35.18076,
+   "lon": -82.22811
+  },
+  {
+   "slug": "ninety-six",
+   "city": "Ninety Six",
+   "state": "SC",
+   "stateSlug": "sc",
+   "stateName": "South Carolina",
+   "verifiedLiveHomes": 415,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 415,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "29666"
+   ],
+   "lat": 34.17405,
+   "lon": -82.02188
+  },
+  {
+   "slug": "beaufort",
+   "city": "Beaufort",
+   "state": "SC",
+   "stateSlug": "sc",
+   "stateName": "South Carolina",
+   "verifiedLiveHomes": 267,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 267,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "29902",
+    "29906"
+   ],
+   "lat": 32.42743,
+   "lon": -80.73054
+  },
+  {
+   "slug": "counce",
+   "city": "Counce",
+   "state": "TN",
+   "stateSlug": "tn",
+   "stateName": "Tennessee",
+   "verifiedLiveHomes": 261,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 261,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "38326"
+   ],
+   "lat": 35.04849,
+   "lon": -88.31353
+  },
+  {
+   "slug": "adamsville",
+   "city": "Adamsville",
+   "state": "TN",
+   "stateSlug": "tn",
+   "stateName": "Tennessee",
+   "verifiedLiveHomes": 259,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 259,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "38310"
+   ],
+   "lat": 35.24056,
+   "lon": -88.3371
+  },
+  {
+   "slug": "keller",
+   "city": "Keller",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 25192,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 25192,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76244",
+    "76248",
+    "76262"
+   ],
+   "lat": 32.94372,
+   "lon": -97.2406
+  },
+  {
+   "slug": "texarkana",
+   "city": "Texarkana",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 17763,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1072,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 17763,
+     "comingSoon": 1072,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75501",
+    "75503"
+   ],
+   "lat": 33.439,
+   "lon": -94.09606
+  },
+  {
+   "slug": "sugar-land",
+   "city": "Sugar Land",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 17162,
+   "availablePerRecordsHomes": 41,
+   "comingSoonHomes": 3089,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 17162,
+     "comingSoon": 3089,
+     "verified": true
+    },
+    {
+     "id": "frontier",
+     "homes": 41,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77478",
+    "77479",
+    "77498"
+   ],
+   "lat": 29.59241,
+   "lon": -95.61369
+  },
+  {
+   "slug": "allen",
+   "city": "Allen",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 14392,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 14392,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75002",
+    "75013"
+   ],
+   "lat": 33.09817,
+   "lon": -96.68104
+  },
+  {
+   "slug": "denton",
+   "city": "Denton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1,
+   "availablePerRecordsHomes": 13224,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 13224,
+     "comingSoon": 0,
+     "verified": false
+    },
+    {
+     "id": "kinetic",
+     "homes": 1,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76201",
+    "76202",
+    "76203",
+    "76204",
+    "76205",
+    "76207",
+    "76208",
+    "76209",
+    "76210",
+    "76298"
+   ],
+   "lat": 33.21553,
+   "lon": -97.12054
+  },
+  {
+   "slug": "plano",
+   "city": "Plano",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 10357,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 10357,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75023",
+    "75024",
+    "75025",
+    "75054",
+    "75074",
+    "75075",
+    "75086",
+    "75093"
+   ],
+   "lat": 33.04975,
+   "lon": -96.72997
+  },
+  {
+   "slug": "richmond",
+   "city": "Richmond",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 10265,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 10265,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "77406",
+    "77407",
+    "77469"
+   ],
+   "lat": 29.63929,
+   "lon": -95.69893
+  },
+  {
+   "slug": "carrollton",
+   "city": "Carrollton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 8476,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 8476,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75006",
+    "75007",
+    "75010"
+   ],
+   "lat": 32.99836,
+   "lon": -96.89541
+  },
+  {
+   "slug": "kerrville",
+   "city": "Kerrville",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 7027,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 967,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 7027,
+     "comingSoon": 967,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "78028"
+   ],
+   "lat": 30.03729,
+   "lon": -99.15057
+  },
+  {
+   "slug": "frisco",
+   "city": "Frisco",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 6548,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 6548,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75033",
+    "75034",
+    "75035",
+    "75036"
+   ],
+   "lat": 33.1413,
+   "lon": -96.84323
+  },
+  {
+   "slug": "lewisville",
+   "city": "Lewisville",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 6252,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 6252,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "70567",
+    "75057",
+    "75067"
+   ],
+   "lat": 33.02718,
+   "lon": -97.00538
+  },
+  {
+   "slug": "dallas",
+   "city": "Dallas",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1,
+   "availablePerRecordsHomes": 6222,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 6222,
+     "comingSoon": 0,
+     "verified": false
+    },
+    {
+     "id": "kinetic",
+     "homes": 1,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75187",
+    "75201",
+    "75202",
+    "75203",
+    "75204",
+    "75207",
+    "75208",
+    "75212",
+    "75216",
+    "75218",
+    "75219",
+    "75220",
+    "75225",
+    "75228",
+    "75229",
+    "75232",
+    "75234",
+    "75238",
+    "75243",
+    "75252",
+    "75261",
+    "75287"
+   ],
+   "lat": 32.8459,
+   "lon": -96.81286
+  },
+  {
+   "slug": "andrews",
+   "city": "Andrews",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 4803,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 338,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4803,
+     "comingSoon": 338,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79714"
+   ],
+   "lat": 32.32253,
+   "lon": -102.54588
+  },
+  {
+   "slug": "dumas",
+   "city": "Dumas",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 4760,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4760,
+     "comingSoon": 3,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79029"
+   ],
+   "lat": 35.86426,
+   "lon": -101.96656
+  },
+  {
+   "slug": "whitney",
+   "city": "Whitney",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 4665,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 726,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4665,
+     "comingSoon": 726,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76692"
+   ],
+   "lat": 31.9785,
+   "lon": -97.36011
+  },
+  {
+   "slug": "houston",
+   "city": "Houston",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 4262,
+   "availablePerRecordsHomes": 147,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 4262,
+     "comingSoon": 0,
+     "verified": true
+    },
+    {
+     "id": "frontier",
+     "homes": 147,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77002",
+    "77041",
+    "77054",
+    "77058",
+    "77071",
+    "77077",
+    "77082",
+    "77083",
+    "77098",
+    "77201"
+   ],
+   "lat": 29.71811,
+   "lon": -95.46038
+  },
+  {
+   "slug": "hemphill",
+   "city": "Hemphill",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 3955,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1198,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3955,
+     "comingSoon": 1198,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75948"
+   ],
+   "lat": 31.30947,
+   "lon": -93.75347
+  },
+  {
+   "slug": "levelland",
+   "city": "Levelland",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 3690,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 486,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3690,
+     "comingSoon": 486,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79336"
+   ],
+   "lat": 33.5836,
+   "lon": -102.36514
+  },
+  {
+   "slug": "brownfield",
+   "city": "Brownfield",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 3600,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3600,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79316"
+   ],
+   "lat": 33.17848,
+   "lon": -102.26717
+  },
+  {
+   "slug": "trinity",
+   "city": "Trinity",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 3506,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2215,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3506,
+     "comingSoon": 2215,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75862"
+   ],
+   "lat": 30.92697,
+   "lon": -95.32093
+  },
+  {
+   "slug": "perryton",
+   "city": "Perryton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 3392,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3392,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79070"
+   ],
+   "lat": 36.38988,
+   "lon": -100.80661
+  },
+  {
+   "slug": "fort-worth",
+   "city": "Fort Worth",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 3382,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 3382,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76104",
+    "76112",
+    "76117",
+    "76120",
+    "76132",
+    "76137",
+    "76155",
+    "76177"
+   ],
+   "lat": 32.81413,
+   "lon": -97.25188
+  },
+  {
+   "slug": "baytown",
+   "city": "Baytown",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 3192,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 3192,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75523",
+    "77520",
+    "77521",
+    "77522",
+    "77523"
+   ],
+   "lat": 29.79277,
+   "lon": -94.94338
+  },
+  {
+   "slug": "dalhart",
+   "city": "Dalhart",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 3172,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 504,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 3172,
+     "comingSoon": 504,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79022"
+   ],
+   "lat": 36.05939,
+   "lon": -102.51504
+  },
+  {
+   "slug": "north-richland-hills",
+   "city": "North Richland Hills",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 3062,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 3062,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76180",
+    "76182"
+   ],
+   "lat": 32.87629,
+   "lon": -97.22544
+  },
+  {
+   "slug": "ferris",
+   "city": "Ferris",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 3011,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 3011,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75125",
+    "75215",
+    "75251",
+    "76125",
+    "76670"
+   ],
+   "lat": 32.53064,
+   "lon": -96.65417
+  },
+  {
+   "slug": "georgetown",
+   "city": "Georgetown",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 2960,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 2960,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78626",
+    "78628",
+    "78633",
+    "78665"
+   ],
+   "lat": 30.6628,
+   "lon": -97.69567
+  },
+  {
+   "slug": "pecos",
+   "city": "Pecos",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 2799,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 166,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2799,
+     "comingSoon": 166,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79722",
+    "79772",
+    "79773",
+    "79777"
+   ],
+   "lat": 31.41123,
+   "lon": -103.50104
+  },
+  {
+   "slug": "lamesa",
+   "city": "Lamesa",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 2297,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2297,
+     "comingSoon": 4,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79331"
+   ],
+   "lat": 32.73784,
+   "lon": -101.95992
+  },
+  {
+   "slug": "littlefield",
+   "city": "Littlefield",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 2244,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 35,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2244,
+     "comingSoon": 35,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79339"
+   ],
+   "lat": 33.91644,
+   "lon": -102.33502
+  },
+  {
+   "slug": "new-boston",
+   "city": "New Boston",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 2177,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 169,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 2177,
+     "comingSoon": 169,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75570"
+   ],
+   "lat": 33.45877,
+   "lon": -94.42383
+  },
+  {
+   "slug": "kyle",
+   "city": "Kyle",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 2152,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 2152,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78640"
+   ],
+   "lat": 29.96947,
+   "lon": -97.85631
+  },
+  {
+   "slug": "flower-mound",
+   "city": "Flower Mound",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 2140,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 2140,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75022",
+    "75028"
+   ],
+   "lat": 33.02495,
+   "lon": -97.06941
+  },
+  {
+   "slug": "tama",
+   "city": "Tama",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 2106,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 2106,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75077"
+   ],
+   "lat": 33.08002,
+   "lon": -97.04432
+  },
+  {
+   "slug": "coppell",
+   "city": "Coppell",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1970,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1970,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75019"
+   ],
+   "lat": 32.97391,
+   "lon": -96.98126
+  },
+  {
+   "slug": "palmer",
+   "city": "Palmer",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1938,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1938,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75152"
+   ],
+   "lat": 32.43817,
+   "lon": -96.68842
+  },
+  {
+   "slug": "denver-city",
+   "city": "Denver City",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1873,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1873,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79323"
+   ],
+   "lat": 32.96717,
+   "lon": -102.83301
+  },
+  {
+   "slug": "fritch",
+   "city": "Fritch",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1820,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1820,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79036"
+   ],
+   "lat": 35.63527,
+   "lon": -101.58942
+  },
+  {
+   "slug": "crockett",
+   "city": "Crockett",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1793,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 21,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1793,
+     "comingSoon": 21,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75835"
+   ],
+   "lat": 31.31688,
+   "lon": -95.45478
+  },
+  {
+   "slug": "clarksville",
+   "city": "Clarksville",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1777,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1777,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75426"
+   ],
+   "lat": 33.60889,
+   "lon": -95.05351
+  },
+  {
+   "slug": "nocona",
+   "city": "Nocona",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1748,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1748,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76255"
+   ],
+   "lat": 33.78896,
+   "lon": -97.729
+  },
+  {
+   "slug": "seymour",
+   "city": "Seymour",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1655,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1655,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76380"
+   ],
+   "lat": 33.59142,
+   "lon": -99.26283
+  },
+  {
+   "slug": "haskell",
+   "city": "Haskell",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1600,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1600,
+     "comingSoon": 4,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79521"
+   ],
+   "lat": 33.16124,
+   "lon": -99.73564
+  },
+  {
+   "slug": "hooks",
+   "city": "Hooks",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1584,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 35,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1584,
+     "comingSoon": 35,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75561"
+   ],
+   "lat": 33.46987,
+   "lon": -94.27235
+  },
+  {
+   "slug": "hitchland",
+   "city": "Hitchland",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1545,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1545,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79081"
+   ],
+   "lat": 36.19318,
+   "lon": -101.19282
+  },
+  {
+   "slug": "dimmitt",
+   "city": "Dimmitt",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1516,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 68,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1516,
+     "comingSoon": 68,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79027"
+   ],
+   "lat": 34.54943,
+   "lon": -102.31924
+  },
+  {
+   "slug": "clarendon",
+   "city": "Clarendon",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1465,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1465,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79226"
+   ],
+   "lat": 34.96355,
+   "lon": -100.89661
+  },
+  {
+   "slug": "irving",
+   "city": "Irving",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1332,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1332,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75038",
+    "75039",
+    "75060",
+    "75061",
+    "75062",
+    "75063"
+   ],
+   "lat": 32.85908,
+   "lon": -96.96531
+  },
+  {
+   "slug": "friona",
+   "city": "Friona",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1321,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1321,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79035"
+   ],
+   "lat": 34.63925,
+   "lon": -102.72413
+  },
+  {
+   "slug": "clyde",
+   "city": "Clyde",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1306,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 4,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1306,
+     "comingSoon": 4,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79510"
+   ],
+   "lat": 32.40424,
+   "lon": -99.49845
+  },
+  {
+   "slug": "kaufman",
+   "city": "Kaufman",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1277,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 266,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1277,
+     "comingSoon": 0,
+     "verified": true
+    },
+    {
+     "id": "kinetic",
+     "homes": 0,
+     "comingSoon": 266,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75142"
+   ],
+   "lat": 32.56922,
+   "lon": -96.36278
+  },
+  {
+   "slug": "daingerfield",
+   "city": "Daingerfield",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1235,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 67,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1235,
+     "comingSoon": 67,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75638"
+   ],
+   "lat": 33.02861,
+   "lon": -94.7314
+  },
+  {
+   "slug": "bridgeport",
+   "city": "Bridgeport",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1232,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1232,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76426"
+   ],
+   "lat": 33.21128,
+   "lon": -97.74938
+  },
+  {
+   "slug": "memphis",
+   "city": "Memphis",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1211,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1211,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79245"
+   ],
+   "lat": 34.72744,
+   "lon": -100.54355
+  },
+  {
+   "slug": "wellington",
+   "city": "Wellington",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1204,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1204,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79095"
+   ],
+   "lat": 34.85215,
+   "lon": -100.21552
+  },
+  {
+   "slug": "garland",
+   "city": "Garland",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1182,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1182,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75040",
+    "75041",
+    "75042",
+    "75043",
+    "75044"
+   ],
+   "lat": 32.90761,
+   "lon": -96.64983
+  },
+  {
+   "slug": "bryan",
+   "city": "Bryan",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1177,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1177,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77801",
+    "77802",
+    "77803",
+    "77807",
+    "77808"
+   ],
+   "lat": 30.66425,
+   "lon": -96.35094
+  },
+  {
+   "slug": "godley",
+   "city": "Godley",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1155,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 31,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1155,
+     "comingSoon": 31,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76044"
+   ],
+   "lat": 32.46014,
+   "lon": -97.52738
+  },
+  {
+   "slug": "post",
+   "city": "Post",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1151,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1151,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79356"
+   ],
+   "lat": 33.19291,
+   "lon": -101.38277
+  },
+  {
+   "slug": "caddo-mills",
+   "city": "Caddo Mills",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1129,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1129,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75135"
+   ],
+   "lat": 33.05306,
+   "lon": -96.21933
+  },
+  {
+   "slug": "humble",
+   "city": "Humble",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1115,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1115,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "77346"
+   ],
+   "lat": 30.01429,
+   "lon": -95.1825
+  },
+  {
+   "slug": "venus",
+   "city": "Venus",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1114,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1114,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76084"
+   ],
+   "lat": 32.43933,
+   "lon": -97.0918
+  },
+  {
+   "slug": "linden",
+   "city": "Linden",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1092,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 7,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1092,
+     "comingSoon": 7,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75563"
+   ],
+   "lat": 33.00817,
+   "lon": -94.3654
+  },
+  {
+   "slug": "tahoka",
+   "city": "Tahoka",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1087,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1087,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79373"
+   ],
+   "lat": 33.16744,
+   "lon": -101.80258
+  },
+  {
+   "slug": "george-west",
+   "city": "George West",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1076,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1076,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78022"
+   ],
+   "lat": 28.33061,
+   "lon": -98.11916
+  },
+  {
+   "slug": "panhandle",
+   "city": "Panhandle",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1070,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 1070,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79068"
+   ],
+   "lat": 35.34714,
+   "lon": -101.38451
+  },
+  {
+   "slug": "caldwell",
+   "city": "Caldwell",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 1062,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 1062,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77836"
+   ],
+   "lat": 30.53206,
+   "lon": -96.69872
+  },
+  {
+   "slug": "mabank",
+   "city": "Mabank",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 1005,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1005,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75147",
+    "75156"
+   ],
+   "lat": 32.33697,
+   "lon": -96.12298
+  },
+  {
+   "slug": "fabens",
+   "city": "Fabens",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 991,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 991,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79838"
+   ],
+   "lat": 31.50301,
+   "lon": -106.15174
+  },
+  {
+   "slug": "nash",
+   "city": "Nash",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 971,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 971,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75569"
+   ],
+   "lat": 33.44252,
+   "lon": -94.12352
+  },
+  {
+   "slug": "van-horn",
+   "city": "Van Horn",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 961,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 961,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79855"
+   ],
+   "lat": 31.04218,
+   "lon": -104.83455
+  },
+  {
+   "slug": "glen-rose",
+   "city": "Glen Rose",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 942,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 199,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 942,
+     "comingSoon": 199,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76043"
+   ],
+   "lat": 32.23679,
+   "lon": -97.75429
+  },
+  {
+   "slug": "de-kalb",
+   "city": "De Kalb",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 895,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 895,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75559"
+   ],
+   "lat": 33.505,
+   "lon": -94.61287
+  },
+  {
+   "slug": "southlake",
+   "city": "Southlake",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 879,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 879,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76092"
+   ],
+   "lat": 32.94456,
+   "lon": -97.17251
+  },
+  {
+   "slug": "maud",
+   "city": "Maud",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 874,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 49,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 874,
+     "comingSoon": 49,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75567"
+   ],
+   "lat": 33.34382,
+   "lon": -94.30967
+  },
+  {
+   "slug": "hughes-springs",
+   "city": "Hughes Springs",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 837,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 837,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75656"
+   ],
+   "lat": 33.00051,
+   "lon": -94.63195
+  },
+  {
+   "slug": "stratford",
+   "city": "Stratford",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 817,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 817,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79084"
+   ],
+   "lat": 36.33687,
+   "lon": -102.07256
+  },
+  {
+   "slug": "morton",
+   "city": "Morton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 812,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 812,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79346"
+   ],
+   "lat": 33.72179,
+   "lon": -102.75814
+  },
+  {
+   "slug": "crosbyton",
+   "city": "Crosbyton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 801,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 801,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79322"
+   ],
+   "lat": 33.65833,
+   "lon": -101.242
+  },
+  {
+   "slug": "sunray",
+   "city": "Sunray",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 794,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 794,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79086"
+   ],
+   "lat": 36.01706,
+   "lon": -101.82342
+  },
+  {
+   "slug": "munday",
+   "city": "Munday",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 774,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 774,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76371"
+   ],
+   "lat": 33.44923,
+   "lon": -99.62842
+  },
+  {
+   "slug": "fairfield",
+   "city": "Fairfield",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 759,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 106,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 759,
+     "comingSoon": 106,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75840"
+   ],
+   "lat": 31.7195,
+   "lon": -96.14662
+  },
+  {
+   "slug": "wylie",
+   "city": "Wylie",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 737,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 737,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75098"
+   ],
+   "lat": 33.01996,
+   "lon": -96.56353
+  },
+  {
+   "slug": "ralls",
+   "city": "Ralls",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 729,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 729,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79357"
+   ],
+   "lat": 33.68119,
+   "lon": -101.3834
+  },
+  {
+   "slug": "baird",
+   "city": "Baird",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 716,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 716,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79504"
+   ],
+   "lat": 32.39562,
+   "lon": -99.39683
+  },
+  {
+   "slug": "sweeny",
+   "city": "Sweeny",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 713,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 67,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 713,
+     "comingSoon": 67,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "77480"
+   ],
+   "lat": 29.04532,
+   "lon": -95.69752
+  },
+  {
+   "slug": "knox-city",
+   "city": "Knox City",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 708,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 708,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79529"
+   ],
+   "lat": 33.41648,
+   "lon": -99.81455
+  },
+  {
+   "slug": "naples",
+   "city": "Naples",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 701,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 701,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75568"
+   ],
+   "lat": 33.20098,
+   "lon": -94.68029
+  },
+  {
+   "slug": "grandview",
+   "city": "Grandview",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 685,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 21,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 685,
+     "comingSoon": 21,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76050"
+   ],
+   "lat": 32.26908,
+   "lon": -97.1768
+  },
+  {
+   "slug": "red-oak",
+   "city": "Red Oak",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 671,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 671,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75154"
+   ],
+   "lat": 32.51711,
+   "lon": -96.73313
+  },
+  {
+   "slug": "san-angelo",
+   "city": "San Angelo",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 663,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 663,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76901",
+    "76903",
+    "76904",
+    "76905",
+    "76908",
+    "76909",
+    "79604"
+   ],
+   "lat": 31.45138,
+   "lon": -100.45177
+  },
+  {
+   "slug": "lone-star",
+   "city": "Lone Star",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 656,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 656,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75668"
+   ],
+   "lat": 32.9434,
+   "lon": -94.70991
+  },
+  {
+   "slug": "argyle",
+   "city": "Argyle",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 654,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 654,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76226"
+   ],
+   "lat": 33.16214,
+   "lon": -97.17033
+  },
+  {
+   "slug": "pineland",
+   "city": "Pineland",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 650,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 650,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75968"
+   ],
+   "lat": 31.26378,
+   "lon": -93.97046
+  },
+  {
+   "slug": "three-rivers",
+   "city": "Three Rivers",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 641,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 641,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78071"
+   ],
+   "lat": 28.46573,
+   "lon": -98.17611
+  },
+  {
+   "slug": "holliday",
+   "city": "Holliday",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 631,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 631,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76366"
+   ],
+   "lat": 33.8139,
+   "lon": -98.695
+  },
+  {
+   "slug": "claude",
+   "city": "Claude",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 605,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 605,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79019"
+   ],
+   "lat": 35.10835,
+   "lon": -101.36554
+  },
+  {
+   "slug": "rosebud",
+   "city": "Rosebud",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 595,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 7,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 595,
+     "comingSoon": 7,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76570"
+   ],
+   "lat": 31.07643,
+   "lon": -96.97516
+  },
+  {
+   "slug": "sherman",
+   "city": "Sherman",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 594,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 594,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75090",
+    "75092"
+   ],
+   "lat": 33.65141,
+   "lon": -96.61744
+  },
+  {
+   "slug": "white-deer",
+   "city": "White Deer",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 594,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 594,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79097"
+   ],
+   "lat": 35.43015,
+   "lon": -101.17513
+  },
+  {
+   "slug": "rising-star",
+   "city": "Rising Star",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 588,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 12,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 588,
+     "comingSoon": 12,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76471"
+   ],
+   "lat": 32.09656,
+   "lon": -98.96463
+  },
+  {
+   "slug": "throckmorton",
+   "city": "Throckmorton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 588,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 588,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76483"
+   ],
+   "lat": 33.18212,
+   "lon": -99.17943
+  },
+  {
+   "slug": "hubbard",
+   "city": "Hubbard",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 587,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 587,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76648"
+   ],
+   "lat": 31.84537,
+   "lon": -96.79934
+  },
+  {
+   "slug": "milam",
+   "city": "Milam",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 584,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 584,
+     "comingSoon": 2,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75959"
+   ],
+   "lat": 31.5159,
+   "lon": -93.80335
+  },
+  {
+   "slug": "college-station",
+   "city": "College Station",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 565,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 565,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77840",
+    "77841",
+    "77843",
+    "77845"
+   ],
+   "lat": 30.6132,
+   "lon": -96.3258
+  },
+  {
+   "slug": "cross-plains",
+   "city": "Cross Plains",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 558,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 558,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76443"
+   ],
+   "lat": 32.12628,
+   "lon": -99.16444
+  },
+  {
+   "slug": "austin",
+   "city": "Austin",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 548,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 548,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78701"
+   ],
+   "lat": 30.2687,
+   "lon": -97.74073
+  },
+  {
+   "slug": "aspermont",
+   "city": "Aspermont",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 547,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 547,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79502"
+   ],
+   "lat": 33.1389,
+   "lon": -100.22876
+  },
+  {
+   "slug": "sundown",
+   "city": "Sundown",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 536,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 536,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79372"
+   ],
+   "lat": 33.45674,
+   "lon": -102.48819
+  },
+  {
+   "slug": "chilton",
+   "city": "Chilton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 532,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 532,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76632"
+   ],
+   "lat": 31.30075,
+   "lon": -97.06541
+  },
+  {
+   "slug": "huntington",
+   "city": "Huntington",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 531,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 40,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 531,
+     "comingSoon": 40,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75949"
+   ],
+   "lat": 31.27791,
+   "lon": -94.57389
+  },
+  {
+   "slug": "booker",
+   "city": "Booker",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 530,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 530,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79005"
+   ],
+   "lat": 36.45398,
+   "lon": -100.53777
+  },
+  {
+   "slug": "grapeland",
+   "city": "Grapeland",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 499,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 9,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 499,
+     "comingSoon": 9,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75844"
+   ],
+   "lat": 31.49477,
+   "lon": -95.47676
+  },
+  {
+   "slug": "petersburg",
+   "city": "Petersburg",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 486,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 486,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79250"
+   ],
+   "lat": 33.86928,
+   "lon": -101.59623
+  },
+  {
+   "slug": "coleman",
+   "city": "Coleman",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 476,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 476,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76834"
+   ],
+   "lat": 31.82995,
+   "lon": -99.42534
+  },
+  {
+   "slug": "seagraves",
+   "city": "Seagraves",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 474,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 474,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79359"
+   ],
+   "lat": 32.94463,
+   "lon": -102.56716
+  },
+  {
+   "slug": "franklin",
+   "city": "Franklin",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 467,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 467,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "77856"
+   ],
+   "lat": 31.02831,
+   "lon": -96.48425
+  },
+  {
+   "slug": "burleson",
+   "city": "Burleson",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 457,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 457,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76028"
+   ],
+   "lat": 32.5803,
+   "lon": -97.29908
+  },
+  {
+   "slug": "elkhart",
+   "city": "Elkhart",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 456,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 21,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 456,
+     "comingSoon": 21,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75839"
+   ],
+   "lat": 31.62352,
+   "lon": -95.57395
+  },
+  {
+   "slug": "bogata",
+   "city": "Bogata",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 448,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 448,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75417"
+   ],
+   "lat": 33.47108,
+   "lon": -95.21142
+  },
+  {
+   "slug": "hart",
+   "city": "Hart",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 433,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 433,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79043"
+   ],
+   "lat": 34.38833,
+   "lon": -102.11491
+  },
+  {
+   "slug": "anton",
+   "city": "Anton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 422,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 422,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79313"
+   ],
+   "lat": 33.81212,
+   "lon": -102.16173
+  },
+  {
+   "slug": "rowlett",
+   "city": "Rowlett",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 416,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 416,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75088",
+    "75089"
+   ],
+   "lat": 32.90824,
+   "lon": -96.55253
+  },
+  {
+   "slug": "bronson",
+   "city": "Bronson",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 416,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 1,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 416,
+     "comingSoon": 1,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75930"
+   ],
+   "lat": 31.34306,
+   "lon": -93.9941
+  },
+  {
+   "slug": "grapevine",
+   "city": "Grapevine",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 411,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 411,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76051"
+   ],
+   "lat": 32.94121,
+   "lon": -97.0784
+  },
+  {
+   "slug": "rule",
+   "city": "Rule",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 409,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 409,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79547"
+   ],
+   "lat": 33.18186,
+   "lon": -99.89256
+  },
+  {
+   "slug": "maypearl",
+   "city": "Maypearl",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 406,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 406,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76064"
+   ],
+   "lat": 32.31212,
+   "lon": -97.01227
+  },
+  {
+   "slug": "kingwood",
+   "city": "Kingwood",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 391,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 391,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "77345"
+   ],
+   "lat": 30.06383,
+   "lon": -95.16193
+  },
+  {
+   "slug": "san-marcos",
+   "city": "San Marcos",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 388,
+   "availablePerRecordsHomes": 1,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 388,
+     "comingSoon": 0,
+     "verified": true
+    },
+    {
+     "id": "frontier",
+     "homes": 1,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78666"
+   ],
+   "lat": 29.88369,
+   "lon": -97.95944
+  },
+  {
+   "slug": "league-city",
+   "city": "League City",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 375,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 375,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77573"
+   ],
+   "lat": 29.49819,
+   "lon": -95.06747
+  },
+  {
+   "slug": "rogers",
+   "city": "Rogers",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 368,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 368,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76569"
+   ],
+   "lat": 30.93221,
+   "lon": -97.22886
+  },
+  {
+   "slug": "lorenzo",
+   "city": "Lorenzo",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 364,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 364,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79343"
+   ],
+   "lat": 33.6701,
+   "lon": -101.53639
+  },
+  {
+   "slug": "rockwall",
+   "city": "Rockwall",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 360,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 360,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75087"
+   ],
+   "lat": 32.91407,
+   "lon": -96.50645
+  },
+  {
+   "slug": "milford",
+   "city": "Milford",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 359,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 359,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76670"
+   ],
+   "lat": 32.12269,
+   "lon": -96.94772
+  },
+  {
+   "slug": "merkel",
+   "city": "Merkel",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 357,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 357,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79536"
+   ],
+   "lat": 32.46748,
+   "lon": -100.01493
+  },
+  {
+   "slug": "waxahachie",
+   "city": "Waxahachie",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 356,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 356,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75165",
+    "75167"
+   ],
+   "lat": 32.38272,
+   "lon": -96.86016
+  },
+  {
+   "slug": "buffalo",
+   "city": "Buffalo",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 344,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 344,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75831"
+   ],
+   "lat": 31.46209,
+   "lon": -96.06578
+  },
+  {
+   "slug": "chandler",
+   "city": "Chandler",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 339,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 339,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75758"
+   ],
+   "lat": 32.20772,
+   "lon": -95.519
+  },
+  {
+   "slug": "dawson",
+   "city": "Dawson",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 315,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 315,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76639"
+   ],
+   "lat": 31.89524,
+   "lon": -96.71447
+  },
+  {
+   "slug": "blooming-grove",
+   "city": "Blooming Grove",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 314,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 314,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76626"
+   ],
+   "lat": 32.09252,
+   "lon": -96.71664
+  },
+  {
+   "slug": "stafford",
+   "city": "Stafford",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 258,
+   "availablePerRecordsHomes": 36,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 258,
+     "comingSoon": 0,
+     "verified": true
+    },
+    {
+     "id": "frontier",
+     "homes": 36,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77477"
+   ],
+   "lat": 29.6219,
+   "lon": -95.5729
+  },
+  {
+   "slug": "tornillo",
+   "city": "Tornillo",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 294,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 144,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 294,
+     "comingSoon": 144,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79853"
+   ],
+   "lat": 31.44776,
+   "lon": -106.09064
+  },
+  {
+   "slug": "justin",
+   "city": "Justin",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 292,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 292,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76247"
+   ],
+   "lat": 33.07443,
+   "lon": -97.32231
+  },
+  {
+   "slug": "kilgore",
+   "city": "Kilgore",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 290,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 290,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75662",
+    "75663"
+   ],
+   "lat": 32.40425,
+   "lon": -94.85143
+  },
+  {
+   "slug": "lott",
+   "city": "Lott",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 272,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 64,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 272,
+     "comingSoon": 64,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76656"
+   ],
+   "lat": 31.20493,
+   "lon": -97.03152
+  },
+  {
+   "slug": "burnet",
+   "city": "Burnet",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 271,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 271,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78611"
+   ],
+   "lat": 30.76741,
+   "lon": -98.23032
+  },
+  {
+   "slug": "avery",
+   "city": "Avery",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 271,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 2,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 271,
+     "comingSoon": 2,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75554"
+   ],
+   "lat": 33.55188,
+   "lon": -94.78056
+  },
+  {
+   "slug": "valley-mills",
+   "city": "Valley Mills",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 266,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 266,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76689"
+   ],
+   "lat": 31.65708,
+   "lon": -97.47216
+  },
+  {
+   "slug": "cushing",
+   "city": "Cushing",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 263,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 263,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75760"
+   ],
+   "lat": 31.81418,
+   "lon": -94.84027
+  },
+  {
+   "slug": "junction",
+   "city": "Junction",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 254,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 254,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76849"
+   ],
+   "lat": 30.48859,
+   "lon": -99.77542
+  },
+  {
+   "slug": "lavon",
+   "city": "Lavon",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 248,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 248,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75166"
+   ],
+   "lat": 33.01862,
+   "lon": -96.45495
+  },
+  {
+   "slug": "higgins",
+   "city": "Higgins",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 247,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 247,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79046"
+   ],
+   "lat": 36.12158,
+   "lon": -100.02633
+  },
+  {
+   "slug": "jarrell",
+   "city": "Jarrell",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 239,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 239,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76537"
+   ],
+   "lat": 30.82762,
+   "lon": -97.6081
+  },
+  {
+   "slug": "boerne",
+   "city": "Boerne",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 237,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 237,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "78006"
+   ],
+   "lat": 29.77777,
+   "lon": -98.71775
+  },
+  {
+   "slug": "missouri-city",
+   "city": "Missouri City",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 131,
+   "availablePerRecordsHomes": 105,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 131,
+     "comingSoon": 0,
+     "verified": true
+    },
+    {
+     "id": "frontier",
+     "homes": 105,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "77459",
+    "77489"
+   ],
+   "lat": 29.57828,
+   "lon": -95.55437
+  },
+  {
+   "slug": "colleyville",
+   "city": "Colleyville",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 233,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 233,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "76034"
+   ],
+   "lat": 32.89699,
+   "lon": -97.15419
+  },
+  {
+   "slug": "overton",
+   "city": "Overton",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 230,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 230,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75684"
+   ],
+   "lat": 32.26548,
+   "lon": -94.95597
+  },
+  {
+   "slug": "blum",
+   "city": "Blum",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 224,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 3,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 224,
+     "comingSoon": 3,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76627"
+   ],
+   "lat": 32.13099,
+   "lon": -97.39015
+  },
+  {
+   "slug": "rochester",
+   "city": "Rochester",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 224,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 224,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "79544"
+   ],
+   "lat": 33.31376,
+   "lon": -99.8568
+  },
+  {
+   "slug": "trinidad",
+   "city": "Trinidad",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 220,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 220,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75163"
+   ],
+   "lat": 32.13885,
+   "lon": -96.09035
+  },
+  {
+   "slug": "commerce",
+   "city": "Commerce",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 215,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 215,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75428"
+   ],
+   "lat": 33.25499,
+   "lon": -95.89311
+  },
+  {
+   "slug": "sachse",
+   "city": "Sachse",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 0,
+   "availablePerRecordsHomes": 212,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "frontier",
+     "homes": 212,
+     "comingSoon": 0,
+     "verified": false
+    }
+   ],
+   "zips": [
+    "75048"
+   ],
+   "lat": 32.97224,
+   "lon": -96.5853
+  },
+  {
+   "slug": "frost",
+   "city": "Frost",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 212,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 6,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 212,
+     "comingSoon": 6,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "76641"
+   ],
+   "lat": 32.07838,
+   "lon": -96.80586
+  },
+  {
+   "slug": "tenaha",
+   "city": "Tenaha",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 205,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 205,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "75974"
+   ],
+   "lat": 31.94411,
+   "lon": -94.24415
+  },
+  {
+   "slug": "iola",
+   "city": "Iola",
+   "state": "TX",
+   "stateSlug": "tx",
+   "stateName": "Texas",
+   "verifiedLiveHomes": 203,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "kinetic",
+     "homes": 203,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "77861"
+   ],
+   "lat": 30.63627,
+   "lon": -96.15213
+  },
+  {
+   "slug": "charlottesville",
+   "city": "Charlottesville",
+   "state": "VA",
+   "stateSlug": "va",
+   "stateName": "Virginia",
+   "verifiedLiveHomes": 313,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 313,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "22901",
+    "22902",
+    "22903",
+    "22911"
+   ],
+   "lat": 38.04475,
+   "lon": -78.52801
+  },
+  {
+   "slug": "halifax",
+   "city": "Halifax",
+   "state": "VA",
+   "stateSlug": "va",
+   "stateName": "Virginia",
+   "verifiedLiveHomes": 212,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 212,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "24558"
+   ],
+   "lat": 36.76425,
+   "lon": -78.94322
+  },
+  {
+   "slug": "berlin",
+   "city": "Berlin",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 1118,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1118,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54923"
+   ],
+   "lat": 43.97018,
+   "lon": -88.95242
+  },
+  {
+   "slug": "spooner",
+   "city": "Spooner",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 1008,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 1008,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54801"
+   ],
+   "lat": 45.82669,
+   "lon": -91.88979
+  },
+  {
+   "slug": "chetek",
+   "city": "Chetek",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 943,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 943,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54728"
+   ],
+   "lat": 45.3234,
+   "lon": -91.65899
+  },
+  {
+   "slug": "ripon",
+   "city": "Ripon",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 869,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 869,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54971"
+   ],
+   "lat": 43.84507,
+   "lon": -88.83747
+  },
+  {
+   "slug": "fox-lake",
+   "city": "Fox Lake",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 645,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 645,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "53933"
+   ],
+   "lat": 43.56362,
+   "lon": -88.91078
+  },
+  {
+   "slug": "bangor",
+   "city": "Bangor",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 535,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 535,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54614"
+   ],
+   "lat": 43.89213,
+   "lon": -90.9886
+  },
+  {
+   "slug": "augusta",
+   "city": "Augusta",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 534,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 534,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54722"
+   ],
+   "lat": 44.6799,
+   "lon": -91.12179
+  },
+  {
+   "slug": "shell-lake",
+   "city": "Shell Lake",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 406,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 406,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54871"
+   ],
+   "lat": 45.73704,
+   "lon": -91.91091
+  },
+  {
+   "slug": "fountain-city",
+   "city": "Fountain City",
+   "state": "WI",
+   "stateSlug": "wi",
+   "stateName": "Wisconsin",
+   "verifiedLiveHomes": 259,
+   "availablePerRecordsHomes": 0,
+   "comingSoonHomes": 0,
+   "providers": [
+    {
+     "id": "brightspeed",
+     "homes": 259,
+     "comingSoon": 0,
+     "verified": true
+    }
+   ],
+   "zips": [
+    "54629"
+   ],
+   "lat": 44.1284,
+   "lon": -91.71196
+  }
+ ]
+}

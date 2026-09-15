@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, MessageSquareText, PhoneCall, RotateCcw } from "lucide-react";
+import { CheckCircle2, CloudOff, MessageSquareText, PhoneCall, RotateCcw } from "lucide-react";
 
 import { setContactPreference } from "@/actions/set-contact-preference";
 import type { LeadSubmitSuccess } from "@/actions/submit-lead";
@@ -26,6 +26,17 @@ export function LeadConfirmation({ mode, result, firstName, onNextDoor }: LeadCo
   const isp = ispDisplayName(result.isp);
   const detail = isComingSoon ? text.comingSoon(isp) : isRep ? text.repNext(CLOSER_SLA_MINUTES) : text.callSoon(CLOSER_SLA_MINUTES, COMPANY.phone);
 
+  if (result.queued) {
+    return (
+      <section aria-live="polite" className="space-y-5 text-center">
+        <CloudOff className="mx-auto size-12 text-amber-500" aria-hidden />
+        <h3 className="text-xl font-bold text-gray-900">{text.queuedTitle}</h3>
+        <p className="mx-auto max-w-md text-sm text-gray-700">{text.queuedDetail}</p>
+        {isRep && <NextDoorButton label={text.nextDoor} onClick={onNextDoor} />}
+      </section>
+    );
+  }
+
   return (
     <section aria-live="polite" className="space-y-5 text-center">
       <CheckCircle2 className="mx-auto size-12 text-fiber-success" aria-hidden />
@@ -36,19 +47,21 @@ export function LeadConfirmation({ mode, result, firstName, onNextDoor }: LeadCo
       <h3 className="text-xl font-bold text-gray-900">{isRep ? text.sentToCloser : text.thanks(firstName)}</h3>
       <p className="mx-auto max-w-md text-sm text-gray-700">{detail}</p>
 
-      {isRep ? (
-        <button
-          type="button"
-          onClick={onNextDoor}
-          className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-lg bg-fiber-blue text-lg font-semibold text-white hover:bg-blue-800"
-        >
-          <RotateCcw className="size-5" aria-hidden />
-          {text.nextDoor}
-        </button>
-      ) : (
-        <HomeownerNextSteps leadId={result.leadId} />
-      )}
+      {isRep ? <NextDoorButton label={text.nextDoor} onClick={onNextDoor} /> : <HomeownerNextSteps leadId={result.leadId} />}
     </section>
+  );
+}
+
+function NextDoorButton({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-lg bg-fiber-blue text-lg font-semibold text-white hover:bg-blue-800"
+    >
+      <RotateCcw className="size-5" aria-hidden />
+      {label}
+    </button>
   );
 }
 

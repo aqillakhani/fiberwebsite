@@ -74,6 +74,8 @@ export interface LeadCopy {
     textInstead: string;
     textNoted: string;
     nextDoor: string;
+    queuedTitle: string;
+    queuedDetail: string;
   };
   door: {
     verified: string;
@@ -154,6 +156,8 @@ const EN: LeadCopy = {
     textInstead: "Text me instead",
     textNoted: "Got it — we'll text you first.",
     nextDoor: "Next door",
+    queuedTitle: "No signal — saved on this phone.",
+    queuedDetail: "The lead is stored on this device and sends itself to the closing team the moment the connection returns. Keep this page open or come back to it; do not clear the browser.",
   },
   door: {
     verified: "Verified FiberFastUSA representative",
@@ -234,6 +238,8 @@ const ES: LeadCopy = {
     textInstead: "Prefiero mensaje de texto",
     textNoted: "Listo: le escribimos primero por texto.",
     nextDoor: "Siguiente casa",
+    queuedTitle: "Sin señal: guardado en este teléfono.",
+    queuedDetail: "La solicitud queda guardada en este dispositivo y se envía sola al equipo de cierre en cuanto vuelva la conexión. Mantenga esta página abierta o vuelva a ella; no borre el navegador.",
   },
   door: {
     verified: "Representante verificado de FiberFastUSA",

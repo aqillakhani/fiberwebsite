@@ -4,12 +4,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useForm, type DefaultValues, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { submitLead, type LeadSubmitSuccess } from "@/actions/submit-lead";
+import { submitLead, type LeadSubmitResult, type LeadSubmitSuccess } from "@/actions/submit-lead";
 import type { AddressSuggestion } from "@/app/api/address-autocomplete/route";
 import { trackLead } from "@/lib/analytics";
 import type { ServiceabilityResult } from "@/lib/serviceability/classify";
 import { parseCookieHeader } from "@/lib/attribution-cookies";
 import { isLanguage, LANGUAGE_COOKIE, LEAD_COPY, type Language } from "@/lib/i18n/lead-copy";
+import { enqueuePendingLead, isNetworkFailure } from "@/lib/leads/offline-queue";
 import { LEAD_ISPS, leadSchema, type LeadInput, type LeadIsp } from "@/lib/validations/lead-schema";
 
 export type LeadFormStep = "address" | "details" | "done";
@@ -129,16 +130,21 @@ export function useLeadForm({ source, initialAddress, consentTextVersion }: UseL
     const isValid = await form.trigger();
     if (!isValid) return;
     setIsSubmitting(true);
-    const outcome = await submitLead(form.getValues());
+    const outcome = await submitOrQueue(form.getValues(), serviceability);
     setIsSubmitting(false);
     if (!outcome.success) {
       setSubmitError(outcome.error);
       return;
     }
+    if (outcome.queued) {
+      setResult(outcome);
+      setStep("done");
+      return;
+    }
     trackLead({ leadId: outcome.leadId, source, status: outcome.serviceabilityStatus, isp: outcome.isp });
     setResult(outcome);
     setStep("done");
-  }, [form, source, consentTextVersion]);
+  }, [form, source, consentTextVersion, serviceability]);
 
   const reset = useCallback(() => {
     form.reset(emptyLead(source));
@@ -213,6 +219,24 @@ function parseTypedAddress(typed: string): ResolvedAddress | null {
   if (!match) return null;
   const [, street, city, state, zip] = match;
   return { street: street.trim(), city: city.trim(), state: state.toUpperCase(), zip, accuracy: "typed" };
+}
+
+const QUEUED_LEAD_NUMBER = "SAVED";
+const OFFLINE_ERROR = "No signal and this phone could not save the lead. Try again when you have service.";
+
+/**
+ * Server action first; if the request itself fails (no signal), keep the lead on the device so the
+ * canvasser can move on. PendingLeadsSync submits it later through the same action.
+ */
+async function submitOrQueue(input: LeadInput, serviceability: ServiceabilityResult | null): Promise<LeadSubmitResult> {
+  try {
+    return await submitLead(input);
+  } catch (error) {
+    if (!isNetworkFailure(error)) throw error;
+    const pending = enqueuePendingLead(input);
+    if (!pending) return { success: false, error: OFFLINE_ERROR };
+    return { success: true, queued: true, leadId: "", leadNumber: QUEUED_LEAD_NUMBER, serviceabilityStatus: serviceability?.status ?? "unknown", isp: serviceability?.isp ?? null };
+  }
 }
 
 function readLanguageCookie(): Language {

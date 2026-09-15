@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next"
 
+import { listStates, LOCATIONS, locationPath } from "@/lib/locations"
+
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fiberfastusa.com"
 
-// Location pages return in Phase 2, generated from the map_pin footprint roll-up (never hand-listed cities).
+// Location pages come from the map_pin footprint roll-up (src/data/locations.json), never hand-listed cities.
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date()
   return [
@@ -13,5 +15,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/faq`, lastModified, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE_URL}/fiber`, lastModified, changeFrequency: "weekly", priority: 0.7 },
+    ...listStates().map((summary) => ({ url: `${BASE_URL}/fiber/${summary.stateSlug}`, lastModified, changeFrequency: "weekly" as const, priority: 0.6 })),
+    ...LOCATIONS.map((location) => ({ url: `${BASE_URL}${locationPath(location)}`, lastModified, changeFrequency: "weekly" as const, priority: 0.6 })),
   ]
 }

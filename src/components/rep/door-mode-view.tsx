@@ -6,6 +6,7 @@ import { ShieldCheck } from "lucide-react";
 
 import { LeadForm } from "@/components/lead/lead-form";
 import { LanguageToggle } from "@/components/lead/language-toggle";
+import { PendingLeadsSync } from "@/components/lead/pending-leads-sync";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Logo } from "@/components/ui/logo";
 import type { Rep } from "@/lib/reps";
@@ -32,6 +33,7 @@ export default function DoorModeView({ rep }: DoorModeViewProps) {
       </header>
 
       <main className="mx-auto max-w-lg space-y-6 px-4 py-6">
+        <PendingLeadsSync />
         <div className="flex items-center gap-4">
           {rep.photo_url ? (
             <div className="relative size-14 shrink-0 overflow-hidden rounded-full">

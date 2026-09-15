@@ -45,7 +45,7 @@ export function AddressStep({ mode, isChecking, error, onPick, onResolveTyped, i
           disabled={isChecking}
           autoFocus={isRep}
           placeholder={copy.address.placeholder}
-          ariaLabel={copy.address.label}
+          ariaLabel={isRep ? copy.address.labelRep : copy.address.label}
           className="flex-1"
           inputClassName={cn(isRep && "h-14 text-lg")}
         />
