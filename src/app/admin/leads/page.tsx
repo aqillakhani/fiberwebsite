@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { LeadStatusEditor } from "@/components/admin/lead-status-editor";
 import { formatLeadNumber } from "@/lib/leads/lead-record";
 import { listRecentLeads, LEADS_PAGE_SIZE, type LeadListItem } from "@/lib/leads/list-leads";
 import { ISP_LABELS, SPEED_LABELS, type LeadIsp, type PreferredSpeed } from "@/lib/validations/lead-schema";
@@ -19,7 +20,7 @@ export default async function AdminLeadsPage() {
         <div>
           <h1 className="text-2xl font-extrabold text-gray-900">Inbound leads</h1>
           <p className="text-sm text-gray-600">
-            Newest first, last {LEADS_PAGE_SIZE}. Leads are never deleted; mark them closed in the CRM instead.
+            Newest first, last {LEADS_PAGE_SIZE}. Set the status and who closed it right in the row — it saves as you go. Leads are never deleted.
           </p>
         </div>
         <nav className="flex gap-3 text-sm font-semibold">
@@ -35,7 +36,7 @@ export default async function AdminLeadsPage() {
         <table className="w-full min-w-[1100px] text-left text-sm">
           <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
             <tr>
-              {["#", "Received", "Name", "Phone", "Email", "Address", "Wants", "Speed", "Map says", "Channel / rep", "Status", "Consent"].map((label) => (
+              {["#", "Received", "Name", "Phone", "Email", "Address", "Wants", "Speed", "Map says", "Channel / rep", "Status / closed by", "Consent"].map((label) => (
                 <th key={label} className="px-3 py-2 font-semibold">
                   {label}
                 </th>
@@ -99,8 +100,7 @@ function LeadRow({ lead }: { lead: LeadListItem }) {
         {lead.utm_campaign && <div className="text-xs text-gray-500">{lead.utm_campaign}</div>}
       </td>
       <td className="px-3 py-2">
-        <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-800">{lead.status}</span>
-        <div className="mt-1 text-xs text-gray-500">CRM {lead.crm_sync_status}</div>
+        <LeadStatusEditor leadId={lead.id} status={lead.status} closerName={lead.closer_name} closerNote={lead.closer_note} />
       </td>
       <td className="px-3 py-2 text-xs text-gray-500">
         {lead.consent_contact ? `yes · ${lead.consent_text_version ?? ""}` : "no"}

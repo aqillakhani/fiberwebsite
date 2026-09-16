@@ -43,7 +43,10 @@ export interface LeadRecord {
   consent_at: string | null;
   consent_ip: string | null;
   consent_user_agent: string | null;
-  status: "new" | "contacted" | "qualified" | "converted" | "closed";
+  status: string;
+  closer_name: string | null;
+  closer_note: string | null;
+  status_updated_at: string | null;
   crm_sync_status: "pending" | "synced" | "failed";
   crm_sync_attempts: number;
   crm_pin_id: string | null;
