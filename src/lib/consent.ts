@@ -18,3 +18,9 @@ export const CONSENT_TEXT_ES =
   "sobre internet de fibra en esta dirección, incluso con tecnología automatizada y mensajes pregrabados. Las " +
   "llamadas pueden grabarse. El consentimiento no es condición de compra; pueden aplicar tarifas de mensajes y " +
   "datos; responda STOP para cancelar.";
+
+/**
+ * Consent captured inside the Facebook/Instagram instant form (custom disclaimer + required checkbox, same
+ * wording as CONSENT_TEXT). Meta stores the checkbox with the lead; we store this version with our copy.
+ */
+export const META_FORM_CONSENT_VERSION = "2026-09-18.meta-v1";

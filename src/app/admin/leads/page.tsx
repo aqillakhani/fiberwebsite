@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { LeadStatusEditor } from "@/components/admin/lead-status-editor";
 import { formatLeadNumber } from "@/lib/leads/lead-record";
+
+const CHANNEL_LABELS: Record<string, string> = { web: "web", rep: "rep", meta_form: "Facebook form" };
 import { listRecentLeads, LEADS_PAGE_SIZE, type LeadListItem } from "@/lib/leads/list-leads";
 import { ISP_LABELS, SPEED_LABELS, type LeadIsp, type PreferredSpeed } from "@/lib/validations/lead-schema";
 
@@ -95,9 +97,10 @@ function LeadRow({ lead }: { lead: LeadListItem }) {
         {mapIsp}
       </td>
       <td className="px-3 py-2 text-gray-700">
-        {lead.lead_channel}
+        {CHANNEL_LABELS[lead.lead_channel] ?? lead.lead_channel}
         {lead.rep_slug && <div className="text-xs text-gray-500">{lead.rep_slug}</div>}
         {lead.utm_campaign && <div className="text-xs text-gray-500">{lead.utm_campaign}</div>}
+        {lead.utm_content && <div className="text-xs text-gray-500">{lead.utm_content}</div>}
       </td>
       <td className="px-3 py-2">
         <LeadStatusEditor leadId={lead.id} status={lead.status} closerName={lead.closer_name} closerNote={lead.closer_note} />
