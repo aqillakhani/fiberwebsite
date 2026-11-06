@@ -1,6 +1,7 @@
 import "server-only";
 
 import { formatLeadNumber, type LeadRecord } from "@/lib/leads/lead-record";
+import { buildAlertText } from "./lead-alert-text";
 
 /**
  * Site-side "a lead just landed" alert. The CRM does the rich notification (SMS to on-duty closers);
@@ -34,24 +35,6 @@ export async function notifyClosers(lead: LeadRecord): Promise<NotifyOutcome> {
     delivered: settled.filter((job) => job.status === "fulfilled").length,
     errors: settled.flatMap((job) => (job.status === "rejected" ? [String(job.reason)] : [])),
   };
-}
-
-function buildAlertText(lead: LeadRecord): string {
-  const status = lead.serviceability?.status ?? "unknown";
-  const isp = lead.serviceability?.isp ?? lead.isp_declared ?? "unknown ISP";
-  const channel = lead.lead_channel === "rep" ? `canvasser ${lead.rep_slug ?? "?"}` : lead.lead_channel;
-  return [
-    `New lead ${formatLeadNumber(lead.lead_number)} (${channel})`,
-    `${lead.full_name} · ${formatPhone(lead.phone)}`,
-    `${lead.service_address}, ${lead.city ?? ""} ${lead.state ?? ""} ${lead.zip ?? ""}`,
-    `Wants: ${lead.isp_declared ?? "best option"} · speed ${lead.preferred_speed ?? "?"}${lead.current_provider ? ` · currently on ${lead.current_provider}` : ""}`,
-    `Map says: ${status.toUpperCase()} — ${isp}`,
-    `Call within the SLA; consent ${lead.consent_text_version ?? "n/a"} captured ${lead.consent_at ?? ""}`,
-  ].join("\n");
-}
-
-function formatPhone(digits: string): string {
-  return digits.length === 10 ? `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}` : digits;
 }
 
 function splitList(raw: string | undefined): string[] {
