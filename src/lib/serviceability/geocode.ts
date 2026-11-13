@@ -39,6 +39,16 @@ const UNIT_SUFFIX =
 const COUNTRY_SUFFIX = /[\s,]+(?:USA|UNITED STATES)\s*$/i;
 const CITY_STATE_ZIP_SUFFIX = /[\s,]+[A-Za-z]{2,}\s+\d{5}(?:-\d{4})?\s*$/;
 
+/**
+ * Rural route designators typed without a space: "16684 fm744", "123 CR-225". Nominatim indexes
+ * these as "FM 744" / "County Road 225" and matches nothing without the separator, which cost us
+ * lead #1062 (Frost TX). Texas alone is 10 of the 48 wave-6 pins, so these recur.
+ */
+const ROUTE_DESIGNATOR = /\b(FM|RR|CR|SH|RM|US|HWY)[-\s]?(\d+)\b/gi;
+
+const spaceRouteDesignator = (street: string): string =>
+  street.replace(ROUTE_DESIGNATOR, (_, designator: string, number: string) => `${designator.toUpperCase()} ${number}`);
+
 export interface GeocodeQuery {
   street: string;
   city: string | null;
@@ -64,7 +74,7 @@ interface NominatimHit {
  * type ("120 country oaks") fall back to stripping known suffixes. Exported for tests.
  */
 export function cleanStreet(raw: string): string {
-  const head = raw.split(",")[0].trim();
+  const head = spaceRouteDesignator(raw.split(",")[0].trim());
   const tokens = head.split(/\s+/);
   const typeAt = tokens.findIndex((token) => STREET_TYPES.has(normalizeToken(token)));
   if (typeAt > 0) {

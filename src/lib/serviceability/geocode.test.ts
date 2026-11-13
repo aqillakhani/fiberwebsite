@@ -24,6 +24,10 @@ afterEach(() => {
 
 describe("cleanStreet", () => {
   test.each([
+    ["16684 fm744", "16684 FM 744"],
+    ["123 CR-225", "123 CR 225"],
+    ["99 fm 744", "99 FM 744"],
+    ["4100 RR12 Apt 3", "4100 RR 12"],
     ["150 Autumn Ln Apt 7-D", "150 Autumn Ln"],
     ["337 Foster St Fl 2", "337 Foster St"],
     ["8811 PARK ST SPC 127", "8811 PARK ST"],
