@@ -5,6 +5,7 @@ import { insertMetaLead } from "@/lib/leads/persist-meta-lead";
 import { extractLeadgenChanges, fetchMetaLead, mapMetaLead, verifyMetaSignature, type MappedMetaLead } from "@/lib/meta/lead-webhook";
 import { checkServiceability } from "@/lib/serviceability/check";
 import type { ServiceabilityResult } from "@/lib/serviceability/classify";
+import { geocodeAddress, type GeocodedPoint } from "@/lib/serviceability/geocode";
 
 /**
  * Meta Lead Ads webhook. GET = subscription handshake; POST = one or more `leadgen` events.
@@ -45,15 +46,27 @@ export async function POST(request: Request): Promise<Response> {
 
 async function ingestLead(leadgenId: string, pageToken: string): Promise<void> {
   const mapped = mapMetaLead(await fetchMetaLead(leadgenId, pageToken));
-  const { record, created } = await insertMetaLead(mapped, await lookupServiceability(mapped));
+  // Meta sends no coordinates, so geocode first: without them `checkServiceability` can only
+  // match a home the scraper probed by name and everything else comes back `unknown`.
+  const point = await geocodeAddress({
+    street: mapped.serviceAddress,
+    city: mapped.city,
+    state: mapped.state,
+    zip: mapped.zip,
+  });
+  const { record, created } = await insertMetaLead(mapped, await lookupServiceability(mapped, point), point);
   if (!created) return;
   await deliverLead(record, { ip: null, userAgent: null, sourceUrl: SOURCE_URL });
 }
 
-async function lookupServiceability(lead: MappedMetaLead): Promise<ServiceabilityResult | null> {
+async function lookupServiceability(lead: MappedMetaLead, point: GeocodedPoint | null): Promise<ServiceabilityResult | null> {
   if (!lead.city && !lead.zip) return null;
   try {
-    return await checkServiceability({ address: `${lead.serviceAddress}, ${lead.city ?? ""} ${lead.state ?? ""} ${lead.zip ?? ""}` });
+    return await checkServiceability({
+      address: `${lead.serviceAddress}, ${lead.city ?? ""} ${lead.state ?? ""} ${lead.zip ?? ""}`,
+      lat: point?.lat,
+      lon: point?.lon,
+    });
   } catch (error) {
     console.error("[meta-leads] serviceability lookup failed; storing lead without snapshot", error);
     return null;

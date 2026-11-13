@@ -3,6 +3,7 @@ import "server-only";
 import { META_FORM_CONSENT_VERSION } from "@/lib/consent";
 import type { MappedMetaLead } from "@/lib/meta/lead-webhook";
 import type { ServiceabilityResult } from "@/lib/serviceability/classify";
+import type { GeocodedPoint } from "@/lib/serviceability/geocode";
 import { createServerClient } from "@/lib/supabase/server";
 import type { LeadRecord } from "./lead-record";
 import { recordLeadEvents } from "./persist-lead";
@@ -16,7 +17,11 @@ export interface MetaLeadInsert {
 }
 
 /** Stores an instant-form lead once; Meta redelivers webhooks, so an existing `meta_lead_id` is a no-op. */
-export async function insertMetaLead(lead: MappedMetaLead, serviceability: ServiceabilityResult | null): Promise<MetaLeadInsert> {
+export async function insertMetaLead(
+  lead: MappedMetaLead,
+  serviceability: ServiceabilityResult | null,
+  point: GeocodedPoint | null
+): Promise<MetaLeadInsert> {
   const supabase = createServerClient();
   const { data: existing } = await supabase.from("public_leads").select("*").eq("meta_lead_id", lead.metaLeadId).maybeSingle();
   if (existing) return { record: existing as LeadRecord, created: false };
@@ -36,6 +41,10 @@ export async function insertMetaLead(lead: MappedMetaLead, serviceability: Servi
       state: lead.state,
       zip: lead.zip,
       address_hash: serviceability?.addressHash ?? null,
+      lat: point?.lat ?? null,
+      lon: point?.lon ?? null,
+      // Matches the website's vocabulary: the geocoder's best match for text the lead typed.
+      address_accuracy: point ? "resolved" : null,
       current_provider: lead.currentProvider,
       serviceability_status: serviceability?.status ?? null,
       serviceability,

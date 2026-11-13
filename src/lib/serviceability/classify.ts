@@ -9,7 +9,8 @@ import type { MapPinCellRow, MapPinRow } from "./neon";
 
 export const SERVICEABILITY_STATUSES = ["live", "coming_soon", "not_serviceable", "unknown"] as const;
 export type ServiceabilityStatus = (typeof SERVICEABILITY_STATUSES)[number];
-export type MatchConfidence = "exact" | "neighborhood";
+/** How close the evidence is: the home itself, its own H3 cell, or the cells around it. */
+export type MatchConfidence = "exact" | "neighborhood" | "area";
 export type DataQuality = "verified" | "available_per_records";
 
 export interface IspMatch {
@@ -46,6 +47,7 @@ const MIN_CELL_SAMPLE = 5;
 const MIN_CELL_AGREEMENT = 0.6;
 
 const STATUS_RANK: Record<ServiceabilityStatus, number> = { live: 0, coming_soon: 1, not_serviceable: 2, unknown: 3 };
+const CONFIDENCE_RANK: Record<MatchConfidence, number> = { exact: 0, neighborhood: 1, area: 2 };
 
 type PinLike = Pick<MapPinRow, "cust" | "service_type" | "went_live_window">;
 
@@ -74,13 +76,13 @@ export function matchesFromExactRows(rows: readonly MapPinRow[]): IspMatch[] {
   }));
 }
 
-export function matchesFromCellRows(rows: readonly MapPinCellRow[]): IspMatch[] {
+export function matchesFromCellRows(rows: readonly MapPinCellRow[], confidence: MatchConfidence = "neighborhood"): IspMatch[] {
   const byIsp = new Map<string, MapPinCellRow[]>();
   for (const row of rows) byIsp.set(row.isp, [...(byIsp.get(row.isp) ?? []), row]);
-  return [...byIsp].map(([isp, ispRows]) => summariseCell(isp, ispRows));
+  return [...byIsp].map(([isp, ispRows]) => summariseCell(isp, ispRows, confidence));
 }
 
-function summariseCell(isp: string, rows: readonly MapPinCellRow[]): IspMatch {
+function summariseCell(isp: string, rows: readonly MapPinCellRow[], confidence: MatchConfidence): IspMatch {
   const totals = new Map<ServiceabilityStatus, number>();
   for (const row of rows) {
     const status = classifyPin(row);
@@ -94,7 +96,7 @@ function summariseCell(isp: string, rows: readonly MapPinCellRow[]): IspMatch {
   return {
     isp,
     status: isConfident ? topStatus : "unknown",
-    confidence: "neighborhood",
+    confidence,
     dataQuality: dataQualityFor(isp),
     agreement,
     sampleSize,
@@ -103,12 +105,12 @@ function summariseCell(isp: string, rows: readonly MapPinCellRow[]): IspMatch {
   };
 }
 
-/** Best match first: better status, then exact over neighbourhood, verified over records, higher agreement. */
+/** Best match first: better status, then closer evidence, verified over records, higher agreement. */
 export function rankMatches(matches: readonly IspMatch[]): IspMatch[] {
   return [...matches].sort(
     (a, b) =>
       STATUS_RANK[a.status] - STATUS_RANK[b.status] ||
-      Number(a.confidence !== "exact") - Number(b.confidence !== "exact") ||
+      CONFIDENCE_RANK[a.confidence] - CONFIDENCE_RANK[b.confidence] ||
       Number(a.dataQuality !== "verified") - Number(b.dataQuality !== "verified") ||
       b.agreement - a.agreement
   );

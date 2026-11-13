@@ -47,13 +47,14 @@ export async function fetchPinsByHash(addressHash: string): Promise<MapPinRow[]>
   return rows as MapPinRow[];
 }
 
-/** Status mix of the surrounding H3 res-8 cell (~0.7 km²). Hits map_pin_isp_h3_cust_idx. */
-export async function fetchCellSummary(h3Cell: string): Promise<MapPinCellRow[]> {
+/** Status mix across one or more H3 res-8 cells (~0.7 km² each). Hits map_pin_isp_h3_cust_idx. */
+export async function fetchCellSummary(h3Cells: readonly string[]): Promise<MapPinCellRow[]> {
+  if (h3Cells.length === 0) return [];
   const sql = getSql();
   const rows = await sql`
     SELECT isp, cust, service_type, went_live_window, COUNT(*)::int AS pin_count
     FROM map_pin
-    WHERE isp = ANY(${[...TRACKED_ISPS]}) AND h3_res8 = ${h3Cell} AND cust IS NOT NULL
+    WHERE isp = ANY(${[...TRACKED_ISPS]}) AND h3_res8 = ANY(${[...h3Cells]}) AND cust IS NOT NULL
     GROUP BY 1, 2, 3, 4`;
   return rows as MapPinCellRow[];
 }
